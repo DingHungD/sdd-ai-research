@@ -1,0 +1,42 @@
+{
+  "source_id": "S-087",
+  "title": "OWASP SCVS Usage and Levels",
+  "url": "https://scvs.owasp.org/scvs/using-scvs/",
+  "canonical_url": "https://scvs.owasp.org/scvs/using-scvs/",
+  "author_or_organization": "",
+  "publisher": "OWASP",
+  "retrieved_at": "2026-05-31T13:59:08+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T135908Z",
+      "local_path": "sources/S-087/raw/SNAP-20260531T135908Z.html",
+      "content_hash": "sha256:1b44f2b94a640d7edb76b1ec9b74f1f05c95017b19f78cde831bae0b28e053f8",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T13:59:08+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T13:59:08+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "official_documentation",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://scvs.owasp.org/scvs/using-scvs/",
+  "supported_claim_ids": [
+    "C-006",
+    "C-007"
+  ],
+  "content_hash": "sha256:1b44f2b94a640d7edb76b1ec9b74f1f05c95017b19f78cde831bae0b28e053f8",
+  "locator": "local snapshot SNAP-20260531T135908Z"
+}

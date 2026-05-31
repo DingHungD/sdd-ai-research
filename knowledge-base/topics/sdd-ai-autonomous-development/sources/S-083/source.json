@@ -1,0 +1,42 @@
+{
+  "source_id": "S-083",
+  "title": "NIST Secure Software Development Framework",
+  "url": "https://csrc.nist.gov/projects/ssdf",
+  "canonical_url": "https://csrc.nist.gov/projects/ssdf",
+  "author_or_organization": "",
+  "publisher": "NIST",
+  "retrieved_at": "2026-05-31T13:59:05+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T135905Z",
+      "local_path": "sources/S-083/raw/SNAP-20260531T135905Z.html",
+      "content_hash": "sha256:5366532c9afb64b193399186452b4711d116036103d4c288da30ffcffc8d2be7",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T13:59:05+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T13:59:05+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "official_documentation",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://csrc.nist.gov/projects/ssdf",
+  "supported_claim_ids": [
+    "C-006",
+    "C-012"
+  ],
+  "content_hash": "sha256:5366532c9afb64b193399186452b4711d116036103d4c288da30ffcffc8d2be7",
+  "locator": "local snapshot SNAP-20260531T135905Z"
+}

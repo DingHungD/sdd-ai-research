@@ -1,0 +1,39 @@
+{
+  "source_id": "S-057",
+  "title": "GitHub Blog: Markdown as a programming language",
+  "url": "https://github.blog/ai-and-ml/generative-ai/spec-driven-development-using-markdown-as-a-programming-language-when-building-with-ai/",
+  "canonical_url": "https://github.blog/ai-and-ml/generative-ai/spec-driven-development-using-markdown-as-a-programming-language-when-building-with-ai/",
+  "author_or_organization": "",
+  "publisher": "GitHub",
+  "retrieved_at": "2026-05-31T13:39:40+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T133940Z",
+      "local_path": "sources/S-057/raw/SNAP-20260531T133940Z.html",
+      "content_hash": "sha256:6cc90fc5ef8b8801dbad39e99fef5c1cb51fdf118acabd17cb7c44daa0d1d26d",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T13:39:40+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T13:39:40+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "professional_article",
+  "evidence_tier": "C",
+  "quality": {
+    "authority": "medium",
+    "directness": "medium",
+    "recency": "medium",
+    "transparency": "medium",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.blog/ai-and-ml/generative-ai/spec-driven-development-using-markdown-as-a-programming-language-when-building-with-ai/",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:6cc90fc5ef8b8801dbad39e99fef5c1cb51fdf118acabd17cb7c44daa0d1d26d",
+  "locator": "local snapshot SNAP-20260531T133940Z"
+}

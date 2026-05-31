@@ -1,0 +1,229 @@
+{
+  "summaries": [
+    {
+      "source_id": "S-001",
+      "snapshot_id": "SNAP-20260531T060534Z",
+      "summarized_at": "2026-05-31T06:15:00Z",
+      "document_purpose": "GitHub Spec Kit 官方首頁，用於確認 GitHub 對 SDD 與核心流程的定義。",
+      "summary": "GitHub 將 Spec Kit 定位為 SDD 工具包：先描述要建造的內容，經過結構化階段細化，再交由 AI coding agent 實作。首頁列出的核心流程是 Spec -> Plan -> Tasks -> Implement。",
+      "categories": ["definition", "tooling", "workflow"],
+      "key_points": [
+        {
+          "text": "Spec Kit 將 SDD 描述為把 specification 放在 AI 輔助軟體開發中心的方法。",
+          "locator": "raw HTML lines 78-78"
+        },
+        {
+          "text": "首頁列出的核心流程是 Spec -> Plan -> Tasks -> Implement。",
+          "locator": "raw HTML lines 86-86"
+        }
+      ],
+      "keywords": ["GitHub Spec Kit", "SDD", "spec", "plan", "tasks", "implement"],
+      "entities": ["GitHub", "Spec Kit"],
+      "limitations": ["首頁是持續更新頁面，數量型資訊需要在引用前重新檢查。"],
+      "potential_questions": ["Spec Kit 的各階段如何加入品質閘門？"]
+    },
+    {
+      "source_id": "S-002",
+      "snapshot_id": "SNAP-20260531T060535Z",
+      "summarized_at": "2026-05-31T06:15:00Z",
+      "document_purpose": "GitHub Spec Kit workflow 官方文件，用於確認可自動化能力與人工 checkpoint。",
+      "summary": "Spec Kit workflow 可串接 command、prompt、shell step 與人工 checkpoint，支援條件、迴圈、fan-out/fan-in，以及從中斷點恢復。這代表可建立高度自動化流程，但官方設計仍保留人工 checkpoint。",
+      "categories": ["workflow", "evaluation"],
+      "key_points": [
+        {
+          "text": "Workflow 可串接 commands、prompts、shell steps 與 human checkpoints。",
+          "locator": "#workflows"
+        },
+        {
+          "text": "Workflow 支援 conditional logic、loops、fan-out/fan-in，並可從中斷位置恢復。",
+          "locator": "#workflows and #resume-a-workflow"
+        }
+      ],
+      "keywords": ["Spec Kit", "workflow", "human checkpoint", "resume", "fan-out", "fan-in"],
+      "entities": ["GitHub", "Spec Kit"],
+      "limitations": ["文件說明編排能力，不等於證明任意軟體可以無人監督完成。"],
+      "potential_questions": ["哪些 checkpoint 適合自動通過，哪些需要人工核准？"]
+    },
+    {
+      "source_id": "S-003",
+      "snapshot_id": "SNAP-20260531T060535Z",
+      "summarized_at": "2026-05-31T06:15:00Z",
+      "document_purpose": "Kiro 官方 Specs 文件，用於確認商用工具中的 specification 工作流。",
+      "summary": "Kiro 將 specs 定義為結構化 artifact，用於把高階想法轉為可追蹤的實作計畫。核心檔案是 requirements.md 或 bugfix.md、design.md、tasks.md。文件也說明任務可依依賴圖分波次平行執行。",
+      "categories": ["definition", "tooling", "workflow"],
+      "key_points": [
+        {
+          "text": "Kiro spec 由 requirements 或 bugfix、design、tasks 三類檔案構成。",
+          "locator": "#core-structure"
+        },
+        {
+          "text": "Kiro 可分析 tasks.md 的依賴並平行執行獨立任務。",
+          "locator": "#running-tasks-in-parallel"
+        }
+      ],
+      "keywords": ["Kiro", "requirements.md", "design.md", "tasks.md", "parallel execution"],
+      "entities": ["AWS", "Kiro"],
+      "limitations": ["Kiro 是產品官方文件，不是開源工具證據；功能效果仍需實際測試。"],
+      "potential_questions": ["Kiro 的人工核准點與自動執行邊界是什麼？"]
+    },
+    {
+      "source_id": "S-004",
+      "snapshot_id": "SNAP-20260531T060537Z",
+      "summarized_at": "2026-05-31T06:15:00Z",
+      "document_purpose": "OpenSpec 官方 repository README，用於確認現有開源實作。",
+      "summary": "OpenSpec 是面向 AI coding assistants 的開源 SDD 工具。它以 lightweight spec layer 讓人與 AI 在寫 code 前對齊，並將每個 change 放入包含 proposal、specs、design 與 tasks 的資料夾。README 強調 artifact 可隨時修改，不採嚴格 phase gate。",
+      "categories": ["tooling", "workflow"],
+      "key_points": [
+        {
+          "text": "OpenSpec 在 code 前加入 spec layer，讓 human 與 AI 對齊。",
+          "locator": "#why-openspec"
+        },
+        {
+          "text": "OpenSpec 將 change 分資料夾保存 proposal、specs、design 與 tasks。",
+          "locator": "#why-openspec"
+        }
+      ],
+      "keywords": ["OpenSpec", "proposal", "specs", "design", "tasks", "change folder"],
+      "entities": ["Fission-AI", "OpenSpec"],
+      "limitations": ["README 是專案自述；需要另行測試其可靠性與維護品質。"],
+      "potential_questions": ["OpenSpec 對 brownfield 專案的實際適用性如何？"]
+    },
+    {
+      "source_id": "S-005",
+      "snapshot_id": "SNAP-20260531T060538Z",
+      "summarized_at": "2026-05-31T06:15:00Z",
+      "document_purpose": "Spec Kitty 官方 repository README，用於確認現有開源實作。",
+      "summary": "Spec Kitty 是開源 CLI，將產品意圖轉為可重複 agent workflow：spec -> plan -> tasks -> next -> review -> accept -> merge。它將重要 context 保存在 repository，建立 work package，並利用 git worktree 隔離實作工作。",
+      "categories": ["tooling", "workflow", "evaluation"],
+      "key_points": [
+        {
+          "text": "Spec Kitty 的核心流程包含 review、accept 與 merge，而不只生成 code。",
+          "locator": "README overview"
+        },
+        {
+          "text": "Spec Kitty 使用 repository-native artifacts、work packages 與 git worktrees。",
+          "locator": "#what-it-provides"
+        }
+      ],
+      "keywords": ["Spec Kitty", "work package", "git worktree", "review", "accept", "merge"],
+      "entities": ["Priivacy-ai", "Spec Kitty"],
+      "limitations": ["README 是專案自述；需要另行評估成熟度、測試覆蓋與維護狀態。"],
+      "potential_questions": ["Spec Kitty 是否適合多 agent 實作與審查分離？"]
+    },
+    {
+      "source_id": "S-006",
+      "snapshot_id": "SNAP-20260531T060539Z",
+      "summarized_at": "2026-05-31T06:15:00Z",
+      "document_purpose": "arXiv 預印本摘要頁，用於補充 SDD 概念分類。",
+      "summary": "此預印本將 SDD 描述為把 specification 視為 source of truth，code 視為生成或驗證後的次級 artifact，並提出 spec-first、spec-anchored、spec-as-source 三種嚴謹程度。",
+      "categories": ["definition", "evaluation", "related_concepts"],
+      "key_points": [
+        {
+          "text": "論文摘要將 SDD 定義為 specification 為 source of truth，code 為 generated or verified secondary artifact。",
+          "locator": "Abstract"
+        },
+        {
+          "text": "論文摘要提出 spec-first、spec-anchored、spec-as-source 三種嚴謹程度。",
+          "locator": "Abstract"
+        }
+      ],
+      "keywords": ["SDD", "spec-first", "spec-anchored", "spec-as-source", "arXiv"],
+      "entities": ["Deepak Babu Piskala", "arXiv"],
+      "limitations": ["這是 2026-01-30 提交的 arXiv 預印本，不能當成已完成同行評審的共識。"],
+      "potential_questions": ["不同專案適合哪一種 specification rigor？"]
+    },
+    {
+      "source_id": "S-007",
+      "snapshot_id": "SNAP-20260531T060634Z",
+      "summarized_at": "2026-05-31T06:15:00Z",
+      "document_purpose": "GitHub Spec Kit 官方 repository README，用於確認開源實作與 artifact 流程。",
+      "summary": "GitHub Spec Kit repository README 展示 constitution、specification、clarification、plan、tasks 與 implementation 等步驟。README 特別要求規格初稿後先 clarify，並提醒不要把第一次輸出視為最終答案。",
+      "categories": ["tooling", "workflow", "evaluation"],
+      "key_points": [
+        {
+          "text": "Spec Kit repository 提供開源模板、script 與 agent command，將需求轉成 version-controlled artifact。",
+          "locator": "README: STEP 2 to STEP 5"
+        },
+        {
+          "text": "README 要求規格初稿後執行 clarification，再進入 technical plan。",
+          "locator": "README: STEP 3 Functional specification clarification"
+        }
+      ],
+      "keywords": ["GitHub Spec Kit", "constitution", "clarify", "plan", "tasks", "implementation"],
+      "entities": ["GitHub", "Spec Kit"],
+      "limitations": ["README 流程可證明工具設計，不足以證明自動生成結果在所有專案都正確。"],
+      "potential_questions": ["哪些 clarify 問題應由 domain expert 回答？"]
+    },
+    {
+      "source_id": "S-008",
+      "snapshot_id": "SNAP-20260531T060635Z",
+      "summarized_at": "2026-05-31T06:15:00Z",
+      "document_purpose": "SpecDD 官方文件，用於確認另一種開源 specification framework。",
+      "summary": "SpecDD 將自己定位為開源 Specification-Driven Development framework。它使用放在 code、infrastructure、workflow 或 documentation 旁的本地 `.sdd` 檔案，保存 intent、architecture、behavior、boundary 與 implementation task，並可逐步導入既有專案。",
+      "categories": ["definition", "tooling", "workflow"],
+      "key_points": [
+        {
+          "text": "SpecDD 使用本地且人可讀的 `.sdd` 檔案作為 humans 與 AI agents 的 shared source of truth。",
+          "locator": "#specdd"
+        },
+        {
+          "text": "SpecDD 文件表示可用於 greenfield，也可在既有專案逐步導入。",
+          "locator": "#specdd"
+        }
+      ],
+      "keywords": ["SpecDD", ".sdd", "shared source of truth", "greenfield", "brownfield"],
+      "entities": ["SpecDD"],
+      "limitations": ["官方文件是專案自述；需另行檢查 CLI、repository 與實際採用案例。"],
+      "potential_questions": ["`.sdd` 檔案格式是否適合大型 repository？"]
+    },
+    {
+      "source_id": "S-009",
+      "snapshot_id": "SNAP-20260531T060636Z",
+      "summarized_at": "2026-05-31T06:15:00Z",
+      "document_purpose": "OpenSpecification repository README，用於記錄 Kiro-inspired 開源工具。",
+      "summary": "OpenSpecification 是開源 web application，宣稱複製 Kiro IDE Spec Mode 的概念。README 描述三階段流程 Requirements -> Design -> Implementation Tasks，支援反覆 refinement、圖表生成與多種匯出格式。",
+      "categories": ["tooling", "workflow"],
+      "key_points": [
+        {
+          "text": "OpenSpecification 採用 Requirements -> Design -> Implementation Tasks 三階段流程。",
+          "locator": "README: Features"
+        },
+        {
+          "text": "OpenSpecification README 表示支援 iterative refinement 與 Markdown、HTML、PDF、ZIP 匯出。",
+          "locator": "README: Features"
+        }
+      ],
+      "keywords": ["OpenSpecification", "Kiro", "requirements", "design", "implementation tasks"],
+      "entities": ["OpenSpecification", "Kiro"],
+      "limitations": ["這是較小型第三方 repository 的自述；本次未驗證其活躍度與 production readiness。"],
+      "potential_questions": ["它是否只產生規格，還是也負責執行程式碼任務？"]
+    },
+    {
+      "source_id": "S-010",
+      "snapshot_id": "SNAP-20260531T060637Z",
+      "summarized_at": "2026-05-31T06:15:00Z",
+      "document_purpose": "Akka 官方 SDD 文件，用於確認完整應用產生流程與限制。",
+      "summary": "Akka 文件描述自然語言 specification 作為 application 的 single source of truth，並提供 specify、clarify、plan、tasks、implement、build、deploy、inspect 等流程。文件同時指出偏差可觸發 human-in-the-loop workflow，也列出快速 demo 等不適合採用 SDD 的情境。",
+      "categories": ["definition", "workflow", "evaluation"],
+      "key_points": [
+        {
+          "text": "Akka 文件描述 specification 為 application single source of truth，AI 生成 code。",
+          "locator": "raw HTML lines 3065-3065"
+        },
+        {
+          "text": "Akka 文件表示偏差可使 build 失敗並觸發 human-in-the-loop workflow。",
+          "locator": "raw HTML lines 3197-3197"
+        },
+        {
+          "text": "Akka 文件列出 specify、clarify、plan、tasks 與後續實作流程。",
+          "locator": "raw HTML lines 3215-3438"
+        }
+      ],
+      "keywords": ["Akka", "SDD", "single source of truth", "human-in-the-loop", "clarify", "tasks"],
+      "entities": ["Akka"],
+      "limitations": ["Akka 文件描述 Akka 生態內的流程，不能直接外推為任意技術棧的全自動能力。"],
+      "potential_questions": ["哪些驗證可由 CI 自動化，哪些偏差需要人工判斷？"]
+    }
+  ]
+}
+

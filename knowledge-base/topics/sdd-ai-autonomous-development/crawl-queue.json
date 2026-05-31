@@ -1,0 +1,2000 @@
+{
+  "topic_id": "sdd-ai-autonomous-development",
+  "updated_at": "2026-05-31T13:59:17+00:00",
+  "items": [
+    {
+      "queue_id": "Q-001",
+      "sequence": 1,
+      "target_type": "search_query",
+      "target": "\"spec-driven development\" definition OR specification",
+      "reason": "先釐清 SDD 的定義、原始提案與相近術語。",
+      "related_question_ids": [
+        "RQ-001"
+      ],
+      "added_by_step": "initial_plan",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [],
+      "notes": "Initial web discovery completed; concrete first-party URLs appended to queue."
+    },
+    {
+      "queue_id": "Q-002",
+      "sequence": 2,
+      "target_type": "search_query",
+      "target": "\"specification-driven development\" AI coding agent",
+      "reason": "尋找不同用語下的定義文件與方法論。",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-002"
+      ],
+      "added_by_step": "initial_plan",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [],
+      "notes": "Initial web discovery completed; concrete first-party URLs appended to queue."
+    },
+    {
+      "queue_id": "Q-003",
+      "sequence": 3,
+      "target_type": "search_query",
+      "target": "site:github.com spec driven development AI coding agent open source",
+      "reason": "建立可供後續驗證的開源工具候選清單。",
+      "related_question_ids": [
+        "RQ-002"
+      ],
+      "added_by_step": "initial_plan",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [],
+      "notes": "Initial web discovery completed; concrete first-party URLs appended to queue."
+    },
+    {
+      "queue_id": "Q-004",
+      "sequence": 4,
+      "target_type": "search_query",
+      "target": "site:github.com specification coding agent README release",
+      "reason": "補充 GitHub repository、README、release note 與版本資訊。",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003"
+      ],
+      "added_by_step": "initial_plan",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [],
+      "notes": "Initial web discovery completed; concrete first-party URLs appended to queue."
+    },
+    {
+      "queue_id": "Q-005",
+      "sequence": 5,
+      "target_type": "search_query",
+      "target": "\"spec driven\" coding agent limitations evaluation",
+      "reason": "蒐集限制、風險與可驗證的評估資料。",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "initial_plan",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [],
+      "notes": "Initial web discovery completed; concrete first-party URLs appended to queue."
+    },
+    {
+      "queue_id": "Q-006",
+      "sequence": 6,
+      "target_type": "url",
+      "target": "https://github.github.com/spec-kit/index.html",
+      "reason": "GitHub Spec Kit official documentation: SDD definition and core phases.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-003"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-001",
+      "result_source_ids": [
+        "S-001"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-007",
+      "sequence": 7,
+      "target_type": "url",
+      "target": "https://github.github.com/spec-kit/reference/workflows.html",
+      "reason": "GitHub Spec Kit official workflow documentation.",
+      "related_question_ids": [
+        "RQ-003"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-004",
+      "result_source_ids": [
+        "S-002"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-008",
+      "sequence": 8,
+      "target_type": "url",
+      "target": "https://kiro.dev/docs/specs/",
+      "reason": "Kiro official specs documentation and execution workflow.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-002",
+      "result_source_ids": [
+        "S-003"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-009",
+      "sequence": 9,
+      "target_type": "url",
+      "target": "https://github.com/Fission-AI/OpenSpec",
+      "reason": "OpenSpec official repository README.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-004"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-010",
+      "sequence": 10,
+      "target_type": "url",
+      "target": "https://github.com/Priivacy-ai/spec-kitty",
+      "reason": "Spec Kitty official repository README.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-005"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-011",
+      "sequence": 11,
+      "target_type": "url",
+      "target": "https://arxiv.org/abs/2602.00180v1",
+      "reason": "SDD paper abstract with definition and rigor levels.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-004"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-001",
+      "result_source_ids": [
+        "S-006"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-012",
+      "sequence": 12,
+      "target_type": "url",
+      "target": "https://github.com/github/spec-kit",
+      "reason": "GitHub Spec Kit official repository README.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003"
+      ],
+      "added_by_step": "step_5_document_curation",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-007"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-013",
+      "sequence": 13,
+      "target_type": "url",
+      "target": "https://specdd.ai/",
+      "reason": "SpecDD official documentation and source repository pointer.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-002",
+        "RQ-003"
+      ],
+      "added_by_step": "step_5_document_curation",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-008"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-014",
+      "sequence": 14,
+      "target_type": "url",
+      "target": "https://github.com/spenceriam/OpenSpecification",
+      "reason": "OpenSpecification repository: open-source Kiro-inspired three-phase spec workflow.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003"
+      ],
+      "added_by_step": "step_5_document_curation",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-009"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-015",
+      "sequence": 15,
+      "target_type": "url",
+      "target": "https://doc.akka.io/sdk/spec-driven-development.html",
+      "reason": "Akka official SDD workflow documentation, including applicability and limits.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_5_document_curation",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-010"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-016",
+      "sequence": 16,
+      "target_type": "url",
+      "target": "https://github.com/shenli/codex-spec",
+      "reason": "codex-spec official repository: context, specs, requirements, plan, task execution.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003"
+      ],
+      "added_by_step": "step_6_claim_mapping",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-011"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-017",
+      "sequence": 17,
+      "target_type": "url",
+      "target": "https://github.com/specpulse/specpulse",
+      "reason": "SpecPulse official repository: CLI-first SDD commands, validation and continuous execution.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_6_claim_mapping",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-012"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-018",
+      "sequence": 18,
+      "target_type": "url",
+      "target": "https://github.com/specs-cli/specs-cli",
+      "reason": "Specs CLI official repository: DSPI traceability workflow.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_6_claim_mapping",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-013"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-019",
+      "sequence": 19,
+      "target_type": "url",
+      "target": "https://github.com/mamajiaa/specs-workflow-mcp",
+      "reason": "Spec Workflow MCP repository: MCP requirements-design-tasks workflow.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003"
+      ],
+      "added_by_step": "step_6_claim_mapping",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-014"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-020",
+      "sequence": 20,
+      "target_type": "url",
+      "target": "https://github.com/specstoryai/specflow",
+      "reason": "Specflow repository: intent-roadmap-tasks-execute-refine methodology.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-003"
+      ],
+      "added_by_step": "step_6_claim_mapping",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-015"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-021",
+      "sequence": 21,
+      "target_type": "url",
+      "target": "https://github.com/bmadcode/BMAD-METHOD",
+      "reason": "BMAD Method repository: adjacent agent workflow framework with planning tracks and specialized workflows.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_6_claim_mapping",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-016"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-022",
+      "sequence": 22,
+      "target_type": "url",
+      "target": "https://github.com/gsd-build/get-shit-done",
+      "reason": "GSD repository: adjacent context-engineering and autonomous phased execution workflow.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_6_claim_mapping",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-017"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-023",
+      "sequence": 23,
+      "target_type": "url",
+      "target": "https://github.com/gannonh/kata",
+      "reason": "Kata repository: spec-driven orchestrator plus tree-sitter and SQLite code context.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_6_claim_mapping",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-018"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-024",
+      "sequence": 24,
+      "target_type": "url",
+      "target": "https://github.com/eyaltoledano/claude-task-master",
+      "reason": "Taskmaster repository: adjacent PRD-to-task graph and dependency execution layer.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003"
+      ],
+      "added_by_step": "step_6_claim_mapping",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-019"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-025",
+      "sequence": 25,
+      "target_type": "url",
+      "target": "https://github.com/openai/symphony",
+      "reason": "OpenAI Symphony repository: autonomous isolated implementation runs.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_6_claim_mapping",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-020"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-026",
+      "sequence": 26,
+      "target_type": "url",
+      "target": "https://github.com/openai/symphony/blob/main/SPEC.md",
+      "reason": "OpenAI Symphony service specification: scheduler, workspace, retry, observability, policy boundaries.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_6_claim_mapping",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-021"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-027",
+      "sequence": 27,
+      "target_type": "url",
+      "target": "https://github.com/endorhq/rover",
+      "reason": "Rover repository: isolated parallel background coding-agent workspaces.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_6_claim_mapping",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-022"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-028",
+      "sequence": 28,
+      "target_type": "url",
+      "target": "https://github.com/addyosmani/agent-skills/blob/main/skills/spec-driven-development/SKILL.md",
+      "reason": "Agent Skills SDD workflow: explicit human gates, boundaries and verification.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_6_claim_mapping",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-023"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-029",
+      "sequence": 29,
+      "target_type": "url",
+      "target": "https://arxiv.org/abs/2604.05278v1",
+      "reason": "Spec Kit Agents paper: context-grounded SDD evaluation.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_6_claim_mapping",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-024"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-030",
+      "sequence": 30,
+      "target_type": "url",
+      "target": "https://arxiv.org/abs/2602.02584v1",
+      "reason": "Constitutional SDD paper: security constraints and traceability.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_6_claim_mapping",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-025"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-031",
+      "sequence": 31,
+      "target_type": "url",
+      "target": "https://github.com/kirodotdev/Kiro",
+      "reason": "Kiro repository: IDE, specs, hooks, steering, MCP and powers.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-026"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-032",
+      "sequence": 32,
+      "target_type": "url",
+      "target": "https://github.com/gotalab/cc-sdd",
+      "reason": "cc-sdd: approved specs to long-running autonomous implementation with fresh implementer/reviewer loops.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-027"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-033",
+      "sequence": 33,
+      "target_type": "url",
+      "target": "https://github.com/modu-ai/moai-adk",
+      "reason": "MoAI-ADK: SPEC-first harness with TDD/DDD quality gates and multi-agent execution.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-028"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-034",
+      "sequence": 34,
+      "target_type": "url",
+      "target": "https://github.com/clay-good/spec-gen",
+      "reason": "spec-gen: reverse engineer brownfield code into living OpenSpec specs via static analysis and LLM extraction.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-029"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-035",
+      "sequence": 35,
+      "target_type": "url",
+      "target": "https://github.com/LIDR-academy/ai-specs",
+      "reason": "Specboot ai-specs: portable standards, agent rules and OpenSpec augmentation.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-030"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-036",
+      "sequence": 36,
+      "target_type": "url",
+      "target": "https://github.com/Gentleman-Programming/gentle-ai",
+      "reason": "Gentle-AI: ecosystem configurator with memory, SDD workflow, MCP and per-phase model routing.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-031"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-037",
+      "sequence": 37,
+      "target_type": "url",
+      "target": "https://github.com/kevinlin/spec-coding-mcp",
+      "reason": "spec-coding-mcp: Kiro-like EARS requirements, design and task workflow over MCP.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-032"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-038",
+      "sequence": 38,
+      "target_type": "url",
+      "target": "https://github.com/Pimzino/spec-workflow-mcp",
+      "reason": "Pimzino spec-workflow-mcp: dashboard, approval workflow, task progress and implementation logs.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-033"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-039",
+      "sequence": 39,
+      "target_type": "url",
+      "target": "https://github.com/tzachbon/smart-ralph",
+      "reason": "Smart Ralph: spec phases plus compacted Ralph autonomous execution.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-034"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-040",
+      "sequence": 40,
+      "target_type": "url",
+      "target": "https://github.com/gmickel/flow-next",
+      "reason": "Flow Next: plan-first workflow, task graph, Ralph mode and cross-model review.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-035"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-041",
+      "sequence": 41,
+      "target_type": "url",
+      "target": "https://github.com/Fr-e-d/GAAI-framework",
+      "reason": "GAAI: discovery defines work and delivery executes until criteria pass.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-036"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-042",
+      "sequence": 42,
+      "target_type": "url",
+      "target": "https://github.com/iannuttall/ralph",
+      "reason": "Ralph: file-based PRD JSON autonomous loop with git memory.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-037"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-043",
+      "sequence": 43,
+      "target_type": "url",
+      "target": "https://github.com/anthropics/claude-code/blob/main/plugins/ralph-wiggum/README.md",
+      "reason": "Anthropic Ralph Wiggum plugin documentation: stop-hook self-referential loop.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-038"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-044",
+      "sequence": 44,
+      "target_type": "url",
+      "target": "https://github.com/snarktank/ralph",
+      "reason": "snarktank Ralph: PRD to prd.json story loop with checks, commits and progress log.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-039"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-045",
+      "sequence": 45,
+      "target_type": "url",
+      "target": "https://github.com/am-will/swarms",
+      "reason": "Swarms: explicit dependency plans, wave parallel execution and orchestrator verification.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-040"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-046",
+      "sequence": 46,
+      "target_type": "url",
+      "target": "https://github.com/dsifry/metaswarm",
+      "reason": "Metaswarm: multi-agent orchestration with TDD enforcement and quality gates.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-041"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-047",
+      "sequence": 47,
+      "target_type": "url",
+      "target": "https://github.com/josstei/maestro-orchestrate",
+      "reason": "Maestro: cross-runtime staged orchestration, specialists, persistent state and quality gate.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-042"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-048",
+      "sequence": 48,
+      "target_type": "url",
+      "target": "https://github.com/max-sixty/worktrunk",
+      "reason": "Worktrunk: git worktree management for parallel AI agents.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-043"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-049",
+      "sequence": 49,
+      "target_type": "url",
+      "target": "https://github.com/raine/workmux",
+      "reason": "workmux: git worktrees and tmux for coordinator-managed parallel agents.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-044"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-050",
+      "sequence": 50,
+      "target_type": "url",
+      "target": "https://github.com/milisp/codexia",
+      "reason": "Codexia: agent workstation, scheduler, worktrees, remote control and permission boundaries.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-045"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-051",
+      "sequence": 51,
+      "target_type": "url",
+      "target": "https://github.com/Enderfga/claw-orchestrator",
+      "reason": "claw-orchestrator: unified multi-engine coding CLI runtime with persistent sessions.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-046"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-052",
+      "sequence": 52,
+      "target_type": "url",
+      "target": "https://github.com/ReinaMacCredy/maestro",
+      "reason": "Local-first maestro: structured memory, handoffs, task graph and verification substrate.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-047"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-053",
+      "sequence": 53,
+      "target_type": "url",
+      "target": "https://github.com/wearetechnative/awesome-openspec",
+      "reason": "Awesome OpenSpec: ecosystem map for OpenSpec tools and schemas.",
+      "related_question_ids": [
+        "RQ-002"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-048"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-054",
+      "sequence": 54,
+      "target_type": "url",
+      "target": "https://github.com/Fission-AI/OpenSpec/blob/main/docs/supported-tools.md",
+      "reason": "OpenSpec supported tools documentation and delivery profiles.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-049"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-055",
+      "sequence": 55,
+      "target_type": "url",
+      "target": "https://github.com/atman-33/openspec-for-copilot",
+      "reason": "OpenSpec for Copilot extension: guided SDD workflow in VS Code.",
+      "related_question_ids": [
+        "RQ-002"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-050"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-056",
+      "sequence": 56,
+      "target_type": "url",
+      "target": "https://github.com/bytegh/clawspec",
+      "reason": "ClawSpec: OpenSpec workflow in chat with durable background execution.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-051"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-057",
+      "sequence": 57,
+      "target_type": "url",
+      "target": "https://github.com/nicksp/ai-coding-worflow",
+      "reason": "AI coding workflow: Kiro-inspired plan and execute prompts with persistent prd.md.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-052"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-058",
+      "sequence": 58,
+      "target_type": "url",
+      "target": "https://github.com/tylerburleigh/claude-sdd-toolkit",
+      "reason": "Claude SDD Toolkit: plan-first machine-readable JSON specifications and CLI operations.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-053"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-059",
+      "sequence": 59,
+      "target_type": "url",
+      "target": "https://github.com/Fr-e-d/AI-Governor-Framework",
+      "reason": "AI Governor Framework: archived governance rules and workflows for architecture constraints.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-054"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-060",
+      "sequence": 60,
+      "target_type": "url",
+      "target": "https://github.com/threatspec/threatspec",
+      "reason": "Threatspec: security context and continuous threat modeling through code annotations.",
+      "related_question_ids": [
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-055"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-061",
+      "sequence": 61,
+      "target_type": "url",
+      "target": "https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/",
+      "reason": "GitHub official Spec Kit introduction and living executable artifacts.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-003"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-001",
+      "result_source_ids": [
+        "S-056"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-062",
+      "sequence": 62,
+      "target_type": "url",
+      "target": "https://github.blog/ai-and-ml/generative-ai/spec-driven-development-using-markdown-as-a-programming-language-when-building-with-ai/",
+      "reason": "GitHub official Markdown-as-programming-language SDD case article.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-057"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-063",
+      "sequence": 63,
+      "target_type": "url",
+      "target": "https://www.thoughtworks.com/en-gb/radar/techniques/spec-driven-development",
+      "reason": "Thoughtworks Technology Radar assessment of SDD definitions and trade-offs.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-058"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-064",
+      "sequence": 64,
+      "target_type": "url",
+      "target": "https://www.thoughtworks.com/en-gb/insights/blog/agile-engineering-practices/spec-driven-development-unpacking-2025-new-engineering-practices",
+      "reason": "Thoughtworks article unpacking competing SDD interpretations.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-059"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-065",
+      "sequence": 65,
+      "target_type": "url",
+      "target": "https://www.thoughtworks.com/en-us/insights/podcasts/technology-podcasts/what-is-spec-driven-development",
+      "reason": "Thoughtworks podcast summary on competing definitions and workflows.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-060"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-066",
+      "sequence": 66,
+      "target_type": "url",
+      "target": "https://kiro.dev/blog/introducing-kiro/",
+      "reason": "Kiro official launch article: specs, hooks, MCP and steering.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-061"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-067",
+      "sequence": 67,
+      "target_type": "url",
+      "target": "https://aws.amazon.com/documentation-overview/kiro/",
+      "reason": "AWS Kiro documentation overview: specs, hooks, steering and privacy.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-062"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-068",
+      "sequence": 68,
+      "target_type": "url",
+      "target": "https://aws.amazon.com/blogs/publicsector/accelerating-govtech-development-with-kiro/",
+      "reason": "AWS GovTech Kiro case: compliance steering and validation hooks.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-063"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-069",
+      "sequence": 69,
+      "target_type": "url",
+      "target": "https://developers.redhat.com/articles/2025/10/22/how-spec-driven-development-improves-ai-coding-quality",
+      "reason": "Red Hat practical SDD article: what/how specs, tests and lessons learned.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "failed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [],
+      "notes": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "queue_id": "Q-070",
+      "sequence": 70,
+      "target_type": "url",
+      "target": "https://developers.redhat.com/articles/2026/03/30/vibes-specs-skills-agents-ai-coding",
+      "reason": "Red Hat four-pillar article: vibes, specs, skills and agents.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "failed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [],
+      "notes": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "queue_id": "Q-071",
+      "sequence": 71,
+      "target_type": "url",
+      "target": "https://tessl.io/blog/how-tessls-products-pioneer-spec-driven-development/",
+      "reason": "Tessl official SDD vision and framework article.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-002",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-003",
+      "result_source_ids": [
+        "S-064"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-072",
+      "sequence": 72,
+      "target_type": "url",
+      "target": "https://tessl.io/blog/spec-driven-development-10-things-you-need-to-know-about-specs",
+      "reason": "Tessl article on spec flavors, context constraints, legacy apps and limits.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-065"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-073",
+      "sequence": 73,
+      "target_type": "url",
+      "target": "https://tessl.io/blog/openai-open-sources-symphony-a-spec-for-orchestrating-codex-agents/",
+      "reason": "Tessl article explaining Symphony task-to-PR orchestration.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-066"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-074",
+      "sequence": 74,
+      "target_type": "url",
+      "target": "https://www.infoq.com/articles/enterprise-spec-driven-development",
+      "reason": "InfoQ enterprise SDD adoption article: tooling gaps and brownfield needs.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-067"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-075",
+      "sequence": 75,
+      "target_type": "url",
+      "target": "https://www.infoq.com/articles/spec-driven-development/",
+      "reason": "InfoQ executable architecture article: drift detection and enforcement.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-068"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-076",
+      "sequence": 76,
+      "target_type": "url",
+      "target": "https://martinfowler.com/articles/exploring-gen-ai/context-engineering-coding-agents.html",
+      "reason": "Martin Fowler site article on context engineering for coding agents.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-069"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-077",
+      "sequence": 77,
+      "target_type": "url",
+      "target": "https://www.anthropic.com/engineering/building-effective-agents",
+      "reason": "Anthropic official agent architecture guidance: workflows versus agents.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-070"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-078",
+      "sequence": 78,
+      "target_type": "url",
+      "target": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "reason": "Anthropic official context engineering guidance for long-horizon agents.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-071"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-079",
+      "sequence": 79,
+      "target_type": "url",
+      "target": "https://openai.com/index/introducing-swe-bench-verified/",
+      "reason": "OpenAI official SWE-bench Verified article: benchmark reliability.",
+      "related_question_ids": [
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "failed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [],
+      "notes": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1010)>"
+    },
+    {
+      "queue_id": "Q-080",
+      "sequence": 80,
+      "target_type": "url",
+      "target": "https://scale.com/blog/swe-atlas-complete",
+      "reason": "Scale AI SWE Atlas article: investigation, validation, maintenance and reliability.",
+      "related_question_ids": [
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-072"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-081",
+      "sequence": 81,
+      "target_type": "url",
+      "target": "https://www.xcapit.com/en/blog/spec-driven-development-ai-agents",
+      "reason": "Xcapit practical SDD guide with human oversight.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-073"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-082",
+      "sequence": 82,
+      "target_type": "url",
+      "target": "https://huggingface.co/papers/2602.05892",
+      "reason": "ContextBench paper page: context retrieval benchmark for coding agents.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-074"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-083",
+      "sequence": 83,
+      "target_type": "url",
+      "target": "https://arxiv.org/abs/2602.02262",
+      "reason": "OmniCode benchmark: broader software engineering tasks and language coverage.",
+      "related_question_ids": [
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-075"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-084",
+      "sequence": 84,
+      "target_type": "url",
+      "target": "https://openreview.net/pdf?id=bw5mNj75h9",
+      "reason": "OpenReview PDF for SDD practitioner guide.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-076"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-085",
+      "sequence": 85,
+      "target_type": "url",
+      "target": "https://bito.ai/blog/spec-driven-development-explained-for-ai-coding-teams/",
+      "reason": "Bito article: SDD, vibe coding and codebase intelligence.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-077"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-086",
+      "sequence": 86,
+      "target_type": "url",
+      "target": "https://www.loadsys.com/blog/context-engineering-ai-spec-driven-development-practice/",
+      "reason": "Loadsys article: context engineering metrics for SDD teams.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_9_quality_gate",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-078"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-087",
+      "sequence": 87,
+      "target_type": "url",
+      "target": "https://swehb.nasa.gov/pages/viewpage.action?pageId=16453101",
+      "reason": "NASA SWE-059 bidirectional traceability requirements to design.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_7_conflict_resolution",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-079"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-088",
+      "sequence": 88,
+      "target_type": "url",
+      "target": "https://swehb.nasa.gov/display/SWEHBVD/SWE-052%2B-%2BBidirectional%2BTraceability",
+      "reason": "NASA SWE-052 end-to-end bidirectional traceability requirements.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_7_conflict_resolution",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-080"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-089",
+      "sequence": 89,
+      "target_type": "url",
+      "target": "https://swehb.nasa.gov/spaces/SWEHBVB/pages/32604539/SWE-067%2B-%2BVerify%2BImplementation",
+      "reason": "NASA SWE-067 verify code completely implements each requirement.",
+      "related_question_ids": [
+        "RQ-004"
+      ],
+      "added_by_step": "step_7_conflict_resolution",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-081"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-090",
+      "sequence": 90,
+      "target_type": "url",
+      "target": "https://www.nasa.gov/reference/6-2-requirements-management/",
+      "reason": "NASA requirements management baseline, change board and traceability.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_7_conflict_resolution",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-082"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-091",
+      "sequence": 91,
+      "target_type": "url",
+      "target": "https://csrc.nist.gov/projects/ssdf",
+      "reason": "NIST SSDF official secure development framework.",
+      "related_question_ids": [
+        "RQ-004"
+      ],
+      "added_by_step": "step_7_conflict_resolution",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-083"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-092",
+      "sequence": 92,
+      "target_type": "url",
+      "target": "https://pages.nist.gov/nccoe-devsecops/",
+      "reason": "NIST NCCoE live DevSecOps guidance implementing SSDF.",
+      "related_question_ids": [
+        "RQ-004"
+      ],
+      "added_by_step": "step_7_conflict_resolution",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-084"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-093",
+      "sequence": 93,
+      "target_type": "url",
+      "target": "https://owasp.org/www-project-application-security-verification-standard/",
+      "reason": "OWASP ASVS testable application security requirements.",
+      "related_question_ids": [
+        "RQ-004"
+      ],
+      "added_by_step": "step_7_conflict_resolution",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-085"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-094",
+      "sequence": 94,
+      "target_type": "url",
+      "target": "https://owasp.org/www-project-artificial-intelligence-security-verification-standard-aisvs-docs/",
+      "reason": "OWASP AISVS catalogue of testable AI security requirements.",
+      "related_question_ids": [
+        "RQ-004"
+      ],
+      "added_by_step": "step_7_conflict_resolution",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-086"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-095",
+      "sequence": 95,
+      "target_type": "url",
+      "target": "https://scvs.owasp.org/scvs/using-scvs/",
+      "reason": "OWASP SCVS verification levels and control families.",
+      "related_question_ids": [
+        "RQ-004"
+      ],
+      "added_by_step": "step_7_conflict_resolution",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-087"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-096",
+      "sequence": 96,
+      "target_type": "url",
+      "target": "https://owasp.org/www-project-devguard/",
+      "reason": "OWASP DevGuard OPA Rego policy enforcement across supply chain.",
+      "related_question_ids": [
+        "RQ-004"
+      ],
+      "added_by_step": "step_7_conflict_resolution",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-088"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-097",
+      "sequence": 97,
+      "target_type": "url",
+      "target": "https://www.openpolicyagent.org/docs/latest",
+      "reason": "OPA official docs policy as code and enforcement APIs.",
+      "related_question_ids": [
+        "RQ-004"
+      ],
+      "added_by_step": "step_7_conflict_resolution",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-089"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-098",
+      "sequence": 98,
+      "target_type": "url",
+      "target": "https://www.openpolicyagent.org/docs/cicd/pr-checks",
+      "reason": "OPA official PR check policies and versioned audit trail.",
+      "related_question_ids": [
+        "RQ-004"
+      ],
+      "added_by_step": "step_7_conflict_resolution",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-090"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-099",
+      "sequence": 99,
+      "target_type": "url",
+      "target": "https://www.conftest.dev/",
+      "reason": "Conftest structured configuration policy testing with Rego.",
+      "related_question_ids": [
+        "RQ-004"
+      ],
+      "added_by_step": "step_7_conflict_resolution",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-091"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-100",
+      "sequence": 100,
+      "target_type": "url",
+      "target": "https://scale.com/blog/swe-bench-pro",
+      "reason": "Scale AI SWE-Bench Pro long-horizon benchmark article.",
+      "related_question_ids": [
+        "RQ-004"
+      ],
+      "added_by_step": "step_7_conflict_resolution",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-092"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-101",
+      "sequence": 101,
+      "target_type": "url",
+      "target": "https://labs.scale.com/papers/swe_bench_pro",
+      "reason": "Scale Labs SWE-Bench Pro paper page.",
+      "related_question_ids": [
+        "RQ-004"
+      ],
+      "added_by_step": "step_7_conflict_resolution",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-093"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-102",
+      "sequence": 102,
+      "target_type": "url",
+      "target": "https://arxiv.org/abs/2604.22432",
+      "reason": "R2Code requirements-to-code traceability paper.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_7_conflict_resolution",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-094"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-103",
+      "sequence": 103,
+      "target_type": "url",
+      "target": "https://arxiv.org/abs/2603.13999",
+      "reason": "ReqToCode compile-time traceability paper.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004"
+      ],
+      "added_by_step": "step_7_conflict_resolution",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-095"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-104",
+      "sequence": 104,
+      "target_type": "url",
+      "target": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/",
+      "reason": "OpenAI article on SWE-bench Verified limitations and SWE-bench Pro recommendation.",
+      "related_question_ids": [
+        "RQ-004"
+      ],
+      "added_by_step": "step_7_conflict_resolution",
+      "status": "failed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [],
+      "notes": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1010)>"
+    },
+    {
+      "queue_id": "Q-105",
+      "sequence": 105,
+      "target_type": "url",
+      "target": "https://www.cisa.gov/resources-tools/resources/secure-by-design",
+      "reason": "CISA Secure by Design guidance.",
+      "related_question_ids": [
+        "RQ-004"
+      ],
+      "added_by_step": "step_7_conflict_resolution",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-096"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-106",
+      "sequence": 106,
+      "target_type": "url",
+      "target": "https://www.cisa.gov/resources-tools/resources/product-security-bad-practices",
+      "reason": "CISA Product Security Bad Practices guidance.",
+      "related_question_ids": [
+        "RQ-004"
+      ],
+      "added_by_step": "step_7_conflict_resolution",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": "Q-005",
+      "result_source_ids": [
+        "S-097"
+      ],
+      "notes": ""
+    }
+  ]
+}

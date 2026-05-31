@@ -1,0 +1,41 @@
+{
+  "source_id": "S-053",
+  "title": "Claude SDD Toolkit Repository README",
+  "url": "https://github.com/tylerburleigh/claude-sdd-toolkit",
+  "canonical_url": "https://github.com/tylerburleigh/claude-sdd-toolkit",
+  "author_or_organization": "",
+  "publisher": "tylerburleigh",
+  "retrieved_at": "2026-05-31T12:12:36+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T121236Z",
+      "local_path": "sources/S-053/raw/SNAP-20260531T121236Z.html",
+      "content_hash": "sha256:1df5ecb4e9987046a1b2c6ac5e45b10b972de5e3462b9e96e692e90e5396f693",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T12:12:36+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T12:12:36+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/tylerburleigh/claude-sdd-toolkit",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:1df5ecb4e9987046a1b2c6ac5e45b10b972de5e3462b9e96e692e90e5396f693",
+  "locator": "repository tree",
+  "commit_sha": "1916846fbe3155405fcb193283332a250db18efb",
+  "immutable_url": "https://github.com/tylerburleigh/claude-sdd-toolkit/tree/1916846fbe3155405fcb193283332a250db18efb"
+}

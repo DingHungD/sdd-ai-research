@@ -1,0 +1,41 @@
+{
+  "source_id": "S-070",
+  "title": "Anthropic: Building Effective Agents",
+  "url": "https://www.anthropic.com/engineering/building-effective-agents",
+  "canonical_url": "https://www.anthropic.com/engineering/building-effective-agents",
+  "author_or_organization": "",
+  "publisher": "Anthropic",
+  "retrieved_at": "2026-05-31T13:39:55+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T133955Z",
+      "local_path": "sources/S-070/raw/SNAP-20260531T133955Z.html",
+      "content_hash": "sha256:7db7fb408d3fe3a08d3e41b99c43d601026d276b2c453e7d6efca7cbed341d7d",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T13:39:55+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T13:39:55+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "official_documentation",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://www.anthropic.com/engineering/building-effective-agents",
+  "supported_claim_ids": [
+    "C-008"
+  ],
+  "content_hash": "sha256:7db7fb408d3fe3a08d3e41b99c43d601026d276b2c453e7d6efca7cbed341d7d",
+  "locator": "local snapshot SNAP-20260531T133955Z"
+}

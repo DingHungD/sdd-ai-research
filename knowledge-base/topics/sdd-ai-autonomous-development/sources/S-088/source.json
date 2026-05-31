@@ -1,0 +1,43 @@
+{
+  "source_id": "S-088",
+  "title": "OWASP DevGuard",
+  "url": "https://owasp.org/www-project-devguard/",
+  "canonical_url": "https://owasp.org/www-project-devguard/",
+  "author_or_organization": "",
+  "publisher": "OWASP",
+  "retrieved_at": "2026-05-31T13:59:08+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T135908Z",
+      "local_path": "sources/S-088/raw/SNAP-20260531T135908Z.html",
+      "content_hash": "sha256:e5869342ac21b5738090cce94e30be62a9068f7e182106a5d0dd7568a4e8dc20",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T13:59:08+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T13:59:08+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "official_documentation",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://owasp.org/www-project-devguard/",
+  "supported_claim_ids": [
+    "C-006",
+    "C-011",
+    "C-012"
+  ],
+  "content_hash": "sha256:e5869342ac21b5738090cce94e30be62a9068f7e182106a5d0dd7568a4e8dc20",
+  "locator": "local snapshot SNAP-20260531T135908Z"
+}

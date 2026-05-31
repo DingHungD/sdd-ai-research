@@ -1,0 +1,41 @@
+{
+  "source_id": "S-011",
+  "title": "codex-spec Repository README",
+  "url": "https://github.com/shenli/codex-spec",
+  "canonical_url": "https://github.com/shenli/codex-spec",
+  "author_or_organization": "",
+  "publisher": "shenli",
+  "retrieved_at": "2026-05-31T11:38:56+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T113856Z",
+      "local_path": "sources/S-011/raw/SNAP-20260531T113856Z.html",
+      "content_hash": "sha256:06007ba8ac402033dbaa22c123ac43aaf136e039d5b9165d37cc08e567a689d1",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T11:38:56+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T11:38:56+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/shenli/codex-spec",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:06007ba8ac402033dbaa22c123ac43aaf136e039d5b9165d37cc08e567a689d1",
+  "locator": "repository tree",
+  "commit_sha": "7b585f0dbf75fb3523244586a1f77a183520fb43",
+  "immutable_url": "https://github.com/shenli/codex-spec/tree/7b585f0dbf75fb3523244586a1f77a183520fb43"
+}

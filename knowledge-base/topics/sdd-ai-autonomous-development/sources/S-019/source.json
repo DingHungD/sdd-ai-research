@@ -1,0 +1,43 @@
+{
+  "source_id": "S-019",
+  "title": "Taskmaster Repository README",
+  "url": "https://github.com/eyaltoledano/claude-task-master",
+  "canonical_url": "https://github.com/eyaltoledano/claude-task-master",
+  "author_or_organization": "",
+  "publisher": "eyaltoledano",
+  "retrieved_at": "2026-05-31T11:39:07+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T113907Z",
+      "local_path": "sources/S-019/raw/SNAP-20260531T113907Z.html",
+      "content_hash": "sha256:c5735012fd81bb680bce26a3448f79db736cbfc03d221836889938af98ab11e5",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T11:39:07+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T11:39:07+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/eyaltoledano/claude-task-master",
+  "supported_claim_ids": [
+    "C-004"
+  ],
+  "content_hash": "sha256:c5735012fd81bb680bce26a3448f79db736cbfc03d221836889938af98ab11e5",
+  "locator": "repository tree",
+  "commit_sha": "c0c98d367c55296bfe69e65680625b6db437af02",
+  "immutable_url": "https://github.com/eyaltoledano/claude-task-master/tree/c0c98d367c55296bfe69e65680625b6db437af02"
+}

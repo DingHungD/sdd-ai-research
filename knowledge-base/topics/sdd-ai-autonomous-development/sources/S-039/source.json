@@ -1,0 +1,43 @@
+{
+  "source_id": "S-039",
+  "title": "snarktank Ralph Repository README",
+  "url": "https://github.com/snarktank/ralph",
+  "canonical_url": "https://github.com/snarktank/ralph",
+  "author_or_organization": "",
+  "publisher": "snarktank",
+  "retrieved_at": "2026-05-31T12:12:18+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T121218Z",
+      "local_path": "sources/S-039/raw/SNAP-20260531T121218Z.html",
+      "content_hash": "sha256:6337ca9d1a85ebc96e496c5213337a3fa24c5ca80e09509abc0c58bc5fcd1598",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T12:12:18+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T12:12:18+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/snarktank/ralph",
+  "supported_claim_ids": [
+    "C-004"
+  ],
+  "content_hash": "sha256:6337ca9d1a85ebc96e496c5213337a3fa24c5ca80e09509abc0c58bc5fcd1598",
+  "locator": "repository tree",
+  "commit_sha": "6c53cb0b831ebe8739c6a003e22af14902d8b0b5",
+  "immutable_url": "https://github.com/snarktank/ralph/tree/6c53cb0b831ebe8739c6a003e22af14902d8b0b5"
+}

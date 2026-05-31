@@ -1,0 +1,56 @@
+{
+  "source_id": "S-043",
+  "snapshot_id": "SNAP-20260531T121223Z",
+  "summarized_at": "2026-05-31T14:01:29+00:00",
+  "document_purpose": "深度來源摘要：Worktrunk。",
+  "summary": "Worktrunk。為平行 AI agent 簡化 git worktree 操作。關鍵技術包括：git worktree, parallel agents, CLI。",
+  "categories": [
+    "workspace_isolation"
+  ],
+  "key_points": [
+    {
+      "text": "為平行 AI agent 簡化 git worktree 操作",
+      "locator": "README or official documentation overview",
+      "notes": "Agent-reviewed catalog summary; return to raw snapshot for publication claims."
+    }
+  ],
+  "keywords": [
+    "Worktrunk",
+    "workspace_isolation"
+  ],
+  "entities": [],
+  "limitations": [
+    "Repository 或官方文件可用於理解公開設計；production readiness 仍需安裝測試、維護狀態與 benchmark 驗證。"
+  ],
+  "potential_questions": [],
+  "role_in_ecosystem": "Worktrunk",
+  "key_features": [
+    "為平行 AI agent 簡化 git worktree 操作",
+    "架構層級：workspace_isolation",
+    "輸出應保存為可追溯 artifact，重要結論需回讀 raw snapshot。"
+  ],
+  "key_technologies": [
+    "git worktree",
+    "parallel agents",
+    "CLI"
+  ],
+  "best_for": [
+    "workspace_isolation",
+    "快速判斷此工具在整體 SDD 架構中的責任",
+    "作為試點工具選型與後續深挖入口"
+  ],
+  "research_value": "此來源用於理解 Worktrunk 在整體架構中的角色。重要結論仍需回讀本地 raw snapshot 與原始 URL。",
+  "architecture_fit": "位於 workspace isolation 層，讓多個 agent 可同時修改 code 而不互相污染。",
+  "workflow_outline": [
+    "為 task 建立 worktree",
+    "啟動 agent 或 terminal session",
+    "執行修改與檢查",
+    "review diff",
+    "合併或丟棄 workspace"
+  ],
+  "verification_questions": [
+    "worktree 生命週期如何管理？",
+    "merge conflict 如何偵測與處理？",
+    "刪除 workspace 前是否保留 artifact？"
+  ]
+}

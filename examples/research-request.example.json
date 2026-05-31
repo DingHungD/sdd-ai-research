@@ -1,0 +1,26 @@
+{
+  "topic": "台灣中小企業導入生成式 AI 的常見應用與風險",
+  "objective": "提供決策者規劃內部試點項目的基礎報告",
+  "questions": [
+    "哪些應用情境已有可驗證的實際案例？",
+    "導入時常見的資料安全、法規與營運風險有哪些？",
+    "適合優先驗證的試點項目有哪些？"
+  ],
+  "audience": "企業決策者",
+  "scope": {
+    "regions": ["TW"],
+    "languages": ["zh-TW", "en"],
+    "include": ["2024 年以後發布的資料", "政府、研究機構與可追溯案例"],
+    "exclude": ["無法追溯來源的行銷宣稱"]
+  },
+  "source_preferences": {
+    "preferred_domains": [],
+    "excluded_domains": [],
+    "minimum_evidence_tier": "C"
+  },
+  "output": {
+    "language": "zh-TW",
+    "format": ["markdown", "json"]
+  }
+}
+

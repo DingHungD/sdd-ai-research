@@ -1,0 +1,43 @@
+{
+  "source_id": "S-001",
+  "title": "GitHub Spec Kit Documentation",
+  "url": "https://github.github.com/spec-kit/index.html",
+  "canonical_url": "https://github.github.com/spec-kit/index.html",
+  "author_or_organization": "",
+  "publisher": "GitHub",
+  "retrieved_at": "2026-05-31T06:05:34+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T060534Z",
+      "local_path": "sources/S-001/raw/SNAP-20260531T060534Z.html",
+      "content_hash": "sha256:ca8a5391751b7de3d59c2581cb046b0494bd011a537541e63574363ed6933c4e",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T06:05:34+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T06:05:34+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "official_documentation",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.github.com/spec-kit/index.html",
+  "supported_claim_ids": [
+    "C-001",
+    "C-003",
+    "C-011"
+  ],
+  "content_hash": "sha256:ca8a5391751b7de3d59c2581cb046b0494bd011a537541e63574363ed6933c4e",
+  "locator": "local snapshot SNAP-20260531T060534Z"
+}

@@ -1,0 +1,72 @@
+{
+  "source_id": "S-008",
+  "snapshot_id": "SNAP-20260531T060635Z",
+  "summarized_at": "2026-05-31T14:01:28+00:00",
+  "document_purpose": "深度來源摘要：SpecDD framework。",
+  "summary": "SpecDD framework。以 `.sdd` 檔案保存 intent、architecture、behavior、boundary、task。關鍵技術包括：.sdd files, colocated specs, incremental adoption。",
+  "categories": [
+    "definition",
+    "direct_sdd",
+    "tooling",
+    "workflow"
+  ],
+  "key_points": [
+    {
+      "text": "SpecDD 使用本地且人可讀的 `.sdd` 檔案作為 humans 與 AI agents 的 shared source of truth。",
+      "locator": "#specdd"
+    },
+    {
+      "text": "SpecDD 文件表示可用於 greenfield，也可在既有專案逐步導入。",
+      "locator": "#specdd"
+    }
+  ],
+  "keywords": [
+    ".sdd",
+    "SpecDD",
+    "SpecDD framework",
+    "brownfield",
+    "direct_sdd",
+    "greenfield",
+    "shared source of truth"
+  ],
+  "entities": [
+    "SpecDD"
+  ],
+  "limitations": [
+    "Repository 或官方文件可用於理解公開設計；production readiness 仍需安裝測試、維護狀態與 benchmark 驗證。",
+    "官方文件是專案自述；需另行檢查 CLI、repository 與實際採用案例。"
+  ],
+  "potential_questions": [
+    "`.sdd` 檔案格式是否適合大型 repository？"
+  ],
+  "role_in_ecosystem": "SpecDD framework",
+  "key_features": [
+    "以 `.sdd` 檔案保存 intent、architecture、behavior、boundary、task",
+    "架構層級：direct_sdd",
+    "輸出應保存為可追溯 artifact，重要結論需回讀 raw snapshot。"
+  ],
+  "key_technologies": [
+    ".sdd files",
+    "colocated specs",
+    "incremental adoption"
+  ],
+  "best_for": [
+    "direct_sdd",
+    "快速判斷此工具在整體 SDD 架構中的責任",
+    "作為試點工具選型與後續深挖入口"
+  ],
+  "research_value": "此來源用於理解 SpecDD framework 在整體架構中的角色。重要結論仍需回讀本地 raw snapshot 與原始 URL。",
+  "architecture_fit": "位於 specification artifact 與 traceability 層，負責把需求轉成可演進、可檢查、可交給 agent 執行的狀態。",
+  "workflow_outline": [
+    "建立或匯入需求",
+    "產生 specification 與 design",
+    "拆解 tasks",
+    "執行或交付 coding agent",
+    "回寫驗證結果與 refinement"
+  ],
+  "verification_questions": [
+    "artifact 是否可版本控制並支援差異比較？",
+    "requirement、task、test 與 commit 是否能互相回指？",
+    "是否支援 approval、resume 與 brownfield 更新？"
+  ]
+}

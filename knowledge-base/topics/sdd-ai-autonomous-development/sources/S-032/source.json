@@ -1,0 +1,43 @@
+{
+  "source_id": "S-032",
+  "title": "spec-coding-mcp Repository README",
+  "url": "https://github.com/kevinlin/spec-coding-mcp",
+  "canonical_url": "https://github.com/kevinlin/spec-coding-mcp",
+  "author_or_organization": "",
+  "publisher": "kevinlin",
+  "retrieved_at": "2026-05-31T12:12:10+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T121210Z",
+      "local_path": "sources/S-032/raw/SNAP-20260531T121210Z.html",
+      "content_hash": "sha256:4eda42552290cc30ed85635da01ed563649c2e0621ba088606d527c33db9287d",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T12:12:10+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T12:12:10+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/kevinlin/spec-coding-mcp",
+  "supported_claim_ids": [
+    "C-001"
+  ],
+  "content_hash": "sha256:4eda42552290cc30ed85635da01ed563649c2e0621ba088606d527c33db9287d",
+  "locator": "repository tree",
+  "commit_sha": "403fb8eebd2de186d7e348fd37cc263b628ad20a",
+  "immutable_url": "https://github.com/kevinlin/spec-coding-mcp/tree/403fb8eebd2de186d7e348fd37cc263b628ad20a"
+}

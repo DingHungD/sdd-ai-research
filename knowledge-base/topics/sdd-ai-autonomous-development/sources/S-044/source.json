@@ -1,0 +1,41 @@
+{
+  "source_id": "S-044",
+  "title": "workmux Repository README",
+  "url": "https://github.com/raine/workmux",
+  "canonical_url": "https://github.com/raine/workmux",
+  "author_or_organization": "",
+  "publisher": "raine",
+  "retrieved_at": "2026-05-31T12:12:25+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T121225Z",
+      "local_path": "sources/S-044/raw/SNAP-20260531T121225Z.html",
+      "content_hash": "sha256:e8f41c9428930ac8511ff58ccc20b9d3a3a2ce2c567f61d1bc749ee8ed73efbb",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T12:12:25+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T12:12:25+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/raine/workmux",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:e8f41c9428930ac8511ff58ccc20b9d3a3a2ce2c567f61d1bc749ee8ed73efbb",
+  "locator": "repository tree",
+  "commit_sha": "d3f7930bfa9026aecdca12509bee2c93553badf6",
+  "immutable_url": "https://github.com/raine/workmux/tree/d3f7930bfa9026aecdca12509bee2c93553badf6"
+}

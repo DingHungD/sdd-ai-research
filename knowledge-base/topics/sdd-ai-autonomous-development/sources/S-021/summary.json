@@ -1,0 +1,82 @@
+{
+  "source_id": "S-021",
+  "snapshot_id": "SNAP-20260531T113910Z",
+  "summarized_at": "2026-05-31T14:01:29+00:00",
+  "document_purpose": "深度來源摘要：OpenAI Symphony service specification。",
+  "summary": "OpenAI Symphony service specification。scheduler、workspace manager、agent runner、retry、reconciliation、observability。關鍵技術包括：scheduler, retries, reconciliation, observability, policy boundaries。",
+  "categories": [
+    "execution_runtime",
+    "isolation",
+    "observability",
+    "orchestration",
+    "retry",
+    "scheduler"
+  ],
+  "key_points": [
+    {
+      "text": "服務規格包含 scheduler、workspace manager、agent runner 與 issue tracker client。",
+      "locator": "SPEC.md architecture"
+    },
+    {
+      "text": "規格包含 retry、reconciliation 與 observability 行為。",
+      "locator": "SPEC.md lifecycle"
+    },
+    {
+      "text": "workspace isolation 與 policy boundary 是長時間執行的基礎。",
+      "locator": "SPEC.md workspace and policy sections"
+    }
+  ],
+  "keywords": [
+    "OpenAI Symphony service specification",
+    "execution_runtime",
+    "observability",
+    "policy",
+    "reconciliation",
+    "retry",
+    "scheduler",
+    "workspace manager"
+  ],
+  "entities": [
+    "OpenAI",
+    "Symphony"
+  ],
+  "limitations": [
+    "Repository 或官方文件可用於理解公開設計；production readiness 仍需安裝測試、維護狀態與 benchmark 驗證。",
+    "SPEC.md 描述理想服務行為；實際部署仍需安全控制。"
+  ],
+  "potential_questions": [
+    "哪些失敗可自動 retry，哪些需要人工 escalation？"
+  ],
+  "role_in_ecosystem": "OpenAI Symphony service specification",
+  "key_features": [
+    "scheduler、workspace manager、agent runner、retry、reconciliation、observability",
+    "架構層級：execution_runtime",
+    "輸出應保存為可追溯 artifact，重要結論需回讀 raw snapshot。"
+  ],
+  "key_technologies": [
+    "scheduler",
+    "retries",
+    "reconciliation",
+    "observability",
+    "policy boundaries"
+  ],
+  "best_for": [
+    "execution_runtime",
+    "快速判斷此工具在整體 SDD 架構中的責任",
+    "作為試點工具選型與後續深挖入口"
+  ],
+  "research_value": "此來源用於理解 OpenAI Symphony service specification 在整體架構中的角色。重要結論仍需回讀本地 raw snapshot 與原始 URL。",
+  "architecture_fit": "位於 execution runtime 層，管理長時間 agent session、workspace、scheduler、retry 與 observability。",
+  "workflow_outline": [
+    "取得 issue 或 task",
+    "建立隔離 workspace",
+    "啟動 agent runtime",
+    "監控 log 與狀態",
+    "完成、retry 或 escalation"
+  ],
+  "verification_questions": [
+    "workspace 是否真正隔離？",
+    "retry 是否具冪等性？",
+    "log、成本、權限與錯誤是否可觀測？"
+  ]
+}

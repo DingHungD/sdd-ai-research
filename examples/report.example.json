@@ -1,0 +1,129 @@
+{
+  "report_id": "R-EXAMPLE-001",
+  "version": "0.2.0",
+  "title": "最小可信報告範例",
+  "generated_at": "2026-05-31T12:00:00+08:00",
+  "data_cutoff": "2026-05-31T11:30:00+08:00",
+  "overall_confidence": "medium",
+  "quality_score": 90,
+  "structural_score": 100,
+  "quality_metrics": {
+    "quality_score": 90,
+    "structural_score": 100,
+    "critical_claim_coverage": "30/30",
+    "source_quality": "25/25",
+    "traceability": "20/20",
+    "limitations_and_resolutions": "5/15",
+    "freshness_and_reproducibility": "10/10",
+    "notes": "1 筆來源；1 筆主要來源；1 筆 A/B 層級來源；0 個 open resolution items。"
+  },
+  "executive_summary": "此檔案展示可通過一致性檢查的最小報告結構，並刻意保留限制處理尚未滿分的情況。",
+  "questions": [
+    "可信報告至少需要保存哪些可追溯資訊？"
+  ],
+  "scope": {
+    "audience": "研究流程維護者",
+    "regions": ["global"],
+    "languages": ["zh-TW"],
+    "date_range": "固定版本規格",
+    "include": ["可追溯性欄位", "雙向 backlinks", "品質分數"],
+    "exclude": ["完整領域研究內容"]
+  },
+  "methodology": "依據本 repo 的可信報告規格整理必要欄位。",
+  "claims": [
+    {
+      "claim_id": "C-001",
+      "text": "可信報告的關鍵主張需要連結至可追溯來源。",
+      "type": "fact",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "規格文件明確定義此發布門檻。",
+      "supporting_source_ids": ["S-001"],
+      "opposing_source_ids": [],
+      "notes": ""
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "S-001",
+      "title": "可信研究報告規格",
+      "url": "https://example.local/docs/trusted-report-spec",
+      "canonical_url": "https://example.local/docs/trusted-report-spec",
+      "immutable_url": "https://example.local/docs/trusted-report-spec/0.2.0",
+      "version": "0.2.0",
+      "locator": "可追溯性規則",
+      "content_hash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+      "author_or_organization": "Project maintainers",
+      "publisher": "Local project",
+      "published_at": "2026-05-31T12:00:00+08:00",
+      "updated_at": null,
+      "retrieved_at": "2026-05-31T12:00:00+08:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T040000Z",
+          "captured_at": "2026-05-31T12:00:00+08:00",
+          "local_path": "sources/S-001/raw/SNAP-20260531T040000Z.md",
+          "content_hash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "freshness": {
+        "mode": "stable",
+        "recheck_after": null,
+        "reason": "範例使用固定版本規格。"
+      },
+      "source_type": "official_documentation",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "high",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "high",
+        "notes": "此來源用於示範本 repo 的契約規則。"
+      },
+      "conflict_of_interest": "此來源由規格維護者撰寫。",
+      "evidence_chain": "local-spec",
+      "supported_claim_ids": ["C-001"]
+    }
+  ],
+  "conflicts": [],
+  "unknowns": [],
+  "resolution_matrix": {
+    "summary": "此最小範例沒有衝突或未知事項。",
+    "conflict_resolutions": [],
+    "unknown_resolutions": []
+  },
+  "limitations": [
+    "此檔案只示範資料結構，不代表完整研究內容。"
+  ],
+  "conclusion": "報告結構可用於後續自動化。",
+  "recommendation_sections": {
+    "implementability": {
+      "summary": "最小範例不提供實作建議。",
+      "items": []
+    },
+    "open_source_options": {
+      "summary": "最小範例不提供工具選型。",
+      "single_tool_recommendations": {
+        "summary": "",
+        "items": []
+      },
+      "multi_tool_recommendations": {
+        "summary": "",
+        "items": []
+      }
+    },
+    "future_directions": {
+      "summary": "最小範例不提供未來方向。",
+      "items": []
+    }
+  },
+  "recommendations": [
+    "實際研究時應以可公開追溯的網路來源取代示範網址。"
+  ],
+  "changelog": [
+    "0.2.0: 補齊 scope、quality metrics、resolution matrix 與 source reproducibility metadata。"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "source_id": "S-018",
+  "title": "Kata Repository README",
+  "url": "https://github.com/gannonh/kata",
+  "canonical_url": "https://github.com/gannonh/kata",
+  "author_or_organization": "",
+  "publisher": "gannonh",
+  "retrieved_at": "2026-05-31T11:39:06+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T113906Z",
+      "local_path": "sources/S-018/raw/SNAP-20260531T113906Z.html",
+      "content_hash": "sha256:482d4c88371bd4c469bbc8ef875d3eaa4d61725e821ffe7217ca0ccb8d2fed84",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T11:39:06+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T11:39:06+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/gannonh/kata",
+  "supported_claim_ids": [
+    "C-004",
+    "C-005"
+  ],
+  "content_hash": "sha256:482d4c88371bd4c469bbc8ef875d3eaa4d61725e821ffe7217ca0ccb8d2fed84",
+  "locator": "repository tree",
+  "commit_sha": "4a592c90c7518375e7f64c9e8b74558ec775168f",
+  "immutable_url": "https://github.com/gannonh/kata/tree/4a592c90c7518375e7f64c9e8b74558ec775168f"
+}

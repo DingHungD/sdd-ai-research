@@ -1,0 +1,57 @@
+{
+  "source_id": "S-035",
+  "snapshot_id": "SNAP-20260531T121214Z",
+  "summarized_at": "2026-05-31T14:01:29+00:00",
+  "document_purpose": "深度來源摘要：Flow Next。",
+  "summary": "Flow Next。plan-first、dependency task graph、worker subagent、Ralph mode、cross-model review。關鍵技術包括：in-repo state, task graph, re-anchoring, review gates。",
+  "categories": [
+    "autonomous_loop"
+  ],
+  "key_points": [
+    {
+      "text": "plan-first、dependency task graph、worker subagent、Ralph mode、cross-model review",
+      "locator": "README or official documentation overview",
+      "notes": "Agent-reviewed catalog summary; return to raw snapshot for publication claims."
+    }
+  ],
+  "keywords": [
+    "Flow Next",
+    "autonomous_loop"
+  ],
+  "entities": [],
+  "limitations": [
+    "Repository 或官方文件可用於理解公開設計；production readiness 仍需安裝測試、維護狀態與 benchmark 驗證。"
+  ],
+  "potential_questions": [],
+  "role_in_ecosystem": "Flow Next",
+  "key_features": [
+    "plan-first、dependency task graph、worker subagent、Ralph mode、cross-model review",
+    "架構層級：autonomous_loop",
+    "輸出應保存為可追溯 artifact，重要結論需回讀 raw snapshot。"
+  ],
+  "key_technologies": [
+    "in-repo state",
+    "task graph",
+    "re-anchoring",
+    "review gates"
+  ],
+  "best_for": [
+    "autonomous_loop",
+    "快速判斷此工具在整體 SDD 架構中的責任",
+    "作為試點工具選型與後續深挖入口"
+  ],
+  "research_value": "此來源用於理解 Flow Next 在整體架構中的角色。重要結論仍需回讀本地 raw snapshot 與原始 URL。",
+  "architecture_fit": "位於 autonomous loop 層，透過 iteration memory、completion condition 與驗證讓 agent 連續工作。",
+  "workflow_outline": [
+    "載入 PRD、task 或 prompt",
+    "執行單一 iteration",
+    "跑檢查並保存 commit 或 progress",
+    "判斷 completion condition",
+    "未完成則進入下一輪或 escalation"
+  ],
+  "verification_questions": [
+    "是否有 max iteration 與停止條件？",
+    "跨 iteration memory 保存在哪裡？",
+    "無法通過驗證時何時 escalation？"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "source_id": "S-024",
+  "snapshot_id": "SNAP-20260531T113913Z",
+  "summarized_at": "2026-05-31T14:01:29+00:00",
+  "document_purpose": "深度來源摘要：Spec Kit Agents 預印本。",
+  "summary": "Spec Kit Agents 預印本。context-grounded agentic workflow 研究方向。關鍵技術包括：context grounding, agent workflow evaluation。",
+  "categories": [
+    "context_engineering",
+    "evaluation",
+    "research"
+  ],
+  "key_points": [
+    {
+      "text": "研究主題聚焦於 context-grounded agentic workflow。",
+      "locator": "Abstract"
+    },
+    {
+      "text": "來源是 arXiv 預印本。",
+      "locator": "Abstract page metadata"
+    }
+  ],
+  "keywords": [
+    "Spec Kit Agents",
+    "Spec Kit Agents 預印本",
+    "agentic workflow",
+    "arXiv",
+    "context-grounded",
+    "research"
+  ],
+  "entities": [
+    "arXiv"
+  ],
+  "limitations": [
+    "Repository 或官方文件可用於理解公開設計；production readiness 仍需安裝測試、維護狀態與 benchmark 驗證。",
+    "預印本尚不能視為已同行評審共識；需閱讀全文確認實驗設計。"
+  ],
+  "potential_questions": [
+    "實驗是否衡量正確性、成本與人工介入？"
+  ],
+  "role_in_ecosystem": "Spec Kit Agents 預印本",
+  "key_features": [
+    "context-grounded agentic workflow 研究方向",
+    "架構層級：research",
+    "輸出應保存為可追溯 artifact，重要結論需回讀 raw snapshot。"
+  ],
+  "key_technologies": [
+    "context grounding",
+    "agent workflow evaluation"
+  ],
+  "best_for": [
+    "research",
+    "快速判斷此工具在整體 SDD 架構中的責任",
+    "作為試點工具選型與後續深挖入口"
+  ],
+  "research_value": "此來源用於理解 Spec Kit Agents 預印本 在整體架構中的角色。重要結論仍需回讀本地 raw snapshot 與原始 URL。",
+  "architecture_fit": "位於 SDD AI 自動開發生態中的輔助層。使用時應先確認它解決的是規格、context、task、runtime、整合或治理問題。",
+  "workflow_outline": [
+    "確認輸入 artifact",
+    "執行工具核心能力",
+    "保存輸出與狀態",
+    "交給下一層或人工覆核"
+  ],
+  "verification_questions": [
+    "此工具解決哪一層問題？",
+    "輸出是否可追溯與版本化？",
+    "失敗時是否有明確 escalation？"
+  ]
+}

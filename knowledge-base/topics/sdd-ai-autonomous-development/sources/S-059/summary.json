@@ -1,0 +1,56 @@
+{
+  "source_id": "S-059",
+  "snapshot_id": "SNAP-20260531T133941Z",
+  "summarized_at": "2026-05-31T14:01:29+00:00",
+  "document_purpose": "深度來源摘要：Thoughtworks：Unpacking SDD。",
+  "summary": "Thoughtworks：Unpacking SDD。比較 SDD 的多種新舊解讀，說明 executable specifications 與 AI coding workflows 的差異。關鍵技術包括：SDD taxonomy, executable specs, AI coding agents。",
+  "categories": [
+    "article"
+  ],
+  "key_points": [
+    {
+      "text": "比較 SDD 的多種新舊解讀，說明 executable specifications 與 AI coding workflows 的差異",
+      "locator": "README or official documentation overview",
+      "notes": "Agent-reviewed catalog summary; return to raw snapshot for publication claims."
+    }
+  ],
+  "keywords": [
+    "Thoughtworks：Unpacking SDD",
+    "article"
+  ],
+  "entities": [],
+  "limitations": [
+    "Repository 或官方文件可用於理解公開設計；production readiness 仍需安裝測試、維護狀態與 benchmark 驗證。"
+  ],
+  "potential_questions": [],
+  "role_in_ecosystem": "Thoughtworks：Unpacking SDD",
+  "architecture_fit": "位於方法論與採用經驗層，用來補足工具文件未涵蓋的實作觀點、 trade-off 與導入風險。",
+  "workflow_outline": [
+    "辨識文章主張與適用範圍",
+    "拆分直接事實、作者觀點與案例",
+    "對照官方工具文件",
+    "保留可驗證的 adoption insight",
+    "將未驗證主張標記為限制"
+  ],
+  "key_features": [
+    "比較 SDD 的多種新舊解讀，說明 executable specifications 與 AI coding workflows 的差異",
+    "架構層級：article",
+    "輸出應保存為可追溯 artifact，重要結論需回讀 raw snapshot。"
+  ],
+  "key_technologies": [
+    "SDD taxonomy",
+    "executable specs",
+    "AI coding agents"
+  ],
+  "best_for": [
+    "article",
+    "快速判斷此工具在整體 SDD 架構中的責任",
+    "作為試點工具選型與後續深挖入口"
+  ],
+  "research_value": "此來源用於理解 Thoughtworks：Unpacking SDD 在整體架構中的角色。重要結論仍需回讀本地 raw snapshot 與原始 URL。",
+  "verification_questions": [
+    "作者是否為官方或具編輯審查來源？",
+    "文章主張是否有案例或數據支持？",
+    "哪些結論只能作為採用假設？"
+  ]
+}

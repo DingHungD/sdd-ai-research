@@ -1,0 +1,147 @@
+{
+  "report_id": "sdd-ai-autonomous-development-20260531-v4",
+  "version": "4.0.0",
+  "title": "根據 SDD 使用 AI 全自動開發：78 來源技術地圖、文章脈絡與落地架構",
+  "generated_at": "2026-05-31T14:00:00Z",
+  "data_cutoff": "2026-05-31T13:45:00Z",
+  "overall_confidence": "medium",
+  "quality_score": 0,
+  "minimum_primary_sources": 75,
+  "executive_summary": "本報告以 78 個獨立主要來源研究 SDD 與 AI 自動開發，包括工具 repository、官方文件、service specification、工程文章、企業採用文章、案例與 benchmark。跨來源結論維持一致：可靠自動開發不是單一 coding agent，而是由 specification artifact、traceability、repository context、task graph、scheduler、isolated workspace、verifier、security policy、observability、retry 與 escalation 組成。新增文章支線補強三點：第一，enterprise 採用的主要缺口是 brownfield、現有 workflow 整合與 spec 維護；第二，context engineering 是規格之外的必要能力；第三，benchmark 必須涵蓋 investigation、validation、maintenance、test generation 與 context retrieval，而不是只看 patch generation。現階段合理目標仍是 bounded autonomy。",
+  "questions": [
+    "SDD 與 AI 全自動開發的完整技術架構是什麼？",
+    "工具、文章、案例與 benchmark 如何互相補證？",
+    "enterprise adoption 的主要缺口是什麼？",
+    "如何定義可量測的 bounded autonomy？"
+  ],
+  "methodology": "使用追加式 crawl queue 保存 78 個獨立主要來源，不把文件內 supporting reference 算入數量。來源分為工具與官方文件、文章與案例、研究與 benchmark。每份來源有 raw snapshot、metadata、深度 summary.md 與 catalog 項目。文章用於補足採用經驗與風險，不凌駕於官方技術文件或原始研究。",
+  "claims": [
+    {
+      "claim_id": "C-001",
+      "text": "SDD 的共通核心是 specification 作為版本化、可演進、可驗證的主要 artifact；code、task、test 與變更紀錄需能回指需求。",
+      "type": "fact",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "官方工具、文章與研究方向一致。",
+      "supporting_source_ids": ["S-001", "S-004", "S-006", "S-008", "S-010", "S-013", "S-027", "S-028", "S-032", "S-033", "S-053", "S-056", "S-058", "S-059"],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-002",
+      "text": "穩定 SDD workflow 通常為 clarify 或 requirements -> design 或 plan -> tasks -> implementation -> verification；不同工具差異在 artifact schema、approval、context 與 execution automation。",
+      "type": "fact",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "多個工具、官方文件與實務文章呈現相同骨架。",
+      "supporting_source_ids": ["S-001", "S-003", "S-007", "S-010", "S-014", "S-023", "S-027", "S-032", "S-033", "S-052", "S-053", "S-057", "S-063", "S-073"],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-003",
+      "text": "enterprise 採用的主要問題不是能否生成 code，而是 brownfield 導入、現有 workflow 整合、spec 維護、context engineering、review-centric 工作方式與安全治理。",
+      "type": "inference",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "Thoughtworks、InfoQ、Tessl、Bito、AWS 案例與多個工具限制互相補證。",
+      "supporting_source_ids": ["S-058", "S-063", "S-065", "S-067", "S-068", "S-077", "S-078"],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-004",
+      "text": "context engineering 是 SDD 的必要配套。大型 repository 需要 code graph、semantic retrieval、memory、compression 與 context selection；僅靠 monolithic spec 不足以穩定支援長時間 agent。",
+      "type": "inference",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "OpenLore、Kata、GSD、Anthropic、Martin Fowler site 文章與 ContextBench 提供互補證據。",
+      "supporting_source_ids": ["S-017", "S-018", "S-029", "S-069", "S-071", "S-074", "S-077", "S-078"],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-005",
+      "text": "長時間執行需要持久 task graph、iteration memory、workspace isolation、scheduler、retry、reconciliation 與 observability；Ralph loop 只是一部分。",
+      "type": "fact",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "Taskmaster、Flow Next、Ralph variants、Symphony、Rover、Worktrunk、workmux、Codexia 與 Tessl Symphony 解讀共同支持。",
+      "supporting_source_ids": ["S-019", "S-021", "S-022", "S-034", "S-035", "S-037", "S-038", "S-039", "S-043", "S-044", "S-045", "S-066"],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-006",
+      "text": "驗證層必須超過 test pass：需要 acceptance criteria、traceability、static analysis、security policy、drift detection、review 與 escalation。",
+      "type": "recommendation",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "Constitutional SDD、Threatspec、OpenLore、MoAI-ADK、cc-sdd、AWS GovTech 案例與 executable architecture 文章共同支持。",
+      "supporting_source_ids": ["S-025", "S-027", "S-028", "S-029", "S-055", "S-063", "S-068"],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-007",
+      "text": "評估 coding agent 時不能只看 bug patch benchmark。應加入 context retrieval、investigation、validation、maintenance、test generation、多語言與人工介入成本。",
+      "type": "recommendation",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "ContextBench、OmniCode、SWE Atlas 與 Loadsys 指標文章提供互補評估面。",
+      "supporting_source_ids": ["S-072", "S-074", "S-075", "S-078"],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-008",
+      "text": "多 agent 架構應先區分 deterministic workflow 與 autonomous agent。可預測步驟使用 workflow；模糊探索才使用具自主性的 agent，並以 evaluator、review 或 policy gate 收斂。",
+      "type": "recommendation",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "Anthropic 官方 agent 指南與多 agent 工具架構一致。",
+      "supporting_source_ids": ["S-040", "S-041", "S-042", "S-047", "S-070"],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-009",
+      "text": "現階段應採 bounded autonomy：讓 agent 自動完成明確且可驗證的工作；模糊需求、架構變更、安全風險、無法驗證結果與發布決策進入人工或政策 escalation。",
+      "type": "recommendation",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "工具設計、案例與文章均反覆出現 approval、human oversight、review 與 escalation。",
+      "supporting_source_ids": ["S-002", "S-005", "S-010", "S-021", "S-023", "S-027", "S-033", "S-034", "S-063", "S-067", "S-070", "S-073"],
+      "opposing_source_ids": [],
+      "notes": ""
+    }
+  ],
+  "source_ids": ["S-001", "S-002", "S-003", "S-004", "S-005", "S-006", "S-007", "S-008", "S-009", "S-010", "S-011", "S-012", "S-013", "S-014", "S-015", "S-016", "S-017", "S-018", "S-019", "S-020", "S-021", "S-022", "S-023", "S-024", "S-025", "S-026", "S-027", "S-028", "S-029", "S-030", "S-031", "S-032", "S-033", "S-034", "S-035", "S-036", "S-037", "S-038", "S-039", "S-040", "S-041", "S-042", "S-043", "S-044", "S-045", "S-046", "S-047", "S-048", "S-049", "S-050", "S-051", "S-052", "S-053", "S-054", "S-055", "S-056", "S-057", "S-058", "S-059", "S-060", "S-061", "S-062", "S-063", "S-064", "S-065", "S-066", "S-067", "S-068", "S-069", "S-070", "S-071", "S-072", "S-073", "S-074", "S-075", "S-076", "S-077", "S-078"],
+  "conflicts": [
+    "SDD 沒有單一標準，從輕量 Markdown 到 executable architecture 都存在。",
+    "文章對 SDD 採用前景的態度不同：部分強調效率，部分強調 brownfield、security、drift 與維護成本。",
+    "benchmark 仍不足以完整代表企業軟體交付。"
+  ],
+  "unknowns": [
+    "缺少同一 repository、模型與需求下的跨工具獨立 benchmark。",
+    "大型 brownfield 的 spec extraction、context retrieval 與 drift detection 成本仍需試點量測。",
+    "安全政策與人工 escalation 最佳邊界仍依領域而異。"
+  ],
+  "limitations": [
+    "78 個來源中包含工具自述、官方文章、編輯文章、案例與 benchmark；不同來源證據權重不同。",
+    "Red Hat 兩篇文章因 HTTP 403 未保存，OpenAI SWE-bench Verified 頁面因本機 SSL 憑證錯誤未保存；失敗紀錄保留於 queue。",
+    "文章適合補充採用脈絡，不應取代官方技術文件與端到端測試。",
+    "本次未安裝執行全部工具。"
+  ],
+  "conclusion": "SDD AI 全自動開發應以分層系統實作：specification artifact、traceability、repository context、task graph、workflow 與 agent orchestration、isolated runtime、verifier、security policy、observability 與 escalation。文章與 benchmark 擴充後，最重要的修正是：不要把自動化程度誤認為可靠性。可行路線是 bounded autonomy，透過量測逐步擴張自動放行範圍。",
+  "recommendations": [
+    "將 `sources/CATALOG.md` 作為研究入口，依技術層與來源類型選擇深挖材料。",
+    "試點至少量測 first-pass verification rate、人工介入次數、iteration cycles、context provision time、retry、返工率與安全事件。",
+    "工具組合建議從 OpenSpec 或 Spec Kit、OpenLore 或 Kata、Taskmaster 或 Flow Next、Symphony 或 Rover、CI verifier 與 Threatspec 開始。",
+    "對 workflow 與 agent 分別設計：可預測步驟固定化，模糊探索步驟保留 agent，但必須配置 evaluator 與 escalation。"
+  ],
+  "changelog": [
+    "4.0.0: 擴充至 78 個獨立來源，新增文章、案例與 benchmark 支線。"
+  ]
+}
+

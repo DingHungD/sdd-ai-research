@@ -1,0 +1,41 @@
+{
+  "source_id": "S-072",
+  "title": "Scale AI: SWE Atlas is Complete",
+  "url": "https://scale.com/blog/swe-atlas-complete",
+  "canonical_url": "https://scale.com/blog/swe-atlas-complete",
+  "author_or_organization": "",
+  "publisher": "Scale AI",
+  "retrieved_at": "2026-05-31T13:40:05+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T134005Z",
+      "local_path": "sources/S-072/raw/SNAP-20260531T134005Z.html",
+      "content_hash": "sha256:d00cb9a3ae54865d06ebed3b5e92fd8a4e256626144cb07d8843d45e8db8896a",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T13:40:05+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T13:40:05+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "professional_article",
+  "evidence_tier": "C",
+  "quality": {
+    "authority": "medium",
+    "directness": "medium",
+    "recency": "medium",
+    "transparency": "medium",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://scale.com/blog/swe-atlas-complete",
+  "supported_claim_ids": [
+    "C-009"
+  ],
+  "content_hash": "sha256:d00cb9a3ae54865d06ebed3b5e92fd8a4e256626144cb07d8843d45e8db8896a",
+  "locator": "local snapshot SNAP-20260531T134005Z"
+}

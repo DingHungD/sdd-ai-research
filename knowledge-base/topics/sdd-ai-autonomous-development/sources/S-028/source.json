@@ -1,0 +1,41 @@
+{
+  "source_id": "S-028",
+  "title": "MoAI-ADK Repository README",
+  "url": "https://github.com/modu-ai/moai-adk",
+  "canonical_url": "https://github.com/modu-ai/moai-adk",
+  "author_or_organization": "",
+  "publisher": "modu-ai",
+  "retrieved_at": "2026-05-31T12:12:05+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T121205Z",
+      "local_path": "sources/S-028/raw/SNAP-20260531T121205Z.html",
+      "content_hash": "sha256:7514b556a692904949accfc8b234005b9642f964cefb7d918106b8c9fc9803fc",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T12:12:05+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T12:12:05+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/modu-ai/moai-adk",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:7514b556a692904949accfc8b234005b9642f964cefb7d918106b8c9fc9803fc",
+  "locator": "repository tree",
+  "commit_sha": "4e8074e019aa047f0c6e154829d619be20cf8620",
+  "immutable_url": "https://github.com/modu-ai/moai-adk/tree/4e8074e019aa047f0c6e154829d619be20cf8620"
+}

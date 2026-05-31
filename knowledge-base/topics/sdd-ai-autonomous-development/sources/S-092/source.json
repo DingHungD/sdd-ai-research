@@ -1,0 +1,41 @@
+{
+  "source_id": "S-092",
+  "title": "Scale AI SWE-Bench Pro Article",
+  "url": "https://scale.com/blog/swe-bench-pro",
+  "canonical_url": "https://scale.com/blog/swe-bench-pro",
+  "author_or_organization": "",
+  "publisher": "Scale AI",
+  "retrieved_at": "2026-05-31T13:59:14+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T135914Z",
+      "local_path": "sources/S-092/raw/SNAP-20260531T135914Z.html",
+      "content_hash": "sha256:ceeac953cb31e2d1406fbfe7ecbf580f821080c5a3ae9ad8f5dd1399354e8f4c",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T13:59:14+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T13:59:14+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "professional_article",
+  "evidence_tier": "C",
+  "quality": {
+    "authority": "medium",
+    "directness": "medium",
+    "recency": "medium",
+    "transparency": "medium",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://scale.com/blog/swe-bench-pro",
+  "supported_claim_ids": [
+    "C-009"
+  ],
+  "content_hash": "sha256:ceeac953cb31e2d1406fbfe7ecbf580f821080c5a3ae9ad8f5dd1399354e8f4c",
+  "locator": "local snapshot SNAP-20260531T135914Z"
+}

@@ -1,0 +1,42 @@
+{
+  "source_id": "S-097",
+  "title": "CISA Product Security Bad Practices",
+  "url": "https://www.cisa.gov/resources-tools/resources/product-security-bad-practices",
+  "canonical_url": "https://www.cisa.gov/resources-tools/resources/product-security-bad-practices",
+  "author_or_organization": "",
+  "publisher": "CISA",
+  "retrieved_at": "2026-05-31T13:59:17+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T135917Z",
+      "local_path": "sources/S-097/raw/SNAP-20260531T135917Z.html",
+      "content_hash": "sha256:db60da09c9d430ab7a6d1238a8285028bea137ab3329764b5ee0892a3365cad6",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T13:59:17+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T13:59:17+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "official_documentation",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://www.cisa.gov/resources-tools/resources/product-security-bad-practices",
+  "supported_claim_ids": [
+    "C-006",
+    "C-008"
+  ],
+  "content_hash": "sha256:db60da09c9d430ab7a6d1238a8285028bea137ab3329764b5ee0892a3365cad6",
+  "locator": "local snapshot SNAP-20260531T135917Z"
+}

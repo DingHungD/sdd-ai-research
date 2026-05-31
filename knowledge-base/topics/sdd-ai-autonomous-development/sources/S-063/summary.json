@@ -1,0 +1,58 @@
+{
+  "source_id": "S-063",
+  "snapshot_id": "SNAP-20260531T133944Z",
+  "summarized_at": "2026-05-31T14:01:29+00:00",
+  "document_purpose": "深度來源摘要：AWS GovTech Kiro 案例。",
+  "summary": "AWS GovTech Kiro 案例。GovTech 案例使用 steering files 保存 compliance、security 與 accessibility，並以 hooks 驗證。關鍵技術包括：GovTech, compliance, steering, hooks, validation。",
+  "categories": [
+    "case_study"
+  ],
+  "key_points": [
+    {
+      "text": "GovTech 案例使用 steering files 保存 compliance、security 與 accessibility，並以 hooks 驗證",
+      "locator": "README or official documentation overview",
+      "notes": "Agent-reviewed catalog summary; return to raw snapshot for publication claims."
+    }
+  ],
+  "keywords": [
+    "AWS GovTech Kiro 案例",
+    "case_study"
+  ],
+  "entities": [],
+  "limitations": [
+    "Repository 或官方文件可用於理解公開設計；production readiness 仍需安裝測試、維護狀態與 benchmark 驗證。"
+  ],
+  "potential_questions": [],
+  "role_in_ecosystem": "AWS GovTech Kiro 案例",
+  "architecture_fit": "位於案例層，用來理解 SDD 在特定組織、法規或流程限制中的實際使用方式。",
+  "workflow_outline": [
+    "確認案例背景",
+    "辨識使用的 spec 與驗證機制",
+    "記錄人工介入點",
+    "拆出可移植做法",
+    "標記不可外推部分"
+  ],
+  "key_features": [
+    "GovTech 案例使用 steering files 保存 compliance、security 與 accessibility，並以 hooks 驗證",
+    "架構層級：case_study",
+    "輸出應保存為可追溯 artifact，重要結論需回讀 raw snapshot。"
+  ],
+  "key_technologies": [
+    "GovTech",
+    "compliance",
+    "steering",
+    "hooks",
+    "validation"
+  ],
+  "best_for": [
+    "case_study",
+    "快速判斷此工具在整體 SDD 架構中的責任",
+    "作為試點工具選型與後續深挖入口"
+  ],
+  "research_value": "此來源用於理解 AWS GovTech Kiro 案例 在整體架構中的角色。重要結論仍需回讀本地 raw snapshot 與原始 URL。",
+  "verification_questions": [
+    "案例是否能外推到其他團隊？",
+    "成功條件與限制是否揭露？",
+    "是否量測品質、速度與人工成本？"
+  ]
+}

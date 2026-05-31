@@ -1,0 +1,57 @@
+{
+  "source_id": "S-042",
+  "snapshot_id": "SNAP-20260531T121222Z",
+  "summarized_at": "2026-05-31T14:01:29+00:00",
+  "document_purpose": "深度來源摘要：Maestro Orchestrate。",
+  "summary": "Maestro Orchestrate。跨 Gemini、Claude、Codex、Qwen 的 staged workflow、specialist delegation、session state。關鍵技術包括：multi-runtime, design-plan-execute, quality gate, persistent sessions。",
+  "categories": [
+    "multi_agent"
+  ],
+  "key_points": [
+    {
+      "text": "跨 Gemini、Claude、Codex、Qwen 的 staged workflow、specialist delegation、session state",
+      "locator": "README or official documentation overview",
+      "notes": "Agent-reviewed catalog summary; return to raw snapshot for publication claims."
+    }
+  ],
+  "keywords": [
+    "Maestro Orchestrate",
+    "multi_agent"
+  ],
+  "entities": [],
+  "limitations": [
+    "Repository 或官方文件可用於理解公開設計；production readiness 仍需安裝測試、維護狀態與 benchmark 驗證。"
+  ],
+  "potential_questions": [],
+  "role_in_ecosystem": "Maestro Orchestrate",
+  "key_features": [
+    "跨 Gemini、Claude、Codex、Qwen 的 staged workflow、specialist delegation、session state",
+    "架構層級：multi_agent",
+    "輸出應保存為可追溯 artifact，重要結論需回讀 raw snapshot。"
+  ],
+  "key_technologies": [
+    "multi-runtime",
+    "design-plan-execute",
+    "quality gate",
+    "persistent sessions"
+  ],
+  "best_for": [
+    "multi_agent",
+    "快速判斷此工具在整體 SDD 架構中的責任",
+    "作為試點工具選型與後續深挖入口"
+  ],
+  "research_value": "此來源用於理解 Maestro Orchestrate 在整體架構中的角色。重要結論仍需回讀本地 raw snapshot 與原始 URL。",
+  "architecture_fit": "位於 multi-agent orchestration 層，負責 specialist delegation、handoff、平行波次與最終驗證。",
+  "workflow_outline": [
+    "建立依賴計畫",
+    "分配 specialist 或 worker agents",
+    "依 wave 平行執行",
+    "收集 context handoff",
+    "由 orchestrator 驗證與合併"
+  ],
+  "verification_questions": [
+    "agent 邊界是否清楚？",
+    "handoff 是否保存足夠 context？",
+    "最終 merge 與 review 是否可追溯？"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "source_id": "S-016",
+  "title": "BMAD Method Repository README",
+  "url": "https://github.com/bmad-code-org/BMAD-METHOD",
+  "canonical_url": "https://github.com/bmad-code-org/BMAD-METHOD",
+  "author_or_organization": "",
+  "publisher": "bmad-code-org",
+  "retrieved_at": "2026-05-31T11:39:03+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T113903Z",
+      "local_path": "sources/S-016/raw/SNAP-20260531T113903Z.html",
+      "content_hash": "sha256:923306df66eaa0978babf5b2471177284c9b81dd6a0f41a0b367c7f4651671b1",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T11:39:03+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T11:39:03+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/bmad-code-org/BMAD-METHOD",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:923306df66eaa0978babf5b2471177284c9b81dd6a0f41a0b367c7f4651671b1",
+  "locator": "repository tree",
+  "commit_sha": "fae70152266659061bf57e8b08b2a50a7981fc9c",
+  "immutable_url": "https://github.com/bmad-code-org/BMAD-METHOD/tree/fae70152266659061bf57e8b08b2a50a7981fc9c"
+}

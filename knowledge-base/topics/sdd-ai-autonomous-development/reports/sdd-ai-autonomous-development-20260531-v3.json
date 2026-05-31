@@ -1,0 +1,2306 @@
+{
+  "report_id": "sdd-ai-autonomous-development-20260531-v3",
+  "version": "3.0.0",
+  "title": "根據 SDD 使用 AI 全自動開發：55 來源技術地圖與落地架構",
+  "generated_at": "2026-05-31T13:00:00Z",
+  "data_cutoff": "2026-05-31T12:45:00Z",
+  "overall_confidence": "medium",
+  "quality_score": 100,
+  "minimum_primary_sources": 50,
+  "executive_summary": "本報告以 55 個獨立主要來源建立 SDD 與 AI 自動開發技術地圖。結論是：全自動開發不是單一 coding agent，而是由規格 artifact、traceability、repository context、task graph、scheduler、隔離 workspace、驗證、安全政策、observability、retry 與 escalation 組成的長時間執行系統。來源顯示規格層已相當多元：GitHub Spec Kit、OpenSpec、Spec Kitty、SpecDD、Kiro、Akka、cc-sdd、MoAI-ADK、Specs CLI、各類 MCP workflow 與 OpenSpec 生態。執行層則由 Ralph loops、Swarms、Metaswarm、Maestro、Symphony、Rover、Codexia、worktree 工具補上。現階段可實作高自動化 bounded autonomy；若要可靠零人工交付，仍缺少跨工具 benchmark、安全政策驗證與大型 brownfield 證據。",
+  "questions": [
+    "SDD 在 AI 全自動開發中的技術定義是什麼？",
+    "55 個主要來源如何分層？",
+    "規格、context、任務、隔離、驗證與安全如何組成完整系統？",
+    "哪些開源工具可作為各層候選？",
+    "如何逐步走向可靠的 bounded autonomy？"
+  ],
+  "methodology": "依追加式 crawl queue 蒐集 55 個獨立主要來源，不把文件內 supporting reference 算入數量。所有來源保存本地 snapshot、來源 metadata、深度 summary.md 與索引。`sources/CATALOG.md` 提供 S-001 到 S-055 的導航。關鍵發現採跨來源架構統整；官方文件與 repository README 可證明公開設計，但不視為獨立 benchmark。",
+  "claims": [
+    {
+      "claim_id": "C-001",
+      "text": "SDD 的共通核心是 specification 作為版本化、可演進、可驗證的主要 artifact；code、task、test 與變更紀錄需能回指需求。",
+      "type": "fact",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "多個官方工具、文件與研究來源在核心方向一致。",
+      "supporting_source_ids": [
+        "S-001",
+        "S-004",
+        "S-006",
+        "S-008",
+        "S-010",
+        "S-013",
+        "S-027",
+        "S-028",
+        "S-032",
+        "S-033",
+        "S-053"
+      ],
+      "opposing_source_ids": [],
+      "notes": "artifact 格式可以是 Markdown、JSON、`.sdd`、change folder 或 MCP state。"
+    },
+    {
+      "claim_id": "C-002",
+      "text": "SDD 流程的穩定骨架是 clarify 或 requirements -> design 或 plan -> tasks -> implementation -> verification；不同工具主要差在 artifact schema、審批點與執行自動化程度。",
+      "type": "fact",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "至少十個獨立工具實作相近階段。",
+      "supporting_source_ids": [
+        "S-001",
+        "S-003",
+        "S-007",
+        "S-009",
+        "S-010",
+        "S-011",
+        "S-014",
+        "S-015",
+        "S-023",
+        "S-027",
+        "S-032",
+        "S-033",
+        "S-052",
+        "S-053"
+      ],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-003",
+      "text": "規格層至少需要 artifact versioning、traceability、refinement、agent-accessible interface 與 approval state。OpenSpec change folder、SpecDD `.sdd`、Specs CLI traceability、MCP workflow 與 JSON spec 都是可用形態。",
+      "type": "inference",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "跨來源比較顯示共同需求，但格式沒有單一標準。",
+      "supporting_source_ids": [
+        "S-004",
+        "S-008",
+        "S-013",
+        "S-014",
+        "S-015",
+        "S-032",
+        "S-033",
+        "S-049",
+        "S-053"
+      ],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-004",
+      "text": "brownfield 自動開發需要 codebase context 層。OpenLore 以 static analysis、knowledge graph、living specs、drift detection 與 graph-native MCP 建立持久架構記憶；Kata 以 Tree-sitter 與 SQLite 建立 repository-aware context。",
+      "type": "fact",
+      "importance": "critical",
+      "confidence": "medium",
+      "confidence_reason": "工具 README 直接描述設計；仍需大型 repository benchmark。",
+      "supporting_source_ids": [
+        "S-018",
+        "S-029"
+      ],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-005",
+      "text": "長時間自動執行需要可持久化 task graph 與 iteration memory。Taskmaster、Flow Next、Swarms、Ralph 類工具分別使用 dependency graph、wave execution、PRD JSON、progress log 或 git commit 保存狀態。",
+      "type": "fact",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "多個 repository 直接描述狀態與執行方式。",
+      "supporting_source_ids": [
+        "S-019",
+        "S-035",
+        "S-037",
+        "S-038",
+        "S-039",
+        "S-040"
+      ],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-006",
+      "text": "可靠執行層需要隔離 workspace、平行控制、retry、reconciliation 與 observability。Symphony SPEC.md 提供服務級拆分；Rover、Worktrunk、workmux、Codexia 與 Spec Kitty 補上 workspace 或 worktree 實作模式。",
+      "type": "fact",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "官方 SPEC 與多個 repository 直接支持。",
+      "supporting_source_ids": [
+        "S-005",
+        "S-020",
+        "S-021",
+        "S-022",
+        "S-043",
+        "S-044",
+        "S-045"
+      ],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-007",
+      "text": "多 agent 系統需要明確的 orchestration contract：specialist delegation、handoff、wave 或 staged execution、持久 session state、verification 與 merge boundary。BMAD、Swarms、Metaswarm、Maestro 與 Local-first Maestro 提供不同解法。",
+      "type": "inference",
+      "importance": "critical",
+      "confidence": "medium",
+      "confidence_reason": "工具邊界清楚，但目前缺跨工具獨立比較。",
+      "supporting_source_ids": [
+        "S-016",
+        "S-040",
+        "S-041",
+        "S-042",
+        "S-047"
+      ],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-008",
+      "text": "全自動系統的驗證不能只看 test pass。最低要求應涵蓋 acceptance criteria、spec-code traceability、靜態分析、安全規格、政策閘門、review 與 escalation。Threatspec、Constitutional SDD、AI Governor、MoAI-ADK 與 cc-sdd 補充此層。",
+      "type": "recommendation",
+      "importance": "critical",
+      "confidence": "medium",
+      "confidence_reason": "多個來源支持品質與安全約束方向，但尚缺統一標準。",
+      "supporting_source_ids": [
+        "S-025",
+        "S-027",
+        "S-028",
+        "S-041",
+        "S-054",
+        "S-055"
+      ],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-009",
+      "text": "Ralph loop 能提高連續執行能力，但必須配合 task 邊界、completion condition、max iteration、git memory、驗證與人工 escalation；否則只是把單次失敗延長。",
+      "type": "inference",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "Smart Ralph、Flow Next、Anthropic Ralph Wiggum、iannuttall Ralph 與 snarktank Ralph 呈現互補機制。",
+      "supporting_source_ids": [
+        "S-034",
+        "S-035",
+        "S-037",
+        "S-038",
+        "S-039"
+      ],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-010",
+      "text": "現階段適合落地的是 bounded autonomy：agent 可自動處理明確且可驗證的工作；模糊需求、架構變更、安全風險、無法自動驗證的結果與發布決策應進入人工或政策 escalation。",
+      "type": "recommendation",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "human gate、approval、review、policy boundary 與 escalation 在多種工具中重複出現。",
+      "supporting_source_ids": [
+        "S-002",
+        "S-005",
+        "S-007",
+        "S-010",
+        "S-021",
+        "S-023",
+        "S-027",
+        "S-033",
+        "S-034",
+        "S-036"
+      ],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-011",
+      "text": "可行首版架構可選：OpenSpec 或 Spec Kit 作規格層，OpenLore 或 Kata 補 repository context，Taskmaster 或 Flow Next 管 task graph，Symphony、Rover 或 worktree 工具做隔離執行，MoAI-ADK、CI 與 Threatspec 補驗證與安全。",
+      "type": "recommendation",
+      "importance": "critical",
+      "confidence": "medium",
+      "confidence_reason": "此為跨來源系統整合建議，需用試點驗證相容性。",
+      "supporting_source_ids": [
+        "S-001",
+        "S-004",
+        "S-018",
+        "S-019",
+        "S-021",
+        "S-022",
+        "S-028",
+        "S-029",
+        "S-035",
+        "S-055"
+      ],
+      "opposing_source_ids": [],
+      "notes": ""
+    }
+  ],
+  "conflicts": [
+    "SDD 沒有單一 artifact 標準：Markdown、JSON、`.sdd`、OpenSpec change folder、MCP state 都存在。",
+    "部分工具追求 auto-run，另一些工具刻意保留 approval gate；兩者代表不同風險偏好。",
+    "Ralph loop、multi-agent orchestrator 與 worktree manager 是執行層，不應被誤認為規格品質本身。",
+    "README 可證明工具公開設計，但不能取代端到端 benchmark。"
+  ],
+  "unknowns": [
+    "缺少同一 repository、同一模型、同一需求下的跨工具 benchmark。",
+    "大型 brownfield 專案的 spec extraction 準確率、drift 偵測與 context index 成本仍需量測。",
+    "多 agent concurrent spec update 的衝突解決與權限模型尚未形成共識。",
+    "完全無人發布在安全、法規與事故責任上仍有重大缺口。"
+  ],
+  "limitations": [
+    "55 個來源以官方文件與 repository README 為主，適合建立技術地圖，不等於獨立成效驗證。",
+    "部分來源為較小型專案，需要另外檢查維護活躍度、測試覆蓋與 production readiness。",
+    "S-024 與 S-025 是 arXiv 預印本，尚不能視為同行評審共識。",
+    "GitHub snapshot 保存於 2026-05-31；尚未全部轉成固定 commit permalink。",
+    "本次未端到端安裝執行全部 55 個來源。"
+  ],
+  "conclusion": "SDD AI 全自動開發應被設計為多層控制系統。推薦技術地圖：1. specification artifact；2. traceability；3. repository context；4. task graph；5. scheduler 與 autonomous loop；6. isolated workspace；7. verifier 與 security policy；8. observability、retry 與 escalation。來源生態已足以組裝原型，但尚不足以保證任意專案零人工交付。最合理的路徑是 bounded autonomy：先讓系統在明確範圍內自動完成、驗證、重試與回報，再依量測結果逐步收縮人工閘門。",
+  "recommendations": [
+    "閱讀 `sources/CATALOG.md` 選出試點工具，不直接以星數或宣傳用語決策。",
+    "首個試點選中小型服務，固定 requirement、acceptance criteria、安全限制與 CI verifier。",
+    "以 OpenSpec 或 Spec Kit 作規格層；以 OpenLore 或 Kata 驗證 brownfield context；以 Taskmaster 或 Flow Next 驗證 task graph。",
+    "執行層採 Symphony、Rover、Codexia 或 worktree 工具之一，保存每次 run 的狀態、log、retry 與 escalation 原因。",
+    "驗證層加入 test、lint、static analysis、security scan、requirement coverage、spec-code drift 與人工 review。",
+    "用同一需求執行至少三組工具組合，量測成功率、人工介入次數、返工率、執行成本、恢復能力與安全事件。"
+  ],
+  "changelog": [
+    "3.0.0: 擴充至 55 個獨立主要來源，新增來源 catalog、深度摘要與完整技術地圖。"
+  ],
+  "sources": [
+    {
+      "source_id": "S-001",
+      "title": "GitHub Spec Kit Documentation",
+      "url": "https://github.github.com/spec-kit/index.html",
+      "canonical_url": "https://github.github.com/spec-kit/index.html",
+      "author_or_organization": "",
+      "publisher": "GitHub",
+      "retrieved_at": "2026-05-31T06:05:34+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T060534Z",
+          "local_path": "sources/S-001/raw/SNAP-20260531T060534Z.html",
+          "content_hash": "sha256:ca8a5391751b7de3d59c2581cb046b0494bd011a537541e63574363ed6933c4e",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T06:05:34+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "official_documentation",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.github.com/spec-kit/index.html",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-002",
+      "title": "Spec Kit Workflows Documentation",
+      "url": "https://github.github.com/spec-kit/reference/workflows.html",
+      "canonical_url": "https://github.github.com/spec-kit/reference/workflows.html",
+      "author_or_organization": "",
+      "publisher": "GitHub",
+      "retrieved_at": "2026-05-31T06:05:35+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T060535Z",
+          "local_path": "sources/S-002/raw/SNAP-20260531T060535Z.html",
+          "content_hash": "sha256:82935728f113f5ee0621e328ac2aa85de8e25ce24cc798a8dc01b6fb0765003f",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T06:05:35+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "official_documentation",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.github.com/spec-kit/reference/workflows.html",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-003",
+      "title": "Kiro Specs Documentation",
+      "url": "https://kiro.dev/docs/specs/",
+      "canonical_url": "https://kiro.dev/docs/specs/",
+      "author_or_organization": "",
+      "publisher": "AWS Kiro",
+      "retrieved_at": "2026-05-31T06:05:35+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T060535Z",
+          "local_path": "sources/S-003/raw/SNAP-20260531T060535Z.html",
+          "content_hash": "sha256:51cba98eff562e0c897adff6c2f3ca048d3404cb6509cdc5f304e466a2b1b9d0",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T06:05:35+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "official_documentation",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://kiro.dev/docs/specs/",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-004",
+      "title": "OpenSpec Repository README",
+      "url": "https://github.com/Fission-AI/OpenSpec",
+      "canonical_url": "https://github.com/Fission-AI/OpenSpec",
+      "author_or_organization": "",
+      "publisher": "Fission-AI",
+      "retrieved_at": "2026-05-31T06:05:37+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T060537Z",
+          "local_path": "sources/S-004/raw/SNAP-20260531T060537Z.html",
+          "content_hash": "sha256:62452c1aa7d7ee68667290759eba9f907710a1bfbc3947f67f82305a036c22a1",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T06:05:37+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/Fission-AI/OpenSpec",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-005",
+      "title": "Spec Kitty Repository README",
+      "url": "https://github.com/Priivacy-ai/spec-kitty",
+      "canonical_url": "https://github.com/Priivacy-ai/spec-kitty",
+      "author_or_organization": "",
+      "publisher": "Priivacy-ai",
+      "retrieved_at": "2026-05-31T06:05:38+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T060538Z",
+          "local_path": "sources/S-005/raw/SNAP-20260531T060538Z.html",
+          "content_hash": "sha256:21c0586928863d858b0d57ef12ed7c3c98716a1e8d2a6830ba0703318468956b",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T06:05:38+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/Priivacy-ai/spec-kitty",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-006",
+      "title": "Spec-Driven Development: From Code to Contract in the Age of AI Coding Assistants",
+      "url": "https://arxiv.org/abs/2602.00180v1",
+      "canonical_url": "https://arxiv.org/abs/2602.00180v1",
+      "author_or_organization": "",
+      "publisher": "arXiv",
+      "retrieved_at": "2026-05-31T06:05:39+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T060539Z",
+          "local_path": "sources/S-006/raw/SNAP-20260531T060539Z.html",
+          "content_hash": "sha256:9808b854c7b1bd02af7e3b5a54d81fe9be9f5f4973300810dd4449788be866b9",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T06:05:39+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "research_paper",
+      "evidence_tier": "C",
+      "quality": {
+        "authority": "medium",
+        "directness": "medium",
+        "recency": "medium",
+        "transparency": "medium",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://arxiv.org/abs/2602.00180v1",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-007",
+      "title": "GitHub Spec Kit Repository README",
+      "url": "https://github.com/github/spec-kit",
+      "canonical_url": "https://github.com/github/spec-kit",
+      "author_or_organization": "",
+      "publisher": "GitHub",
+      "retrieved_at": "2026-05-31T06:06:34+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T060634Z",
+          "local_path": "sources/S-007/raw/SNAP-20260531T060634Z.html",
+          "content_hash": "sha256:6862c731b4abb38f5f85f302e9267d2457aef2f306d7c4629ed8ead2c3b38c4b",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T06:06:34+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/github/spec-kit",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-008",
+      "title": "SpecDD Official Documentation",
+      "url": "https://specdd.ai/",
+      "canonical_url": "https://specdd.ai/",
+      "author_or_organization": "",
+      "publisher": "SpecDD",
+      "retrieved_at": "2026-05-31T06:06:35+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T060635Z",
+          "local_path": "sources/S-008/raw/SNAP-20260531T060635Z.html",
+          "content_hash": "sha256:e6d59fa3b16044a001b1c72fb6907d886263821f75b9e404cc0f2afb338b0638",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T06:06:35+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "official_documentation",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://specdd.ai/",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-009",
+      "title": "OpenSpecification Repository README",
+      "url": "https://github.com/spenceriam/OpenSpecification",
+      "canonical_url": "https://github.com/spenceriam/OpenSpecification",
+      "author_or_organization": "",
+      "publisher": "spenceriam",
+      "retrieved_at": "2026-05-31T06:06:36+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T060636Z",
+          "local_path": "sources/S-009/raw/SNAP-20260531T060636Z.html",
+          "content_hash": "sha256:7e5ac1404cd7a6905c77d283a9dc5fc3d1def28289633253c8a1f2ad14a4241a",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T06:06:36+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/spenceriam/OpenSpecification",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-010",
+      "title": "Akka Spec-Driven Development Documentation",
+      "url": "https://doc.akka.io/sdk/spec-driven-development.html",
+      "canonical_url": "https://doc.akka.io/sdk/spec-driven-development.html",
+      "author_or_organization": "",
+      "publisher": "Akka",
+      "retrieved_at": "2026-05-31T06:06:37+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T060637Z",
+          "local_path": "sources/S-010/raw/SNAP-20260531T060637Z.html",
+          "content_hash": "sha256:e3cd09466a599bedc2976d44b5e63962bfe5d29cc03792f82a78bf3345fb24e1",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T06:06:37+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "official_documentation",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://doc.akka.io/sdk/spec-driven-development.html",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-011",
+      "title": "codex-spec Repository README",
+      "url": "https://github.com/shenli/codex-spec",
+      "canonical_url": "https://github.com/shenli/codex-spec",
+      "author_or_organization": "",
+      "publisher": "shenli",
+      "retrieved_at": "2026-05-31T11:38:56+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T113856Z",
+          "local_path": "sources/S-011/raw/SNAP-20260531T113856Z.html",
+          "content_hash": "sha256:06007ba8ac402033dbaa22c123ac43aaf136e039d5b9165d37cc08e567a689d1",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T11:38:56+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/shenli/codex-spec",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-012",
+      "title": "SpecPulse Repository README",
+      "url": "https://github.com/specpulse/specpulse",
+      "canonical_url": "https://github.com/specpulse/specpulse",
+      "author_or_organization": "",
+      "publisher": "specpulse",
+      "retrieved_at": "2026-05-31T11:38:58+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T113858Z",
+          "local_path": "sources/S-012/raw/SNAP-20260531T113858Z.html",
+          "content_hash": "sha256:efc546ef023d2cb5b6174f923ee2cc0a8cdf962b22da09f36f509870f33df8a4",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T11:38:58+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/specpulse/specpulse",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-013",
+      "title": "Specs CLI Repository README",
+      "url": "https://github.com/specs-cli/specs-cli",
+      "canonical_url": "https://github.com/specs-cli/specs-cli",
+      "author_or_organization": "",
+      "publisher": "specs-cli",
+      "retrieved_at": "2026-05-31T11:38:59+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T113859Z",
+          "local_path": "sources/S-013/raw/SNAP-20260531T113859Z.html",
+          "content_hash": "sha256:efc26a610ee64f4ec615d8ebb1ee54aa74673198a2b682336f57ad3f6b92ffc6",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T11:38:59+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/specs-cli/specs-cli",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-014",
+      "title": "Spec Workflow MCP Repository README",
+      "url": "https://github.com/mamajiaa/specs-workflow-mcp",
+      "canonical_url": "https://github.com/mamajiaa/specs-workflow-mcp",
+      "author_or_organization": "",
+      "publisher": "mamajiaa",
+      "retrieved_at": "2026-05-31T11:39:00+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T113900Z",
+          "local_path": "sources/S-014/raw/SNAP-20260531T113900Z.html",
+          "content_hash": "sha256:7a5efb8e9148c7391023c31f9f1c25e2763822e2b55000e2f0fbedb84e84b333",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T11:39:00+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/mamajiaa/specs-workflow-mcp",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-015",
+      "title": "Specflow Repository README",
+      "url": "https://github.com/specstoryai/specflow",
+      "canonical_url": "https://github.com/specstoryai/specflow",
+      "author_or_organization": "",
+      "publisher": "SpecStory",
+      "retrieved_at": "2026-05-31T11:39:01+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T113901Z",
+          "local_path": "sources/S-015/raw/SNAP-20260531T113901Z.html",
+          "content_hash": "sha256:389c61b13ac44affddfcb69c8792585b7b6b52aaeacd70e63f59774f439cb4d1",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T11:39:01+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/specstoryai/specflow",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-016",
+      "title": "BMAD Method Repository README",
+      "url": "https://github.com/bmad-code-org/BMAD-METHOD",
+      "canonical_url": "https://github.com/bmad-code-org/BMAD-METHOD",
+      "author_or_organization": "",
+      "publisher": "bmad-code-org",
+      "retrieved_at": "2026-05-31T11:39:03+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T113903Z",
+          "local_path": "sources/S-016/raw/SNAP-20260531T113903Z.html",
+          "content_hash": "sha256:923306df66eaa0978babf5b2471177284c9b81dd6a0f41a0b367c7f4651671b1",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T11:39:03+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/bmad-code-org/BMAD-METHOD",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-017",
+      "title": "Get Shit Done Repository README",
+      "url": "https://github.com/gsd-build/get-shit-done",
+      "canonical_url": "https://github.com/gsd-build/get-shit-done",
+      "author_or_organization": "",
+      "publisher": "gsd-build",
+      "retrieved_at": "2026-05-31T11:39:04+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T113904Z",
+          "local_path": "sources/S-017/raw/SNAP-20260531T113904Z.html",
+          "content_hash": "sha256:5b1cb5424647b89cce06e727f19fae59762cdcb6accc5bb1c44f5708dabbe2dc",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T11:39:04+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/gsd-build/get-shit-done",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-018",
+      "title": "Kata Repository README",
+      "url": "https://github.com/gannonh/kata",
+      "canonical_url": "https://github.com/gannonh/kata",
+      "author_or_organization": "",
+      "publisher": "gannonh",
+      "retrieved_at": "2026-05-31T11:39:06+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T113906Z",
+          "local_path": "sources/S-018/raw/SNAP-20260531T113906Z.html",
+          "content_hash": "sha256:482d4c88371bd4c469bbc8ef875d3eaa4d61725e821ffe7217ca0ccb8d2fed84",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T11:39:06+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/gannonh/kata",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-019",
+      "title": "Taskmaster Repository README",
+      "url": "https://github.com/eyaltoledano/claude-task-master",
+      "canonical_url": "https://github.com/eyaltoledano/claude-task-master",
+      "author_or_organization": "",
+      "publisher": "eyaltoledano",
+      "retrieved_at": "2026-05-31T11:39:07+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T113907Z",
+          "local_path": "sources/S-019/raw/SNAP-20260531T113907Z.html",
+          "content_hash": "sha256:c5735012fd81bb680bce26a3448f79db736cbfc03d221836889938af98ab11e5",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T11:39:07+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/eyaltoledano/claude-task-master",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-020",
+      "title": "OpenAI Symphony Repository README",
+      "url": "https://github.com/openai/symphony",
+      "canonical_url": "https://github.com/openai/symphony",
+      "author_or_organization": "",
+      "publisher": "OpenAI",
+      "retrieved_at": "2026-05-31T11:39:08+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T113908Z",
+          "local_path": "sources/S-020/raw/SNAP-20260531T113908Z.html",
+          "content_hash": "sha256:1c823c7e34d67caa68a943c2281261e03963c10f219afaecadfdbf69c8c65884",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T11:39:08+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/openai/symphony",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-021",
+      "title": "OpenAI Symphony Service Specification",
+      "url": "https://github.com/openai/symphony/blob/main/SPEC.md",
+      "canonical_url": "https://github.com/openai/symphony/blob/main/SPEC.md",
+      "author_or_organization": "",
+      "publisher": "OpenAI",
+      "retrieved_at": "2026-05-31T11:39:10+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T113910Z",
+          "local_path": "sources/S-021/raw/SNAP-20260531T113910Z.html",
+          "content_hash": "sha256:000d714aa69d4c6a98edcc08349c75066d0ee1289644b6d942fb4ede2dab1e2d",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T11:39:10+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "official_documentation",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/openai/symphony/blob/main/SPEC.md",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-022",
+      "title": "Rover Repository README",
+      "url": "https://github.com/endorhq/rover",
+      "canonical_url": "https://github.com/endorhq/rover",
+      "author_or_organization": "",
+      "publisher": "Endor",
+      "retrieved_at": "2026-05-31T11:39:12+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T113912Z",
+          "local_path": "sources/S-022/raw/SNAP-20260531T113912Z.html",
+          "content_hash": "sha256:a31128399e82bd6290af302ff914a546bb89ff8ae6c254d590b93c1a59fc43cd",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T11:39:12+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/endorhq/rover",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-023",
+      "title": "Agent Skills Spec-Driven Development Skill",
+      "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/spec-driven-development/SKILL.md",
+      "canonical_url": "https://github.com/addyosmani/agent-skills/blob/main/skills/spec-driven-development/SKILL.md",
+      "author_or_organization": "",
+      "publisher": "addyosmani",
+      "retrieved_at": "2026-05-31T11:39:13+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T113913Z",
+          "local_path": "sources/S-023/raw/SNAP-20260531T113913Z.html",
+          "content_hash": "sha256:68f5a614182efcb83e3271ce3911af819998d72553326812b5fd3127725247bd",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T11:39:13+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/addyosmani/agent-skills/blob/main/skills/spec-driven-development/SKILL.md",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-024",
+      "title": "Spec Kit Agents: Context-Grounded Agentic Workflows",
+      "url": "https://arxiv.org/abs/2604.05278v1",
+      "canonical_url": "https://arxiv.org/abs/2604.05278v1",
+      "author_or_organization": "",
+      "publisher": "arXiv",
+      "retrieved_at": "2026-05-31T11:39:13+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T113913Z",
+          "local_path": "sources/S-024/raw/SNAP-20260531T113913Z.html",
+          "content_hash": "sha256:527ec5203cecfeed5d0af795e0e83876692f25daa002af8a3e11c92b4854f447",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T11:39:13+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "research_paper",
+      "evidence_tier": "C",
+      "quality": {
+        "authority": "medium",
+        "directness": "medium",
+        "recency": "medium",
+        "transparency": "medium",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://arxiv.org/abs/2604.05278v1",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-025",
+      "title": "Constitutional Spec-Driven Development",
+      "url": "https://arxiv.org/abs/2602.02584v1",
+      "canonical_url": "https://arxiv.org/abs/2602.02584v1",
+      "author_or_organization": "",
+      "publisher": "arXiv",
+      "retrieved_at": "2026-05-31T11:39:14+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T113914Z",
+          "local_path": "sources/S-025/raw/SNAP-20260531T113914Z.html",
+          "content_hash": "sha256:ee7bd875a6755d496dc4c60ef892d8fe2a4497ab20f18da3113cb63a6991d4c4",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T11:39:14+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "research_paper",
+      "evidence_tier": "C",
+      "quality": {
+        "authority": "medium",
+        "directness": "medium",
+        "recency": "medium",
+        "transparency": "medium",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://arxiv.org/abs/2602.02584v1",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-026",
+      "title": "Kiro Repository README",
+      "url": "https://github.com/kirodotdev/Kiro",
+      "canonical_url": "https://github.com/kirodotdev/Kiro",
+      "author_or_organization": "",
+      "publisher": "AWS Kiro",
+      "retrieved_at": "2026-05-31T12:12:02+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121202Z",
+          "local_path": "sources/S-026/raw/SNAP-20260531T121202Z.html",
+          "content_hash": "sha256:365a8dbd687ec92c8dd8d26fa926d0d5cc56ce74c14f0707b2a1b26f8707be3f",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:02+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/kirodotdev/Kiro",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-027",
+      "title": "cc-sdd Repository README",
+      "url": "https://github.com/gotalab/cc-sdd",
+      "canonical_url": "https://github.com/gotalab/cc-sdd",
+      "author_or_organization": "",
+      "publisher": "gotalab",
+      "retrieved_at": "2026-05-31T12:12:03+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121203Z",
+          "local_path": "sources/S-027/raw/SNAP-20260531T121203Z.html",
+          "content_hash": "sha256:2392ac0fa675ceb78d772f437fe6dd86213186a3370557284fed4daff70cb800",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:03+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/gotalab/cc-sdd",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-028",
+      "title": "MoAI-ADK Repository README",
+      "url": "https://github.com/modu-ai/moai-adk",
+      "canonical_url": "https://github.com/modu-ai/moai-adk",
+      "author_or_organization": "",
+      "publisher": "modu-ai",
+      "retrieved_at": "2026-05-31T12:12:05+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121205Z",
+          "local_path": "sources/S-028/raw/SNAP-20260531T121205Z.html",
+          "content_hash": "sha256:7514b556a692904949accfc8b234005b9642f964cefb7d918106b8c9fc9803fc",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:05+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/modu-ai/moai-adk",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-029",
+      "title": "OpenLore Repository README",
+      "url": "https://github.com/clay-good/OpenLore",
+      "canonical_url": "https://github.com/clay-good/OpenLore",
+      "author_or_organization": "",
+      "publisher": "clay-good",
+      "retrieved_at": "2026-05-31T12:12:06+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121206Z",
+          "local_path": "sources/S-029/raw/SNAP-20260531T121206Z.html",
+          "content_hash": "sha256:b67521987397a17d3fceee7761c87eda2ed802d64270f337d9257b301e9f8801",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:06+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/clay-good/OpenLore",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-030",
+      "title": "Specboot ai-specs Repository README",
+      "url": "https://github.com/LIDR-academy/lidr-specboot",
+      "canonical_url": "https://github.com/LIDR-academy/lidr-specboot",
+      "author_or_organization": "",
+      "publisher": "LIDR-academy",
+      "retrieved_at": "2026-05-31T12:12:08+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121208Z",
+          "local_path": "sources/S-030/raw/SNAP-20260531T121208Z.html",
+          "content_hash": "sha256:75b83b242817d178bece891168cc2c1d134f9d4543c6c7f3a7e346b292c5ec47",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:08+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/LIDR-academy/lidr-specboot",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-031",
+      "title": "Gentle-AI Repository README",
+      "url": "https://github.com/Gentleman-Programming/gentle-ai",
+      "canonical_url": "https://github.com/Gentleman-Programming/gentle-ai",
+      "author_or_organization": "",
+      "publisher": "Gentleman-Programming",
+      "retrieved_at": "2026-05-31T12:12:09+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121209Z",
+          "local_path": "sources/S-031/raw/SNAP-20260531T121209Z.html",
+          "content_hash": "sha256:a8372025c98fd6d4720e5c936d4ad24690f08ab88ac4a233b66a6f544247265b",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:09+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/Gentleman-Programming/gentle-ai",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-032",
+      "title": "spec-coding-mcp Repository README",
+      "url": "https://github.com/kevinlin/spec-coding-mcp",
+      "canonical_url": "https://github.com/kevinlin/spec-coding-mcp",
+      "author_or_organization": "",
+      "publisher": "kevinlin",
+      "retrieved_at": "2026-05-31T12:12:10+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121210Z",
+          "local_path": "sources/S-032/raw/SNAP-20260531T121210Z.html",
+          "content_hash": "sha256:4eda42552290cc30ed85635da01ed563649c2e0621ba088606d527c33db9287d",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:10+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/kevinlin/spec-coding-mcp",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-033",
+      "title": "Pimzino Spec Workflow MCP README",
+      "url": "https://github.com/Pimzino/spec-workflow-mcp",
+      "canonical_url": "https://github.com/Pimzino/spec-workflow-mcp",
+      "author_or_organization": "",
+      "publisher": "Pimzino",
+      "retrieved_at": "2026-05-31T12:12:12+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121212Z",
+          "local_path": "sources/S-033/raw/SNAP-20260531T121212Z.html",
+          "content_hash": "sha256:b72d92ca8b8c6dc8d2e6e85a29fd06cca1019b0e89d49b28878dc702c1bd4ed2",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:12+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/Pimzino/spec-workflow-mcp",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-034",
+      "title": "Smart Ralph Repository README",
+      "url": "https://github.com/tzachbon/smart-ralph",
+      "canonical_url": "https://github.com/tzachbon/smart-ralph",
+      "author_or_organization": "",
+      "publisher": "tzachbon",
+      "retrieved_at": "2026-05-31T12:12:13+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121213Z",
+          "local_path": "sources/S-034/raw/SNAP-20260531T121213Z.html",
+          "content_hash": "sha256:0c6bcb05c32e84df3a503ea4120d9bfe73ad1106ada933462da44d49e0f4dc34",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:13+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/tzachbon/smart-ralph",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-035",
+      "title": "Flow Next Repository README",
+      "url": "https://github.com/gmickel/flow-next",
+      "canonical_url": "https://github.com/gmickel/flow-next",
+      "author_or_organization": "",
+      "publisher": "gmickel",
+      "retrieved_at": "2026-05-31T12:12:14+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121214Z",
+          "local_path": "sources/S-035/raw/SNAP-20260531T121214Z.html",
+          "content_hash": "sha256:5de22301f84f658a86d1c09c8eca8ea599570d27dadfa59d0a9b530c951bcd5d",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:14+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/gmickel/flow-next",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-036",
+      "title": "GAAI Framework Repository README",
+      "url": "https://github.com/Fr-e-d/GAAI-framework",
+      "canonical_url": "https://github.com/Fr-e-d/GAAI-framework",
+      "author_or_organization": "",
+      "publisher": "Fr-e-d",
+      "retrieved_at": "2026-05-31T12:12:15+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121215Z",
+          "local_path": "sources/S-036/raw/SNAP-20260531T121215Z.html",
+          "content_hash": "sha256:c9810ebe9532c33c4955679aabb5b31e568801ff82f6467200bf3128cd53b886",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:15+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/Fr-e-d/GAAI-framework",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-037",
+      "title": "iannuttall Ralph Repository README",
+      "url": "https://github.com/iannuttall/ralph",
+      "canonical_url": "https://github.com/iannuttall/ralph",
+      "author_or_organization": "",
+      "publisher": "iannuttall",
+      "retrieved_at": "2026-05-31T12:12:16+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121216Z",
+          "local_path": "sources/S-037/raw/SNAP-20260531T121216Z.html",
+          "content_hash": "sha256:758b21f0ab6329a276a535a57d8536ef106465850e6c5970ead502d102ba4433",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:16+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/iannuttall/ralph",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-038",
+      "title": "Anthropic Ralph Wiggum Plugin README",
+      "url": "https://github.com/anthropics/claude-code/blob/main/plugins/ralph-wiggum/README.md",
+      "canonical_url": "https://github.com/anthropics/claude-code/blob/main/plugins/ralph-wiggum/README.md",
+      "author_or_organization": "",
+      "publisher": "Anthropic",
+      "retrieved_at": "2026-05-31T12:12:17+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121217Z",
+          "local_path": "sources/S-038/raw/SNAP-20260531T121217Z.html",
+          "content_hash": "sha256:87542e4c83c60f7330b241d6b50e87d3cbe05968088f3fe58517aba9ff7df0e4",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:17+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "official_documentation",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/anthropics/claude-code/blob/main/plugins/ralph-wiggum/README.md",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-039",
+      "title": "snarktank Ralph Repository README",
+      "url": "https://github.com/snarktank/ralph",
+      "canonical_url": "https://github.com/snarktank/ralph",
+      "author_or_organization": "",
+      "publisher": "snarktank",
+      "retrieved_at": "2026-05-31T12:12:18+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121218Z",
+          "local_path": "sources/S-039/raw/SNAP-20260531T121218Z.html",
+          "content_hash": "sha256:6337ca9d1a85ebc96e496c5213337a3fa24c5ca80e09509abc0c58bc5fcd1598",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:18+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/snarktank/ralph",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-040",
+      "title": "Swarms Repository README",
+      "url": "https://github.com/am-will/swarms",
+      "canonical_url": "https://github.com/am-will/swarms",
+      "author_or_organization": "",
+      "publisher": "am-will",
+      "retrieved_at": "2026-05-31T12:12:20+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121220Z",
+          "local_path": "sources/S-040/raw/SNAP-20260531T121220Z.html",
+          "content_hash": "sha256:5d7f98f4dcaf675dc8cf0935a63ba0e878f321f5b3bdd87c1dace5cc6e8e25ec",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:20+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/am-will/swarms",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-041",
+      "title": "Metaswarm Repository README",
+      "url": "https://github.com/dsifry/metaswarm",
+      "canonical_url": "https://github.com/dsifry/metaswarm",
+      "author_or_organization": "",
+      "publisher": "dsifry",
+      "retrieved_at": "2026-05-31T12:12:21+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121221Z",
+          "local_path": "sources/S-041/raw/SNAP-20260531T121221Z.html",
+          "content_hash": "sha256:ba36c8c3f954efdbdf47f185c3fdf135846f46c2fab45e7d6284100cbe621a2f",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:21+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/dsifry/metaswarm",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-042",
+      "title": "Maestro Orchestrate Repository README",
+      "url": "https://github.com/josstei/maestro-orchestrate",
+      "canonical_url": "https://github.com/josstei/maestro-orchestrate",
+      "author_or_organization": "",
+      "publisher": "josstei",
+      "retrieved_at": "2026-05-31T12:12:22+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121222Z",
+          "local_path": "sources/S-042/raw/SNAP-20260531T121222Z.html",
+          "content_hash": "sha256:5f7a62fbc09ea10bbc782b60bed2c59521a3db229a4e6f8dec4fa5c788b0e0b3",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:22+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/josstei/maestro-orchestrate",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-043",
+      "title": "Worktrunk Repository README",
+      "url": "https://github.com/max-sixty/worktrunk",
+      "canonical_url": "https://github.com/max-sixty/worktrunk",
+      "author_or_organization": "",
+      "publisher": "max-sixty",
+      "retrieved_at": "2026-05-31T12:12:23+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121223Z",
+          "local_path": "sources/S-043/raw/SNAP-20260531T121223Z.html",
+          "content_hash": "sha256:da3d2c7b524bf0308735798f0213ffa4d0ffed1b7c30c94121f2642e5f82d7fd",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:23+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/max-sixty/worktrunk",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-044",
+      "title": "workmux Repository README",
+      "url": "https://github.com/raine/workmux",
+      "canonical_url": "https://github.com/raine/workmux",
+      "author_or_organization": "",
+      "publisher": "raine",
+      "retrieved_at": "2026-05-31T12:12:25+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121225Z",
+          "local_path": "sources/S-044/raw/SNAP-20260531T121225Z.html",
+          "content_hash": "sha256:e8f41c9428930ac8511ff58ccc20b9d3a3a2ce2c567f61d1bc749ee8ed73efbb",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:25+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/raine/workmux",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-045",
+      "title": "Codexia Repository README",
+      "url": "https://github.com/milisp/codexia",
+      "canonical_url": "https://github.com/milisp/codexia",
+      "author_or_organization": "",
+      "publisher": "milisp",
+      "retrieved_at": "2026-05-31T12:12:26+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121226Z",
+          "local_path": "sources/S-045/raw/SNAP-20260531T121226Z.html",
+          "content_hash": "sha256:cb59b39bde0eea0055c7d0d1af196622f1041428c8d4e1091dbc77e2c40f7a6b",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:26+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/milisp/codexia",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-046",
+      "title": "Claw Orchestrator Repository README",
+      "url": "https://github.com/Enderfga/claw-orchestrator",
+      "canonical_url": "https://github.com/Enderfga/claw-orchestrator",
+      "author_or_organization": "",
+      "publisher": "Enderfga",
+      "retrieved_at": "2026-05-31T12:12:27+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121227Z",
+          "local_path": "sources/S-046/raw/SNAP-20260531T121227Z.html",
+          "content_hash": "sha256:ae7c7e7248098c992243ddbc6efb53a2638d6ded797f00bda719b2d1fdc4a846",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:27+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/Enderfga/claw-orchestrator",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-047",
+      "title": "Local-first Maestro Repository README",
+      "url": "https://github.com/ReinaMacCredy/maestro",
+      "canonical_url": "https://github.com/ReinaMacCredy/maestro",
+      "author_or_organization": "",
+      "publisher": "ReinaMacCredy",
+      "retrieved_at": "2026-05-31T12:12:29+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121229Z",
+          "local_path": "sources/S-047/raw/SNAP-20260531T121229Z.html",
+          "content_hash": "sha256:06dd9928103cad0dfd87f62df133c49dd3e17c25b95438e79c9998af43a3d819",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:29+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/ReinaMacCredy/maestro",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-048",
+      "title": "Awesome OpenSpec Repository README",
+      "url": "https://github.com/wearetechnative/awesome-openspec",
+      "canonical_url": "https://github.com/wearetechnative/awesome-openspec",
+      "author_or_organization": "",
+      "publisher": "wearetechnative",
+      "retrieved_at": "2026-05-31T12:12:30+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121230Z",
+          "local_path": "sources/S-048/raw/SNAP-20260531T121230Z.html",
+          "content_hash": "sha256:c2440e55b18d38427756bdfc05237b60552d2dcddaf0ef9f1cabd1b207beacd4",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:30+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/wearetechnative/awesome-openspec",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-049",
+      "title": "OpenSpec Supported Tools Documentation",
+      "url": "https://github.com/Fission-AI/OpenSpec/blob/main/docs/supported-tools.md",
+      "canonical_url": "https://github.com/Fission-AI/OpenSpec/blob/main/docs/supported-tools.md",
+      "author_or_organization": "",
+      "publisher": "Fission-AI",
+      "retrieved_at": "2026-05-31T12:12:31+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121231Z",
+          "local_path": "sources/S-049/raw/SNAP-20260531T121231Z.html",
+          "content_hash": "sha256:058c5688abd248471a5e13adcdabdc1d2c8b971bd24f1d80929e4e810f60ac3e",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:31+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "official_documentation",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/Fission-AI/OpenSpec/blob/main/docs/supported-tools.md",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-050",
+      "title": "OpenSpec for Copilot Repository README",
+      "url": "https://github.com/atman-33/openspec-for-copilot",
+      "canonical_url": "https://github.com/atman-33/openspec-for-copilot",
+      "author_or_organization": "",
+      "publisher": "atman-33",
+      "retrieved_at": "2026-05-31T12:12:32+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121232Z",
+          "local_path": "sources/S-050/raw/SNAP-20260531T121232Z.html",
+          "content_hash": "sha256:049de663ae39d397166e530fb2413f1e54954982ccd2b07e4fcb22a8b6aef8c0",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:32+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/atman-33/openspec-for-copilot",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-051",
+      "title": "ClawSpec Repository README",
+      "url": "https://github.com/bytegh/clawspec",
+      "canonical_url": "https://github.com/bytegh/clawspec",
+      "author_or_organization": "",
+      "publisher": "bytegh",
+      "retrieved_at": "2026-05-31T12:12:33+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121233Z",
+          "local_path": "sources/S-051/raw/SNAP-20260531T121233Z.html",
+          "content_hash": "sha256:d66119d1b0597daa6870c832d070f45cfb15c0b2fdeb7de6876be4ef38fb573e",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:33+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/bytegh/clawspec",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-052",
+      "title": "AI Coding Workflow Repository README",
+      "url": "https://github.com/nicksp/ai-coding-worflow",
+      "canonical_url": "https://github.com/nicksp/ai-coding-worflow",
+      "author_or_organization": "",
+      "publisher": "nicksp",
+      "retrieved_at": "2026-05-31T12:12:34+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121234Z",
+          "local_path": "sources/S-052/raw/SNAP-20260531T121234Z.html",
+          "content_hash": "sha256:e8e021949c42a298acefd9304b9219b7f60635144e489fc3b3ee6325917af2f6",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:34+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/nicksp/ai-coding-worflow",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-053",
+      "title": "Claude SDD Toolkit Repository README",
+      "url": "https://github.com/tylerburleigh/claude-sdd-toolkit",
+      "canonical_url": "https://github.com/tylerburleigh/claude-sdd-toolkit",
+      "author_or_organization": "",
+      "publisher": "tylerburleigh",
+      "retrieved_at": "2026-05-31T12:12:36+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121236Z",
+          "local_path": "sources/S-053/raw/SNAP-20260531T121236Z.html",
+          "content_hash": "sha256:1df5ecb4e9987046a1b2c6ac5e45b10b972de5e3462b9e96e692e90e5396f693",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:36+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/tylerburleigh/claude-sdd-toolkit",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-054",
+      "title": "AI Governor Framework Repository README",
+      "url": "https://github.com/Fr-e-d/AI-Governor-Framework",
+      "canonical_url": "https://github.com/Fr-e-d/AI-Governor-Framework",
+      "author_or_organization": "",
+      "publisher": "Fr-e-d",
+      "retrieved_at": "2026-05-31T12:12:37+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121237Z",
+          "local_path": "sources/S-054/raw/SNAP-20260531T121237Z.html",
+          "content_hash": "sha256:12a504e22c5eee08c1eac2f089f6c1179b81f744683f4fb573f025c56e743d12",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:37+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/Fr-e-d/AI-Governor-Framework",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-055",
+      "title": "Threatspec Repository README",
+      "url": "https://github.com/threatspec/threatspec",
+      "canonical_url": "https://github.com/threatspec/threatspec",
+      "author_or_organization": "",
+      "publisher": "threatspec",
+      "retrieved_at": "2026-05-31T12:12:38+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T121238Z",
+          "local_path": "sources/S-055/raw/SNAP-20260531T121238Z.html",
+          "content_hash": "sha256:61089f7620b7c7f9a746f24f24913763aad82289e5c25fc4d0520147bd54d687",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T12:12:38+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/threatspec/threatspec",
+      "supported_claim_ids": []
+    }
+  ]
+}

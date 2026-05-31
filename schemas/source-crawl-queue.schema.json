@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/source-crawl-queue.schema.json",
+  "title": "Source Crawl Queue",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["topic_id", "updated_at", "items"],
+  "properties": {
+    "topic_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "updated_at": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "queue_id",
+          "sequence",
+          "target_type",
+          "target",
+          "reason",
+          "related_question_ids",
+          "added_by_step",
+          "status"
+        ],
+        "properties": {
+          "queue_id": {
+            "type": "string",
+            "pattern": "^Q-[0-9]{3,}$"
+          },
+          "sequence": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "target_type": {
+            "type": "string",
+            "enum": ["search_query", "url", "domain_seed", "local_gap"]
+          },
+          "target": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "related_question_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^RQ-[0-9]{3,}$"
+            }
+          },
+          "added_by_step": {
+            "type": "string",
+            "enum": [
+              "initial_plan",
+              "step_1_local_retrieval",
+              "step_2_question_breakdown",
+              "step_3_source_search",
+              "step_4_source_capture",
+              "step_5_document_curation",
+              "step_6_claim_mapping",
+              "step_7_conflict_resolution",
+              "step_9_quality_gate",
+              "manual"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": ["pending", "in_progress", "completed", "failed", "skipped"]
+          },
+          "priority_override": {
+            "type": "boolean",
+            "default": false
+          },
+          "discovered_from": {
+            "type": ["string", "null"],
+            "pattern": "^Q-[0-9]{3,}$"
+          },
+          "result_source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^S-[0-9]{3,}$"
+            }
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,43 @@
+{
+  "source_id": "S-067",
+  "title": "InfoQ: Enterprise SDD adoption",
+  "url": "https://www.infoq.com/articles/enterprise-spec-driven-development/",
+  "canonical_url": "https://www.infoq.com/articles/enterprise-spec-driven-development/",
+  "author_or_organization": "",
+  "publisher": "InfoQ",
+  "retrieved_at": "2026-05-31T13:39:50+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T133950Z",
+      "local_path": "sources/S-067/raw/SNAP-20260531T133950Z.html",
+      "content_hash": "sha256:bc30b67101db3d32de48af7fa170582ea417f9f6e36ee5df03414b9e58a6c7b8",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T13:39:50+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T13:39:50+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "professional_article",
+  "evidence_tier": "C",
+  "quality": {
+    "authority": "medium",
+    "directness": "medium",
+    "recency": "medium",
+    "transparency": "medium",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://www.infoq.com/articles/enterprise-spec-driven-development/",
+  "supported_claim_ids": [
+    "C-004",
+    "C-008",
+    "C-012"
+  ],
+  "content_hash": "sha256:bc30b67101db3d32de48af7fa170582ea417f9f6e36ee5df03414b9e58a6c7b8",
+  "locator": "local snapshot SNAP-20260531T133950Z"
+}

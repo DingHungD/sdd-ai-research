@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+
+# Raw evidence snapshots remain local by default. Commit metadata, hashes, and
+# curated summaries; publish snapshots separately only when redistribution is allowed.
+knowledge-base/**/sources/*/raw/

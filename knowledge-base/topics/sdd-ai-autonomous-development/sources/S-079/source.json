@@ -1,0 +1,45 @@
+{
+  "source_id": "S-079",
+  "title": "NASA SWE-059 Requirements to Design Traceability",
+  "url": "https://swehb.nasa.gov/pages/viewpage.action?pageId=16453101",
+  "canonical_url": "https://swehb.nasa.gov/pages/viewpage.action?pageId=16453101",
+  "author_or_organization": "",
+  "publisher": "NASA",
+  "retrieved_at": "2026-05-31T13:58:55+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T135855Z",
+      "local_path": "sources/S-079/raw/SNAP-20260531T135855Z.html",
+      "content_hash": "sha256:e0f15703e7b6350f65316595e05d6bdc888be090621ce9b12d1390b2b79fd562",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T13:58:55+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T13:58:55+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "official_documentation",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://swehb.nasa.gov/pages/viewpage.action?pageId=16453101",
+  "supported_claim_ids": [
+    "C-001",
+    "C-002",
+    "C-007",
+    "C-011",
+    "C-012"
+  ],
+  "content_hash": "sha256:e0f15703e7b6350f65316595e05d6bdc888be090621ce9b12d1390b2b79fd562",
+  "locator": "local snapshot SNAP-20260531T135855Z"
+}

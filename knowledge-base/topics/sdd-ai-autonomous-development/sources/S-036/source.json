@@ -1,0 +1,41 @@
+{
+  "source_id": "S-036",
+  "title": "GAAI Framework Repository README",
+  "url": "https://github.com/Fr-e-d/GAAI-framework",
+  "canonical_url": "https://github.com/Fr-e-d/GAAI-framework",
+  "author_or_organization": "",
+  "publisher": "Fr-e-d",
+  "retrieved_at": "2026-05-31T12:12:15+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T121215Z",
+      "local_path": "sources/S-036/raw/SNAP-20260531T121215Z.html",
+      "content_hash": "sha256:c9810ebe9532c33c4955679aabb5b31e568801ff82f6467200bf3128cd53b886",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T12:12:15+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T12:12:15+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/Fr-e-d/GAAI-framework",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:c9810ebe9532c33c4955679aabb5b31e568801ff82f6467200bf3128cd53b886",
+  "locator": "repository tree",
+  "commit_sha": "c12e1de36847e65a98d768b83bf6fa7951637d89",
+  "immutable_url": "https://github.com/Fr-e-d/GAAI-framework/tree/c12e1de36847e65a98d768b83bf6fa7951637d89"
+}

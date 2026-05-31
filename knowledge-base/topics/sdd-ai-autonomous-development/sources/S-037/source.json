@@ -1,0 +1,43 @@
+{
+  "source_id": "S-037",
+  "title": "iannuttall Ralph Repository README",
+  "url": "https://github.com/iannuttall/ralph",
+  "canonical_url": "https://github.com/iannuttall/ralph",
+  "author_or_organization": "",
+  "publisher": "iannuttall",
+  "retrieved_at": "2026-05-31T12:12:16+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T121216Z",
+      "local_path": "sources/S-037/raw/SNAP-20260531T121216Z.html",
+      "content_hash": "sha256:758b21f0ab6329a276a535a57d8536ef106465850e6c5970ead502d102ba4433",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T12:12:16+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T12:12:16+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/iannuttall/ralph",
+  "supported_claim_ids": [
+    "C-004"
+  ],
+  "content_hash": "sha256:758b21f0ab6329a276a535a57d8536ef106465850e6c5970ead502d102ba4433",
+  "locator": "repository tree",
+  "commit_sha": "5bc402540c45192bd1e9cacb84611ee2e5ba13a8",
+  "immutable_url": "https://github.com/iannuttall/ralph/tree/5bc402540c45192bd1e9cacb84611ee2e5ba13a8"
+}

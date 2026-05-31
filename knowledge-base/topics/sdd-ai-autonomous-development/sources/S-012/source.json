@@ -1,0 +1,41 @@
+{
+  "source_id": "S-012",
+  "title": "SpecPulse Repository README",
+  "url": "https://github.com/specpulse/specpulse",
+  "canonical_url": "https://github.com/specpulse/specpulse",
+  "author_or_organization": "",
+  "publisher": "specpulse",
+  "retrieved_at": "2026-05-31T11:38:58+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T113858Z",
+      "local_path": "sources/S-012/raw/SNAP-20260531T113858Z.html",
+      "content_hash": "sha256:efc546ef023d2cb5b6174f923ee2cc0a8cdf962b22da09f36f509870f33df8a4",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T11:38:58+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T11:38:58+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/specpulse/specpulse",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:efc546ef023d2cb5b6174f923ee2cc0a8cdf962b22da09f36f509870f33df8a4",
+  "locator": "repository tree",
+  "commit_sha": "01801da4ae31da7eca569b1d1ab0e4ea2cc0dc7d",
+  "immutable_url": "https://github.com/specpulse/specpulse/tree/01801da4ae31da7eca569b1d1ab0e4ea2cc0dc7d"
+}

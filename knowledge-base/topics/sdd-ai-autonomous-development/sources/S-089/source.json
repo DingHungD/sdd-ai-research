@@ -1,0 +1,42 @@
+{
+  "source_id": "S-089",
+  "title": "Open Policy Agent Documentation",
+  "url": "https://www.openpolicyagent.org/docs",
+  "canonical_url": "https://www.openpolicyagent.org/docs",
+  "author_or_organization": "",
+  "publisher": "OPA",
+  "retrieved_at": "2026-05-31T13:59:10+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T135910Z",
+      "local_path": "sources/S-089/raw/SNAP-20260531T135910Z.html",
+      "content_hash": "sha256:e0c3ef9a9d054b536b29439350f474613fdab5908184deca2fa707dd611815ac",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T13:59:10+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T13:59:10+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "official_documentation",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://www.openpolicyagent.org/docs",
+  "supported_claim_ids": [
+    "C-006",
+    "C-011"
+  ],
+  "content_hash": "sha256:e0c3ef9a9d054b536b29439350f474613fdab5908184deca2fa707dd611815ac",
+  "locator": "local snapshot SNAP-20260531T135910Z"
+}

@@ -1,0 +1,45 @@
+{
+  "source_id": "S-004",
+  "title": "OpenSpec Repository README",
+  "url": "https://github.com/Fission-AI/OpenSpec",
+  "canonical_url": "https://github.com/Fission-AI/OpenSpec",
+  "author_or_organization": "",
+  "publisher": "Fission-AI",
+  "retrieved_at": "2026-05-31T06:05:37+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T060537Z",
+      "local_path": "sources/S-004/raw/SNAP-20260531T060537Z.html",
+      "content_hash": "sha256:62452c1aa7d7ee68667290759eba9f907710a1bfbc3947f67f82305a036c22a1",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T06:05:37+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T06:05:37+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/Fission-AI/OpenSpec",
+  "supported_claim_ids": [
+    "C-001",
+    "C-003",
+    "C-011"
+  ],
+  "content_hash": "sha256:62452c1aa7d7ee68667290759eba9f907710a1bfbc3947f67f82305a036c22a1",
+  "locator": "repository tree",
+  "commit_sha": "0c5f0c6c48dce8cdcb85c1c50089c2d1c7921209",
+  "immutable_url": "https://github.com/Fission-AI/OpenSpec/tree/0c5f0c6c48dce8cdcb85c1c50089c2d1c7921209"
+}

@@ -1,0 +1,41 @@
+{
+  "source_id": "S-045",
+  "title": "Codexia Repository README",
+  "url": "https://github.com/milisp/codexia",
+  "canonical_url": "https://github.com/milisp/codexia",
+  "author_or_organization": "",
+  "publisher": "milisp",
+  "retrieved_at": "2026-05-31T12:12:26+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T121226Z",
+      "local_path": "sources/S-045/raw/SNAP-20260531T121226Z.html",
+      "content_hash": "sha256:cb59b39bde0eea0055c7d0d1af196622f1041428c8d4e1091dbc77e2c40f7a6b",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T12:12:26+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T12:12:26+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/milisp/codexia",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:cb59b39bde0eea0055c7d0d1af196622f1041428c8d4e1091dbc77e2c40f7a6b",
+  "locator": "repository tree",
+  "commit_sha": "f2eb514021e9a4c91c5dc3877952ade4175fd536",
+  "immutable_url": "https://github.com/milisp/codexia/tree/f2eb514021e9a4c91c5dc3877952ade4175fd536"
+}

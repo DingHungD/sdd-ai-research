@@ -1,0 +1,42 @@
+{
+  "source_id": "S-086",
+  "title": "OWASP AISVS",
+  "url": "https://owasp.org/www-project-artificial-intelligence-security-verification-standard-aisvs-docs/",
+  "canonical_url": "https://owasp.org/www-project-artificial-intelligence-security-verification-standard-aisvs-docs/",
+  "author_or_organization": "",
+  "publisher": "OWASP",
+  "retrieved_at": "2026-05-31T13:59:07+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T135907Z",
+      "local_path": "sources/S-086/raw/SNAP-20260531T135907Z.html",
+      "content_hash": "sha256:b6a4e263392d2cc0749b355cdb54bd4a85521fe88253e200dc5f9f39b0b9f7b7",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T13:59:07+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T13:59:07+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "official_documentation",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://owasp.org/www-project-artificial-intelligence-security-verification-standard-aisvs-docs/",
+  "supported_claim_ids": [
+    "C-006",
+    "C-007"
+  ],
+  "content_hash": "sha256:b6a4e263392d2cc0749b355cdb54bd4a85521fe88253e200dc5f9f39b0b9f7b7",
+  "locator": "local snapshot SNAP-20260531T135907Z"
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/knowledge-index.schema.json",
+  "title": "Local Knowledge Base Index",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["topic_id", "updated_at", "sources"],
+  "properties": {
+    "topic_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "updated_at": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source_id", "source_path", "summary_path", "keywords"],
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "pattern": "^S-[0-9]{3,}$"
+          },
+          "source_path": { "type": "string", "minLength": 1 },
+          "summary_path": { "type": "string", "minLength": 1 },
+          "title": { "type": "string" },
+          "categories": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "keywords": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "recheck_after": {
+            "type": ["string", "null"],
+            "format": "date-time"
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,43 @@
+{
+  "source_id": "S-033",
+  "title": "Pimzino Spec Workflow MCP README",
+  "url": "https://github.com/Pimzino/spec-workflow-mcp",
+  "canonical_url": "https://github.com/Pimzino/spec-workflow-mcp",
+  "author_or_organization": "",
+  "publisher": "Pimzino",
+  "retrieved_at": "2026-05-31T12:12:12+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T121212Z",
+      "local_path": "sources/S-033/raw/SNAP-20260531T121212Z.html",
+      "content_hash": "sha256:b72d92ca8b8c6dc8d2e6e85a29fd06cca1019b0e89d49b28878dc702c1bd4ed2",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T12:12:12+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T12:12:12+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/Pimzino/spec-workflow-mcp",
+  "supported_claim_ids": [
+    "C-008"
+  ],
+  "content_hash": "sha256:b72d92ca8b8c6dc8d2e6e85a29fd06cca1019b0e89d49b28878dc702c1bd4ed2",
+  "locator": "repository tree",
+  "commit_sha": "b63e6cd8d6ed53bbc48fe93d634f7b548285762f",
+  "immutable_url": "https://github.com/Pimzino/spec-workflow-mcp/tree/b63e6cd8d6ed53bbc48fe93d634f7b548285762f"
+}

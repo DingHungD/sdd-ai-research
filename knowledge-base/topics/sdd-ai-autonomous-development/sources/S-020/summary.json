@@ -1,0 +1,74 @@
+{
+  "source_id": "S-020",
+  "snapshot_id": "SNAP-20260531T113908Z",
+  "summarized_at": "2026-05-31T14:01:29+00:00",
+  "document_purpose": "深度來源摘要：OpenAI Symphony repository。",
+  "summary": "OpenAI Symphony repository。issue tracker 驅動的隔離 coding-agent 執行原型。關鍵技術包括：issue tracker, isolated workspace, parallel runs。",
+  "categories": [
+    "adjacent_tooling",
+    "execution_runtime",
+    "isolation",
+    "observability",
+    "orchestration"
+  ],
+  "key_points": [
+    {
+      "text": "Symphony 將 issue tracker 工作交給 coding agent 執行。",
+      "locator": "README overview"
+    },
+    {
+      "text": "每個工作使用隔離 workspace，並支援並行執行。",
+      "locator": "README overview"
+    }
+  ],
+  "keywords": [
+    "OpenAI Symphony",
+    "OpenAI Symphony repository",
+    "coding agent",
+    "execution_runtime",
+    "issue tracker",
+    "parallel",
+    "workspace"
+  ],
+  "entities": [
+    "OpenAI",
+    "Symphony"
+  ],
+  "limitations": [
+    "Repository 或官方文件可用於理解公開設計；production readiness 仍需安裝測試、維護狀態與 benchmark 驗證。",
+    "Symphony repository 明確定位為 engineering prototype；不是安全強化平台。"
+  ],
+  "potential_questions": [
+    "如何將 SDD task graph 映射到 Symphony issue lifecycle？"
+  ],
+  "role_in_ecosystem": "OpenAI Symphony repository",
+  "key_features": [
+    "issue tracker 驅動的隔離 coding-agent 執行原型",
+    "架構層級：execution_runtime",
+    "輸出應保存為可追溯 artifact，重要結論需回讀 raw snapshot。"
+  ],
+  "key_technologies": [
+    "issue tracker",
+    "isolated workspace",
+    "parallel runs"
+  ],
+  "best_for": [
+    "execution_runtime",
+    "快速判斷此工具在整體 SDD 架構中的責任",
+    "作為試點工具選型與後續深挖入口"
+  ],
+  "research_value": "此來源用於理解 OpenAI Symphony repository 在整體架構中的角色。重要結論仍需回讀本地 raw snapshot 與原始 URL。",
+  "architecture_fit": "位於 execution runtime 層，管理長時間 agent session、workspace、scheduler、retry 與 observability。",
+  "workflow_outline": [
+    "取得 issue 或 task",
+    "建立隔離 workspace",
+    "啟動 agent runtime",
+    "監控 log 與狀態",
+    "完成、retry 或 escalation"
+  ],
+  "verification_questions": [
+    "workspace 是否真正隔離？",
+    "retry 是否具冪等性？",
+    "log、成本、權限與錯誤是否可觀測？"
+  ]
+}

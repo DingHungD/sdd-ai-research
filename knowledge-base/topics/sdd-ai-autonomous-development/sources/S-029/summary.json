@@ -1,0 +1,62 @@
+{
+  "source_id": "S-029",
+  "snapshot_id": "SNAP-20260531T121206Z",
+  "summarized_at": "2026-05-31T14:01:29+00:00",
+  "document_purpose": "深度來源摘要：OpenLore。",
+  "summary": "OpenLore。以 static analysis 建立可查詢 knowledge graph，結合 living specs、drift detection、graph-native MCP tools 與 CI staleness gate。關鍵技術包括：knowledge graph, call graph, SQLite, graph-native MCP, semantic retrieval, drift detection, SCIP export, CI preflight。",
+  "categories": [
+    "brownfield"
+  ],
+  "key_points": [
+    {
+      "text": "以 static analysis 與 LLM 反向產生 living OpenSpec，追蹤 spec test coverage 與 drift",
+      "locator": "README or official documentation overview",
+      "notes": "Agent-reviewed catalog summary; return to raw snapshot for publication claims."
+    }
+  ],
+  "keywords": [
+    "OpenLore",
+    "brownfield",
+    "spec-gen"
+  ],
+  "entities": [],
+  "limitations": [
+    "Repository 或官方文件可用於理解公開設計；production readiness 仍需安裝測試、維護狀態與 benchmark 驗證。"
+  ],
+  "potential_questions": [],
+  "role_in_ecosystem": "OpenLore",
+  "key_features": [
+    "以 static analysis 建立可查詢 knowledge graph，結合 living specs、drift detection、graph-native MCP tools 與 CI staleness gate",
+    "架構層級：brownfield",
+    "輸出應保存為可追溯 artifact，重要結論需回讀 raw snapshot。"
+  ],
+  "key_technologies": [
+    "knowledge graph",
+    "call graph",
+    "SQLite",
+    "graph-native MCP",
+    "semantic retrieval",
+    "drift detection",
+    "SCIP export",
+    "CI preflight"
+  ],
+  "best_for": [
+    "brownfield",
+    "快速判斷此工具在整體 SDD 架構中的責任",
+    "作為試點工具選型與後續深挖入口"
+  ],
+  "research_value": "此來源用於理解 OpenLore 在整體架構中的角色。重要結論仍需回讀本地 raw snapshot 與原始 URL。",
+  "architecture_fit": "位於 brownfield reverse-engineering 層，從既有 code 產生或更新 living specification。",
+  "workflow_outline": [
+    "執行 static analysis",
+    "建立 dependency 與 call graph",
+    "識別 domain clusters",
+    "由 LLM 補充語意",
+    "輸出 living specs 與 drift 指標"
+  ],
+  "verification_questions": [
+    "產生規格的準確率如何驗證？",
+    "spec-code drift 是否可持續監控？",
+    "未覆蓋的 code path 如何揭露？"
+  ]
+}

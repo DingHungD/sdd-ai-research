@@ -1,0 +1,43 @@
+{
+  "source_id": "S-017",
+  "title": "Get Shit Done Repository README",
+  "url": "https://github.com/gsd-build/get-shit-done",
+  "canonical_url": "https://github.com/gsd-build/get-shit-done",
+  "author_or_organization": "",
+  "publisher": "gsd-build",
+  "retrieved_at": "2026-05-31T11:39:04+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T113904Z",
+      "local_path": "sources/S-017/raw/SNAP-20260531T113904Z.html",
+      "content_hash": "sha256:5b1cb5424647b89cce06e727f19fae59762cdcb6accc5bb1c44f5708dabbe2dc",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T11:39:04+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T11:39:04+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/gsd-build/get-shit-done",
+  "supported_claim_ids": [
+    "C-005"
+  ],
+  "content_hash": "sha256:5b1cb5424647b89cce06e727f19fae59762cdcb6accc5bb1c44f5708dabbe2dc",
+  "locator": "repository tree",
+  "commit_sha": "837114c1d0a4bec91983bb198a2b0d9f42a9446f",
+  "immutable_url": "https://github.com/gsd-build/get-shit-done/tree/837114c1d0a4bec91983bb198a2b0d9f42a9446f"
+}

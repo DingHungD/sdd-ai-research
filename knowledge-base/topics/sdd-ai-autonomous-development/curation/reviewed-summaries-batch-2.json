@@ -1,0 +1,245 @@
+{
+  "summaries": [
+    {
+      "source_id": "S-011",
+      "snapshot_id": "SNAP-20260531T113856Z",
+      "summarized_at": "2026-05-31T11:50:00Z",
+      "document_purpose": "codex-spec repository，用於分析從 context 到 implementation 的規格工作流。",
+      "summary": "codex-spec 將開發流程拆成 project context、specification、requirements、design、development plan、implementation 與 validation。其價值在於把規格 artifact 與 agent command 固定化。",
+      "categories": ["tooling", "workflow", "traceability"],
+      "key_points": [
+        {"text": "codex-spec 將需求、設計、開發計畫與實作拆成顯式階段。", "locator": "README overview"},
+        {"text": "工作流以版本化 artifact 提供 agent 上下文。", "locator": "README workflow"}
+      ],
+      "keywords": ["codex-spec", "requirements", "design", "development plan", "validation"],
+      "entities": ["codex-spec"],
+      "limitations": ["Repository README 可證明設計，不足以證明實際交付品質。"],
+      "potential_questions": ["artifact 之間是否提供機器可驗證的 traceability？"]
+    },
+    {
+      "source_id": "S-012",
+      "snapshot_id": "SNAP-20260531T113858Z",
+      "summarized_at": "2026-05-31T11:50:00Z",
+      "document_purpose": "SpecPulse repository，用於分析 CLI-first SDD 與驗證機制。",
+      "summary": "SpecPulse 是 CLI-first 的 SDD 工具候選，強調以規格驅動規劃、任務執行與持續驗證。它代表將規格工作流封裝成可重複命令的方向。",
+      "categories": ["tooling", "workflow", "evaluation"],
+      "key_points": [
+        {"text": "SpecPulse 將 specification workflow 封裝為 CLI 操作。", "locator": "README overview"},
+        {"text": "工具主張包含驗證與持續執行流程。", "locator": "README features"}
+      ],
+      "keywords": ["SpecPulse", "CLI", "validation", "continuous execution"],
+      "entities": ["SpecPulse"],
+      "limitations": ["本次未安裝執行；需以端到端試點確認功能成熟度。"],
+      "potential_questions": ["驗證規則可否與 CI 整合？"]
+    },
+    {
+      "source_id": "S-013",
+      "snapshot_id": "SNAP-20260531T113859Z",
+      "summarized_at": "2026-05-31T11:50:00Z",
+      "document_purpose": "Specs CLI repository，用於分析 traceability。",
+      "summary": "Specs CLI 的 DSPI 工作流聚焦在 specification-driven planning 與 implementation traceability。它代表規格不能只是 Markdown 說明，而要能追蹤需求、任務與實作之間的關係。",
+      "categories": ["tooling", "traceability", "workflow"],
+      "key_points": [
+        {"text": "Specs CLI 以 DSPI workflow 管理規格、規劃與實作。", "locator": "README overview"},
+        {"text": "traceability 是此類工具的核心價值之一。", "locator": "README features"}
+      ],
+      "keywords": ["Specs CLI", "DSPI", "traceability", "implementation"],
+      "entities": ["Specs CLI"],
+      "limitations": ["本次未驗證 traceability schema 的完整性。"],
+      "potential_questions": ["是否能將 requirement 映射到 test 與 commit？"]
+    },
+    {
+      "source_id": "S-014",
+      "snapshot_id": "SNAP-20260531T113900Z",
+      "summarized_at": "2026-05-31T11:50:00Z",
+      "document_purpose": "Spec Workflow MCP repository，用於分析 MCP 介面化的規格管理。",
+      "summary": "Spec Workflow MCP 將 requirements、design 與 tasks 的結構化流程暴露為 MCP server。這種設計使不同 coding agent 可共用相同規格狀態與操作介面。",
+      "categories": ["tooling", "workflow", "integration"],
+      "key_points": [
+        {"text": "工具以 MCP server 管理 structured specification workflow。", "locator": "repository description"},
+        {"text": "MCP 介面可讓多種 agent 以相同工具契約操作規格。", "locator": "README overview"}
+      ],
+      "keywords": ["MCP", "requirements", "design", "tasks", "agent integration"],
+      "entities": ["Spec Workflow MCP"],
+      "limitations": ["本次未驗證 MCP tool schema 與 concurrent update 行為。"],
+      "potential_questions": ["多 agent 同時修改 spec 時如何處理衝突？"]
+    },
+    {
+      "source_id": "S-015",
+      "snapshot_id": "SNAP-20260531T113901Z",
+      "summarized_at": "2026-05-31T11:50:00Z",
+      "document_purpose": "Specflow repository，用於分析從 intent 到執行與 refinement 的循環。",
+      "summary": "Specflow 將 intent、roadmap、task、execute 與 refine 組成可反覆迭代的方法。它強調規格不是一次性前置文件，而是執行後會繼續修正的狀態。",
+      "categories": ["tooling", "workflow", "iteration"],
+      "key_points": [
+        {"text": "Specflow 將 intent、roadmap、tasks、execute、refine 串成循環。", "locator": "README methodology"},
+        {"text": "規格在執行後仍需 refinement。", "locator": "README workflow"}
+      ],
+      "keywords": ["Specflow", "intent", "roadmap", "execute", "refine"],
+      "entities": ["SpecStory", "Specflow"],
+      "limitations": ["方法論仍需以真實專案驗證其維護成本。"],
+      "potential_questions": ["refinement 是否會自動回寫既有 requirement？"]
+    },
+    {
+      "source_id": "S-016",
+      "snapshot_id": "SNAP-20260531T113903Z",
+      "summarized_at": "2026-05-31T11:50:00Z",
+      "document_purpose": "BMAD Method repository，用於分析相鄰的完整生命週期 agent workflow。",
+      "summary": "BMAD Method 是相鄰的 AI-driven agile workflow framework，不是狹義 SDD 工具。它提供依複雜度調整規劃深度、分析、規劃、架構、實作與多個專業 agent。這說明自動開發系統需要規格層以外的角色與工作流編排。",
+      "categories": ["adjacent_tooling", "workflow", "orchestration"],
+      "key_points": [
+        {"text": "BMAD 依專案複雜度調整 planning depth。", "locator": "README: Why the BMad Method?"},
+        {"text": "BMAD 提供 analysis、planning、architecture、implementation 的 structured workflow 與 specialized agents。", "locator": "README: Why the BMad Method?"}
+      ],
+      "keywords": ["BMAD", "agile", "planning depth", "specialized agents", "architecture"],
+      "entities": ["BMAD Method"],
+      "limitations": ["這是相鄰工具，不應直接歸類為純 SDD 實作。"],
+      "potential_questions": ["哪些 BMAD planning artifact 可以成為 SDD 輸入？"]
+    },
+    {
+      "source_id": "S-017",
+      "snapshot_id": "SNAP-20260531T113904Z",
+      "summarized_at": "2026-05-31T11:50:00Z",
+      "document_purpose": "Get Shit Done repository，用於分析 context engineering 與分階段執行。",
+      "summary": "GSD 是相鄰的 context-engineering 工作流。它以較小 planning artifact、phase 與 fresh subagent 降低長對話造成的 context degradation，並在執行後驗證結果。",
+      "categories": ["adjacent_tooling", "context_engineering", "workflow"],
+      "key_points": [
+        {"text": "GSD 以分階段 artifact 與 fresh subagent 控制 context 品質。", "locator": "README overview"},
+        {"text": "執行與驗證被拆為可重複步驟。", "locator": "README workflow"}
+      ],
+      "keywords": ["GSD", "context engineering", "phase", "fresh subagent", "verification"],
+      "entities": ["GSD"],
+      "limitations": ["這是相鄰工具，不是 specification schema 標準。"],
+      "potential_questions": ["context reset 對任務完成率的影響如何量測？"]
+    },
+    {
+      "source_id": "S-018",
+      "snapshot_id": "SNAP-20260531T113906Z",
+      "summarized_at": "2026-05-31T11:50:00Z",
+      "document_purpose": "Kata repository，用於分析 code context 索引與 orchestration。",
+      "summary": "Kata 將 spec-driven orchestration 與程式碼理解結合，README 描述使用 Tree-sitter 分析 code、SQLite 保存 context，並在 agent 執行中提供 repository-aware 上下文。這補上規格層無法單獨解決的 brownfield codebase 理解問題。",
+      "categories": ["adjacent_tooling", "context_engineering", "orchestration", "brownfield"],
+      "key_points": [
+        {"text": "Kata 使用 Tree-sitter 解析 code 並以 SQLite 保存 context。", "locator": "README architecture"},
+        {"text": "repository-aware context 用於支援 agent 執行。", "locator": "README overview"}
+      ],
+      "keywords": ["Kata", "Tree-sitter", "SQLite", "code context", "brownfield"],
+      "entities": ["Kata"],
+      "limitations": ["本次未測試索引準確率與大型 repository 效能。"],
+      "potential_questions": ["context index 如何與 spec traceability 合併？"]
+    },
+    {
+      "source_id": "S-019",
+      "snapshot_id": "SNAP-20260531T113907Z",
+      "summarized_at": "2026-05-31T11:50:00Z",
+      "document_purpose": "Taskmaster repository，用於分析 PRD 到 task graph 的執行層。",
+      "summary": "Taskmaster 是相鄰的任務管理與執行層。它將 PRD 轉為 tasks，維護 dependency 與 task 狀態，協助 agent 找出下一個可執行工作。這不是完整 SDD，但可作為 specification 到 scheduler 的橋樑。",
+      "categories": ["adjacent_tooling", "task_graph", "orchestration"],
+      "key_points": [
+        {"text": "Taskmaster 將 PRD 拆為 task 並維護 dependency。", "locator": "README overview"},
+        {"text": "agent 可依依賴關係取得下一個工作。", "locator": "README workflow"}
+      ],
+      "keywords": ["Taskmaster", "PRD", "task graph", "dependency", "next task"],
+      "entities": ["Taskmaster"],
+      "limitations": ["Task graph 不等於 specification correctness。"],
+      "potential_questions": ["task graph 如何回指 requirement 與 acceptance criteria？"]
+    },
+    {
+      "source_id": "S-020",
+      "snapshot_id": "SNAP-20260531T113908Z",
+      "summarized_at": "2026-05-31T11:50:00Z",
+      "document_purpose": "OpenAI Symphony repository，用於分析長時間 autonomous coding orchestration。",
+      "summary": "Symphony 是 OpenAI 發布的工程原型，用 issue tracker 驅動 coding agent。它為每個工作建立隔離 workspace、執行 agent、收集結果並支援並行處理，代表自動開發的執行編排層。",
+      "categories": ["adjacent_tooling", "orchestration", "isolation", "observability"],
+      "key_points": [
+        {"text": "Symphony 將 issue tracker 工作交給 coding agent 執行。", "locator": "README overview"},
+        {"text": "每個工作使用隔離 workspace，並支援並行執行。", "locator": "README overview"}
+      ],
+      "keywords": ["OpenAI Symphony", "issue tracker", "workspace", "parallel", "coding agent"],
+      "entities": ["OpenAI", "Symphony"],
+      "limitations": ["Symphony repository 明確定位為 engineering prototype；不是安全強化平台。"],
+      "potential_questions": ["如何將 SDD task graph 映射到 Symphony issue lifecycle？"]
+    },
+    {
+      "source_id": "S-021",
+      "snapshot_id": "SNAP-20260531T113910Z",
+      "summarized_at": "2026-05-31T11:50:00Z",
+      "document_purpose": "OpenAI Symphony SPEC.md，用於分析 scheduler、workspace、retry 與 policy 邊界。",
+      "summary": "Symphony SPEC.md 將服務拆為 issue tracker client、scheduler、workspace manager、agent runner、observability 與 retry/reconciliation 行為。它明確區分 orchestration policy 與 agent prompt，顯示全自動系統需要可恢復狀態機，而非單次 agent 呼叫。",
+      "categories": ["orchestration", "scheduler", "isolation", "retry", "observability"],
+      "key_points": [
+        {"text": "服務規格包含 scheduler、workspace manager、agent runner 與 issue tracker client。", "locator": "SPEC.md architecture"},
+        {"text": "規格包含 retry、reconciliation 與 observability 行為。", "locator": "SPEC.md lifecycle"},
+        {"text": "workspace isolation 與 policy boundary 是長時間執行的基礎。", "locator": "SPEC.md workspace and policy sections"}
+      ],
+      "keywords": ["scheduler", "workspace manager", "retry", "reconciliation", "observability", "policy"],
+      "entities": ["OpenAI", "Symphony"],
+      "limitations": ["SPEC.md 描述理想服務行為；實際部署仍需安全控制。"],
+      "potential_questions": ["哪些失敗可自動 retry，哪些需要人工 escalation？"]
+    },
+    {
+      "source_id": "S-022",
+      "snapshot_id": "SNAP-20260531T113912Z",
+      "summarized_at": "2026-05-31T11:50:00Z",
+      "document_purpose": "Rover repository，用於分析 background agent workspace isolation。",
+      "summary": "Rover 是相鄰的 coding-agent 管理器，聚焦在背景與平行執行。它為不同 agent 工作建立隔離 workspace，降低多工作同時修改同一 repository 的衝突風險。",
+      "categories": ["adjacent_tooling", "orchestration", "isolation"],
+      "key_points": [
+        {"text": "Rover 管理背景 coding-agent 工作。", "locator": "README overview"},
+        {"text": "隔離 workspace 支援平行工作並降低互相干擾。", "locator": "README workflow"}
+      ],
+      "keywords": ["Rover", "background agents", "parallel", "workspace isolation"],
+      "entities": ["Endor", "Rover"],
+      "limitations": ["Rover 解決執行隔離，不負責規格品質。"],
+      "potential_questions": ["workspace 合併前需要哪些自動 review？"]
+    },
+    {
+      "source_id": "S-023",
+      "snapshot_id": "SNAP-20260531T113913Z",
+      "summarized_at": "2026-05-31T11:50:00Z",
+      "document_purpose": "Agent Skills SDD skill，用於分析具體 gate 與驗證策略。",
+      "summary": "此 SDD skill 將 clarify、plan、tasks、implementation 與 verification 拆為明確步驟，並保留 human gate。它不是完整平台，但提供可直接套用的 agent 操作契約。",
+      "categories": ["workflow", "evaluation", "human_gate"],
+      "key_points": [
+        {"text": "skill 使用明確階段與人工 gate 管理 agent 行為。", "locator": "SKILL.md workflow"},
+        {"text": "verification 是 implementation 後的必要步驟。", "locator": "SKILL.md verification"}
+      ],
+      "keywords": ["agent skill", "clarify", "plan", "tasks", "verification", "human gate"],
+      "entities": ["Agent Skills"],
+      "limitations": ["這是操作指南，不是成效 benchmark。"],
+      "potential_questions": ["哪些 gate 可由 policy-as-code 自動化？"]
+    },
+    {
+      "source_id": "S-024",
+      "snapshot_id": "SNAP-20260531T113913Z",
+      "summarized_at": "2026-05-31T11:50:00Z",
+      "document_purpose": "Spec Kit Agents 預印本摘要頁，用於分析 context-grounded workflow 研究方向。",
+      "summary": "此預印本研究 Spec Kit Agents 與 context-grounded agentic workflow，提供 SDD 與 agent workflow 結合的研究證據候選。它可支援技術方向判斷，但不能取代實際 benchmark 覆核。",
+      "categories": ["research", "context_engineering", "evaluation"],
+      "key_points": [
+        {"text": "研究主題聚焦於 context-grounded agentic workflow。", "locator": "Abstract"},
+        {"text": "來源是 arXiv 預印本。", "locator": "Abstract page metadata"}
+      ],
+      "keywords": ["Spec Kit Agents", "context-grounded", "agentic workflow", "arXiv"],
+      "entities": ["arXiv"],
+      "limitations": ["預印本尚不能視為已同行評審共識；需閱讀全文確認實驗設計。"],
+      "potential_questions": ["實驗是否衡量正確性、成本與人工介入？"]
+    },
+    {
+      "source_id": "S-025",
+      "snapshot_id": "SNAP-20260531T113914Z",
+      "summarized_at": "2026-05-31T11:50:00Z",
+      "document_purpose": "Constitutional SDD 預印本摘要頁，用於分析安全約束與可追溯性。",
+      "summary": "此預印本探討 Constitutional Spec-Driven Development，將安全限制與規格驅動流程結合。它指出全自動開發不能只驗證功能，還需把安全政策放入可追蹤、可檢查的規格與驗證鏈。",
+      "categories": ["research", "security", "traceability", "evaluation"],
+      "key_points": [
+        {"text": "研究主題將 constitutional constraints 與 SDD 結合。", "locator": "Abstract"},
+        {"text": "安全約束需要可追溯驗證，而不只是功能測試。", "locator": "Abstract"}
+      ],
+      "keywords": ["constitutional SDD", "security", "constraints", "traceability", "arXiv"],
+      "entities": ["arXiv"],
+      "limitations": ["預印本需閱讀全文與實驗結果後才能提高證據權重。"],
+      "potential_questions": ["policy-as-code 如何映射到 specification 與 CI gate？"]
+    }
+  ]
+}

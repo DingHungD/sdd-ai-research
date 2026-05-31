@@ -1,0 +1,46 @@
+{
+  "source_id": "S-021",
+  "title": "OpenAI Symphony Service Specification",
+  "url": "https://github.com/openai/symphony/blob/main/SPEC.md",
+  "canonical_url": "https://github.com/openai/symphony/blob/main/SPEC.md",
+  "author_or_organization": "",
+  "publisher": "OpenAI",
+  "retrieved_at": "2026-05-31T11:39:10+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T113910Z",
+      "local_path": "sources/S-021/raw/SNAP-20260531T113910Z.html",
+      "content_hash": "sha256:000d714aa69d4c6a98edcc08349c75066d0ee1289644b6d942fb4ede2dab1e2d",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T11:39:10+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T11:39:10+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "official_documentation",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/openai/symphony/blob/main/SPEC.md",
+  "supported_claim_ids": [
+    "C-004",
+    "C-008",
+    "C-011",
+    "C-012"
+  ],
+  "content_hash": "sha256:000d714aa69d4c6a98edcc08349c75066d0ee1289644b6d942fb4ede2dab1e2d",
+  "locator": "SPEC.md",
+  "commit_sha": "c5261d12101b02e0045ca84701eed0c4be367387",
+  "immutable_url": "https://github.com/openai/symphony/blob/c5261d12101b02e0045ca84701eed0c4be367387/SPEC.md"
+}

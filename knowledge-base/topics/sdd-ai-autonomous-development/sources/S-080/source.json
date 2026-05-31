@@ -1,0 +1,45 @@
+{
+  "source_id": "S-080",
+  "title": "NASA SWE-052 Bidirectional Traceability",
+  "url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695427/SWE-052+-+Bidirectional+Traceability",
+  "canonical_url": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695427/SWE-052+-+Bidirectional+Traceability",
+  "author_or_organization": "",
+  "publisher": "NASA",
+  "retrieved_at": "2026-05-31T13:58:59+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T135859Z",
+      "local_path": "sources/S-080/raw/SNAP-20260531T135859Z.html",
+      "content_hash": "sha256:a63c777e66e90419df3931bda9a987d7615ffcc8e4d8e56bfaaaefb66c5314d0",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T13:58:59+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T13:58:59+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "official_documentation",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695427/SWE-052+-+Bidirectional+Traceability",
+  "supported_claim_ids": [
+    "C-001",
+    "C-002",
+    "C-007",
+    "C-011",
+    "C-012"
+  ],
+  "content_hash": "sha256:a63c777e66e90419df3931bda9a987d7615ffcc8e4d8e56bfaaaefb66c5314d0",
+  "locator": "local snapshot SNAP-20260531T135859Z"
+}

@@ -1,0 +1,43 @@
+{
+  "source_id": "S-082",
+  "title": "NASA Requirements Management",
+  "url": "https://www.nasa.gov/reference/6-2-requirements-management/",
+  "canonical_url": "https://www.nasa.gov/reference/6-2-requirements-management/",
+  "author_or_organization": "",
+  "publisher": "NASA",
+  "retrieved_at": "2026-05-31T13:59:04+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T135904Z",
+      "local_path": "sources/S-082/raw/SNAP-20260531T135904Z.html",
+      "content_hash": "sha256:1c54a23d56cde50162d92dbbaa74f192807eb0027c11c5519a3f3207710b9a91",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T13:59:04+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T13:59:04+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "official_documentation",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://www.nasa.gov/reference/6-2-requirements-management/",
+  "supported_claim_ids": [
+    "C-001",
+    "C-002",
+    "C-007"
+  ],
+  "content_hash": "sha256:1c54a23d56cde50162d92dbbaa74f192807eb0027c11c5519a3f3207710b9a91",
+  "locator": "local snapshot SNAP-20260531T135904Z"
+}

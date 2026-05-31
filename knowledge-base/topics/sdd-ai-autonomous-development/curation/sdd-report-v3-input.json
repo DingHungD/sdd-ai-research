@@ -1,0 +1,174 @@
+{
+  "report_id": "sdd-ai-autonomous-development-20260531-v3",
+  "version": "3.0.0",
+  "title": "根據 SDD 使用 AI 全自動開發：55 來源技術地圖與落地架構",
+  "generated_at": "2026-05-31T13:00:00Z",
+  "data_cutoff": "2026-05-31T12:45:00Z",
+  "overall_confidence": "medium",
+  "quality_score": 0,
+  "minimum_primary_sources": 50,
+  "executive_summary": "本報告以 55 個獨立主要來源建立 SDD 與 AI 自動開發技術地圖。結論是：全自動開發不是單一 coding agent，而是由規格 artifact、traceability、repository context、task graph、scheduler、隔離 workspace、驗證、安全政策、observability、retry 與 escalation 組成的長時間執行系統。來源顯示規格層已相當多元：GitHub Spec Kit、OpenSpec、Spec Kitty、SpecDD、Kiro、Akka、cc-sdd、MoAI-ADK、Specs CLI、各類 MCP workflow 與 OpenSpec 生態。執行層則由 Ralph loops、Swarms、Metaswarm、Maestro、Symphony、Rover、Codexia、worktree 工具補上。現階段可實作高自動化 bounded autonomy；若要可靠零人工交付，仍缺少跨工具 benchmark、安全政策驗證與大型 brownfield 證據。",
+  "questions": [
+    "SDD 在 AI 全自動開發中的技術定義是什麼？",
+    "55 個主要來源如何分層？",
+    "規格、context、任務、隔離、驗證與安全如何組成完整系統？",
+    "哪些開源工具可作為各層候選？",
+    "如何逐步走向可靠的 bounded autonomy？"
+  ],
+  "methodology": "依追加式 crawl queue 蒐集 55 個獨立主要來源，不把文件內 supporting reference 算入數量。所有來源保存本地 snapshot、來源 metadata、深度 summary.md 與索引。`sources/CATALOG.md` 提供 S-001 到 S-055 的導航。關鍵發現採跨來源架構統整；官方文件與 repository README 可證明公開設計，但不視為獨立 benchmark。",
+  "claims": [
+    {
+      "claim_id": "C-001",
+      "text": "SDD 的共通核心是 specification 作為版本化、可演進、可驗證的主要 artifact；code、task、test 與變更紀錄需能回指需求。",
+      "type": "fact",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "多個官方工具、文件與研究來源在核心方向一致。",
+      "supporting_source_ids": ["S-001", "S-004", "S-006", "S-008", "S-010", "S-013", "S-027", "S-028", "S-032", "S-033", "S-053"],
+      "opposing_source_ids": [],
+      "notes": "artifact 格式可以是 Markdown、JSON、`.sdd`、change folder 或 MCP state。"
+    },
+    {
+      "claim_id": "C-002",
+      "text": "SDD 流程的穩定骨架是 clarify 或 requirements -> design 或 plan -> tasks -> implementation -> verification；不同工具主要差在 artifact schema、審批點與執行自動化程度。",
+      "type": "fact",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "至少十個獨立工具實作相近階段。",
+      "supporting_source_ids": ["S-001", "S-003", "S-007", "S-009", "S-010", "S-011", "S-014", "S-015", "S-023", "S-027", "S-032", "S-033", "S-052", "S-053"],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-003",
+      "text": "規格層至少需要 artifact versioning、traceability、refinement、agent-accessible interface 與 approval state。OpenSpec change folder、SpecDD `.sdd`、Specs CLI traceability、MCP workflow 與 JSON spec 都是可用形態。",
+      "type": "inference",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "跨來源比較顯示共同需求，但格式沒有單一標準。",
+      "supporting_source_ids": ["S-004", "S-008", "S-013", "S-014", "S-015", "S-032", "S-033", "S-049", "S-053"],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-004",
+      "text": "brownfield 自動開發需要 codebase context 層。OpenLore 以 static analysis、knowledge graph、living specs、drift detection 與 graph-native MCP 建立持久架構記憶；Kata 以 Tree-sitter 與 SQLite 建立 repository-aware context。",
+      "type": "fact",
+      "importance": "critical",
+      "confidence": "medium",
+      "confidence_reason": "工具 README 直接描述設計；仍需大型 repository benchmark。",
+      "supporting_source_ids": ["S-018", "S-029"],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-005",
+      "text": "長時間自動執行需要可持久化 task graph 與 iteration memory。Taskmaster、Flow Next、Swarms、Ralph 類工具分別使用 dependency graph、wave execution、PRD JSON、progress log 或 git commit 保存狀態。",
+      "type": "fact",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "多個 repository 直接描述狀態與執行方式。",
+      "supporting_source_ids": ["S-019", "S-035", "S-037", "S-038", "S-039", "S-040"],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-006",
+      "text": "可靠執行層需要隔離 workspace、平行控制、retry、reconciliation 與 observability。Symphony SPEC.md 提供服務級拆分；Rover、Worktrunk、workmux、Codexia 與 Spec Kitty 補上 workspace 或 worktree 實作模式。",
+      "type": "fact",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "官方 SPEC 與多個 repository 直接支持。",
+      "supporting_source_ids": ["S-005", "S-020", "S-021", "S-022", "S-043", "S-044", "S-045"],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-007",
+      "text": "多 agent 系統需要明確的 orchestration contract：specialist delegation、handoff、wave 或 staged execution、持久 session state、verification 與 merge boundary。BMAD、Swarms、Metaswarm、Maestro 與 Local-first Maestro 提供不同解法。",
+      "type": "inference",
+      "importance": "critical",
+      "confidence": "medium",
+      "confidence_reason": "工具邊界清楚，但目前缺跨工具獨立比較。",
+      "supporting_source_ids": ["S-016", "S-040", "S-041", "S-042", "S-047"],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-008",
+      "text": "全自動系統的驗證不能只看 test pass。最低要求應涵蓋 acceptance criteria、spec-code traceability、靜態分析、安全規格、政策閘門、review 與 escalation。Threatspec、Constitutional SDD、AI Governor、MoAI-ADK 與 cc-sdd 補充此層。",
+      "type": "recommendation",
+      "importance": "critical",
+      "confidence": "medium",
+      "confidence_reason": "多個來源支持品質與安全約束方向，但尚缺統一標準。",
+      "supporting_source_ids": ["S-025", "S-027", "S-028", "S-041", "S-054", "S-055"],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-009",
+      "text": "Ralph loop 能提高連續執行能力，但必須配合 task 邊界、completion condition、max iteration、git memory、驗證與人工 escalation；否則只是把單次失敗延長。",
+      "type": "inference",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "Smart Ralph、Flow Next、Anthropic Ralph Wiggum、iannuttall Ralph 與 snarktank Ralph 呈現互補機制。",
+      "supporting_source_ids": ["S-034", "S-035", "S-037", "S-038", "S-039"],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-010",
+      "text": "現階段適合落地的是 bounded autonomy：agent 可自動處理明確且可驗證的工作；模糊需求、架構變更、安全風險、無法自動驗證的結果與發布決策應進入人工或政策 escalation。",
+      "type": "recommendation",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "human gate、approval、review、policy boundary 與 escalation 在多種工具中重複出現。",
+      "supporting_source_ids": ["S-002", "S-005", "S-007", "S-010", "S-021", "S-023", "S-027", "S-033", "S-034", "S-036"],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-011",
+      "text": "可行首版架構可選：OpenSpec 或 Spec Kit 作規格層，OpenLore 或 Kata 補 repository context，Taskmaster 或 Flow Next 管 task graph，Symphony、Rover 或 worktree 工具做隔離執行，MoAI-ADK、CI 與 Threatspec 補驗證與安全。",
+      "type": "recommendation",
+      "importance": "critical",
+      "confidence": "medium",
+      "confidence_reason": "此為跨來源系統整合建議，需用試點驗證相容性。",
+      "supporting_source_ids": ["S-001", "S-004", "S-018", "S-019", "S-021", "S-022", "S-028", "S-029", "S-035", "S-055"],
+      "opposing_source_ids": [],
+      "notes": ""
+    }
+  ],
+  "source_ids": ["S-001", "S-002", "S-003", "S-004", "S-005", "S-006", "S-007", "S-008", "S-009", "S-010", "S-011", "S-012", "S-013", "S-014", "S-015", "S-016", "S-017", "S-018", "S-019", "S-020", "S-021", "S-022", "S-023", "S-024", "S-025", "S-026", "S-027", "S-028", "S-029", "S-030", "S-031", "S-032", "S-033", "S-034", "S-035", "S-036", "S-037", "S-038", "S-039", "S-040", "S-041", "S-042", "S-043", "S-044", "S-045", "S-046", "S-047", "S-048", "S-049", "S-050", "S-051", "S-052", "S-053", "S-054", "S-055"],
+  "conflicts": [
+    "SDD 沒有單一 artifact 標準：Markdown、JSON、`.sdd`、OpenSpec change folder、MCP state 都存在。",
+    "部分工具追求 auto-run，另一些工具刻意保留 approval gate；兩者代表不同風險偏好。",
+    "Ralph loop、multi-agent orchestrator 與 worktree manager 是執行層，不應被誤認為規格品質本身。",
+    "README 可證明工具公開設計，但不能取代端到端 benchmark。"
+  ],
+  "unknowns": [
+    "缺少同一 repository、同一模型、同一需求下的跨工具 benchmark。",
+    "大型 brownfield 專案的 spec extraction 準確率、drift 偵測與 context index 成本仍需量測。",
+    "多 agent concurrent spec update 的衝突解決與權限模型尚未形成共識。",
+    "完全無人發布在安全、法規與事故責任上仍有重大缺口。"
+  ],
+  "limitations": [
+    "55 個來源以官方文件與 repository README 為主，適合建立技術地圖，不等於獨立成效驗證。",
+    "部分來源為較小型專案，需要另外檢查維護活躍度、測試覆蓋與 production readiness。",
+    "S-024 與 S-025 是 arXiv 預印本，尚不能視為同行評審共識。",
+    "GitHub snapshot 保存於 2026-05-31；尚未全部轉成固定 commit permalink。",
+    "本次未端到端安裝執行全部 55 個來源。"
+  ],
+  "conclusion": "SDD AI 全自動開發應被設計為多層控制系統。推薦技術地圖：1. specification artifact；2. traceability；3. repository context；4. task graph；5. scheduler 與 autonomous loop；6. isolated workspace；7. verifier 與 security policy；8. observability、retry 與 escalation。來源生態已足以組裝原型，但尚不足以保證任意專案零人工交付。最合理的路徑是 bounded autonomy：先讓系統在明確範圍內自動完成、驗證、重試與回報，再依量測結果逐步收縮人工閘門。",
+  "recommendations": [
+    "閱讀 `sources/CATALOG.md` 選出試點工具，不直接以星數或宣傳用語決策。",
+    "首個試點選中小型服務，固定 requirement、acceptance criteria、安全限制與 CI verifier。",
+    "以 OpenSpec 或 Spec Kit 作規格層；以 OpenLore 或 Kata 驗證 brownfield context；以 Taskmaster 或 Flow Next 驗證 task graph。",
+    "執行層採 Symphony、Rover、Codexia 或 worktree 工具之一，保存每次 run 的狀態、log、retry 與 escalation 原因。",
+    "驗證層加入 test、lint、static analysis、security scan、requirement coverage、spec-code drift 與人工 review。",
+    "用同一需求執行至少三組工具組合，量測成功率、人工介入次數、返工率、執行成本、恢復能力與安全事件。"
+  ],
+  "changelog": [
+    "3.0.0: 擴充至 55 個獨立主要來源，新增來源 catalog、深度摘要與完整技術地圖。"
+  ]
+}

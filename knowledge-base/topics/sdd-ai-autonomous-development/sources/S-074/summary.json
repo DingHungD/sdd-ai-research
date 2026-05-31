@@ -1,0 +1,57 @@
+{
+  "source_id": "S-074",
+  "snapshot_id": "SNAP-20260531T134127Z",
+  "summarized_at": "2026-05-31T14:01:29+00:00",
+  "document_purpose": "深度來源摘要：ContextBench。",
+  "summary": "ContextBench。評估 coding agent 是否取得並使用正確 context，提醒複雜 scaffold 不一定改善 retrieval。關鍵技術包括：context retrieval, coding agents, benchmark, process analysis。",
+  "categories": [
+    "benchmark"
+  ],
+  "key_points": [
+    {
+      "text": "評估 coding agent 是否取得並使用正確 context，提醒複雜 scaffold 不一定改善 retrieval",
+      "locator": "README or official documentation overview",
+      "notes": "Agent-reviewed catalog summary; return to raw snapshot for publication claims."
+    }
+  ],
+  "keywords": [
+    "ContextBench",
+    "benchmark"
+  ],
+  "entities": [],
+  "limitations": [
+    "Repository 或官方文件可用於理解公開設計；production readiness 仍需安裝測試、維護狀態與 benchmark 驗證。"
+  ],
+  "potential_questions": [],
+  "role_in_ecosystem": "ContextBench",
+  "architecture_fit": "位於評估層，用來約束對 coding agent、context retrieval 與長時間自動開發能力的宣稱。",
+  "workflow_outline": [
+    "確認 benchmark 任務分布",
+    "檢查資料品質與污染風險",
+    "辨識評估指標",
+    "比較 agent 行為",
+    "將限制回饋到系統 gate"
+  ],
+  "key_features": [
+    "評估 coding agent 是否取得並使用正確 context，提醒複雜 scaffold 不一定改善 retrieval",
+    "架構層級：benchmark",
+    "輸出應保存為可追溯 artifact，重要結論需回讀 raw snapshot。"
+  ],
+  "key_technologies": [
+    "context retrieval",
+    "coding agents",
+    "benchmark",
+    "process analysis"
+  ],
+  "best_for": [
+    "benchmark",
+    "快速判斷此工具在整體 SDD 架構中的責任",
+    "作為試點工具選型與後續深挖入口"
+  ],
+  "research_value": "此來源用於理解 ContextBench 在整體架構中的角色。重要結論仍需回讀本地 raw snapshot 與原始 URL。",
+  "verification_questions": [
+    "benchmark 是否覆蓋真實 software engineering 工作？",
+    "是否只測 patch generation？",
+    "是否揭露 context retrieval、驗證與維護任務？"
+  ]
+}

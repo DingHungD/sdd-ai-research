@@ -1,0 +1,41 @@
+{
+  "source_id": "S-071",
+  "title": "Anthropic: Effective context engineering for AI agents",
+  "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+  "canonical_url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+  "author_or_organization": "",
+  "publisher": "Anthropic",
+  "retrieved_at": "2026-05-31T13:40:03+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T134003Z",
+      "local_path": "sources/S-071/raw/SNAP-20260531T134003Z.html",
+      "content_hash": "sha256:2b7f6bd759d51a7305b9f352e12dbb323dfa5b60788bc5b5e488dc0c479cc7d3",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T13:40:03+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T13:40:03+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "official_documentation",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+  "supported_claim_ids": [
+    "C-005"
+  ],
+  "content_hash": "sha256:2b7f6bd759d51a7305b9f352e12dbb323dfa5b60788bc5b5e488dc0c479cc7d3",
+  "locator": "local snapshot SNAP-20260531T134003Z"
+}

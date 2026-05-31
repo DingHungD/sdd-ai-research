@@ -1,0 +1,39 @@
+{
+  "source_id": "S-006",
+  "title": "Spec-Driven Development: From Code to Contract in the Age of AI Coding Assistants",
+  "url": "https://arxiv.org/abs/2602.00180v1",
+  "canonical_url": "https://arxiv.org/abs/2602.00180v1",
+  "author_or_organization": "",
+  "publisher": "arXiv",
+  "retrieved_at": "2026-05-31T06:05:39+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T060539Z",
+      "local_path": "sources/S-006/raw/SNAP-20260531T060539Z.html",
+      "content_hash": "sha256:9808b854c7b1bd02af7e3b5a54d81fe9be9f5f4973300810dd4449788be866b9",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T06:05:39+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "stable",
+    "recheck_after": null,
+    "reason": "Captured publication is treated as stable; refresh only when a newer version is relevant."
+  },
+  "source_type": "research_paper",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://arxiv.org/abs/2602.00180v1",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:9808b854c7b1bd02af7e3b5a54d81fe9be9f5f4973300810dd4449788be866b9",
+  "locator": "local snapshot SNAP-20260531T060539Z"
+}

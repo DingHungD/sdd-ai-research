@@ -1,0 +1,41 @@
+{
+  "source_id": "S-009",
+  "title": "OpenSpecification Repository README",
+  "url": "https://github.com/spenceriam/OpenSpecification",
+  "canonical_url": "https://github.com/spenceriam/OpenSpecification",
+  "author_or_organization": "",
+  "publisher": "spenceriam",
+  "retrieved_at": "2026-05-31T06:06:36+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T060636Z",
+      "local_path": "sources/S-009/raw/SNAP-20260531T060636Z.html",
+      "content_hash": "sha256:7e5ac1404cd7a6905c77d283a9dc5fc3d1def28289633253c8a1f2ad14a4241a",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T06:06:36+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T06:06:36+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/spenceriam/OpenSpecification",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:7e5ac1404cd7a6905c77d283a9dc5fc3d1def28289633253c8a1f2ad14a4241a",
+  "locator": "repository tree",
+  "commit_sha": "fd0dc03b92492476187849be8116939ab265b54d",
+  "immutable_url": "https://github.com/spenceriam/OpenSpecification/tree/fd0dc03b92492476187849be8116939ab265b54d"
+}

@@ -1,0 +1,41 @@
+{
+  "source_id": "S-005",
+  "title": "Spec Kitty Repository README",
+  "url": "https://github.com/Priivacy-ai/spec-kitty",
+  "canonical_url": "https://github.com/Priivacy-ai/spec-kitty",
+  "author_or_organization": "",
+  "publisher": "Priivacy-ai",
+  "retrieved_at": "2026-05-31T06:05:38+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T060538Z",
+      "local_path": "sources/S-005/raw/SNAP-20260531T060538Z.html",
+      "content_hash": "sha256:21c0586928863d858b0d57ef12ed7c3c98716a1e8d2a6830ba0703318468956b",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T06:05:38+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T06:05:38+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/Priivacy-ai/spec-kitty",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:21c0586928863d858b0d57ef12ed7c3c98716a1e8d2a6830ba0703318468956b",
+  "locator": "repository tree",
+  "commit_sha": "8a295a510e92a68a9d5da0ed7bf60cfaa040e351",
+  "immutable_url": "https://github.com/Priivacy-ai/spec-kitty/tree/8a295a510e92a68a9d5da0ed7bf60cfaa040e351"
+}

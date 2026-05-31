@@ -1,0 +1,71 @@
+{
+  "source_id": "S-011",
+  "snapshot_id": "SNAP-20260531T113856Z",
+  "summarized_at": "2026-05-31T14:01:29+00:00",
+  "document_purpose": "深度來源摘要：codex-spec。",
+  "summary": "codex-spec。context、spec、requirements、design、development plan、implementation、validation。關鍵技術包括：Codex commands, dependency-aware tasks, context refresh。",
+  "categories": [
+    "direct_sdd",
+    "tooling",
+    "traceability",
+    "workflow"
+  ],
+  "key_points": [
+    {
+      "text": "codex-spec 將需求、設計、開發計畫與實作拆成顯式階段。",
+      "locator": "README overview"
+    },
+    {
+      "text": "工作流以版本化 artifact 提供 agent 上下文。",
+      "locator": "README workflow"
+    }
+  ],
+  "keywords": [
+    "codex-spec",
+    "design",
+    "development plan",
+    "direct_sdd",
+    "requirements",
+    "validation"
+  ],
+  "entities": [
+    "codex-spec"
+  ],
+  "limitations": [
+    "Repository README 可證明設計，不足以證明實際交付品質。",
+    "Repository 或官方文件可用於理解公開設計；production readiness 仍需安裝測試、維護狀態與 benchmark 驗證。"
+  ],
+  "potential_questions": [
+    "artifact 之間是否提供機器可驗證的 traceability？"
+  ],
+  "role_in_ecosystem": "codex-spec",
+  "key_features": [
+    "context、spec、requirements、design、development plan、implementation、validation",
+    "架構層級：direct_sdd",
+    "輸出應保存為可追溯 artifact，重要結論需回讀 raw snapshot。"
+  ],
+  "key_technologies": [
+    "Codex commands",
+    "dependency-aware tasks",
+    "context refresh"
+  ],
+  "best_for": [
+    "direct_sdd",
+    "快速判斷此工具在整體 SDD 架構中的責任",
+    "作為試點工具選型與後續深挖入口"
+  ],
+  "research_value": "此來源用於理解 codex-spec 在整體架構中的角色。重要結論仍需回讀本地 raw snapshot 與原始 URL。",
+  "architecture_fit": "位於 specification artifact 與 traceability 層，負責把需求轉成可演進、可檢查、可交給 agent 執行的狀態。",
+  "workflow_outline": [
+    "建立或匯入需求",
+    "產生 specification 與 design",
+    "拆解 tasks",
+    "執行或交付 coding agent",
+    "回寫驗證結果與 refinement"
+  ],
+  "verification_questions": [
+    "artifact 是否可版本控制並支援差異比較？",
+    "requirement、task、test 與 commit 是否能互相回指？",
+    "是否支援 approval、resume 與 brownfield 更新？"
+  ]
+}

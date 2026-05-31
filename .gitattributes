@@ -1,0 +1,2 @@
+# Preserve downloaded evidence snapshots byte-for-byte if explicitly committed.
+knowledge-base/**/raw/** -text

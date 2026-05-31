@@ -1,0 +1,39 @@
+{
+  "source_id": "S-076",
+  "title": "SDD Practitioner Guide OpenReview PDF",
+  "url": "https://openreview.net/pdf?id=bw5mNj75h9",
+  "canonical_url": "https://openreview.net/pdf?id=bw5mNj75h9",
+  "author_or_organization": "",
+  "publisher": "OpenReview",
+  "retrieved_at": "2026-05-31T13:41:29+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T134129Z",
+      "local_path": "sources/S-076/raw/SNAP-20260531T134129Z.pdf",
+      "content_hash": "sha256:f3ee6d7927e2802b12c547e9b5fa2d8dd0f8b16a4d1683d779d1b0d7dd449f6e",
+      "mime_type": "application/pdf",
+      "captured_at": "2026-05-31T13:41:29+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "stable",
+    "recheck_after": null,
+    "reason": "Captured publication is treated as stable; refresh only when a newer version is relevant."
+  },
+  "source_type": "research_paper",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://openreview.net/pdf?id=bw5mNj75h9",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:f3ee6d7927e2802b12c547e9b5fa2d8dd0f8b16a4d1683d779d1b0d7dd449f6e",
+  "locator": "local snapshot SNAP-20260531T134129Z"
+}

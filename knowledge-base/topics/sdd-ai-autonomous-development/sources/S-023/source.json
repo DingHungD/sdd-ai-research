@@ -1,0 +1,43 @@
+{
+  "source_id": "S-023",
+  "title": "Agent Skills Spec-Driven Development Skill",
+  "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/spec-driven-development/SKILL.md",
+  "canonical_url": "https://github.com/addyosmani/agent-skills/blob/main/skills/spec-driven-development/SKILL.md",
+  "author_or_organization": "",
+  "publisher": "addyosmani",
+  "retrieved_at": "2026-05-31T11:39:13+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T113913Z",
+      "local_path": "sources/S-023/raw/SNAP-20260531T113913Z.html",
+      "content_hash": "sha256:68f5a614182efcb83e3271ce3911af819998d72553326812b5fd3127725247bd",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T11:39:13+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T11:39:13+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/addyosmani/agent-skills/blob/main/skills/spec-driven-development/SKILL.md",
+  "supported_claim_ids": [
+    "C-008"
+  ],
+  "content_hash": "sha256:68f5a614182efcb83e3271ce3911af819998d72553326812b5fd3127725247bd",
+  "locator": "skills/spec-driven-development/SKILL.md",
+  "commit_sha": "6ce029897d2b794940325fc7148774a6ec51111c",
+  "immutable_url": "https://github.com/addyosmani/agent-skills/blob/6ce029897d2b794940325fc7148774a6ec51111c/skills/spec-driven-development/SKILL.md"
+}

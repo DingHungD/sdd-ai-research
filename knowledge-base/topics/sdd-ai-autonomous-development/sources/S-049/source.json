@@ -1,0 +1,41 @@
+{
+  "source_id": "S-049",
+  "title": "OpenSpec Supported Tools Documentation",
+  "url": "https://github.com/Fission-AI/OpenSpec/blob/main/docs/supported-tools.md",
+  "canonical_url": "https://github.com/Fission-AI/OpenSpec/blob/main/docs/supported-tools.md",
+  "author_or_organization": "",
+  "publisher": "Fission-AI",
+  "retrieved_at": "2026-05-31T12:12:31+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T121231Z",
+      "local_path": "sources/S-049/raw/SNAP-20260531T121231Z.html",
+      "content_hash": "sha256:058c5688abd248471a5e13adcdabdc1d2c8b971bd24f1d80929e4e810f60ac3e",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T12:12:31+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T12:12:31+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "official_documentation",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/Fission-AI/OpenSpec/blob/main/docs/supported-tools.md",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:058c5688abd248471a5e13adcdabdc1d2c8b971bd24f1d80929e4e810f60ac3e",
+  "locator": "docs/supported-tools.md",
+  "commit_sha": "9aded17af760ad2015ed3e91ce3b93bec9f3adfc",
+  "immutable_url": "https://github.com/Fission-AI/OpenSpec/blob/9aded17af760ad2015ed3e91ce3b93bec9f3adfc/docs/supported-tools.md"
+}

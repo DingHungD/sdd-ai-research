@@ -1,0 +1,41 @@
+{
+  "source_id": "S-026",
+  "title": "Kiro Repository README",
+  "url": "https://github.com/kirodotdev/Kiro",
+  "canonical_url": "https://github.com/kirodotdev/Kiro",
+  "author_or_organization": "",
+  "publisher": "AWS Kiro",
+  "retrieved_at": "2026-05-31T12:12:02+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T121202Z",
+      "local_path": "sources/S-026/raw/SNAP-20260531T121202Z.html",
+      "content_hash": "sha256:365a8dbd687ec92c8dd8d26fa926d0d5cc56ce74c14f0707b2a1b26f8707be3f",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T12:12:02+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T12:12:02+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/kirodotdev/Kiro",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:365a8dbd687ec92c8dd8d26fa926d0d5cc56ce74c14f0707b2a1b26f8707be3f",
+  "locator": "repository tree",
+  "commit_sha": "2f1d7a72e28203332ad11894886b1903e7dbbebe",
+  "immutable_url": "https://github.com/kirodotdev/Kiro/tree/2f1d7a72e28203332ad11894886b1903e7dbbebe"
+}

@@ -1,0 +1,73 @@
+{
+  "source_id": "S-014",
+  "snapshot_id": "SNAP-20260531T113900Z",
+  "summarized_at": "2026-05-31T14:01:29+00:00",
+  "document_purpose": "深度來源摘要：Spec Workflow MCP。",
+  "summary": "Spec Workflow MCP。requirements、design、tasks 的 MCP server 介面。關鍵技術包括：MCP, templates, progress tracking, validation。",
+  "categories": [
+    "direct_sdd",
+    "integration",
+    "tooling",
+    "workflow"
+  ],
+  "key_points": [
+    {
+      "text": "工具以 MCP server 管理 structured specification workflow。",
+      "locator": "repository description"
+    },
+    {
+      "text": "MCP 介面可讓多種 agent 以相同工具契約操作規格。",
+      "locator": "README overview"
+    }
+  ],
+  "keywords": [
+    "MCP",
+    "Spec Workflow MCP",
+    "agent integration",
+    "design",
+    "direct_sdd",
+    "requirements",
+    "tasks"
+  ],
+  "entities": [
+    "Spec Workflow MCP"
+  ],
+  "limitations": [
+    "Repository 或官方文件可用於理解公開設計；production readiness 仍需安裝測試、維護狀態與 benchmark 驗證。",
+    "本次未驗證 MCP tool schema 與 concurrent update 行為。"
+  ],
+  "potential_questions": [
+    "多 agent 同時修改 spec 時如何處理衝突？"
+  ],
+  "role_in_ecosystem": "Spec Workflow MCP",
+  "key_features": [
+    "requirements、design、tasks 的 MCP server 介面",
+    "架構層級：direct_sdd",
+    "輸出應保存為可追溯 artifact，重要結論需回讀 raw snapshot。"
+  ],
+  "key_technologies": [
+    "MCP",
+    "templates",
+    "progress tracking",
+    "validation"
+  ],
+  "best_for": [
+    "direct_sdd",
+    "快速判斷此工具在整體 SDD 架構中的責任",
+    "作為試點工具選型與後續深挖入口"
+  ],
+  "research_value": "此來源用於理解 Spec Workflow MCP 在整體架構中的角色。重要結論仍需回讀本地 raw snapshot 與原始 URL。",
+  "architecture_fit": "位於 specification artifact 與 traceability 層，負責把需求轉成可演進、可檢查、可交給 agent 執行的狀態。",
+  "workflow_outline": [
+    "建立或匯入需求",
+    "產生 specification 與 design",
+    "拆解 tasks",
+    "執行或交付 coding agent",
+    "回寫驗證結果與 refinement"
+  ],
+  "verification_questions": [
+    "artifact 是否可版本控制並支援差異比較？",
+    "requirement、task、test 與 commit 是否能互相回指？",
+    "是否支援 approval、resume 與 brownfield 更新？"
+  ]
+}

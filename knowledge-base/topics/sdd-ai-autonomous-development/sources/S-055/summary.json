@@ -1,0 +1,57 @@
+{
+  "source_id": "S-055",
+  "snapshot_id": "SNAP-20260531T121238Z",
+  "summarized_at": "2026-05-31T14:01:29+00:00",
+  "document_purpose": "深度來源摘要：Threatspec。",
+  "summary": "Threatspec。在 source code annotations 中保存 threat model，產生報告與 data-flow diagrams。關鍵技術包括：security annotations, threat model, DFD, CI/CD integration。",
+  "categories": [
+    "security"
+  ],
+  "key_points": [
+    {
+      "text": "在 source code annotations 中保存 threat model，產生報告與 data-flow diagrams",
+      "locator": "README or official documentation overview",
+      "notes": "Agent-reviewed catalog summary; return to raw snapshot for publication claims."
+    }
+  ],
+  "keywords": [
+    "Threatspec",
+    "security"
+  ],
+  "entities": [],
+  "limitations": [
+    "Repository 或官方文件可用於理解公開設計；production readiness 仍需安裝測試、維護狀態與 benchmark 驗證。"
+  ],
+  "potential_questions": [],
+  "role_in_ecosystem": "Threatspec",
+  "key_features": [
+    "在 source code annotations 中保存 threat model，產生報告與 data-flow diagrams",
+    "架構層級：security",
+    "輸出應保存為可追溯 artifact，重要結論需回讀 raw snapshot。"
+  ],
+  "key_technologies": [
+    "security annotations",
+    "threat model",
+    "DFD",
+    "CI/CD integration"
+  ],
+  "best_for": [
+    "security",
+    "快速判斷此工具在整體 SDD 架構中的責任",
+    "作為試點工具選型與後續深挖入口"
+  ],
+  "research_value": "此來源用於理解 Threatspec 在整體架構中的角色。重要結論仍需回讀本地 raw snapshot 與原始 URL。",
+  "architecture_fit": "位於 governance 與 security 層，將安全要求、threat model 與政策檢查加入交付鏈。",
+  "workflow_outline": [
+    "定義 security constraints",
+    "將限制映射到 code 或 spec",
+    "執行分析與驗證",
+    "產生報告",
+    "阻擋或升級違規變更"
+  ],
+  "verification_questions": [
+    "安全規格是否可機器驗證？",
+    "policy violation 是否阻擋 merge？",
+    "threat model 是否隨 code 變更更新？"
+  ]
+}

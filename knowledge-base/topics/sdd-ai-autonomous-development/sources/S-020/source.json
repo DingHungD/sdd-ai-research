@@ -1,0 +1,41 @@
+{
+  "source_id": "S-020",
+  "title": "OpenAI Symphony Repository README",
+  "url": "https://github.com/openai/symphony",
+  "canonical_url": "https://github.com/openai/symphony",
+  "author_or_organization": "",
+  "publisher": "OpenAI",
+  "retrieved_at": "2026-05-31T11:39:08+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T113908Z",
+      "local_path": "sources/S-020/raw/SNAP-20260531T113908Z.html",
+      "content_hash": "sha256:1c823c7e34d67caa68a943c2281261e03963c10f219afaecadfdbf69c8c65884",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T11:39:08+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T11:39:08+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/openai/symphony",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:1c823c7e34d67caa68a943c2281261e03963c10f219afaecadfdbf69c8c65884",
+  "locator": "repository tree",
+  "commit_sha": "c5261d12101b02e0045ca84701eed0c4be367387",
+  "immutable_url": "https://github.com/openai/symphony/tree/c5261d12101b02e0045ca84701eed0c4be367387"
+}

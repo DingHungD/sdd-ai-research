@@ -1,0 +1,39 @@
+{
+  "source_id": "S-024",
+  "title": "Spec Kit Agents: Context-Grounded Agentic Workflows",
+  "url": "https://arxiv.org/abs/2604.05278v1",
+  "canonical_url": "https://arxiv.org/abs/2604.05278v1",
+  "author_or_organization": "",
+  "publisher": "arXiv",
+  "retrieved_at": "2026-05-31T11:39:13+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T113913Z",
+      "local_path": "sources/S-024/raw/SNAP-20260531T113913Z.html",
+      "content_hash": "sha256:527ec5203cecfeed5d0af795e0e83876692f25daa002af8a3e11c92b4854f447",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T11:39:13+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "stable",
+    "recheck_after": null,
+    "reason": "Captured publication is treated as stable; refresh only when a newer version is relevant."
+  },
+  "source_type": "research_paper",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://arxiv.org/abs/2604.05278v1",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:527ec5203cecfeed5d0af795e0e83876692f25daa002af8a3e11c92b4854f447",
+  "locator": "local snapshot SNAP-20260531T113913Z"
+}

@@ -1,0 +1,44 @@
+{
+  "source_id": "S-055",
+  "title": "Threatspec Repository README",
+  "url": "https://github.com/threatspec/threatspec",
+  "canonical_url": "https://github.com/threatspec/threatspec",
+  "author_or_organization": "",
+  "publisher": "threatspec",
+  "retrieved_at": "2026-05-31T12:12:38+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T121238Z",
+      "local_path": "sources/S-055/raw/SNAP-20260531T121238Z.html",
+      "content_hash": "sha256:61089f7620b7c7f9a746f24f24913763aad82289e5c25fc4d0520147bd54d687",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T12:12:38+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T12:12:38+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/threatspec/threatspec",
+  "supported_claim_ids": [
+    "C-004",
+    "C-011"
+  ],
+  "content_hash": "sha256:61089f7620b7c7f9a746f24f24913763aad82289e5c25fc4d0520147bd54d687",
+  "locator": "repository tree",
+  "commit_sha": "0c03d6076eabc226cbe9f126e299871cbcda5a0f",
+  "immutable_url": "https://github.com/threatspec/threatspec/tree/0c03d6076eabc226cbe9f126e299871cbcda5a0f"
+}

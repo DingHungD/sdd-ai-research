@@ -1,0 +1,41 @@
+{
+  "source_id": "S-069",
+  "title": "Martin Fowler: Context Engineering for Coding Agents",
+  "url": "https://martinfowler.com/articles/exploring-gen-ai/context-engineering-coding-agents.html",
+  "canonical_url": "https://martinfowler.com/articles/exploring-gen-ai/context-engineering-coding-agents.html",
+  "author_or_organization": "",
+  "publisher": "MartinFowler.com",
+  "retrieved_at": "2026-05-31T13:39:53+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T133953Z",
+      "local_path": "sources/S-069/raw/SNAP-20260531T133953Z.html",
+      "content_hash": "sha256:55cb072698e11a7d65079def045780ef764ef5d36729b08355803b252966076b",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T13:39:53+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T13:39:53+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "professional_article",
+  "evidence_tier": "C",
+  "quality": {
+    "authority": "medium",
+    "directness": "medium",
+    "recency": "medium",
+    "transparency": "medium",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://martinfowler.com/articles/exploring-gen-ai/context-engineering-coding-agents.html",
+  "supported_claim_ids": [
+    "C-005"
+  ],
+  "content_hash": "sha256:55cb072698e11a7d65079def045780ef764ef5d36729b08355803b252966076b",
+  "locator": "local snapshot SNAP-20260531T133953Z"
+}

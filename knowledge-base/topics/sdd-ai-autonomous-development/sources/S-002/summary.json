@@ -1,0 +1,74 @@
+{
+  "source_id": "S-002",
+  "snapshot_id": "SNAP-20260531T060535Z",
+  "summarized_at": "2026-05-31T14:01:28+00:00",
+  "document_purpose": "深度來源摘要：Spec Kit workflow 編排。",
+  "summary": "Spec Kit workflow 編排。條件、迴圈、fan-out/fan-in、human checkpoint、pause/resume。關鍵技術包括：workflow state machine, shell steps, prompts, checkpoints。",
+  "categories": [
+    "evaluation",
+    "workflow",
+    "workflow_runtime"
+  ],
+  "key_points": [
+    {
+      "text": "Workflow 可串接 commands、prompts、shell steps 與 human checkpoints。",
+      "locator": "#workflows"
+    },
+    {
+      "text": "Workflow 支援 conditional logic、loops、fan-out/fan-in，並可從中斷位置恢復。",
+      "locator": "#workflows and #resume-a-workflow"
+    }
+  ],
+  "keywords": [
+    "Spec Kit",
+    "Spec Kit workflow 編排",
+    "fan-in",
+    "fan-out",
+    "human checkpoint",
+    "resume",
+    "workflow",
+    "workflow_runtime"
+  ],
+  "entities": [
+    "GitHub",
+    "Spec Kit"
+  ],
+  "limitations": [
+    "Repository 或官方文件可用於理解公開設計；production readiness 仍需安裝測試、維護狀態與 benchmark 驗證。",
+    "文件說明編排能力，不等於證明任意軟體可以無人監督完成。"
+  ],
+  "potential_questions": [
+    "哪些 checkpoint 適合自動通過，哪些需要人工核准？"
+  ],
+  "role_in_ecosystem": "Spec Kit workflow 編排",
+  "key_features": [
+    "條件、迴圈、fan-out/fan-in、human checkpoint、pause/resume",
+    "架構層級：workflow_runtime",
+    "輸出應保存為可追溯 artifact，重要結論需回讀 raw snapshot。"
+  ],
+  "key_technologies": [
+    "workflow state machine",
+    "shell steps",
+    "prompts",
+    "checkpoints"
+  ],
+  "best_for": [
+    "workflow_runtime",
+    "快速判斷此工具在整體 SDD 架構中的責任",
+    "作為試點工具選型與後續深挖入口"
+  ],
+  "research_value": "此來源用於理解 Spec Kit workflow 編排 在整體架構中的角色。重要結論仍需回讀本地 raw snapshot 與原始 URL。",
+  "architecture_fit": "位於流程編排層，將多步驟 SDD 命令、人工閘門與失敗恢復組成長時間 workflow。",
+  "workflow_outline": [
+    "載入 workflow 定義",
+    "依序或平行執行 steps",
+    "遇到 gate 時暫停",
+    "核准或修正後 resume",
+    "保存 run state 與結果"
+  ],
+  "verification_questions": [
+    "中斷後能否精準 resume？",
+    "哪些 gate 可由 policy 自動判斷？",
+    "是否保留每個 step 的輸入、輸出與 log？"
+  ]
+}

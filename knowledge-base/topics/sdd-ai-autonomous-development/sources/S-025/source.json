@@ -1,0 +1,39 @@
+{
+  "source_id": "S-025",
+  "title": "Constitutional Spec-Driven Development",
+  "url": "https://arxiv.org/abs/2602.02584v1",
+  "canonical_url": "https://arxiv.org/abs/2602.02584v1",
+  "author_or_organization": "",
+  "publisher": "arXiv",
+  "retrieved_at": "2026-05-31T11:39:14+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T113914Z",
+      "local_path": "sources/S-025/raw/SNAP-20260531T113914Z.html",
+      "content_hash": "sha256:ee7bd875a6755d496dc4c60ef892d8fe2a4497ab20f18da3113cb63a6991d4c4",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T11:39:14+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "stable",
+    "recheck_after": null,
+    "reason": "Captured publication is treated as stable; refresh only when a newer version is relevant."
+  },
+  "source_type": "research_paper",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://arxiv.org/abs/2602.02584v1",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:ee7bd875a6755d496dc4c60ef892d8fe2a4497ab20f18da3113cb63a6991d4c4",
+  "locator": "local snapshot SNAP-20260531T113914Z"
+}

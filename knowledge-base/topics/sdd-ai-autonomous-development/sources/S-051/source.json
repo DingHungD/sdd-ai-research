@@ -1,0 +1,41 @@
+{
+  "source_id": "S-051",
+  "title": "ClawSpec Repository README",
+  "url": "https://github.com/bytegh/clawspec",
+  "canonical_url": "https://github.com/bytegh/clawspec",
+  "author_or_organization": "",
+  "publisher": "bytegh",
+  "retrieved_at": "2026-05-31T12:12:33+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T121233Z",
+      "local_path": "sources/S-051/raw/SNAP-20260531T121233Z.html",
+      "content_hash": "sha256:d66119d1b0597daa6870c832d070f45cfb15c0b2fdeb7de6876be4ef38fb573e",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T12:12:33+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T12:12:33+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/bytegh/clawspec",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:d66119d1b0597daa6870c832d070f45cfb15c0b2fdeb7de6876be4ef38fb573e",
+  "locator": "repository tree",
+  "commit_sha": "980e32ddab1ba3dfe8abfcd70f400340fc95588d",
+  "immutable_url": "https://github.com/bytegh/clawspec/tree/980e32ddab1ba3dfe8abfcd70f400340fc95588d"
+}

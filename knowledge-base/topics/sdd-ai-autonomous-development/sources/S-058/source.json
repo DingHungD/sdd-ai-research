@@ -1,0 +1,39 @@
+{
+  "source_id": "S-058",
+  "title": "Thoughtworks Technology Radar: Spec-driven development",
+  "url": "https://www.thoughtworks.com/en-gb/radar/techniques/spec-driven-development",
+  "canonical_url": "https://www.thoughtworks.com/en-gb/radar/techniques/spec-driven-development",
+  "author_or_organization": "",
+  "publisher": "Thoughtworks",
+  "retrieved_at": "2026-05-31T13:39:41+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T133941Z",
+      "local_path": "sources/S-058/raw/SNAP-20260531T133941Z.html",
+      "content_hash": "sha256:f89732f1e4b4092df6fbbca80c6a729557e810dfc6846e3d276ce8b84a30ca9e",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T13:39:41+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T13:39:41+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "professional_article",
+  "evidence_tier": "C",
+  "quality": {
+    "authority": "medium",
+    "directness": "medium",
+    "recency": "medium",
+    "transparency": "medium",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://www.thoughtworks.com/en-gb/radar/techniques/spec-driven-development",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:f89732f1e4b4092df6fbbca80c6a729557e810dfc6846e3d276ce8b84a30ca9e",
+  "locator": "local snapshot SNAP-20260531T133941Z"
+}

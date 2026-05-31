@@ -1,0 +1,41 @@
+{
+  "topic_id": "sdd-ai-autonomous-development",
+  "title": "根據 SDD 使用 AI 全自動開發",
+  "description": "整理 SDD 的定義、相關方法、現有開源工具、可驗證流程、限制與評估方式。",
+  "questions": [
+    {
+      "question_id": "RQ-001",
+      "text": "SDD 在此研究中的定義是什麼？是否存在不同流派或相近概念？"
+    },
+    {
+      "question_id": "RQ-002",
+      "text": "目前有哪些開源工具或框架實作了 specification 驅動的 AI 開發流程？"
+    },
+    {
+      "question_id": "RQ-003",
+      "text": "哪些步驟可自動化，哪些步驟仍需要人工確認？"
+    },
+    {
+      "question_id": "RQ-004",
+      "text": "如何評估生成結果的正確性、可維護性與安全性？現有工具有哪些限制與尚未解決的問題？"
+    }
+  ],
+  "keywords": [
+    "SDD",
+    "spec-driven development",
+    "specification-driven development",
+    "AI autonomous development",
+    "agentic coding",
+    "requirements engineering",
+    "coding agent"
+  ],
+  "categories": [
+    "definition",
+    "tooling",
+    "workflow",
+    "evaluation",
+    "case_study",
+    "related_concepts"
+  ],
+  "default_recheck_days": 30
+}

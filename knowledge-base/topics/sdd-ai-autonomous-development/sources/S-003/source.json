@@ -1,0 +1,41 @@
+{
+  "source_id": "S-003",
+  "title": "Kiro Specs Documentation",
+  "url": "https://kiro.dev/docs/specs/",
+  "canonical_url": "https://kiro.dev/docs/specs/",
+  "author_or_organization": "",
+  "publisher": "AWS Kiro",
+  "retrieved_at": "2026-05-31T06:05:35+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T060535Z",
+      "local_path": "sources/S-003/raw/SNAP-20260531T060535Z.html",
+      "content_hash": "sha256:51cba98eff562e0c897adff6c2f3ca048d3404cb6509cdc5f304e466a2b1b9d0",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T06:05:35+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T06:05:35+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "official_documentation",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://kiro.dev/docs/specs/",
+  "supported_claim_ids": [
+    "C-001"
+  ],
+  "content_hash": "sha256:51cba98eff562e0c897adff6c2f3ca048d3404cb6509cdc5f304e466a2b1b9d0",
+  "locator": "local snapshot SNAP-20260531T060535Z"
+}

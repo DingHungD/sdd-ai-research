@@ -1,0 +1,547 @@
+{
+  "report_id": "sdd-ai-autonomous-development-20260531",
+  "version": "1.0.0",
+  "title": "根據 SDD 使用 AI 全自動開發：現況與可行邊界",
+  "generated_at": "2026-05-31T06:20:00Z",
+  "data_cutoff": "2026-05-31T06:06:37Z",
+  "overall_confidence": "medium",
+  "quality_score": 100,
+  "executive_summary": "SDD 在 AI 開發情境中可合理理解為：將 specification 提升為可版本控制、可驗證的主要 artifact，再由 agent 依序產生 plan、tasks、implementation 與驗證結果。目前已有多個可用工具與官方工作流，包括 GitHub Spec Kit、OpenSpec、Spec Kitty、SpecDD、Kiro Specs、OpenSpecification 與 Akka SDD。現有資料支持「高度自動化、可恢復、可平行執行的開發流程」已經存在，但不足以支持「任意專案可以完全無人監督地可靠開發」。適合的落地方式是 bounded autonomy：讓 agent 自動執行明確任務，並在規格核准、風險變更、測試失敗與發布前保留品質閘門。",
+  "questions": [
+    "SDD 在此研究中的定義是什麼？是否存在不同流派或相近概念？",
+    "目前有哪些開源工具或框架實作了 specification 驅動的 AI 開發流程？",
+    "哪些步驟可自動化，哪些步驟仍需要人工確認？",
+    "如何評估生成結果的正確性、可維護性與安全性？現有工具有哪些限制與尚未解決的問題？"
+  ],
+  "methodology": "依追加式 crawl queue 搜尋與擷取來源。優先保存官方文件、官方 repository README 與版本固定的 arXiv 摘要頁。本次共保存 10 份本地 snapshot，逐份覆核後建立主張。工具自述可證明功能設計與公開介面，但不視為獨立成效驗證。",
+  "claims": [
+    {
+      "claim_id": "C-001",
+      "text": "本報告採用的 SDD 定義是：以 specification 作為主要且可演進的 source of truth，讓 code 成為由 specification 引導產生或驗證的 artifact。",
+      "type": "fact",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "GitHub Spec Kit、Akka 官方文件與 arXiv 預印本摘要在核心概念上方向一致。",
+      "supporting_source_ids": [
+        "S-001",
+        "S-006",
+        "S-010"
+      ],
+      "opposing_source_ids": [],
+      "notes": "不同工具對 specification 的格式、嚴謹程度與生命週期仍有差異。"
+    },
+    {
+      "claim_id": "C-002",
+      "text": "常見 SDD 流程不是單一步驟 prompt-to-code，而是將需求逐步轉為 specification、plan 或 design、tasks、implementation 與驗證 artifact。",
+      "type": "fact",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "GitHub Spec Kit、Kiro 與 Akka 官方文件均列出多階段 artifact 流程。",
+      "supporting_source_ids": [
+        "S-001",
+        "S-003",
+        "S-007",
+        "S-010"
+      ],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-003",
+      "text": "GitHub Spec Kit 是開源 SDD 工具包，核心流程為 Spec -> Plan -> Tasks -> Implement；其 workflow 功能可串接 prompt、shell step、條件、迴圈、fan-out/fan-in 與 human checkpoint，並支援恢復中斷執行。",
+      "type": "fact",
+      "importance": "critical",
+      "confidence": "high",
+      "confidence_reason": "由 GitHub Spec Kit 官方文件與官方 repository README 直接支持。",
+      "supporting_source_ids": [
+        "S-001",
+        "S-002",
+        "S-007"
+      ],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-004",
+      "text": "OpenSpec 是開源 SDD 工具，使用 lightweight spec layer 與 change folder 保存 proposal、specs、design、tasks，重點是 code 前的人機對齊與可稽核變更。",
+      "type": "fact",
+      "importance": "supporting",
+      "confidence": "medium",
+      "confidence_reason": "由 OpenSpec 官方 repository README 支持；本次未進行實際安裝測試。",
+      "supporting_source_ids": [
+        "S-004"
+      ],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-005",
+      "text": "Spec Kitty 是開源 CLI，將流程擴展為 spec -> plan -> tasks -> next -> review -> accept -> merge，並使用 repository-native artifact、work package 與 git worktree 支援 agent 工作。",
+      "type": "fact",
+      "importance": "supporting",
+      "confidence": "medium",
+      "confidence_reason": "由 Spec Kitty 官方 repository README 支持；本次未進行實際安裝測試。",
+      "supporting_source_ids": [
+        "S-005"
+      ],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-006",
+      "text": "SpecDD 是開源 framework，使用放在專案內容旁的本地 `.sdd` 檔案保存 intent、architecture、behavior、boundary 與 task，並宣稱可逐步導入既有專案。",
+      "type": "fact",
+      "importance": "supporting",
+      "confidence": "medium",
+      "confidence_reason": "由 SpecDD 官方文件支持；本次未深入驗證 CLI repository。",
+      "supporting_source_ids": [
+        "S-008"
+      ],
+      "opposing_source_ids": [],
+      "notes": ""
+    },
+    {
+      "claim_id": "C-007",
+      "text": "Kiro Specs 與 OpenSpecification 顯示另一種常見結構：Requirements -> Design -> Tasks；Kiro 文件另描述依賴分析與平行 task execution。",
+      "type": "fact",
+      "importance": "supporting",
+      "confidence": "high",
+      "confidence_reason": "Kiro 官方文件直接支持其 Specs 流程；OpenSpecification repository README 支持其 Kiro-inspired 開源實作。",
+      "supporting_source_ids": [
+        "S-003",
+        "S-009"
+      ],
+      "opposing_source_ids": [],
+      "notes": "Kiro 本身不是本報告列為開源工具的項目。"
+    },
+    {
+      "claim_id": "C-008",
+      "text": "目前證據支持 SDD 可達到高度自動化，但不支持將它描述為對任意專案皆可靠的完全無人開發。",
+      "type": "inference",
+      "importance": "critical",
+      "confidence": "medium",
+      "confidence_reason": "Spec Kit workflow 明確保留 human checkpoints；Spec Kit README 要求 clarification；Akka 文件描述 human-in-the-loop；本次未找到足以證明任意專案可無人完成的獨立 benchmark。",
+      "supporting_source_ids": [
+        "S-002",
+        "S-007",
+        "S-010"
+      ],
+      "opposing_source_ids": [],
+      "notes": "這是根據來源做出的推論，不是來源中的直接宣稱。"
+    },
+    {
+      "claim_id": "C-009",
+      "text": "較可行的落地策略是 bounded autonomy：agent 自動執行規格明確且可驗證的工作，人工負責 domain decision、規格核准、例外處理與發布前風險確認。",
+      "type": "recommendation",
+      "importance": "critical",
+      "confidence": "medium",
+      "confidence_reason": "此建議符合官方文件中的 clarification、human checkpoint、build failure 與 human-in-the-loop 設計。",
+      "supporting_source_ids": [
+        "S-002",
+        "S-003",
+        "S-007",
+        "S-010"
+      ],
+      "opposing_source_ids": [],
+      "notes": ""
+    }
+  ],
+  "conflicts": [
+    "SDD 目前不是單一標準：GitHub Spec Kit、OpenSpec、SpecDD、Kiro 與 Akka 對 artifact、phase gate 與更新方式的設計不同。",
+    "部分工具主張 AI 可生成全部 code，但同一批官方資料仍保留 clarification、human checkpoint 或 human-in-the-loop，因此「全自動」需要明確限定範圍。"
+  ],
+  "unknowns": [
+    "本次未收集足以比較各工具 defect rate、維護成本或交付速度的獨立 benchmark。",
+    "本次未對每個開源工具執行安裝、端到端測試與安全審查。",
+    "大型 brownfield repository 中，spec 與 code 長期同步的實際成本仍需試點驗證。"
+  ],
+  "limitations": [
+    "多數工具能力來自官方文件或 repository README，適合證明設計與公開功能，不等於獨立成效驗證。",
+    "GitHub 與官方文件會持續更新；本報告保存了 2026-05-31 的本地 snapshot，但尚未將 GitHub README 轉為固定 commit permalink。",
+    "arXiv 來源是預印本，不能當成已完成同行評審的共識。",
+    "本報告著重工具與流程盤點，沒有執行實際 SDD 專案 benchmark。"
+  ],
+  "conclusion": "SDD 已經形成可操作的 AI 開發工作流家族，而不是單一工具。若目標是提高自動化程度，應將 specification、task graph、測試、品質閘門與可恢復執行納入同一流程。若目標是完全移除人工，現有證據不足；更務實的方向是逐步擴大 bounded autonomy，並用可量測的試點決定哪些 checkpoint 可以自動放行。",
+  "recommendations": [
+    "先選一個邊界清楚、可用自動測試驗證的中小型功能作為試點。",
+    "將需求、acceptance criteria、架構限制、安全限制與完成條件保存為版本化 artifact。",
+    "設定至少四個人工或政策閘門：規格核准、架構或安全風險變更、測試無法自動判定、發布前確認。",
+    "評估工具時分開量測規格品質、任務完成率、測試通過率、人工介入次數、返工率與 spec-code drift。",
+    "下一輪對 GitHub Spec Kit、OpenSpec 與 Spec Kitty 各做一個相同需求的端到端試驗，再比較維護成本與可恢復性。"
+  ],
+  "changelog": [
+    "1.0.0: 依 10 份本地 snapshot 建立首版 SDD AI 全自動開發研究報告。"
+  ],
+  "sources": [
+    {
+      "source_id": "S-001",
+      "title": "GitHub Spec Kit Documentation",
+      "url": "https://github.github.com/spec-kit/index.html",
+      "canonical_url": "https://github.github.com/spec-kit/index.html",
+      "author_or_organization": "",
+      "publisher": "GitHub",
+      "retrieved_at": "2026-05-31T06:05:34+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T060534Z",
+          "local_path": "sources/S-001/raw/SNAP-20260531T060534Z.html",
+          "content_hash": "sha256:ca8a5391751b7de3d59c2581cb046b0494bd011a537541e63574363ed6933c4e",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T06:05:34+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "official_documentation",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.github.com/spec-kit/index.html",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-002",
+      "title": "Spec Kit Workflows Documentation",
+      "url": "https://github.github.com/spec-kit/reference/workflows.html",
+      "canonical_url": "https://github.github.com/spec-kit/reference/workflows.html",
+      "author_or_organization": "",
+      "publisher": "GitHub",
+      "retrieved_at": "2026-05-31T06:05:35+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T060535Z",
+          "local_path": "sources/S-002/raw/SNAP-20260531T060535Z.html",
+          "content_hash": "sha256:82935728f113f5ee0621e328ac2aa85de8e25ce24cc798a8dc01b6fb0765003f",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T06:05:35+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "official_documentation",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.github.com/spec-kit/reference/workflows.html",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-003",
+      "title": "Kiro Specs Documentation",
+      "url": "https://kiro.dev/docs/specs/",
+      "canonical_url": "https://kiro.dev/docs/specs/",
+      "author_or_organization": "",
+      "publisher": "AWS Kiro",
+      "retrieved_at": "2026-05-31T06:05:35+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T060535Z",
+          "local_path": "sources/S-003/raw/SNAP-20260531T060535Z.html",
+          "content_hash": "sha256:51cba98eff562e0c897adff6c2f3ca048d3404cb6509cdc5f304e466a2b1b9d0",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T06:05:35+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "official_documentation",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://kiro.dev/docs/specs/",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-004",
+      "title": "OpenSpec Repository README",
+      "url": "https://github.com/Fission-AI/OpenSpec",
+      "canonical_url": "https://github.com/Fission-AI/OpenSpec",
+      "author_or_organization": "",
+      "publisher": "Fission-AI",
+      "retrieved_at": "2026-05-31T06:05:37+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T060537Z",
+          "local_path": "sources/S-004/raw/SNAP-20260531T060537Z.html",
+          "content_hash": "sha256:62452c1aa7d7ee68667290759eba9f907710a1bfbc3947f67f82305a036c22a1",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T06:05:37+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/Fission-AI/OpenSpec",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-005",
+      "title": "Spec Kitty Repository README",
+      "url": "https://github.com/Priivacy-ai/spec-kitty",
+      "canonical_url": "https://github.com/Priivacy-ai/spec-kitty",
+      "author_or_organization": "",
+      "publisher": "Priivacy-ai",
+      "retrieved_at": "2026-05-31T06:05:38+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T060538Z",
+          "local_path": "sources/S-005/raw/SNAP-20260531T060538Z.html",
+          "content_hash": "sha256:21c0586928863d858b0d57ef12ed7c3c98716a1e8d2a6830ba0703318468956b",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T06:05:38+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/Priivacy-ai/spec-kitty",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-006",
+      "title": "Spec-Driven Development: From Code to Contract in the Age of AI Coding Assistants",
+      "url": "https://arxiv.org/abs/2602.00180v1",
+      "canonical_url": "https://arxiv.org/abs/2602.00180v1",
+      "author_or_organization": "",
+      "publisher": "arXiv",
+      "retrieved_at": "2026-05-31T06:05:39+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T060539Z",
+          "local_path": "sources/S-006/raw/SNAP-20260531T060539Z.html",
+          "content_hash": "sha256:9808b854c7b1bd02af7e3b5a54d81fe9be9f5f4973300810dd4449788be866b9",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T06:05:39+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "research_paper",
+      "evidence_tier": "C",
+      "quality": {
+        "authority": "medium",
+        "directness": "medium",
+        "recency": "medium",
+        "transparency": "medium",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://arxiv.org/abs/2602.00180v1",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-007",
+      "title": "GitHub Spec Kit Repository README",
+      "url": "https://github.com/github/spec-kit",
+      "canonical_url": "https://github.com/github/spec-kit",
+      "author_or_organization": "",
+      "publisher": "GitHub",
+      "retrieved_at": "2026-05-31T06:06:34+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T060634Z",
+          "local_path": "sources/S-007/raw/SNAP-20260531T060634Z.html",
+          "content_hash": "sha256:6862c731b4abb38f5f85f302e9267d2457aef2f306d7c4629ed8ead2c3b38c4b",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T06:06:34+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/github/spec-kit",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-008",
+      "title": "SpecDD Official Documentation",
+      "url": "https://specdd.ai/",
+      "canonical_url": "https://specdd.ai/",
+      "author_or_organization": "",
+      "publisher": "SpecDD",
+      "retrieved_at": "2026-05-31T06:06:35+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T060635Z",
+          "local_path": "sources/S-008/raw/SNAP-20260531T060635Z.html",
+          "content_hash": "sha256:e6d59fa3b16044a001b1c72fb6907d886263821f75b9e404cc0f2afb338b0638",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T06:06:35+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "official_documentation",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://specdd.ai/",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-009",
+      "title": "OpenSpecification Repository README",
+      "url": "https://github.com/spenceriam/OpenSpecification",
+      "canonical_url": "https://github.com/spenceriam/OpenSpecification",
+      "author_or_organization": "",
+      "publisher": "spenceriam",
+      "retrieved_at": "2026-05-31T06:06:36+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T060636Z",
+          "local_path": "sources/S-009/raw/SNAP-20260531T060636Z.html",
+          "content_hash": "sha256:7e5ac1404cd7a6905c77d283a9dc5fc3d1def28289633253c8a1f2ad14a4241a",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T06:06:36+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "repository_file",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://github.com/spenceriam/OpenSpecification",
+      "supported_claim_ids": []
+    },
+    {
+      "source_id": "S-010",
+      "title": "Akka Spec-Driven Development Documentation",
+      "url": "https://doc.akka.io/sdk/spec-driven-development.html",
+      "canonical_url": "https://doc.akka.io/sdk/spec-driven-development.html",
+      "author_or_organization": "",
+      "publisher": "Akka",
+      "retrieved_at": "2026-05-31T06:06:37+00:00",
+      "local_snapshots": [
+        {
+          "snapshot_id": "SNAP-20260531T060637Z",
+          "local_path": "sources/S-010/raw/SNAP-20260531T060637Z.html",
+          "content_hash": "sha256:e3cd09466a599bedc2976d44b5e63962bfe5d29cc03792f82a78bf3345fb24e1",
+          "mime_type": "text/html",
+          "captured_at": "2026-05-31T06:06:37+00:00"
+        }
+      ],
+      "freshness": {
+        "mode": "periodic",
+        "recheck_after": null,
+        "reason": "Initial default; agent review required."
+      },
+      "source_type": "official_documentation",
+      "evidence_tier": "A",
+      "quality": {
+        "authority": "high",
+        "directness": "high",
+        "recency": "medium",
+        "transparency": "high",
+        "independence": "medium",
+        "reproducibility": "medium",
+        "notes": "Heuristic initial evaluation. Agent review is required before publication."
+      },
+      "conflict_of_interest": "",
+      "evidence_chain": "https://doc.akka.io/sdk/spec-driven-development.html",
+      "supported_claim_ids": []
+    }
+  ]
+}

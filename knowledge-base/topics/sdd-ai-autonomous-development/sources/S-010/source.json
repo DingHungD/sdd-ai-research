@@ -1,0 +1,44 @@
+{
+  "source_id": "S-010",
+  "title": "Akka Spec-Driven Development Documentation",
+  "url": "https://doc.akka.io/sdk/spec-driven-development.html",
+  "canonical_url": "https://doc.akka.io/sdk/spec-driven-development.html",
+  "author_or_organization": "",
+  "publisher": "Akka",
+  "retrieved_at": "2026-05-31T06:06:37+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T060637Z",
+      "local_path": "sources/S-010/raw/SNAP-20260531T060637Z.html",
+      "content_hash": "sha256:e3cd09466a599bedc2976d44b5e63962bfe5d29cc03792f82a78bf3345fb24e1",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T06:06:37+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T06:06:37+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "official_documentation",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://doc.akka.io/sdk/spec-driven-development.html",
+  "supported_claim_ids": [
+    "C-001",
+    "C-003",
+    "C-008",
+    "C-012"
+  ],
+  "content_hash": "sha256:e3cd09466a599bedc2976d44b5e63962bfe5d29cc03792f82a78bf3345fb24e1",
+  "locator": "local snapshot SNAP-20260531T060637Z"
+}

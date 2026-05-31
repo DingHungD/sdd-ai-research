@@ -1,0 +1,47 @@
+{
+  "source_id": "S-029",
+  "title": "OpenLore Repository README",
+  "url": "https://github.com/clay-good/OpenLore",
+  "canonical_url": "https://github.com/clay-good/OpenLore",
+  "author_or_organization": "",
+  "publisher": "clay-good",
+  "retrieved_at": "2026-05-31T12:12:06+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T121206Z",
+      "local_path": "sources/S-029/raw/SNAP-20260531T121206Z.html",
+      "content_hash": "sha256:b67521987397a17d3fceee7761c87eda2ed802d64270f337d9257b301e9f8801",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T12:12:06+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T12:12:06+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/clay-good/OpenLore",
+  "supported_claim_ids": [
+    "C-003",
+    "C-004",
+    "C-005",
+    "C-011",
+    "C-012"
+  ],
+  "content_hash": "sha256:b67521987397a17d3fceee7761c87eda2ed802d64270f337d9257b301e9f8801",
+  "locator": "repository tree",
+  "commit_sha": "57b639cf5cf010bc702369987ab35b78916cb8bc",
+  "immutable_url": "https://github.com/clay-good/OpenLore/tree/57b639cf5cf010bc702369987ab35b78916cb8bc"
+}

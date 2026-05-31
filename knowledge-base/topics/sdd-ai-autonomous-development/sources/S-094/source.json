@@ -1,0 +1,41 @@
+{
+  "source_id": "S-094",
+  "title": "R2Code Requirements-to-Code Traceability",
+  "url": "https://arxiv.org/abs/2604.22432",
+  "canonical_url": "https://arxiv.org/abs/2604.22432",
+  "author_or_organization": "",
+  "publisher": "arXiv",
+  "retrieved_at": "2026-05-31T13:59:15+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T135915Z",
+      "local_path": "sources/S-094/raw/SNAP-20260531T135915Z.html",
+      "content_hash": "sha256:9ace88c7c266c9345be4822edb25ad97c8fb20f2283ef1a195eb356a388354f5",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T13:59:15+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "stable",
+    "recheck_after": null,
+    "reason": "Captured publication is treated as stable; refresh only when a newer version is relevant."
+  },
+  "source_type": "research_paper",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://arxiv.org/abs/2604.22432",
+  "supported_claim_ids": [
+    "C-010"
+  ],
+  "content_hash": "sha256:9ace88c7c266c9345be4822edb25ad97c8fb20f2283ef1a195eb356a388354f5",
+  "locator": "local snapshot SNAP-20260531T135915Z"
+}

@@ -1,0 +1,1558 @@
+{
+  "topic_id": "sdd-ai-autonomous-development",
+  "updated_at": "2026-05-31T14:01:30+00:00",
+  "sources": [
+    {
+      "source_id": "S-001",
+      "source_path": "sources/S-001/source.json",
+      "summary_path": "sources/S-001/summary.json",
+      "title": "GitHub Spec Kit Documentation",
+      "categories": [
+        "definition",
+        "direct_sdd",
+        "tooling",
+        "workflow"
+      ],
+      "keywords": [
+        "GitHub Spec Kit",
+        "GitHub Spec Kit 官方文件",
+        "SDD",
+        "direct_sdd",
+        "implement",
+        "plan",
+        "spec",
+        "tasks"
+      ],
+      "recheck_after": "2026-06-30T06:05:34+00:00"
+    },
+    {
+      "source_id": "S-002",
+      "source_path": "sources/S-002/source.json",
+      "summary_path": "sources/S-002/summary.json",
+      "title": "Spec Kit Workflows Documentation",
+      "categories": [
+        "evaluation",
+        "workflow",
+        "workflow_runtime"
+      ],
+      "keywords": [
+        "Spec Kit",
+        "Spec Kit workflow 編排",
+        "fan-in",
+        "fan-out",
+        "human checkpoint",
+        "resume",
+        "workflow",
+        "workflow_runtime"
+      ],
+      "recheck_after": "2026-06-30T06:05:35+00:00"
+    },
+    {
+      "source_id": "S-003",
+      "source_path": "sources/S-003/source.json",
+      "summary_path": "sources/S-003/summary.json",
+      "title": "Kiro Specs Documentation",
+      "categories": [
+        "definition",
+        "direct_sdd",
+        "tooling",
+        "workflow"
+      ],
+      "keywords": [
+        "Kiro",
+        "Kiro 官方 Specs",
+        "design.md",
+        "direct_sdd",
+        "parallel execution",
+        "requirements.md",
+        "tasks.md"
+      ],
+      "recheck_after": "2026-06-30T06:05:35+00:00"
+    },
+    {
+      "source_id": "S-004",
+      "source_path": "sources/S-004/source.json",
+      "summary_path": "sources/S-004/summary.json",
+      "title": "OpenSpec Repository README",
+      "categories": [
+        "direct_sdd",
+        "tooling",
+        "workflow"
+      ],
+      "keywords": [
+        "OpenSpec",
+        "OpenSpec 核心工具",
+        "change folder",
+        "design",
+        "direct_sdd",
+        "proposal",
+        "specs",
+        "tasks"
+      ],
+      "recheck_after": "2026-06-30T06:05:37+00:00"
+    },
+    {
+      "source_id": "S-005",
+      "source_path": "sources/S-005/source.json",
+      "summary_path": "sources/S-005/summary.json",
+      "title": "Spec Kitty Repository README",
+      "categories": [
+        "direct_sdd",
+        "evaluation",
+        "tooling",
+        "workflow"
+      ],
+      "keywords": [
+        "Spec Kitty",
+        "Spec Kitty CLI",
+        "accept",
+        "direct_sdd",
+        "git worktree",
+        "merge",
+        "review",
+        "work package"
+      ],
+      "recheck_after": "2026-06-30T06:05:38+00:00"
+    },
+    {
+      "source_id": "S-006",
+      "source_path": "sources/S-006/source.json",
+      "summary_path": "sources/S-006/summary.json",
+      "title": "Spec-Driven Development: From Code to Contract in the Age of AI Coding Assistants",
+      "categories": [
+        "definition",
+        "evaluation",
+        "related_concepts",
+        "research"
+      ],
+      "keywords": [
+        "SDD",
+        "SDD 概念預印本",
+        "arXiv",
+        "research",
+        "spec-anchored",
+        "spec-as-source",
+        "spec-first"
+      ],
+      "recheck_after": null
+    },
+    {
+      "source_id": "S-007",
+      "source_path": "sources/S-007/source.json",
+      "summary_path": "sources/S-007/summary.json",
+      "title": "GitHub Spec Kit Repository README",
+      "categories": [
+        "direct_sdd",
+        "evaluation",
+        "tooling",
+        "workflow"
+      ],
+      "keywords": [
+        "GitHub Spec Kit",
+        "GitHub Spec Kit repository",
+        "clarify",
+        "constitution",
+        "direct_sdd",
+        "implementation",
+        "plan",
+        "tasks"
+      ],
+      "recheck_after": "2026-06-30T06:06:34+00:00"
+    },
+    {
+      "source_id": "S-008",
+      "source_path": "sources/S-008/source.json",
+      "summary_path": "sources/S-008/summary.json",
+      "title": "SpecDD Official Documentation",
+      "categories": [
+        "definition",
+        "direct_sdd",
+        "tooling",
+        "workflow"
+      ],
+      "keywords": [
+        ".sdd",
+        "SpecDD",
+        "SpecDD framework",
+        "brownfield",
+        "direct_sdd",
+        "greenfield",
+        "shared source of truth"
+      ],
+      "recheck_after": "2026-06-30T06:06:35+00:00"
+    },
+    {
+      "source_id": "S-009",
+      "source_path": "sources/S-009/source.json",
+      "summary_path": "sources/S-009/summary.json",
+      "title": "OpenSpecification Repository README",
+      "categories": [
+        "direct_sdd",
+        "tooling",
+        "workflow"
+      ],
+      "keywords": [
+        "Kiro",
+        "OpenSpecification",
+        "OpenSpecification web app",
+        "design",
+        "direct_sdd",
+        "implementation tasks",
+        "requirements"
+      ],
+      "recheck_after": "2026-06-30T06:06:36+00:00"
+    },
+    {
+      "source_id": "S-010",
+      "source_path": "sources/S-010/source.json",
+      "summary_path": "sources/S-010/summary.json",
+      "title": "Akka Spec-Driven Development Documentation",
+      "categories": [
+        "definition",
+        "direct_sdd",
+        "evaluation",
+        "workflow"
+      ],
+      "keywords": [
+        "Akka",
+        "Akka SDD 官方文件",
+        "SDD",
+        "clarify",
+        "direct_sdd",
+        "human-in-the-loop",
+        "single source of truth",
+        "tasks"
+      ],
+      "recheck_after": "2026-06-30T06:06:37+00:00"
+    },
+    {
+      "source_id": "S-011",
+      "source_path": "sources/S-011/source.json",
+      "summary_path": "sources/S-011/summary.json",
+      "title": "codex-spec Repository README",
+      "categories": [
+        "direct_sdd",
+        "tooling",
+        "traceability",
+        "workflow"
+      ],
+      "keywords": [
+        "codex-spec",
+        "design",
+        "development plan",
+        "direct_sdd",
+        "requirements",
+        "validation"
+      ],
+      "recheck_after": "2026-06-30T11:38:56+00:00"
+    },
+    {
+      "source_id": "S-012",
+      "source_path": "sources/S-012/source.json",
+      "summary_path": "sources/S-012/summary.json",
+      "title": "SpecPulse Repository README",
+      "categories": [
+        "direct_sdd",
+        "evaluation",
+        "tooling",
+        "workflow"
+      ],
+      "keywords": [
+        "CLI",
+        "SpecPulse",
+        "continuous execution",
+        "direct_sdd",
+        "validation"
+      ],
+      "recheck_after": "2026-06-30T11:38:58+00:00"
+    },
+    {
+      "source_id": "S-013",
+      "source_path": "sources/S-013/source.json",
+      "summary_path": "sources/S-013/summary.json",
+      "title": "Specs CLI Repository README",
+      "categories": [
+        "direct_sdd",
+        "tooling",
+        "traceability",
+        "workflow"
+      ],
+      "keywords": [
+        "DSPI",
+        "Specs CLI",
+        "direct_sdd",
+        "implementation",
+        "traceability"
+      ],
+      "recheck_after": "2026-06-30T11:38:59+00:00"
+    },
+    {
+      "source_id": "S-014",
+      "source_path": "sources/S-014/source.json",
+      "summary_path": "sources/S-014/summary.json",
+      "title": "Spec Workflow MCP Repository README",
+      "categories": [
+        "direct_sdd",
+        "integration",
+        "tooling",
+        "workflow"
+      ],
+      "keywords": [
+        "MCP",
+        "Spec Workflow MCP",
+        "agent integration",
+        "design",
+        "direct_sdd",
+        "requirements",
+        "tasks"
+      ],
+      "recheck_after": "2026-06-30T11:39:00+00:00"
+    },
+    {
+      "source_id": "S-015",
+      "source_path": "sources/S-015/source.json",
+      "summary_path": "sources/S-015/summary.json",
+      "title": "Specflow Repository README",
+      "categories": [
+        "direct_sdd",
+        "iteration",
+        "tooling",
+        "workflow"
+      ],
+      "keywords": [
+        "Specflow",
+        "direct_sdd",
+        "execute",
+        "intent",
+        "refine",
+        "roadmap"
+      ],
+      "recheck_after": "2026-06-30T11:39:01+00:00"
+    },
+    {
+      "source_id": "S-016",
+      "source_path": "sources/S-016/source.json",
+      "summary_path": "sources/S-016/summary.json",
+      "title": "BMAD Method Repository README",
+      "categories": [
+        "adjacent_tooling",
+        "lifecycle_workflow",
+        "orchestration",
+        "workflow"
+      ],
+      "keywords": [
+        "BMAD",
+        "BMAD Method",
+        "agile",
+        "architecture",
+        "lifecycle_workflow",
+        "planning depth",
+        "specialized agents"
+      ],
+      "recheck_after": "2026-06-30T11:39:03+00:00"
+    },
+    {
+      "source_id": "S-017",
+      "source_path": "sources/S-017/source.json",
+      "summary_path": "sources/S-017/summary.json",
+      "title": "Get Shit Done Repository README",
+      "categories": [
+        "adjacent_tooling",
+        "context_engineering",
+        "workflow"
+      ],
+      "keywords": [
+        "GSD",
+        "Get Shit Done",
+        "context engineering",
+        "context_engineering",
+        "fresh subagent",
+        "phase",
+        "verification"
+      ],
+      "recheck_after": "2026-06-30T11:39:04+00:00"
+    },
+    {
+      "source_id": "S-018",
+      "source_path": "sources/S-018/source.json",
+      "summary_path": "sources/S-018/summary.json",
+      "title": "Kata Repository README",
+      "categories": [
+        "adjacent_tooling",
+        "brownfield",
+        "context_engineering",
+        "orchestration"
+      ],
+      "keywords": [
+        "Kata",
+        "SQLite",
+        "Tree-sitter",
+        "brownfield",
+        "code context",
+        "context_engineering"
+      ],
+      "recheck_after": "2026-06-30T11:39:06+00:00"
+    },
+    {
+      "source_id": "S-019",
+      "source_path": "sources/S-019/source.json",
+      "summary_path": "sources/S-019/summary.json",
+      "title": "Taskmaster Repository README",
+      "categories": [
+        "adjacent_tooling",
+        "orchestration",
+        "task_graph"
+      ],
+      "keywords": [
+        "PRD",
+        "Taskmaster",
+        "dependency",
+        "next task",
+        "task graph",
+        "task_graph"
+      ],
+      "recheck_after": "2026-06-30T11:39:07+00:00"
+    },
+    {
+      "source_id": "S-020",
+      "source_path": "sources/S-020/source.json",
+      "summary_path": "sources/S-020/summary.json",
+      "title": "OpenAI Symphony Repository README",
+      "categories": [
+        "adjacent_tooling",
+        "execution_runtime",
+        "isolation",
+        "observability",
+        "orchestration"
+      ],
+      "keywords": [
+        "OpenAI Symphony",
+        "OpenAI Symphony repository",
+        "coding agent",
+        "execution_runtime",
+        "issue tracker",
+        "parallel",
+        "workspace"
+      ],
+      "recheck_after": "2026-06-30T11:39:08+00:00"
+    },
+    {
+      "source_id": "S-021",
+      "source_path": "sources/S-021/source.json",
+      "summary_path": "sources/S-021/summary.json",
+      "title": "OpenAI Symphony Service Specification",
+      "categories": [
+        "execution_runtime",
+        "isolation",
+        "observability",
+        "orchestration",
+        "retry",
+        "scheduler"
+      ],
+      "keywords": [
+        "OpenAI Symphony service specification",
+        "execution_runtime",
+        "observability",
+        "policy",
+        "reconciliation",
+        "retry",
+        "scheduler",
+        "workspace manager"
+      ],
+      "recheck_after": "2026-06-30T11:39:10+00:00"
+    },
+    {
+      "source_id": "S-022",
+      "source_path": "sources/S-022/source.json",
+      "summary_path": "sources/S-022/summary.json",
+      "title": "Rover Repository README",
+      "categories": [
+        "adjacent_tooling",
+        "execution_runtime",
+        "isolation",
+        "orchestration"
+      ],
+      "keywords": [
+        "Rover",
+        "background agents",
+        "execution_runtime",
+        "parallel",
+        "workspace isolation"
+      ],
+      "recheck_after": "2026-06-30T11:39:12+00:00"
+    },
+    {
+      "source_id": "S-023",
+      "source_path": "sources/S-023/source.json",
+      "summary_path": "sources/S-023/summary.json",
+      "title": "Agent Skills Spec-Driven Development Skill",
+      "categories": [
+        "evaluation",
+        "human_gate",
+        "workflow",
+        "workflow_contract"
+      ],
+      "keywords": [
+        "Agent Skills SDD skill",
+        "agent skill",
+        "clarify",
+        "human gate",
+        "plan",
+        "tasks",
+        "verification",
+        "workflow_contract"
+      ],
+      "recheck_after": "2026-06-30T11:39:13+00:00"
+    },
+    {
+      "source_id": "S-024",
+      "source_path": "sources/S-024/source.json",
+      "summary_path": "sources/S-024/summary.json",
+      "title": "Spec Kit Agents: Context-Grounded Agentic Workflows",
+      "categories": [
+        "context_engineering",
+        "evaluation",
+        "research"
+      ],
+      "keywords": [
+        "Spec Kit Agents",
+        "Spec Kit Agents 預印本",
+        "agentic workflow",
+        "arXiv",
+        "context-grounded",
+        "research"
+      ],
+      "recheck_after": null
+    },
+    {
+      "source_id": "S-025",
+      "source_path": "sources/S-025/source.json",
+      "summary_path": "sources/S-025/summary.json",
+      "title": "Constitutional Spec-Driven Development",
+      "categories": [
+        "evaluation",
+        "research",
+        "security",
+        "traceability"
+      ],
+      "keywords": [
+        "Constitutional SDD 預印本",
+        "arXiv",
+        "constitutional SDD",
+        "constraints",
+        "security",
+        "traceability"
+      ],
+      "recheck_after": null
+    },
+    {
+      "source_id": "S-026",
+      "source_path": "sources/S-026/source.json",
+      "summary_path": "sources/S-026/summary.json",
+      "title": "Kiro Repository README",
+      "categories": [
+        "direct_sdd"
+      ],
+      "keywords": [
+        "Kiro repository",
+        "direct_sdd"
+      ],
+      "recheck_after": "2026-06-30T12:12:02+00:00"
+    },
+    {
+      "source_id": "S-027",
+      "source_path": "sources/S-027/source.json",
+      "summary_path": "sources/S-027/summary.json",
+      "title": "cc-sdd Repository README",
+      "categories": [
+        "direct_sdd"
+      ],
+      "keywords": [
+        "cc-sdd",
+        "direct_sdd"
+      ],
+      "recheck_after": "2026-06-30T12:12:03+00:00"
+    },
+    {
+      "source_id": "S-028",
+      "source_path": "sources/S-028/source.json",
+      "summary_path": "sources/S-028/summary.json",
+      "title": "MoAI-ADK Repository README",
+      "categories": [
+        "harness_engineering"
+      ],
+      "keywords": [
+        "MoAI-ADK",
+        "harness_engineering"
+      ],
+      "recheck_after": "2026-06-30T12:12:05+00:00"
+    },
+    {
+      "source_id": "S-029",
+      "source_path": "sources/S-029/source.json",
+      "summary_path": "sources/S-029/summary.json",
+      "title": "OpenLore Repository README",
+      "categories": [
+        "brownfield"
+      ],
+      "keywords": [
+        "OpenLore",
+        "brownfield",
+        "spec-gen"
+      ],
+      "recheck_after": "2026-06-30T12:12:06+00:00"
+    },
+    {
+      "source_id": "S-030",
+      "source_path": "sources/S-030/source.json",
+      "summary_path": "sources/S-030/summary.json",
+      "title": "Specboot ai-specs Repository README",
+      "categories": [
+        "governance"
+      ],
+      "keywords": [
+        "Specboot ai-specs",
+        "governance"
+      ],
+      "recheck_after": "2026-06-30T12:12:08+00:00"
+    },
+    {
+      "source_id": "S-031",
+      "source_path": "sources/S-031/source.json",
+      "summary_path": "sources/S-031/summary.json",
+      "title": "Gentle-AI Repository README",
+      "categories": [
+        "harness_engineering"
+      ],
+      "keywords": [
+        "Gentle-AI",
+        "harness_engineering"
+      ],
+      "recheck_after": "2026-06-30T12:12:09+00:00"
+    },
+    {
+      "source_id": "S-032",
+      "source_path": "sources/S-032/source.json",
+      "summary_path": "sources/S-032/summary.json",
+      "title": "spec-coding-mcp Repository README",
+      "categories": [
+        "direct_sdd"
+      ],
+      "keywords": [
+        "direct_sdd",
+        "spec-coding-mcp"
+      ],
+      "recheck_after": "2026-06-30T12:12:10+00:00"
+    },
+    {
+      "source_id": "S-033",
+      "source_path": "sources/S-033/source.json",
+      "summary_path": "sources/S-033/summary.json",
+      "title": "Pimzino Spec Workflow MCP README",
+      "categories": [
+        "direct_sdd"
+      ],
+      "keywords": [
+        "Pimzino Spec Workflow MCP",
+        "direct_sdd"
+      ],
+      "recheck_after": "2026-06-30T12:12:12+00:00"
+    },
+    {
+      "source_id": "S-034",
+      "source_path": "sources/S-034/source.json",
+      "summary_path": "sources/S-034/summary.json",
+      "title": "Smart Ralph Repository README",
+      "categories": [
+        "autonomous_loop"
+      ],
+      "keywords": [
+        "Smart Ralph",
+        "autonomous_loop"
+      ],
+      "recheck_after": "2026-06-30T12:12:13+00:00"
+    },
+    {
+      "source_id": "S-035",
+      "source_path": "sources/S-035/source.json",
+      "summary_path": "sources/S-035/summary.json",
+      "title": "Flow Next Repository README",
+      "categories": [
+        "autonomous_loop"
+      ],
+      "keywords": [
+        "Flow Next",
+        "autonomous_loop"
+      ],
+      "recheck_after": "2026-06-30T12:12:14+00:00"
+    },
+    {
+      "source_id": "S-036",
+      "source_path": "sources/S-036/source.json",
+      "summary_path": "sources/S-036/summary.json",
+      "title": "GAAI Framework Repository README",
+      "categories": [
+        "delivery_framework"
+      ],
+      "keywords": [
+        "GAAI Framework",
+        "delivery_framework"
+      ],
+      "recheck_after": "2026-06-30T12:12:15+00:00"
+    },
+    {
+      "source_id": "S-037",
+      "source_path": "sources/S-037/source.json",
+      "summary_path": "sources/S-037/summary.json",
+      "title": "iannuttall Ralph Repository README",
+      "categories": [
+        "autonomous_loop"
+      ],
+      "keywords": [
+        "autonomous_loop",
+        "iannuttall Ralph"
+      ],
+      "recheck_after": "2026-06-30T12:12:16+00:00"
+    },
+    {
+      "source_id": "S-038",
+      "source_path": "sources/S-038/source.json",
+      "summary_path": "sources/S-038/summary.json",
+      "title": "Anthropic Ralph Wiggum Plugin README",
+      "categories": [
+        "autonomous_loop"
+      ],
+      "keywords": [
+        "Anthropic Ralph Wiggum plugin",
+        "autonomous_loop"
+      ],
+      "recheck_after": "2026-06-30T12:12:17+00:00"
+    },
+    {
+      "source_id": "S-039",
+      "source_path": "sources/S-039/source.json",
+      "summary_path": "sources/S-039/summary.json",
+      "title": "snarktank Ralph Repository README",
+      "categories": [
+        "autonomous_loop"
+      ],
+      "keywords": [
+        "autonomous_loop",
+        "snarktank Ralph"
+      ],
+      "recheck_after": "2026-06-30T12:12:18+00:00"
+    },
+    {
+      "source_id": "S-040",
+      "source_path": "sources/S-040/source.json",
+      "summary_path": "sources/S-040/summary.json",
+      "title": "Swarms Repository README",
+      "categories": [
+        "multi_agent"
+      ],
+      "keywords": [
+        "Swarms",
+        "multi_agent"
+      ],
+      "recheck_after": "2026-06-30T12:12:20+00:00"
+    },
+    {
+      "source_id": "S-041",
+      "source_path": "sources/S-041/source.json",
+      "summary_path": "sources/S-041/summary.json",
+      "title": "Metaswarm Repository README",
+      "categories": [
+        "multi_agent"
+      ],
+      "keywords": [
+        "Metaswarm",
+        "multi_agent"
+      ],
+      "recheck_after": "2026-06-30T12:12:21+00:00"
+    },
+    {
+      "source_id": "S-042",
+      "source_path": "sources/S-042/source.json",
+      "summary_path": "sources/S-042/summary.json",
+      "title": "Maestro Orchestrate Repository README",
+      "categories": [
+        "multi_agent"
+      ],
+      "keywords": [
+        "Maestro Orchestrate",
+        "multi_agent"
+      ],
+      "recheck_after": "2026-06-30T12:12:22+00:00"
+    },
+    {
+      "source_id": "S-043",
+      "source_path": "sources/S-043/source.json",
+      "summary_path": "sources/S-043/summary.json",
+      "title": "Worktrunk Repository README",
+      "categories": [
+        "workspace_isolation"
+      ],
+      "keywords": [
+        "Worktrunk",
+        "workspace_isolation"
+      ],
+      "recheck_after": "2026-06-30T12:12:23+00:00"
+    },
+    {
+      "source_id": "S-044",
+      "source_path": "sources/S-044/source.json",
+      "summary_path": "sources/S-044/summary.json",
+      "title": "workmux Repository README",
+      "categories": [
+        "workspace_isolation"
+      ],
+      "keywords": [
+        "workmux",
+        "workspace_isolation"
+      ],
+      "recheck_after": "2026-06-30T12:12:25+00:00"
+    },
+    {
+      "source_id": "S-045",
+      "source_path": "sources/S-045/source.json",
+      "summary_path": "sources/S-045/summary.json",
+      "title": "Codexia Repository README",
+      "categories": [
+        "execution_runtime"
+      ],
+      "keywords": [
+        "Codexia",
+        "execution_runtime"
+      ],
+      "recheck_after": "2026-06-30T12:12:26+00:00"
+    },
+    {
+      "source_id": "S-046",
+      "source_path": "sources/S-046/source.json",
+      "summary_path": "sources/S-046/summary.json",
+      "title": "Claw Orchestrator Repository README",
+      "categories": [
+        "execution_runtime"
+      ],
+      "keywords": [
+        "Claw Orchestrator",
+        "execution_runtime"
+      ],
+      "recheck_after": "2026-06-30T12:12:27+00:00"
+    },
+    {
+      "source_id": "S-047",
+      "source_path": "sources/S-047/source.json",
+      "summary_path": "sources/S-047/summary.json",
+      "title": "Local-first Maestro Repository README",
+      "categories": [
+        "multi_agent"
+      ],
+      "keywords": [
+        "Local-first Maestro",
+        "multi_agent"
+      ],
+      "recheck_after": "2026-06-30T12:12:29+00:00"
+    },
+    {
+      "source_id": "S-048",
+      "source_path": "sources/S-048/source.json",
+      "summary_path": "sources/S-048/summary.json",
+      "title": "Awesome OpenSpec Repository README",
+      "categories": [
+        "ecosystem_map"
+      ],
+      "keywords": [
+        "Awesome OpenSpec",
+        "ecosystem_map"
+      ],
+      "recheck_after": "2026-06-30T12:12:30+00:00"
+    },
+    {
+      "source_id": "S-049",
+      "source_path": "sources/S-049/source.json",
+      "summary_path": "sources/S-049/summary.json",
+      "title": "OpenSpec Supported Tools Documentation",
+      "categories": [
+        "direct_sdd"
+      ],
+      "keywords": [
+        "OpenSpec supported tools",
+        "direct_sdd"
+      ],
+      "recheck_after": "2026-06-30T12:12:31+00:00"
+    },
+    {
+      "source_id": "S-050",
+      "source_path": "sources/S-050/source.json",
+      "summary_path": "sources/S-050/summary.json",
+      "title": "OpenSpec for Copilot Repository README",
+      "categories": [
+        "integration"
+      ],
+      "keywords": [
+        "OpenSpec for Copilot",
+        "integration"
+      ],
+      "recheck_after": "2026-06-30T12:12:32+00:00"
+    },
+    {
+      "source_id": "S-051",
+      "source_path": "sources/S-051/source.json",
+      "summary_path": "sources/S-051/summary.json",
+      "title": "ClawSpec Repository README",
+      "categories": [
+        "integration"
+      ],
+      "keywords": [
+        "ClawSpec",
+        "integration"
+      ],
+      "recheck_after": "2026-06-30T12:12:33+00:00"
+    },
+    {
+      "source_id": "S-052",
+      "source_path": "sources/S-052/source.json",
+      "summary_path": "sources/S-052/summary.json",
+      "title": "AI Coding Workflow Repository README",
+      "categories": [
+        "workflow_contract"
+      ],
+      "keywords": [
+        "AI Coding Workflow",
+        "workflow_contract"
+      ],
+      "recheck_after": "2026-06-30T12:12:34+00:00"
+    },
+    {
+      "source_id": "S-053",
+      "source_path": "sources/S-053/source.json",
+      "summary_path": "sources/S-053/summary.json",
+      "title": "Claude SDD Toolkit Repository README",
+      "categories": [
+        "direct_sdd"
+      ],
+      "keywords": [
+        "Claude SDD Toolkit",
+        "direct_sdd"
+      ],
+      "recheck_after": "2026-06-30T12:12:36+00:00"
+    },
+    {
+      "source_id": "S-054",
+      "source_path": "sources/S-054/source.json",
+      "summary_path": "sources/S-054/summary.json",
+      "title": "AI Governor Framework Repository README",
+      "categories": [
+        "governance"
+      ],
+      "keywords": [
+        "AI Governor Framework",
+        "governance"
+      ],
+      "recheck_after": "2026-06-30T12:12:37+00:00"
+    },
+    {
+      "source_id": "S-055",
+      "source_path": "sources/S-055/source.json",
+      "summary_path": "sources/S-055/summary.json",
+      "title": "Threatspec Repository README",
+      "categories": [
+        "security"
+      ],
+      "keywords": [
+        "Threatspec",
+        "security"
+      ],
+      "recheck_after": "2026-06-30T12:12:38+00:00"
+    },
+    {
+      "source_id": "S-056",
+      "source_path": "sources/S-056/source.json",
+      "summary_path": "sources/S-056/summary.json",
+      "title": "GitHub Blog: Spec-driven development with AI toolkit",
+      "categories": [
+        "article"
+      ],
+      "keywords": [
+        "GitHub Blog：Spec Kit 入門",
+        "article"
+      ],
+      "recheck_after": "2026-06-30T13:39:39+00:00"
+    },
+    {
+      "source_id": "S-057",
+      "source_path": "sources/S-057/source.json",
+      "summary_path": "sources/S-057/summary.json",
+      "title": "GitHub Blog: Markdown as a programming language",
+      "categories": [
+        "case_study"
+      ],
+      "keywords": [
+        "GitHub Blog：Markdown as programming language",
+        "case_study"
+      ],
+      "recheck_after": "2026-06-30T13:39:40+00:00"
+    },
+    {
+      "source_id": "S-058",
+      "source_path": "sources/S-058/source.json",
+      "summary_path": "sources/S-058/summary.json",
+      "title": "Thoughtworks Technology Radar: Spec-driven development",
+      "categories": [
+        "article"
+      ],
+      "keywords": [
+        "Thoughtworks Technology Radar",
+        "article"
+      ],
+      "recheck_after": "2026-06-30T13:39:41+00:00"
+    },
+    {
+      "source_id": "S-059",
+      "source_path": "sources/S-059/source.json",
+      "summary_path": "sources/S-059/summary.json",
+      "title": "Thoughtworks: Unpacking spec-driven development",
+      "categories": [
+        "article"
+      ],
+      "keywords": [
+        "Thoughtworks：Unpacking SDD",
+        "article"
+      ],
+      "recheck_after": "2026-06-30T13:39:41+00:00"
+    },
+    {
+      "source_id": "S-060",
+      "source_path": "sources/S-060/source.json",
+      "summary_path": "sources/S-060/summary.json",
+      "title": "Thoughtworks Podcast: What is spec-driven development?",
+      "categories": [
+        "article"
+      ],
+      "keywords": [
+        "Thoughtworks Podcast：What is SDD",
+        "article"
+      ],
+      "recheck_after": "2026-06-30T13:39:42+00:00"
+    },
+    {
+      "source_id": "S-061",
+      "source_path": "sources/S-061/source.json",
+      "summary_path": "sources/S-061/summary.json",
+      "title": "Kiro Blog: Introducing Kiro",
+      "categories": [
+        "article"
+      ],
+      "keywords": [
+        "Kiro Blog：Introducing Kiro",
+        "article"
+      ],
+      "recheck_after": "2026-06-30T13:39:43+00:00"
+    },
+    {
+      "source_id": "S-062",
+      "source_path": "sources/S-062/source.json",
+      "summary_path": "sources/S-062/summary.json",
+      "title": "AWS Documentation Overview: Kiro",
+      "categories": [
+        "article"
+      ],
+      "keywords": [
+        "AWS Kiro Overview",
+        "article"
+      ],
+      "recheck_after": "2026-06-30T13:39:43+00:00"
+    },
+    {
+      "source_id": "S-063",
+      "source_path": "sources/S-063/source.json",
+      "summary_path": "sources/S-063/summary.json",
+      "title": "AWS Public Sector Blog: Accelerating GovTech development with Kiro",
+      "categories": [
+        "case_study"
+      ],
+      "keywords": [
+        "AWS GovTech Kiro 案例",
+        "case_study"
+      ],
+      "recheck_after": "2026-06-30T13:39:44+00:00"
+    },
+    {
+      "source_id": "S-064",
+      "source_path": "sources/S-064/source.json",
+      "summary_path": "sources/S-064/summary.json",
+      "title": "Tessl: How products pioneer SDD",
+      "categories": [
+        "article"
+      ],
+      "keywords": [
+        "Tessl SDD 產品願景",
+        "article"
+      ],
+      "recheck_after": "2026-06-30T13:39:46+00:00"
+    },
+    {
+      "source_id": "S-065",
+      "source_path": "sources/S-065/source.json",
+      "summary_path": "sources/S-065/summary.json",
+      "title": "Tessl: 10 things about specs",
+      "categories": [
+        "article"
+      ],
+      "keywords": [
+        "Tessl：Specs 十件事",
+        "article"
+      ],
+      "recheck_after": "2026-06-30T13:39:47+00:00"
+    },
+    {
+      "source_id": "S-066",
+      "source_path": "sources/S-066/source.json",
+      "summary_path": "sources/S-066/summary.json",
+      "title": "Tessl: OpenAI Symphony orchestration spec",
+      "categories": [
+        "article"
+      ],
+      "keywords": [
+        "Tessl：Symphony 解讀",
+        "article"
+      ],
+      "recheck_after": "2026-06-30T13:39:48+00:00"
+    },
+    {
+      "source_id": "S-067",
+      "source_path": "sources/S-067/source.json",
+      "summary_path": "sources/S-067/summary.json",
+      "title": "InfoQ: Enterprise SDD adoption",
+      "categories": [
+        "article"
+      ],
+      "keywords": [
+        "InfoQ：Enterprise SDD Adoption",
+        "article"
+      ],
+      "recheck_after": "2026-06-30T13:39:50+00:00"
+    },
+    {
+      "source_id": "S-068",
+      "source_path": "sources/S-068/source.json",
+      "summary_path": "sources/S-068/summary.json",
+      "title": "InfoQ: When architecture becomes executable",
+      "categories": [
+        "article"
+      ],
+      "keywords": [
+        "InfoQ：Executable Architecture",
+        "article"
+      ],
+      "recheck_after": "2026-06-30T13:39:52+00:00"
+    },
+    {
+      "source_id": "S-069",
+      "source_path": "sources/S-069/source.json",
+      "summary_path": "sources/S-069/summary.json",
+      "title": "Martin Fowler: Context Engineering for Coding Agents",
+      "categories": [
+        "article"
+      ],
+      "keywords": [
+        "Martin Fowler：Context Engineering for Coding Agents",
+        "article"
+      ],
+      "recheck_after": "2026-06-30T13:39:53+00:00"
+    },
+    {
+      "source_id": "S-070",
+      "source_path": "sources/S-070/source.json",
+      "summary_path": "sources/S-070/summary.json",
+      "title": "Anthropic: Building Effective Agents",
+      "categories": [
+        "article"
+      ],
+      "keywords": [
+        "Anthropic：Building Effective Agents",
+        "article"
+      ],
+      "recheck_after": "2026-06-30T13:39:55+00:00"
+    },
+    {
+      "source_id": "S-071",
+      "source_path": "sources/S-071/source.json",
+      "summary_path": "sources/S-071/summary.json",
+      "title": "Anthropic: Effective context engineering for AI agents",
+      "categories": [
+        "article"
+      ],
+      "keywords": [
+        "Anthropic：Effective Context Engineering",
+        "article"
+      ],
+      "recheck_after": "2026-06-30T13:40:03+00:00"
+    },
+    {
+      "source_id": "S-072",
+      "source_path": "sources/S-072/source.json",
+      "summary_path": "sources/S-072/summary.json",
+      "title": "Scale AI: SWE Atlas is Complete",
+      "categories": [
+        "benchmark"
+      ],
+      "keywords": [
+        "Scale AI：SWE Atlas",
+        "benchmark"
+      ],
+      "recheck_after": "2026-06-30T13:40:05+00:00"
+    },
+    {
+      "source_id": "S-073",
+      "source_path": "sources/S-073/source.json",
+      "summary_path": "sources/S-073/summary.json",
+      "title": "Xcapit: SDD with AI Agents Practical Guide",
+      "categories": [
+        "article"
+      ],
+      "keywords": [
+        "Xcapit SDD 實務指南",
+        "article"
+      ],
+      "recheck_after": "2026-06-30T13:41:26+00:00"
+    },
+    {
+      "source_id": "S-074",
+      "source_path": "sources/S-074/source.json",
+      "summary_path": "sources/S-074/summary.json",
+      "title": "ContextBench Paper Page",
+      "categories": [
+        "benchmark"
+      ],
+      "keywords": [
+        "ContextBench",
+        "benchmark"
+      ],
+      "recheck_after": null
+    },
+    {
+      "source_id": "S-075",
+      "source_path": "sources/S-075/source.json",
+      "summary_path": "sources/S-075/summary.json",
+      "title": "OmniCode Benchmark Paper",
+      "categories": [
+        "benchmark"
+      ],
+      "keywords": [
+        "OmniCode",
+        "benchmark"
+      ],
+      "recheck_after": null
+    },
+    {
+      "source_id": "S-076",
+      "source_path": "sources/S-076/source.json",
+      "summary_path": "sources/S-076/summary.json",
+      "title": "SDD Practitioner Guide OpenReview PDF",
+      "categories": [
+        "research"
+      ],
+      "keywords": [
+        "OpenReview SDD Practitioner Guide",
+        "research"
+      ],
+      "recheck_after": null
+    },
+    {
+      "source_id": "S-077",
+      "source_path": "sources/S-077/source.json",
+      "summary_path": "sources/S-077/summary.json",
+      "title": "Bito: SDD Explained for AI Coding Teams",
+      "categories": [
+        "article"
+      ],
+      "keywords": [
+        "Bito：SDD 與 Codebase Intelligence",
+        "article"
+      ],
+      "recheck_after": "2026-06-30T13:41:32+00:00"
+    },
+    {
+      "source_id": "S-078",
+      "source_path": "sources/S-078/source.json",
+      "summary_path": "sources/S-078/summary.json",
+      "title": "Loadsys: Context Engineering AI Practice for SDD Teams",
+      "categories": [
+        "article"
+      ],
+      "keywords": [
+        "Loadsys：Context Engineering Practice",
+        "article"
+      ],
+      "recheck_after": "2026-06-30T13:41:33+00:00"
+    },
+    {
+      "source_id": "S-079",
+      "source_path": "sources/S-079/source.json",
+      "summary_path": "sources/S-079/summary.json",
+      "title": "NASA SWE-059 Requirements to Design Traceability",
+      "categories": [
+        "traceability"
+      ],
+      "keywords": [
+        "NASA SWE-059",
+        "traceability"
+      ],
+      "recheck_after": "2026-06-30T13:58:55+00:00"
+    },
+    {
+      "source_id": "S-080",
+      "source_path": "sources/S-080/source.json",
+      "summary_path": "sources/S-080/summary.json",
+      "title": "NASA SWE-052 Bidirectional Traceability",
+      "categories": [
+        "traceability"
+      ],
+      "keywords": [
+        "NASA SWE-052",
+        "traceability"
+      ],
+      "recheck_after": "2026-06-30T13:58:59+00:00"
+    },
+    {
+      "source_id": "S-081",
+      "source_path": "sources/S-081/source.json",
+      "summary_path": "sources/S-081/summary.json",
+      "title": "NASA SWE-067 Verify Implementation",
+      "categories": [
+        "traceability"
+      ],
+      "keywords": [
+        "NASA SWE-067",
+        "traceability"
+      ],
+      "recheck_after": "2026-06-30T13:59:01+00:00"
+    },
+    {
+      "source_id": "S-082",
+      "source_path": "sources/S-082/source.json",
+      "summary_path": "sources/S-082/summary.json",
+      "title": "NASA Requirements Management",
+      "categories": [
+        "traceability"
+      ],
+      "keywords": [
+        "NASA Requirements Management",
+        "traceability"
+      ],
+      "recheck_after": "2026-06-30T13:59:04+00:00"
+    },
+    {
+      "source_id": "S-083",
+      "source_path": "sources/S-083/source.json",
+      "summary_path": "sources/S-083/summary.json",
+      "title": "NIST Secure Software Development Framework",
+      "categories": [
+        "assurance"
+      ],
+      "keywords": [
+        "NIST SSDF",
+        "assurance"
+      ],
+      "recheck_after": "2026-06-30T13:59:05+00:00"
+    },
+    {
+      "source_id": "S-084",
+      "source_path": "sources/S-084/source.json",
+      "summary_path": "sources/S-084/summary.json",
+      "title": "NIST NCCoE DevSecOps Practices",
+      "categories": [
+        "assurance"
+      ],
+      "keywords": [
+        "NIST NCCoE DevSecOps Practices",
+        "assurance"
+      ],
+      "recheck_after": "2026-06-30T13:59:06+00:00"
+    },
+    {
+      "source_id": "S-085",
+      "source_path": "sources/S-085/source.json",
+      "summary_path": "sources/S-085/summary.json",
+      "title": "OWASP ASVS",
+      "categories": [
+        "assurance"
+      ],
+      "keywords": [
+        "OWASP ASVS",
+        "assurance"
+      ],
+      "recheck_after": "2026-06-30T13:59:07+00:00"
+    },
+    {
+      "source_id": "S-086",
+      "source_path": "sources/S-086/source.json",
+      "summary_path": "sources/S-086/summary.json",
+      "title": "OWASP AISVS",
+      "categories": [
+        "assurance"
+      ],
+      "keywords": [
+        "OWASP AISVS",
+        "assurance"
+      ],
+      "recheck_after": "2026-06-30T13:59:07+00:00"
+    },
+    {
+      "source_id": "S-087",
+      "source_path": "sources/S-087/source.json",
+      "summary_path": "sources/S-087/summary.json",
+      "title": "OWASP SCVS Usage and Levels",
+      "categories": [
+        "assurance"
+      ],
+      "keywords": [
+        "OWASP SCVS",
+        "assurance"
+      ],
+      "recheck_after": "2026-06-30T13:59:08+00:00"
+    },
+    {
+      "source_id": "S-088",
+      "source_path": "sources/S-088/source.json",
+      "summary_path": "sources/S-088/summary.json",
+      "title": "OWASP DevGuard",
+      "categories": [
+        "policy_as_code"
+      ],
+      "keywords": [
+        "OWASP DevGuard",
+        "policy_as_code"
+      ],
+      "recheck_after": "2026-06-30T13:59:08+00:00"
+    },
+    {
+      "source_id": "S-089",
+      "source_path": "sources/S-089/source.json",
+      "summary_path": "sources/S-089/summary.json",
+      "title": "Open Policy Agent Documentation",
+      "categories": [
+        "policy_as_code"
+      ],
+      "keywords": [
+        "Open Policy Agent",
+        "policy_as_code"
+      ],
+      "recheck_after": "2026-06-30T13:59:10+00:00"
+    },
+    {
+      "source_id": "S-090",
+      "source_path": "sources/S-090/source.json",
+      "summary_path": "sources/S-090/summary.json",
+      "title": "OPA Pull Request Check Policies",
+      "categories": [
+        "policy_as_code"
+      ],
+      "keywords": [
+        "OPA PR Check Policies",
+        "policy_as_code"
+      ],
+      "recheck_after": "2026-06-30T13:59:11+00:00"
+    },
+    {
+      "source_id": "S-091",
+      "source_path": "sources/S-091/source.json",
+      "summary_path": "sources/S-091/summary.json",
+      "title": "Conftest Documentation",
+      "categories": [
+        "policy_as_code"
+      ],
+      "keywords": [
+        "Conftest",
+        "policy_as_code"
+      ],
+      "recheck_after": "2026-06-30T13:59:12+00:00"
+    },
+    {
+      "source_id": "S-092",
+      "source_path": "sources/S-092/source.json",
+      "summary_path": "sources/S-092/summary.json",
+      "title": "Scale AI SWE-Bench Pro Article",
+      "categories": [
+        "benchmark"
+      ],
+      "keywords": [
+        "Scale AI SWE-Bench Pro Article",
+        "benchmark"
+      ],
+      "recheck_after": "2026-06-30T13:59:14+00:00"
+    },
+    {
+      "source_id": "S-093",
+      "source_path": "sources/S-093/source.json",
+      "summary_path": "sources/S-093/summary.json",
+      "title": "Scale Labs SWE-Bench Pro Paper Page",
+      "categories": [
+        "benchmark"
+      ],
+      "keywords": [
+        "Scale Labs SWE-Bench Pro Paper",
+        "benchmark"
+      ],
+      "recheck_after": null
+    },
+    {
+      "source_id": "S-094",
+      "source_path": "sources/S-094/source.json",
+      "summary_path": "sources/S-094/summary.json",
+      "title": "R2Code Requirements-to-Code Traceability",
+      "categories": [
+        "traceability"
+      ],
+      "keywords": [
+        "R2Code",
+        "traceability"
+      ],
+      "recheck_after": null
+    },
+    {
+      "source_id": "S-095",
+      "source_path": "sources/S-095/source.json",
+      "summary_path": "sources/S-095/summary.json",
+      "title": "ReqToCode Compile-Time Traceability",
+      "categories": [
+        "traceability"
+      ],
+      "keywords": [
+        "ReqToCode",
+        "traceability"
+      ],
+      "recheck_after": null
+    },
+    {
+      "source_id": "S-096",
+      "source_path": "sources/S-096/source.json",
+      "summary_path": "sources/S-096/summary.json",
+      "title": "CISA Secure by Design",
+      "categories": [
+        "assurance"
+      ],
+      "keywords": [
+        "CISA Secure by Design",
+        "assurance"
+      ],
+      "recheck_after": "2026-06-30T13:59:16+00:00"
+    },
+    {
+      "source_id": "S-097",
+      "source_path": "sources/S-097/source.json",
+      "summary_path": "sources/S-097/summary.json",
+      "title": "CISA Product Security Bad Practices",
+      "categories": [
+        "assurance"
+      ],
+      "keywords": [
+        "CISA Product Security Bad Practices",
+        "assurance"
+      ],
+      "recheck_after": "2026-06-30T13:59:17+00:00"
+    }
+  ]
+}

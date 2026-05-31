@@ -1,0 +1,41 @@
+{
+  "source_id": "S-046",
+  "title": "Claw Orchestrator Repository README",
+  "url": "https://github.com/Enderfga/claw-orchestrator",
+  "canonical_url": "https://github.com/Enderfga/claw-orchestrator",
+  "author_or_organization": "",
+  "publisher": "Enderfga",
+  "retrieved_at": "2026-05-31T12:12:27+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T121227Z",
+      "local_path": "sources/S-046/raw/SNAP-20260531T121227Z.html",
+      "content_hash": "sha256:ae7c7e7248098c992243ddbc6efb53a2638d6ded797f00bda719b2d1fdc4a846",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T12:12:27+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T12:12:27+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/Enderfga/claw-orchestrator",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:ae7c7e7248098c992243ddbc6efb53a2638d6ded797f00bda719b2d1fdc4a846",
+  "locator": "repository tree",
+  "commit_sha": "2002effdf1490f7ccf53682b3363e690a373f766",
+  "immutable_url": "https://github.com/Enderfga/claw-orchestrator/tree/2002effdf1490f7ccf53682b3363e690a373f766"
+}

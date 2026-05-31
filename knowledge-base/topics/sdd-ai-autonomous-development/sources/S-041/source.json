@@ -1,0 +1,41 @@
+{
+  "source_id": "S-041",
+  "title": "Metaswarm Repository README",
+  "url": "https://github.com/dsifry/metaswarm",
+  "canonical_url": "https://github.com/dsifry/metaswarm",
+  "author_or_organization": "",
+  "publisher": "dsifry",
+  "retrieved_at": "2026-05-31T12:12:21+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T121221Z",
+      "local_path": "sources/S-041/raw/SNAP-20260531T121221Z.html",
+      "content_hash": "sha256:ba36c8c3f954efdbdf47f185c3fdf135846f46c2fab45e7d6284100cbe621a2f",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T12:12:21+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T12:12:21+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/dsifry/metaswarm",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:ba36c8c3f954efdbdf47f185c3fdf135846f46c2fab45e7d6284100cbe621a2f",
+  "locator": "repository tree",
+  "commit_sha": "398be78231bc1c57b147869c5c80696003e95f31",
+  "immutable_url": "https://github.com/dsifry/metaswarm/tree/398be78231bc1c57b147869c5c80696003e95f31"
+}

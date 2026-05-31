@@ -1,0 +1,43 @@
+{
+  "source_id": "S-034",
+  "title": "Smart Ralph Repository README",
+  "url": "https://github.com/tzachbon/smart-ralph",
+  "canonical_url": "https://github.com/tzachbon/smart-ralph",
+  "author_or_organization": "",
+  "publisher": "tzachbon",
+  "retrieved_at": "2026-05-31T12:12:13+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T121213Z",
+      "local_path": "sources/S-034/raw/SNAP-20260531T121213Z.html",
+      "content_hash": "sha256:0c6bcb05c32e84df3a503ea4120d9bfe73ad1106ada933462da44d49e0f4dc34",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T12:12:13+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T12:12:13+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/tzachbon/smart-ralph",
+  "supported_claim_ids": [
+    "C-004"
+  ],
+  "content_hash": "sha256:0c6bcb05c32e84df3a503ea4120d9bfe73ad1106ada933462da44d49e0f4dc34",
+  "locator": "repository tree",
+  "commit_sha": "1b332022227af46006793e7774dcf55eab1706f0",
+  "immutable_url": "https://github.com/tzachbon/smart-ralph/tree/1b332022227af46006793e7774dcf55eab1706f0"
+}

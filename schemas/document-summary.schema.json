@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/document-summary.schema.json",
+  "title": "Document Summary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "snapshot_id",
+    "summarized_at",
+    "document_purpose",
+    "summary",
+    "key_points",
+    "keywords",
+    "limitations"
+  ],
+  "properties": {
+    "source_id": {
+      "type": "string",
+      "pattern": "^S-[0-9]{3,}$"
+    },
+    "snapshot_id": {
+      "type": "string",
+      "pattern": "^SNAP-[0-9]{8}T[0-9]{6}Z$"
+    },
+    "summarized_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "document_purpose": { "type": "string", "minLength": 1 },
+    "summary": { "type": "string", "minLength": 1 },
+    "role_in_ecosystem": { "type": "string" },
+    "architecture_fit": { "type": "string" },
+    "workflow_outline": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "key_features": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "key_technologies": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "best_for": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "research_value": { "type": "string" },
+    "verification_questions": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "categories": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "key_points": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["text", "locator"],
+        "properties": {
+          "text": { "type": "string", "minLength": 1 },
+          "locator": { "type": "string", "minLength": 1 },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "keywords": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "entities": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "limitations": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "potential_questions": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    }
+  }
+}

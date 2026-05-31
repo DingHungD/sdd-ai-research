@@ -1,0 +1,41 @@
+{
+  "source_id": "S-015",
+  "title": "Specflow Repository README",
+  "url": "https://github.com/specstoryai/specflow",
+  "canonical_url": "https://github.com/specstoryai/specflow",
+  "author_or_organization": "",
+  "publisher": "SpecStory",
+  "retrieved_at": "2026-05-31T11:39:01+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T113901Z",
+      "local_path": "sources/S-015/raw/SNAP-20260531T113901Z.html",
+      "content_hash": "sha256:389c61b13ac44affddfcb69c8792585b7b6b52aaeacd70e63f59774f439cb4d1",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T11:39:01+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T11:39:01+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/specstoryai/specflow",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:389c61b13ac44affddfcb69c8792585b7b6b52aaeacd70e63f59774f439cb4d1",
+  "locator": "repository tree",
+  "commit_sha": "8e4a6c4bdaa84f1381e647116cd8ae47b7c7d444",
+  "immutable_url": "https://github.com/specstoryai/specflow/tree/8e4a6c4bdaa84f1381e647116cd8ae47b7c7d444"
+}

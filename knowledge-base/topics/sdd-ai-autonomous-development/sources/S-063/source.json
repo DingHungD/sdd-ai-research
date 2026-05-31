@@ -1,0 +1,42 @@
+{
+  "source_id": "S-063",
+  "title": "AWS Public Sector Blog: Accelerating GovTech development with Kiro",
+  "url": "https://aws.amazon.com/blogs/publicsector/accelerating-govtech-development-with-kiro/",
+  "canonical_url": "https://aws.amazon.com/blogs/publicsector/accelerating-govtech-development-with-kiro/",
+  "author_or_organization": "",
+  "publisher": "AWS",
+  "retrieved_at": "2026-05-31T13:39:44+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T133944Z",
+      "local_path": "sources/S-063/raw/SNAP-20260531T133944Z.html",
+      "content_hash": "sha256:8714c4a42bc3d38b51a5ec048d5dd1d6019946053cc03f67fb3f8dbe6bbb1da7",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T13:39:44+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T13:39:44+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "professional_article",
+  "evidence_tier": "C",
+  "quality": {
+    "authority": "medium",
+    "directness": "medium",
+    "recency": "medium",
+    "transparency": "medium",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://aws.amazon.com/blogs/publicsector/accelerating-govtech-development-with-kiro/",
+  "supported_claim_ids": [
+    "C-008",
+    "C-012"
+  ],
+  "content_hash": "sha256:8714c4a42bc3d38b51a5ec048d5dd1d6019946053cc03f67fb3f8dbe6bbb1da7",
+  "locator": "local snapshot SNAP-20260531T133944Z"
+}

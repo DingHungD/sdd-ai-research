@@ -1,0 +1,43 @@
+{
+  "source_id": "S-027",
+  "title": "cc-sdd Repository README",
+  "url": "https://github.com/gotalab/cc-sdd",
+  "canonical_url": "https://github.com/gotalab/cc-sdd",
+  "author_or_organization": "",
+  "publisher": "gotalab",
+  "retrieved_at": "2026-05-31T12:12:03+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T121203Z",
+      "local_path": "sources/S-027/raw/SNAP-20260531T121203Z.html",
+      "content_hash": "sha256:2392ac0fa675ceb78d772f437fe6dd86213186a3370557284fed4daff70cb800",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T12:12:03+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T12:12:03+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/gotalab/cc-sdd",
+  "supported_claim_ids": [
+    "C-008"
+  ],
+  "content_hash": "sha256:2392ac0fa675ceb78d772f437fe6dd86213186a3370557284fed4daff70cb800",
+  "locator": "repository tree",
+  "commit_sha": "29aee950f4addc36f9aeecb9881c46540e71ecc9",
+  "immutable_url": "https://github.com/gotalab/cc-sdd/tree/29aee950f4addc36f9aeecb9881c46540e71ecc9"
+}

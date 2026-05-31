@@ -1,0 +1,45 @@
+{
+  "source_id": "S-013",
+  "title": "Specs CLI Repository README",
+  "url": "https://github.com/specs-cli/specs-cli",
+  "canonical_url": "https://github.com/specs-cli/specs-cli",
+  "author_or_organization": "",
+  "publisher": "specs-cli",
+  "retrieved_at": "2026-05-31T11:38:59+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T113859Z",
+      "local_path": "sources/S-013/raw/SNAP-20260531T113859Z.html",
+      "content_hash": "sha256:efc26a610ee64f4ec615d8ebb1ee54aa74673198a2b682336f57ad3f6b92ffc6",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T11:38:59+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T11:38:59+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/specs-cli/specs-cli",
+  "supported_claim_ids": [
+    "C-001",
+    "C-002",
+    "C-003"
+  ],
+  "content_hash": "sha256:efc26a610ee64f4ec615d8ebb1ee54aa74673198a2b682336f57ad3f6b92ffc6",
+  "locator": "repository tree",
+  "commit_sha": "c36ee1afdd72061ded2f0ab88b4a3ab8e7353fe4",
+  "immutable_url": "https://github.com/specs-cli/specs-cli/tree/c36ee1afdd72061ded2f0ab88b4a3ab8e7353fe4"
+}

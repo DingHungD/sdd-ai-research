@@ -1,0 +1,70 @@
+{
+  "source_id": "S-012",
+  "snapshot_id": "SNAP-20260531T113858Z",
+  "summarized_at": "2026-05-31T14:01:29+00:00",
+  "document_purpose": "深度來源摘要：SpecPulse。",
+  "summary": "SpecPulse。CLI-first SDD、memory、decision 保存與持續驗證。關鍵技術包括：CLI workflow, project memory, validation。",
+  "categories": [
+    "direct_sdd",
+    "evaluation",
+    "tooling",
+    "workflow"
+  ],
+  "key_points": [
+    {
+      "text": "SpecPulse 將 specification workflow 封裝為 CLI 操作。",
+      "locator": "README overview"
+    },
+    {
+      "text": "工具主張包含驗證與持續執行流程。",
+      "locator": "README features"
+    }
+  ],
+  "keywords": [
+    "CLI",
+    "SpecPulse",
+    "continuous execution",
+    "direct_sdd",
+    "validation"
+  ],
+  "entities": [
+    "SpecPulse"
+  ],
+  "limitations": [
+    "Repository 或官方文件可用於理解公開設計；production readiness 仍需安裝測試、維護狀態與 benchmark 驗證。",
+    "本次未安裝執行；需以端到端試點確認功能成熟度。"
+  ],
+  "potential_questions": [
+    "驗證規則可否與 CI 整合？"
+  ],
+  "role_in_ecosystem": "SpecPulse",
+  "key_features": [
+    "CLI-first SDD、memory、decision 保存與持續驗證",
+    "架構層級：direct_sdd",
+    "輸出應保存為可追溯 artifact，重要結論需回讀 raw snapshot。"
+  ],
+  "key_technologies": [
+    "CLI workflow",
+    "project memory",
+    "validation"
+  ],
+  "best_for": [
+    "direct_sdd",
+    "快速判斷此工具在整體 SDD 架構中的責任",
+    "作為試點工具選型與後續深挖入口"
+  ],
+  "research_value": "此來源用於理解 SpecPulse 在整體架構中的角色。重要結論仍需回讀本地 raw snapshot 與原始 URL。",
+  "architecture_fit": "位於 specification artifact 與 traceability 層，負責把需求轉成可演進、可檢查、可交給 agent 執行的狀態。",
+  "workflow_outline": [
+    "建立或匯入需求",
+    "產生 specification 與 design",
+    "拆解 tasks",
+    "執行或交付 coding agent",
+    "回寫驗證結果與 refinement"
+  ],
+  "verification_questions": [
+    "artifact 是否可版本控制並支援差異比較？",
+    "requirement、task、test 與 commit 是否能互相回指？",
+    "是否支援 approval、resume 與 brownfield 更新？"
+  ]
+}

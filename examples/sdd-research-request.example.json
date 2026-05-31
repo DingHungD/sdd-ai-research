@@ -1,0 +1,40 @@
+{
+  "topic_id": "sdd-ai-autonomous-development",
+  "topic": "根據 SDD 使用 AI 全自動開發",
+  "objective": "整理 SDD 的定義、現有開源工具、可自動化範圍、限制與可行的實作方向",
+  "questions": [
+    "SDD 在此研究中的定義是什麼？",
+    "目前有哪些開源工具實作過相近流程？",
+    "從 specification 到程式碼、測試與驗證，哪些步驟可自動化？",
+    "哪些風險與限制需要人工介入？"
+  ],
+  "audience": "技術決策者與開發團隊",
+  "scope": {
+    "languages": ["zh-TW", "en"],
+    "include": [
+      "官方文件",
+      "GitHub repository",
+      "release note",
+      "原始提案與可追溯技術文章"
+    ],
+    "exclude": [
+      "無法追溯來源的宣傳內容"
+    ]
+  },
+  "source_preferences": {
+    "preferred_domains": ["github.com"],
+    "excluded_domains": [],
+    "minimum_evidence_tier": "C"
+  },
+  "knowledge_base": {
+    "local_first": true,
+    "allow_web_refresh": true,
+    "refresh_expired_sources": true,
+    "force_web_refresh": false
+  },
+  "output": {
+    "language": "zh-TW",
+    "format": ["markdown", "json"]
+  }
+}
+

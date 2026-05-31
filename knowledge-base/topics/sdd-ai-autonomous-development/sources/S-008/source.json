@@ -1,0 +1,42 @@
+{
+  "source_id": "S-008",
+  "title": "SpecDD Official Documentation",
+  "url": "https://specdd.ai/",
+  "canonical_url": "https://specdd.ai/",
+  "author_or_organization": "",
+  "publisher": "SpecDD",
+  "retrieved_at": "2026-05-31T06:06:35+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T060635Z",
+      "local_path": "sources/S-008/raw/SNAP-20260531T060635Z.html",
+      "content_hash": "sha256:e6d59fa3b16044a001b1c72fb6907d886263821f75b9e404cc0f2afb338b0638",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T06:06:35+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T06:06:35+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "official_documentation",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://specdd.ai/",
+  "supported_claim_ids": [
+    "C-001",
+    "C-003"
+  ],
+  "content_hash": "sha256:e6d59fa3b16044a001b1c72fb6907d886263821f75b9e404cc0f2afb338b0638",
+  "locator": "local snapshot SNAP-20260531T060635Z"
+}

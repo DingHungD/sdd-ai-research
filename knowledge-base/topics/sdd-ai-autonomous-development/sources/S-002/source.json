@@ -1,0 +1,41 @@
+{
+  "source_id": "S-002",
+  "title": "Spec Kit Workflows Documentation",
+  "url": "https://github.github.com/spec-kit/reference/workflows.html",
+  "canonical_url": "https://github.github.com/spec-kit/reference/workflows.html",
+  "author_or_organization": "",
+  "publisher": "GitHub",
+  "retrieved_at": "2026-05-31T06:05:35+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T060535Z",
+      "local_path": "sources/S-002/raw/SNAP-20260531T060535Z.html",
+      "content_hash": "sha256:82935728f113f5ee0621e328ac2aa85de8e25ce24cc798a8dc01b6fb0765003f",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T06:05:35+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T06:05:35+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "official_documentation",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.github.com/spec-kit/reference/workflows.html",
+  "supported_claim_ids": [
+    "C-008"
+  ],
+  "content_hash": "sha256:82935728f113f5ee0621e328ac2aa85de8e25ce24cc798a8dc01b6fb0765003f",
+  "locator": "local snapshot SNAP-20260531T060535Z"
+}

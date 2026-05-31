@@ -1,0 +1,41 @@
+{
+  "source_id": "S-047",
+  "title": "Local-first Maestro Repository README",
+  "url": "https://github.com/ReinaMacCredy/maestro",
+  "canonical_url": "https://github.com/ReinaMacCredy/maestro",
+  "author_or_organization": "",
+  "publisher": "ReinaMacCredy",
+  "retrieved_at": "2026-05-31T12:12:29+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T121229Z",
+      "local_path": "sources/S-047/raw/SNAP-20260531T121229Z.html",
+      "content_hash": "sha256:06dd9928103cad0dfd87f62df133c49dd3e17c25b95438e79c9998af43a3d819",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T12:12:29+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T12:12:29+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/ReinaMacCredy/maestro",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:06dd9928103cad0dfd87f62df133c49dd3e17c25b95438e79c9998af43a3d819",
+  "locator": "repository tree",
+  "commit_sha": "87f8e446b5997763e0ec0ac088494be15175bce4",
+  "immutable_url": "https://github.com/ReinaMacCredy/maestro/tree/87f8e446b5997763e0ec0ac088494be15175bce4"
+}

@@ -1,0 +1,73 @@
+{
+  "source_id": "S-009",
+  "snapshot_id": "SNAP-20260531T060636Z",
+  "summarized_at": "2026-05-31T14:01:29+00:00",
+  "document_purpose": "深度來源摘要：OpenSpecification web app。",
+  "summary": "OpenSpecification web app。Kiro-inspired Requirements -> Design -> Implementation Tasks。關鍵技術包括：web UI, OpenRouter, Mermaid, exports。",
+  "categories": [
+    "direct_sdd",
+    "tooling",
+    "workflow"
+  ],
+  "key_points": [
+    {
+      "text": "OpenSpecification 採用 Requirements -> Design -> Implementation Tasks 三階段流程。",
+      "locator": "README: Features"
+    },
+    {
+      "text": "OpenSpecification README 表示支援 iterative refinement 與 Markdown、HTML、PDF、ZIP 匯出。",
+      "locator": "README: Features"
+    }
+  ],
+  "keywords": [
+    "Kiro",
+    "OpenSpecification",
+    "OpenSpecification web app",
+    "design",
+    "direct_sdd",
+    "implementation tasks",
+    "requirements"
+  ],
+  "entities": [
+    "OpenSpecification",
+    "Kiro"
+  ],
+  "limitations": [
+    "Repository 或官方文件可用於理解公開設計；production readiness 仍需安裝測試、維護狀態與 benchmark 驗證。",
+    "這是較小型第三方 repository 的自述；本次未驗證其活躍度與 production readiness。"
+  ],
+  "potential_questions": [
+    "它是否只產生規格，還是也負責執行程式碼任務？"
+  ],
+  "role_in_ecosystem": "OpenSpecification web app",
+  "key_features": [
+    "Kiro-inspired Requirements -> Design -> Implementation Tasks",
+    "架構層級：direct_sdd",
+    "輸出應保存為可追溯 artifact，重要結論需回讀 raw snapshot。"
+  ],
+  "key_technologies": [
+    "web UI",
+    "OpenRouter",
+    "Mermaid",
+    "exports"
+  ],
+  "best_for": [
+    "direct_sdd",
+    "快速判斷此工具在整體 SDD 架構中的責任",
+    "作為試點工具選型與後續深挖入口"
+  ],
+  "research_value": "此來源用於理解 OpenSpecification web app 在整體架構中的角色。重要結論仍需回讀本地 raw snapshot 與原始 URL。",
+  "architecture_fit": "位於 specification artifact 與 traceability 層，負責把需求轉成可演進、可檢查、可交給 agent 執行的狀態。",
+  "workflow_outline": [
+    "建立或匯入需求",
+    "產生 specification 與 design",
+    "拆解 tasks",
+    "執行或交付 coding agent",
+    "回寫驗證結果與 refinement"
+  ],
+  "verification_questions": [
+    "artifact 是否可版本控制並支援差異比較？",
+    "requirement、task、test 與 commit 是否能互相回指？",
+    "是否支援 approval、resume 與 brownfield 更新？"
+  ]
+}

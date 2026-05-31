@@ -1,0 +1,43 @@
+{
+  "source_id": "S-038",
+  "title": "Anthropic Ralph Wiggum Plugin README",
+  "url": "https://github.com/anthropics/claude-code/blob/main/plugins/ralph-wiggum/README.md",
+  "canonical_url": "https://github.com/anthropics/claude-code/blob/main/plugins/ralph-wiggum/README.md",
+  "author_or_organization": "",
+  "publisher": "Anthropic",
+  "retrieved_at": "2026-05-31T12:12:17+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T121217Z",
+      "local_path": "sources/S-038/raw/SNAP-20260531T121217Z.html",
+      "content_hash": "sha256:87542e4c83c60f7330b241d6b50e87d3cbe05968088f3fe58517aba9ff7df0e4",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T12:12:17+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T12:12:17+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "official_documentation",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/anthropics/claude-code/blob/main/plugins/ralph-wiggum/README.md",
+  "supported_claim_ids": [
+    "C-004"
+  ],
+  "content_hash": "sha256:87542e4c83c60f7330b241d6b50e87d3cbe05968088f3fe58517aba9ff7df0e4",
+  "locator": "plugins/ralph-wiggum/README.md",
+  "commit_sha": "295dee881d0e1c1d0cd22fe171e4c1d07118fb04",
+  "immutable_url": "https://github.com/anthropics/claude-code/blob/295dee881d0e1c1d0cd22fe171e4c1d07118fb04/plugins/ralph-wiggum/README.md"
+}

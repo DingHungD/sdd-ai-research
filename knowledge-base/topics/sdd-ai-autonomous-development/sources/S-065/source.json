@@ -1,0 +1,39 @@
+{
+  "source_id": "S-065",
+  "title": "Tessl: 10 things about specs",
+  "url": "https://tessl.io/blog/spec-driven-development-10-things-you-need-to-know-about-specs/",
+  "canonical_url": "https://tessl.io/blog/spec-driven-development-10-things-you-need-to-know-about-specs/",
+  "author_or_organization": "",
+  "publisher": "Tessl",
+  "retrieved_at": "2026-05-31T13:39:47+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T133947Z",
+      "local_path": "sources/S-065/raw/SNAP-20260531T133947Z.html",
+      "content_hash": "sha256:d8342abd009ad8fa44b470082c3ea00a1b8139fd536d94261dc194b8aea00cf9",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T13:39:47+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T13:39:47+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "professional_article",
+  "evidence_tier": "C",
+  "quality": {
+    "authority": "medium",
+    "directness": "medium",
+    "recency": "medium",
+    "transparency": "medium",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://tessl.io/blog/spec-driven-development-10-things-you-need-to-know-about-specs/",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:d8342abd009ad8fa44b470082c3ea00a1b8139fd536d94261dc194b8aea00cf9",
+  "locator": "local snapshot SNAP-20260531T133947Z"
+}

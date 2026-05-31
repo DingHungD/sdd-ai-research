@@ -1,0 +1,42 @@
+{
+  "source_id": "S-091",
+  "title": "Conftest Documentation",
+  "url": "https://www.conftest.dev/",
+  "canonical_url": "https://www.conftest.dev/",
+  "author_or_organization": "",
+  "publisher": "Conftest",
+  "retrieved_at": "2026-05-31T13:59:12+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T135912Z",
+      "local_path": "sources/S-091/raw/SNAP-20260531T135912Z.html",
+      "content_hash": "sha256:73716e6bfdd19f6359a67d4b1aad8dd7ab6e4132e7b8e58f7add039333d57d86",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T13:59:12+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T13:59:12+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "official_documentation",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://www.conftest.dev/",
+  "supported_claim_ids": [
+    "C-006",
+    "C-011"
+  ],
+  "content_hash": "sha256:73716e6bfdd19f6359a67d4b1aad8dd7ab6e4132e7b8e58f7add039333d57d86",
+  "locator": "local snapshot SNAP-20260531T135912Z"
+}

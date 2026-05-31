@@ -1,0 +1,41 @@
+{
+  "source_id": "S-031",
+  "title": "Gentle-AI Repository README",
+  "url": "https://github.com/Gentleman-Programming/gentle-ai",
+  "canonical_url": "https://github.com/Gentleman-Programming/gentle-ai",
+  "author_or_organization": "",
+  "publisher": "Gentleman-Programming",
+  "retrieved_at": "2026-05-31T12:12:09+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T121209Z",
+      "local_path": "sources/S-031/raw/SNAP-20260531T121209Z.html",
+      "content_hash": "sha256:a8372025c98fd6d4720e5c936d4ad24690f08ab88ac4a233b66a6f544247265b",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T12:12:09+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T12:12:09+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/Gentleman-Programming/gentle-ai",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:a8372025c98fd6d4720e5c936d4ad24690f08ab88ac4a233b66a6f544247265b",
+  "locator": "repository tree",
+  "commit_sha": "21634526c5a1096fd7c278841e62766f2b090b1d",
+  "immutable_url": "https://github.com/Gentleman-Programming/gentle-ai/tree/21634526c5a1096fd7c278841e62766f2b090b1d"
+}

@@ -1,0 +1,57 @@
+{
+  "source_id": "S-090",
+  "snapshot_id": "SNAP-20260531T135911Z",
+  "summarized_at": "2026-05-31T14:01:30+00:00",
+  "document_purpose": "深度來源摘要：OPA PR Check Policies。",
+  "summary": "OPA PR Check Policies。依 changed files 決定 PR 必跑 checks，policy 可 version、review、test 並形成 audit trail。關鍵技術包括：Rego, pull request checks, audit trail, GitHub Actions。",
+  "categories": [
+    "policy_as_code"
+  ],
+  "key_points": [
+    {
+      "text": "依 changed files 決定 PR 必跑 checks，policy 可 version、review、test 並形成 audit trail",
+      "locator": "README or official documentation overview",
+      "notes": "Agent-reviewed catalog summary; return to raw snapshot for publication claims."
+    }
+  ],
+  "keywords": [
+    "OPA PR Check Policies",
+    "policy_as_code"
+  ],
+  "entities": [],
+  "limitations": [
+    "Repository 或官方文件可用於理解公開設計；production readiness 仍需安裝測試、維護狀態與 benchmark 驗證。"
+  ],
+  "potential_questions": [],
+  "role_in_ecosystem": "OPA PR Check Policies",
+  "architecture_fit": "位於 policy gate 層，將組織、安全與部署規則寫成可版本控制、可測試、可稽核的機器判斷。",
+  "workflow_outline": [
+    "將 artifact 轉為結構化輸入",
+    "以 declarative policy 評估",
+    "在 PR 或 CI 阻擋違規",
+    "保存 policy decision 與 audit trail",
+    "例外進入人工審批"
+  ],
+  "key_features": [
+    "依 changed files 決定 PR 必跑 checks，policy 可 version、review、test 並形成 audit trail",
+    "架構層級：policy_as_code",
+    "輸出應保存為可追溯 artifact，重要結論需回讀 raw snapshot。"
+  ],
+  "key_technologies": [
+    "Rego",
+    "pull request checks",
+    "audit trail",
+    "GitHub Actions"
+  ],
+  "best_for": [
+    "policy_as_code",
+    "快速判斷此工具在整體 SDD 架構中的責任",
+    "作為試點工具選型與後續深挖入口"
+  ],
+  "research_value": "此來源用於理解 OPA PR Check Policies 在整體架構中的角色。重要結論仍需回讀本地 raw snapshot 與原始 URL。",
+  "verification_questions": [
+    "policy 是否版本化與可測試？",
+    "違規是否阻擋 merge 或 deploy？",
+    "例外流程是否留下 audit trail？"
+  ]
+}

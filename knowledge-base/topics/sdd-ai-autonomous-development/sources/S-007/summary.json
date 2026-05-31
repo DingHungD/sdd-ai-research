@@ -1,0 +1,75 @@
+{
+  "source_id": "S-007",
+  "snapshot_id": "SNAP-20260531T060634Z",
+  "summarized_at": "2026-05-31T14:01:28+00:00",
+  "document_purpose": "深度來源摘要：GitHub Spec Kit repository。",
+  "summary": "GitHub Spec Kit repository。constitution、clarify、plan、tasks、implement；規格不應一次生成就結束。關鍵技術包括：CLI commands, versioned artifacts, clarification。",
+  "categories": [
+    "direct_sdd",
+    "evaluation",
+    "tooling",
+    "workflow"
+  ],
+  "key_points": [
+    {
+      "text": "Spec Kit repository 提供開源模板、script 與 agent command，將需求轉成 version-controlled artifact。",
+      "locator": "README: STEP 2 to STEP 5"
+    },
+    {
+      "text": "README 要求規格初稿後執行 clarification，再進入 technical plan。",
+      "locator": "README: STEP 3 Functional specification clarification"
+    }
+  ],
+  "keywords": [
+    "GitHub Spec Kit",
+    "GitHub Spec Kit repository",
+    "clarify",
+    "constitution",
+    "direct_sdd",
+    "implementation",
+    "plan",
+    "tasks"
+  ],
+  "entities": [
+    "GitHub",
+    "Spec Kit"
+  ],
+  "limitations": [
+    "README 流程可證明工具設計，不足以證明自動生成結果在所有專案都正確。",
+    "Repository 或官方文件可用於理解公開設計；production readiness 仍需安裝測試、維護狀態與 benchmark 驗證。"
+  ],
+  "potential_questions": [
+    "哪些 clarify 問題應由 domain expert 回答？"
+  ],
+  "role_in_ecosystem": "GitHub Spec Kit repository",
+  "key_features": [
+    "constitution、clarify、plan、tasks、implement",
+    "規格不應一次生成就結束",
+    "架構層級：direct_sdd",
+    "輸出應保存為可追溯 artifact，重要結論需回讀 raw snapshot。"
+  ],
+  "key_technologies": [
+    "CLI commands",
+    "versioned artifacts",
+    "clarification"
+  ],
+  "best_for": [
+    "direct_sdd",
+    "快速判斷此工具在整體 SDD 架構中的責任",
+    "作為試點工具選型與後續深挖入口"
+  ],
+  "research_value": "此來源用於理解 GitHub Spec Kit repository 在整體架構中的角色。重要結論仍需回讀本地 raw snapshot 與原始 URL。",
+  "architecture_fit": "位於 specification artifact 與 traceability 層，負責把需求轉成可演進、可檢查、可交給 agent 執行的狀態。",
+  "workflow_outline": [
+    "建立或匯入需求",
+    "產生 specification 與 design",
+    "拆解 tasks",
+    "執行或交付 coding agent",
+    "回寫驗證結果與 refinement"
+  ],
+  "verification_questions": [
+    "artifact 是否可版本控制並支援差異比較？",
+    "requirement、task、test 與 commit 是否能互相回指？",
+    "是否支援 approval、resume 與 brownfield 更新？"
+  ]
+}

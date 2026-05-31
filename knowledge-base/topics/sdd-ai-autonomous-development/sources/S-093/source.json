@@ -1,0 +1,41 @@
+{
+  "source_id": "S-093",
+  "title": "Scale Labs SWE-Bench Pro Paper Page",
+  "url": "https://labs.scale.com/papers/swe_bench_pro",
+  "canonical_url": "https://labs.scale.com/papers/swe_bench_pro",
+  "author_or_organization": "",
+  "publisher": "Scale Labs",
+  "retrieved_at": "2026-05-31T13:59:15+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T135915Z",
+      "local_path": "sources/S-093/raw/SNAP-20260531T135915Z.html",
+      "content_hash": "sha256:2cb95018f28c6fca35a030913aa234ae6108de4ab73b108668fa5ca97db6cccc",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T13:59:15+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "stable",
+    "recheck_after": null,
+    "reason": "Captured publication is treated as stable; refresh only when a newer version is relevant."
+  },
+  "source_type": "research_paper",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://labs.scale.com/papers/swe_bench_pro",
+  "supported_claim_ids": [
+    "C-009"
+  ],
+  "content_hash": "sha256:2cb95018f28c6fca35a030913aa234ae6108de4ab73b108668fa5ca97db6cccc",
+  "locator": "local snapshot SNAP-20260531T135915Z"
+}

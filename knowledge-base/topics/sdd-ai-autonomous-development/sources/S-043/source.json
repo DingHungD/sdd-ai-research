@@ -1,0 +1,41 @@
+{
+  "source_id": "S-043",
+  "title": "Worktrunk Repository README",
+  "url": "https://github.com/max-sixty/worktrunk",
+  "canonical_url": "https://github.com/max-sixty/worktrunk",
+  "author_or_organization": "",
+  "publisher": "max-sixty",
+  "retrieved_at": "2026-05-31T12:12:23+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260531T121223Z",
+      "local_path": "sources/S-043/raw/SNAP-20260531T121223Z.html",
+      "content_hash": "sha256:da3d2c7b524bf0308735798f0213ffa4d0ffed1b7c30c94121f2642e5f82d7fd",
+      "mime_type": "text/html",
+      "captured_at": "2026-05-31T12:12:23+00:00"
+    }
+  ],
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-06-30T12:12:23+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "source_type": "repository_file",
+  "evidence_tier": "B",
+  "quality": {
+    "authority": "medium",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  },
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/max-sixty/worktrunk",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:da3d2c7b524bf0308735798f0213ffa4d0ffed1b7c30c94121f2642e5f82d7fd",
+  "locator": "repository tree",
+  "commit_sha": "33bab089bff623ac66b78719c5d761388e09b91e",
+  "immutable_url": "https://github.com/max-sixty/worktrunk/tree/33bab089bff623ac66b78719c5d761388e09b91e"
+}

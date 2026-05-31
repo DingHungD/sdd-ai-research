@@ -1,0 +1,71 @@
+{
+  "source_id": "S-025",
+  "snapshot_id": "SNAP-20260531T113914Z",
+  "summarized_at": "2026-05-31T14:01:29+00:00",
+  "document_purpose": "深度來源摘要：Constitutional SDD 預印本。",
+  "summary": "Constitutional SDD 預印本。將 security constraints 納入規格與驗證鏈。關鍵技術包括：policy constraints, traceability, security validation。",
+  "categories": [
+    "evaluation",
+    "research",
+    "security",
+    "traceability"
+  ],
+  "key_points": [
+    {
+      "text": "研究主題將 constitutional constraints 與 SDD 結合。",
+      "locator": "Abstract"
+    },
+    {
+      "text": "安全約束需要可追溯驗證，而不只是功能測試。",
+      "locator": "Abstract"
+    }
+  ],
+  "keywords": [
+    "Constitutional SDD 預印本",
+    "arXiv",
+    "constitutional SDD",
+    "constraints",
+    "security",
+    "traceability"
+  ],
+  "entities": [
+    "arXiv"
+  ],
+  "limitations": [
+    "Repository 或官方文件可用於理解公開設計；production readiness 仍需安裝測試、維護狀態與 benchmark 驗證。",
+    "預印本需閱讀全文與實驗結果後才能提高證據權重。"
+  ],
+  "potential_questions": [
+    "policy-as-code 如何映射到 specification 與 CI gate？"
+  ],
+  "role_in_ecosystem": "Constitutional SDD 預印本",
+  "key_features": [
+    "將 security constraints 納入規格與驗證鏈",
+    "架構層級：security",
+    "輸出應保存為可追溯 artifact，重要結論需回讀 raw snapshot。"
+  ],
+  "key_technologies": [
+    "policy constraints",
+    "traceability",
+    "security validation"
+  ],
+  "best_for": [
+    "security",
+    "快速判斷此工具在整體 SDD 架構中的責任",
+    "作為試點工具選型與後續深挖入口"
+  ],
+  "research_value": "此來源用於理解 Constitutional SDD 預印本 在整體架構中的角色。重要結論仍需回讀本地 raw snapshot 與原始 URL。",
+  "architecture_fit": "位於 governance 與 security 層，將安全要求、threat model 與政策檢查加入交付鏈。",
+  "workflow_outline": [
+    "定義 security constraints",
+    "將限制映射到 code 或 spec",
+    "執行分析與驗證",
+    "產生報告",
+    "阻擋或升級違規變更"
+  ],
+  "verification_questions": [
+    "安全規格是否可機器驗證？",
+    "policy violation 是否阻擋 merge？",
+    "threat model 是否隨 code 變更更新？"
+  ]
+}
