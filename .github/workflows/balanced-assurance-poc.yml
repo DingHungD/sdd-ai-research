@@ -4,7 +4,7 @@ on:
   pull_request:
   push:
     branches:
-      - main
+      - codex/sdd-report-v11
 
 jobs:
   verify:
