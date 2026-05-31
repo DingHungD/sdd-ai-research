@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "tasks": [
+    {
+      "id": "TSK-001",
+      "title": "Build traceability adapter",
+      "requirement_ids": ["REQ-001"],
+      "boundary": ["adapter"],
+      "code_paths": ["research_pipeline/balanced_assurance.py"],
+      "test_ids": ["TC-001"],
+      "status": "completed"
+    },
+    {
+      "id": "TSK-002",
+      "title": "Add drift gate",
+      "requirement_ids": ["REQ-002"],
+      "boundary": ["openlore-contract", "adapter"],
+      "code_paths": ["research_pipeline/balanced_assurance.py"],
+      "test_ids": ["TC-002"],
+      "status": "completed"
+    },
+    {
+      "id": "TSK-003",
+      "title": "Add policy-as-code gate",
+      "requirement_ids": ["REQ-003"],
+      "boundary": ["policy", "ci"],
+      "code_paths": ["experiments/balanced-assurance-poc/policy/main.rego"],
+      "test_ids": ["TC-003"],
+      "status": "completed"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "set": {
+    "openlore.drift_report.stale_nodes": ["module:legacy-auth"],
+    "cc_sdd.evidence_bundle.tests.1.status": "failed"
+  }
+}

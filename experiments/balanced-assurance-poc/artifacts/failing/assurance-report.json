@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "verdict": "fail",
+  "summary": {
+    "requirement_count": 3,
+    "task_count": 3,
+    "control_count": 3,
+    "finding_count": 3,
+    "error_count": 3
+  },
+  "findings": [
+    {
+      "code": "REQ_TEST_FAILED",
+      "severity": "error",
+      "message": "AC-002 is backed by non-passing test TC-002."
+    },
+    {
+      "code": "EVIDENCE_TEST_FAILED",
+      "severity": "error",
+      "message": "TC-002 did not pass."
+    },
+    {
+      "code": "DRIFT_STALE_NODE",
+      "severity": "error",
+      "message": "OpenLore reported stale repository nodes."
+    }
+  ]
+}

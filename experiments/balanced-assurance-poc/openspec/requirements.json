@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "source_document": "../sdd/requirements.md",
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "title": "Trace every approved requirement",
+      "status": "approved",
+      "control_ids": ["CTRL-TRACE-001"],
+      "acceptance_criteria": [
+        {
+          "id": "AC-001",
+          "text": "Every requirement maps to task, code, test and review evidence.",
+          "test_ids": ["TC-001"]
+        }
+      ]
+    },
+    {
+      "id": "REQ-002",
+      "title": "Block unreviewed brownfield drift",
+      "status": "approved",
+      "control_ids": ["CTRL-DRIFT-001"],
+      "acceptance_criteria": [
+        {
+          "id": "AC-002",
+          "text": "A clean graph with human approval passes the drift gate.",
+          "test_ids": ["TC-002"]
+        }
+      ]
+    },
+    {
+      "id": "REQ-003",
+      "title": "Evaluate versioned policy before merge",
+      "status": "approved",
+      "control_ids": ["CTRL-POLICY-001"],
+      "acceptance_criteria": [
+        {
+          "id": "AC-003",
+          "text": "Structured gate input is checked by local verifier and Conftest.",
+          "test_ids": ["TC-003"]
+        }
+      ]
+    }
+  ]
+}

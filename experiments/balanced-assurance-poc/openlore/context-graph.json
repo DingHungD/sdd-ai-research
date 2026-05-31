@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "graph_sha256": "8af67467ca553545d699456b28d295403515964afad02af4b0c444f209ab81b1",
+  "nodes": [
+    {"id": "spec:requirements", "kind": "spec", "path": "openspec/requirements.json"},
+    {"id": "adapter:gate", "kind": "module", "path": "research_pipeline/balanced_assurance.py"},
+    {"id": "policy:main", "kind": "policy", "path": "policy/main.rego"},
+    {"id": "ci:workflow", "kind": "workflow", "path": ".github/workflows/balanced-assurance-poc.yml"}
+  ],
+  "edges": [
+    {"from": "spec:requirements", "to": "adapter:gate", "type": "implemented-by"},
+    {"from": "adapter:gate", "to": "policy:main", "type": "emits-input-for"},
+    {"from": "policy:main", "to": "ci:workflow", "type": "executed-by"}
+  ]
+}

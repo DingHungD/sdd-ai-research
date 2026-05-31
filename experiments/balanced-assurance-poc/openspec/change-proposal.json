@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "id": "CHG-001",
+  "title": "Add reliable SDD merge gate",
+  "status": "ready-for-implementation",
+  "spec_delta": ["REQ-001", "REQ-002", "REQ-003"],
+  "approval": {
+    "status": "approved",
+    "reviewer": "human-product-owner",
+    "evidence": "approval://CHG-001"
+  }
+}

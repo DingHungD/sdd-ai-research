@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "verdict": "pass",
+  "summary": {
+    "requirement_count": 3,
+    "task_count": 3,
+    "control_count": 3,
+    "finding_count": 0,
+    "error_count": 0
+  },
+  "findings": []
+}

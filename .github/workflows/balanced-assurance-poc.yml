@@ -1,0 +1,26 @@
+name: Balanced assurance PoC
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      CONFTEST_VERSION: "0.64.0"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run Python contract tests
+        run: python -m unittest discover -s tests -v
+      - name: Install Conftest
+        run: |
+          curl -sSL "https://github.com/open-policy-agent/conftest/releases/download/v${CONFTEST_VERSION}/conftest_${CONFTEST_VERSION}_Linux_x86_64.tar.gz" | tar xz
+          sudo mv conftest /usr/local/bin/conftest
+      - name: Run real Conftest and Rego gate
+        run: python scripts/run_balanced_assurance_poc.py --require-conftest

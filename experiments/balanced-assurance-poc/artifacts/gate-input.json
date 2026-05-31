@@ -1,0 +1,285 @@
+{
+  "schema_version": "1.0",
+  "experiment": {
+    "id": "balanced-assurance-poc",
+    "stack": [
+      "OpenSpec",
+      "OpenLore",
+      "cc-sdd",
+      "OPA/Rego",
+      "Conftest"
+    ],
+    "contract_mode": true
+  },
+  "openspec": {
+    "requirements": {
+      "schema_version": "1.0",
+      "source_document": "../sdd/requirements.md",
+      "requirements": [
+        {
+          "id": "REQ-001",
+          "title": "Trace every approved requirement",
+          "status": "approved",
+          "control_ids": [
+            "CTRL-TRACE-001"
+          ],
+          "acceptance_criteria": [
+            {
+              "id": "AC-001",
+              "text": "Every requirement maps to task, code, test and review evidence.",
+              "test_ids": [
+                "TC-001"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "REQ-002",
+          "title": "Block unreviewed brownfield drift",
+          "status": "approved",
+          "control_ids": [
+            "CTRL-DRIFT-001"
+          ],
+          "acceptance_criteria": [
+            {
+              "id": "AC-002",
+              "text": "A clean graph with human approval passes the drift gate.",
+              "test_ids": [
+                "TC-002"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "REQ-003",
+          "title": "Evaluate versioned policy before merge",
+          "status": "approved",
+          "control_ids": [
+            "CTRL-POLICY-001"
+          ],
+          "acceptance_criteria": [
+            {
+              "id": "AC-003",
+              "text": "Structured gate input is checked by local verifier and Conftest.",
+              "test_ids": [
+                "TC-003"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "change_proposal": {
+      "schema_version": "1.0",
+      "id": "CHG-001",
+      "title": "Add reliable SDD merge gate",
+      "status": "ready-for-implementation",
+      "spec_delta": [
+        "REQ-001",
+        "REQ-002",
+        "REQ-003"
+      ],
+      "approval": {
+        "status": "approved",
+        "reviewer": "human-product-owner",
+        "evidence": "approval://CHG-001"
+      }
+    }
+  },
+  "openlore": {
+    "context_graph": {
+      "schema_version": "1.0",
+      "graph_sha256": "8af67467ca553545d699456b28d295403515964afad02af4b0c444f209ab81b1",
+      "nodes": [
+        {
+          "id": "spec:requirements",
+          "kind": "spec",
+          "path": "openspec/requirements.json"
+        },
+        {
+          "id": "adapter:gate",
+          "kind": "module",
+          "path": "research_pipeline/balanced_assurance.py"
+        },
+        {
+          "id": "policy:main",
+          "kind": "policy",
+          "path": "policy/main.rego"
+        },
+        {
+          "id": "ci:workflow",
+          "kind": "workflow",
+          "path": ".github/workflows/balanced-assurance-poc.yml"
+        }
+      ],
+      "edges": [
+        {
+          "from": "spec:requirements",
+          "to": "adapter:gate",
+          "type": "implemented-by"
+        },
+        {
+          "from": "adapter:gate",
+          "to": "policy:main",
+          "type": "emits-input-for"
+        },
+        {
+          "from": "policy:main",
+          "to": "ci:workflow",
+          "type": "executed-by"
+        }
+      ]
+    },
+    "drift_report": {
+      "schema_version": "1.0",
+      "baseline_graph_sha256": "8af67467ca553545d699456b28d295403515964afad02af4b0c444f209ab81b1",
+      "current_graph_sha256": "8af67467ca553545d699456b28d295403515964afad02af4b0c444f209ab81b1",
+      "stale_nodes": [],
+      "orphan_nodes": [],
+      "impact_analysis": {
+        "status": "reviewed",
+        "impacted_nodes": [
+          "adapter:gate",
+          "policy:main",
+          "ci:workflow"
+        ]
+      },
+      "human_approval": {
+        "status": "approved",
+        "reviewer": "human-maintainer",
+        "evidence": "approval://DRIFT-001"
+      }
+    }
+  },
+  "cc_sdd": {
+    "execution_plan": {
+      "schema_version": "1.0",
+      "tasks": [
+        {
+          "id": "TSK-001",
+          "title": "Build traceability adapter",
+          "requirement_ids": [
+            "REQ-001"
+          ],
+          "boundary": [
+            "adapter"
+          ],
+          "code_paths": [
+            "research_pipeline/balanced_assurance.py"
+          ],
+          "test_ids": [
+            "TC-001"
+          ],
+          "status": "completed"
+        },
+        {
+          "id": "TSK-002",
+          "title": "Add drift gate",
+          "requirement_ids": [
+            "REQ-002"
+          ],
+          "boundary": [
+            "openlore-contract",
+            "adapter"
+          ],
+          "code_paths": [
+            "research_pipeline/balanced_assurance.py"
+          ],
+          "test_ids": [
+            "TC-002"
+          ],
+          "status": "completed"
+        },
+        {
+          "id": "TSK-003",
+          "title": "Add policy-as-code gate",
+          "requirement_ids": [
+            "REQ-003"
+          ],
+          "boundary": [
+            "policy",
+            "ci"
+          ],
+          "code_paths": [
+            "experiments/balanced-assurance-poc/policy/main.rego"
+          ],
+          "test_ids": [
+            "TC-003"
+          ],
+          "status": "completed"
+        }
+      ]
+    },
+    "evidence_bundle": {
+      "schema_version": "1.0",
+      "tests": [
+        {
+          "id": "TC-001",
+          "status": "passed",
+          "artifact": "tests/test_balanced_assurance.py::test_passing_contract"
+        },
+        {
+          "id": "TC-002",
+          "status": "passed",
+          "artifact": "tests/test_balanced_assurance.py::test_drift_blocks_merge"
+        },
+        {
+          "id": "TC-003",
+          "status": "passed",
+          "artifact": ".github/workflows/balanced-assurance-poc.yml"
+        }
+      ],
+      "reviews": [
+        {
+          "task_id": "TSK-001",
+          "status": "approved",
+          "reviewer": "independent-reviewer"
+        },
+        {
+          "task_id": "TSK-002",
+          "status": "approved",
+          "reviewer": "independent-reviewer"
+        },
+        {
+          "task_id": "TSK-003",
+          "status": "approved",
+          "reviewer": "security-reviewer"
+        }
+      ]
+    }
+  },
+  "policy": {
+    "security_controls": {
+      "schema_version": "1.0",
+      "controls": [
+        {
+          "id": "CTRL-TRACE-001",
+          "title": "Requirement traceability",
+          "enforced": true,
+          "enforcement": [
+            "python-verifier",
+            "rego"
+          ]
+        },
+        {
+          "id": "CTRL-DRIFT-001",
+          "title": "Brownfield drift approval",
+          "enforced": true,
+          "enforcement": [
+            "python-verifier",
+            "rego"
+          ]
+        },
+        {
+          "id": "CTRL-POLICY-001",
+          "title": "Pre-merge policy gate",
+          "enforced": true,
+          "enforcement": [
+            "conftest",
+            "rego"
+          ]
+        }
+      ]
+    }
+  }
+}

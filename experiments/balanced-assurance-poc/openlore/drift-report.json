@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "baseline_graph_sha256": "8af67467ca553545d699456b28d295403515964afad02af4b0c444f209ab81b1",
+  "current_graph_sha256": "8af67467ca553545d699456b28d295403515964afad02af4b0c444f209ab81b1",
+  "stale_nodes": [],
+  "orphan_nodes": [],
+  "impact_analysis": {
+    "status": "reviewed",
+    "impacted_nodes": ["adapter:gate", "policy:main", "ci:workflow"]
+  },
+  "human_approval": {
+    "status": "approved",
+    "reviewer": "human-maintainer",
+    "evidence": "approval://DRIFT-001"
+  }
+}
