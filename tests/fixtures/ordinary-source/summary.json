@@ -1,0 +1,13 @@
+{
+  "source_id": "S-001",
+  "document_purpose": "Describe the behavior of an ordinary official document fixture.",
+  "summary": "This fixture represents a non-GitHub source with enough structured summary fields for unit tests.",
+  "key_points": [
+    {
+      "point": "The fixture is intentionally small and local.",
+      "locator": "tests/fixtures/ordinary-source/summary.json"
+    }
+  ],
+  "keywords": ["fixture", "official_documentation"],
+  "limitations": ["This is a synthetic fixture, not publication evidence."]
+}

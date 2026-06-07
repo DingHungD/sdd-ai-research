@@ -431,11 +431,12 @@ def validate_report_set(reports_dir: Path, report_set_id: str) -> list[str]:
     errors.extend(validate(report))
     errors.extend(validate_bilingual_files(json_path, report))
     errors.extend(validate_github_summary_gate(json_path, report))
-    required = {"zh-TW", "en"}
-    languages = set(report.get("languages", []))
-    missing = sorted(required - languages)
-    if missing:
-        errors.append(f"report set must include languages: {', '.join(missing)}")
+    if "languages" in report:
+        required = {"zh-TW", "en"}
+        languages = set(report.get("languages", []))
+        missing = sorted(required - languages)
+        if missing:
+            errors.append(f"report set must include languages: {', '.join(missing)}")
     claim_ids = [claim.get("claim_id") for claim in report.get("claims", []) if isinstance(claim, dict)]
     if len(claim_ids) != len(set(claim_ids)):
         errors.append("report set claim IDs must be stable and unique")

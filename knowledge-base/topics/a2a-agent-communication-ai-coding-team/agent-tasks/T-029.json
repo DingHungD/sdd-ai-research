@@ -1,0 +1,61 @@
+{
+  "task_id": "T-029",
+  "topic_id": "a2a-agent-communication-ai-coding-team",
+  "agent_role": "source_curator_agent",
+  "model": "gpt-5.4",
+  "reasoning_effort": "medium",
+  "objective": "Fix summary gate issues for S-029.",
+  "input": {
+    "paths_or_urls": [
+      "knowledge-base/topics/a2a-agent-communication-ai-coding-team/sources/S-029/source.json",
+      "knowledge-base/topics/a2a-agent-communication-ai-coding-team/sources/S-029/summary.json"
+    ],
+    "source_ids": [
+      "S-029"
+    ],
+    "claim_ids": [],
+    "questions": [
+      "S-029: summary appears too short, truncated, or polluted by HTML/navigation noise",
+      "S-029: summary requires at least one key_point with locator",
+      "S-029: keywords must be non-empty"
+    ],
+    "constraints": [
+      "Do not change source_id.",
+      "Do not reorder crawl queue.",
+      "Preserve provenance and add locators for every key point."
+    ]
+  },
+  "expected_output": {
+    "artifact_type": "document_summary",
+    "schema": "schemas/document-summary.schema.json",
+    "required_fields": [
+      "document_purpose",
+      "summary",
+      "key_points",
+      "keywords",
+      "limitations"
+    ]
+  },
+  "write_scope": {
+    "allowed_paths": [
+      "knowledge-base/topics/a2a-agent-communication-ai-coding-team/sources/S-*/summary.json",
+      "knowledge-base/topics/a2a-agent-communication-ai-coding-team/sources/S-*/summary.md"
+    ],
+    "forbidden_paths": [
+      "knowledge-base/topics/a2a-agent-communication-ai-coding-team/crawl-queue.json",
+      "knowledge-base/topics/a2a-agent-communication-ai-coding-team/reports/*"
+    ]
+  },
+  "quality_gate": {
+    "checks": [
+      "summary gate passes",
+      "key_points have locators"
+    ],
+    "done_when": [
+      "summary can support bounded claims or limitations are documented"
+    ]
+  },
+  "status": "pending",
+  "created_at": "2026-06-07T07:59:06+00:00",
+  "updated_at": "2026-06-07T07:59:06+00:00"
+}

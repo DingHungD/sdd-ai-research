@@ -1,0 +1,14 @@
+{
+  "source_id": "S-001",
+  "title": "Monorepo Fixture Repository",
+  "url": "https://github.com/example/mono",
+  "canonical_url": "https://github.com/example/mono",
+  "source_type": "official_documentation",
+  "repository": {
+    "owner": "example",
+    "name": "mono",
+    "default_branch": "main",
+    "commit_sha": "1111111111111111111111111111111111111111",
+    "is_monorepo": true
+  }
+}

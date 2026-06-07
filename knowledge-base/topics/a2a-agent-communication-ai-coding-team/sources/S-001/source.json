@@ -42,5 +42,16 @@
     "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
     "review_summary": "A2A official repository. It anchors AgentCard, task, message, artifact, streaming, sample implementation, and protocol governance details.",
     "category": "A2A core"
+  },
+  "repository": {
+    "owner": "a2aproject",
+    "name": "A2A",
+    "default_branch": "main",
+    "commit_sha": "2e0a4e535e738ae12af2a757c7013cf60283fa71",
+    "tree_url": "https://github.com/a2aproject/A2A/tree/2e0a4e535e738ae12af2a757c7013cf60283fa71",
+    "capture_scope": "selected_files",
+    "capture_manifest_path": "sources/S-001/repo-manifest.json",
+    "selection_reason": "Selected-file manifest created for GitHub repo deep-read; review concrete files before critical implementation claims.",
+    "needs_commit_pin": false
   }
 }

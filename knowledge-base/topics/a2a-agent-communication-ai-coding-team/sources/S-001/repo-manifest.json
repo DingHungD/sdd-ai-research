@@ -1,0 +1,107 @@
+{
+  "source_id": "S-001",
+  "generated_at": "2026-06-07T12:28:35+00:00",
+  "repository": {
+    "owner": "a2aproject",
+    "name": "A2A",
+    "default_branch": "main",
+    "commit_sha": "2e0a4e535e738ae12af2a757c7013cf60283fa71",
+    "tree_url": "https://github.com/a2aproject/A2A/tree/2e0a4e535e738ae12af2a757c7013cf60283fa71"
+  },
+  "capture_strategy": "selected_files",
+  "needs_commit_pin": false,
+  "selected_file_patterns": [
+    "README*",
+    "docs/**",
+    "package.json",
+    "pyproject.toml",
+    "Cargo.toml",
+    "go.mod",
+    "src/**",
+    "examples/**",
+    "tests/**",
+    "LICENSE*",
+    "SECURITY*",
+    "CHANGELOG*"
+  ],
+  "candidate_files": [
+    {
+      "pattern": "README*",
+      "reason": "Candidate selected-file evidence path."
+    },
+    {
+      "pattern": "docs/**",
+      "reason": "Candidate selected-file evidence path."
+    },
+    {
+      "pattern": "package.json",
+      "reason": "Candidate selected-file evidence path."
+    },
+    {
+      "pattern": "pyproject.toml",
+      "reason": "Candidate selected-file evidence path."
+    },
+    {
+      "pattern": "Cargo.toml",
+      "reason": "Candidate selected-file evidence path."
+    },
+    {
+      "pattern": "go.mod",
+      "reason": "Candidate selected-file evidence path."
+    },
+    {
+      "pattern": "src/**",
+      "reason": "Candidate selected-file evidence path."
+    },
+    {
+      "pattern": "examples/**",
+      "reason": "Candidate selected-file evidence path."
+    },
+    {
+      "pattern": "tests/**",
+      "reason": "Candidate selected-file evidence path."
+    },
+    {
+      "pattern": "LICENSE*",
+      "reason": "Candidate selected-file evidence path."
+    },
+    {
+      "pattern": "SECURITY*",
+      "reason": "Candidate selected-file evidence path."
+    },
+    {
+      "pattern": "CHANGELOG*",
+      "reason": "Candidate selected-file evidence path."
+    }
+  ],
+  "selected_files": [
+    {
+      "path": "README*",
+      "permalink": "https://github.com/a2aproject/A2A/tree/2e0a4e535e738ae12af2a757c7013cf60283fa71",
+      "selection_reason": "Project overview and positioning.",
+      "claim_boundary": "Positioning only until paired with docs/config/source/examples/tests."
+    }
+  ],
+  "selection_reasons": [
+    "Start with README for project positioning.",
+    "Select docs/config/source/examples/tests before implementation, maturity, or security claims."
+  ],
+  "files_reviewed": [
+    {
+      "path": "README*",
+      "permalink": "https://github.com/a2aproject/A2A/tree/2e0a4e535e738ae12af2a757c7013cf60283fa71",
+      "why_selected": "Project overview and positioning.",
+      "evidence_used": "Use only for project positioning unless paired with source, docs, examples, or tests."
+    }
+  ],
+  "files_not_reviewed": [
+    {
+      "pattern_or_path": "**/*",
+      "reason": "v1 manifest collector records selected-file intent without cloning or enumerating the full repository."
+    }
+  ],
+  "open_questions": [
+    "Select concrete docs/config/source/examples/tests files before using this repository for implementation, maturity, or security claims."
+  ],
+  "blocked_reason": ""
+}

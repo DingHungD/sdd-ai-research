@@ -1,0 +1,13 @@
+{
+  "source_id": "S-001",
+  "title": "A2A Fixture Repository",
+  "url": "https://github.com/a2aproject/A2A",
+  "canonical_url": "https://github.com/a2aproject/A2A",
+  "source_type": "official_documentation",
+  "repository": {
+    "owner": "a2aproject",
+    "name": "A2A",
+    "default_branch": "main",
+    "commit_sha": "2e0a4e535e738ae12af2a757c7013cf60283fa71"
+  }
+}

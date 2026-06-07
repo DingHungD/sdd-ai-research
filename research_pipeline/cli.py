@@ -1,8 +1,9 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import argparse
 from pathlib import Path
 
+from .agent_tasks import block_task, complete_task, create_task, fail_task, list_tasks, load_task, start_task, validate_task
 from .claim_extractor import extract_claim_drafts
 from .crawl_queue import append_item, next_pending, update_item
 from .document_curator import save_reviewed_summary
@@ -10,6 +11,7 @@ from .evidence_mapper import assign_claim_ids
 from .io_utils import iso_now, read_json
 from .local_retriever import retrieve
 from .quality_gate import evaluate_report_details
+from .repo_manifest import build_repo_manifest
 from .report_writer import sync_supported_claim_ids, write_bilingual_report, write_report
 from .source_catalog import write_catalog
 from .source_collector import fetch_url
@@ -84,6 +86,55 @@ def build_parser() -> argparse.ArgumentParser:
     catalog = sub.add_parser("catalog")
     catalog.add_argument("topic_id")
 
+    task_create = sub.add_parser("task-create")
+    task_create.add_argument("topic_id")
+    task_create.add_argument("--agent", required=True)
+    task_create.add_argument("--objective", required=True)
+    task_create.add_argument("--path", action="append", default=[])
+    task_create.add_argument("--question", action="append", default=[])
+    task_create.add_argument("--constraint", action="append", default=[])
+    task_create.add_argument("--source", action="append", default=[])
+    task_create.add_argument("--claim", action="append", default=[])
+    task_create.add_argument("--status", default="pending", choices=["pending", "in_progress", "completed", "failed", "blocked"])
+    task_create.add_argument("--human-escalation-reason")
+
+    task_list = sub.add_parser("task-list")
+    task_list.add_argument("topic_id")
+
+    task_validate = sub.add_parser("task-validate")
+    task_validate.add_argument("topic_id")
+    task_validate.add_argument("task_id")
+
+    task_complete = sub.add_parser("task-complete")
+    task_complete.add_argument("topic_id")
+    task_complete.add_argument("task_id")
+    task_complete.add_argument("--result", required=True)
+
+    task_start = sub.add_parser("task-start")
+    task_start.add_argument("topic_id")
+    task_start.add_argument("task_id")
+
+    task_block = sub.add_parser("task-block")
+    task_block.add_argument("topic_id")
+    task_block.add_argument("task_id")
+    task_block.add_argument("--reason", required=True)
+
+    task_fail = sub.add_parser("task-fail")
+    task_fail.add_argument("topic_id")
+    task_fail.add_argument("task_id")
+    task_fail.add_argument("--reason", required=True)
+
+    backlog = sub.add_parser("task-backlog-summary-gate")
+    backlog.add_argument("topic_id")
+    backlog.add_argument("--limit", type=int, default=0)
+
+    repo_manifest = sub.add_parser("repo-manifest")
+    repo_manifest.add_argument("topic_id")
+    repo_manifest.add_argument("source_id")
+
+    doctor = sub.add_parser("doctor")
+    doctor.add_argument("topic_id")
+
     return parser
 
 
@@ -109,19 +160,25 @@ def _command_run(directory: Path, topic_id: str) -> int:
     summary_errors = validate_topic_summaries(directory)
     reports_dir = directory / "reports"
     reports = sorted(reports_dir.glob("*.json")) if reports_dir.exists() else []
+    tasks = list_tasks(directory)
+    pending_tasks = [task for task in tasks if task.get("status") in {"pending", "blocked"}]
 
     print(f"Topic: {topic_id}")
     print("Next crawl item: none" if item is None else f"Next crawl item: {item['queue_id']} {item['target_type']} {item['target']}")
     print(f"Summary gate: {'passed' if not summary_errors else f'{len(summary_errors)} issue(s)'}")
     print(f"Reports: {len(reports)} JSON report(s)")
+    print(f"Agent tasks: {len(tasks)} total, {len(pending_tasks)} pending/blocked")
     print("Main-agent next actions:")
     if item is not None:
         print("- Process the next crawl queue item or append discovered URLs to the queue.")
     if summary_errors:
         print("- Fix curated summaries before using affected sources for critical claims.")
+        print("- Run task-backlog-summary-gate to create traceable remediation tasks.")
+    if pending_tasks:
+        print("- Dispatch or resolve pending/blocked agent tasks.")
     if not reports:
         print("- Build synthesis JSON and run write-bilingual-report when evidence mapping is ready.")
-    if item is None and not summary_errors and reports:
+    if item is None and not summary_errors and reports and not pending_tasks:
         print("- Run quality-check and publish.")
     for error in summary_errors[:20]:
         print(f"SUMMARY ERROR: {error}")
@@ -144,7 +201,7 @@ def _command_draft_report(directory: Path, report_id: str) -> int:
         "data_cutoff": iso_now(),
         "overall_confidence": "low",
         "quality_score": 0,
-        "executive_summary": "此為 pipeline 產生的初步草稿。發布前需要 agent 進行跨來源分析與覆核。",
+        "executive_summary": "This is a pipeline-generated draft that requires agent review before publication.",
         "questions": [item["text"] if isinstance(item, dict) else item for item in topic["questions"]],
         "scope": {
             "audience": topic.get("audience", ""),
@@ -184,6 +241,121 @@ def _command_draft_report(directory: Path, report_id: str) -> int:
     for error in errors:
         print(f"WARNING: {error}")
     return 0
+
+
+def _command_task_backlog(directory: Path, topic_id: str, limit: int) -> int:
+    errors = validate_topic_summaries(directory)
+    by_source: dict[str, list[str]] = {}
+    for error in errors:
+        source_id = error.split(":", 1)[0]
+        by_source.setdefault(source_id, []).append(error)
+    existing_sources = {
+        source_id
+        for task in list_tasks(directory)
+        if task.get("status") in {"pending", "in_progress", "blocked"}
+        for source_id in task.get("input", {}).get("source_ids", [])
+        if str(task.get("objective", "")).startswith("Fix summary gate issues")
+    }
+    created = 0
+    skipped = 0
+    for source_id, source_errors in sorted(by_source.items()):
+        if limit and created >= limit:
+            break
+        if source_id in existing_sources:
+            skipped += 1
+            continue
+        role = "github_repo_analyst_agent" if any("repo_analysis" in error or "GitHub repository" in error for error in source_errors) else "source_curator_agent"
+        source_path = f"knowledge-base/topics/{topic_id}/sources/{source_id}/source.json"
+        summary_path = f"knowledge-base/topics/{topic_id}/sources/{source_id}/summary.json"
+        create_task(
+            directory,
+            topic_id=topic_id,
+            agent_role=role,
+            objective=f"Fix summary gate issues for {source_id}.",
+            paths_or_urls=[source_path, summary_path],
+            questions=source_errors,
+            constraints=[
+                "Do not change source_id.",
+                "Do not reorder crawl queue.",
+                "Preserve provenance and add locators for every key point.",
+            ],
+            source_ids=[source_id],
+        )
+        created += 1
+    print(f"Created {created} summary-gate backlog task(s).")
+    if skipped:
+        print(f"Skipped {skipped} source(s) that already have active backlog tasks.")
+    return 0 if created or skipped or not errors else 1
+
+
+def _command_doctor(directory: Path, topic_id: str) -> int:
+    blocking: list[str] = []
+    warnings: list[str] = []
+    recommendations: list[str] = []
+
+    try:
+        from scripts.validate_workflow_alignment import main as validate_alignment
+
+        if validate_alignment() != 0:
+            blocking.append("workflow alignment validation failed")
+    except Exception as exc:  # pragma: no cover - defensive CLI boundary
+        blocking.append(f"cannot run workflow alignment validation: {exc}")
+
+    queue_path = directory / "crawl-queue.json"
+    if queue_path.exists():
+        try:
+            from scripts.validate_crawl_queue import validate as validate_crawl_queue
+
+            for error in validate_crawl_queue(read_json(queue_path)):
+                blocking.append(f"crawl queue: {error}")
+        except Exception as exc:  # pragma: no cover - defensive CLI boundary
+            blocking.append(f"cannot validate crawl queue: {exc}")
+    else:
+        warnings.append("crawl-queue.json is missing")
+
+    summary_errors = validate_topic_summaries(directory)
+    if summary_errors:
+        warnings.append(f"summary gate has {len(summary_errors)} issue(s)")
+        recommendations.append("Run task-backlog-summary-gate or dispatch existing source curator / GitHub repo analyst tasks.")
+
+    for task in list_tasks(directory):
+        for error in validate_task(task):
+            blocking.append(f"{task.get('task_id', '<unknown>')}: {error}")
+
+    reports_dir = directory / "reports"
+    report_paths = sorted(reports_dir.glob("*.json")) if reports_dir.exists() else []
+    if report_paths:
+        try:
+            from scripts.validate_report import validate_report_set
+
+            for report_path in report_paths:
+                report_id = report_path.stem
+                for error in validate_report_set(reports_dir, report_id):
+                    blocking.append(f"{report_id}: {error}")
+        except Exception as exc:  # pragma: no cover - defensive CLI boundary
+            blocking.append(f"cannot validate report sets: {exc}")
+    else:
+        warnings.append("reports directory has no JSON reports")
+
+    if (ROOT / "outputs").exists():
+        warnings.append("outputs/ exists; keep it out of Git unless explicitly approved")
+    if list(ROOT.rglob("__pycache__")):
+        warnings.append("__pycache__ directories exist; remove generated caches before publication")
+    raw_dirs = list((directory / "sources").glob("S-*/raw")) if (directory / "sources").exists() else []
+    if raw_dirs:
+        warnings.append("source raw/ snapshots exist; do not stage them unless redistribution is approved")
+
+    print(f"Doctor: {topic_id}")
+    print("Status: failed" if blocking else "Status: passed with warnings" if warnings else "Status: passed")
+    for item in blocking:
+        print(f"BLOCKING: {item}")
+    for item in warnings[:30]:
+        print(f"WARNING: {item}")
+    if len(warnings) > 30:
+        print(f"WARNING: ... {len(warnings) - 30} more")
+    for item in recommendations:
+        print(f"RECOMMENDED: {item}")
+    return 1 if blocking else 0
 
 
 def main() -> int:
@@ -306,6 +478,72 @@ def main() -> int:
         path = write_catalog(directory)
         print(f"Saved {path}.")
         return 0
+    if args.command == "task-create":
+        task = create_task(
+            directory,
+            topic_id=args.topic_id,
+            agent_role=args.agent,
+            objective=args.objective,
+            paths_or_urls=args.path,
+            questions=args.question or [args.objective],
+            constraints=args.constraint,
+            source_ids=args.source,
+            claim_ids=args.claim,
+            status=args.status,
+            human_escalation_reason=args.human_escalation_reason,
+        )
+        print(f"Created {task['task_id']} for {task['agent_role']}.")
+        return 0
+    if args.command == "task-list":
+        for task in list_tasks(directory):
+            print(f"{task['task_id']}\t{task['status']}\t{task['agent_role']}\t{task['objective']}")
+        return 0
+    if args.command == "task-validate":
+        errors = validate_task(load_task(directory, args.task_id))
+        for error in errors:
+            print(f"ERROR: {error}")
+        print("Task validation passed." if not errors else f"Task validation failed: {len(errors)} issue(s).")
+        return 1 if errors else 0
+    if args.command == "task-complete":
+        try:
+            task = complete_task(directory, args.task_id, read_json(Path(args.result)))
+        except ValueError as exc:
+            print(f"ERROR: {exc}")
+            return 1
+        print(f"Updated {task['task_id']} to {task['status']}.")
+        return 0
+    if args.command == "task-start":
+        try:
+            task = start_task(directory, args.task_id)
+        except ValueError as exc:
+            print(f"ERROR: {exc}")
+            return 1
+        print(f"Updated {task['task_id']} to {task['status']}.")
+        return 0
+    if args.command == "task-block":
+        try:
+            task = block_task(directory, args.task_id, args.reason)
+        except ValueError as exc:
+            print(f"ERROR: {exc}")
+            return 1
+        print(f"Updated {task['task_id']} to {task['status']}.")
+        return 0
+    if args.command == "task-fail":
+        try:
+            task = fail_task(directory, args.task_id, args.reason)
+        except ValueError as exc:
+            print(f"ERROR: {exc}")
+            return 1
+        print(f"Updated {task['task_id']} to {task['status']}.")
+        return 0
+    if args.command == "task-backlog-summary-gate":
+        return _command_task_backlog(directory, args.topic_id, args.limit)
+    if args.command == "repo-manifest":
+        manifest = build_repo_manifest(directory, args.source_id)
+        print(f"Saved repo manifest for {manifest['source_id']}.")
+        return 0
+    if args.command == "doctor":
+        return _command_doctor(directory, args.topic_id)
     raise AssertionError("unhandled command")
 
 

@@ -1,0 +1,13 @@
+{
+  "source_id": "S-001",
+  "document_purpose": "Represent a README-only GitHub repo summary.",
+  "summary": "This fixture intentionally describes only project positioning. It must not support implementation maturity or security claims.",
+  "key_points": [
+    {
+      "point": "README-only evidence can support positioning claims only.",
+      "locator": "README.md"
+    }
+  ],
+  "keywords": ["GitHub", "README-only"],
+  "limitations": ["No source, tests, examples, or security policy files were reviewed."]
+}

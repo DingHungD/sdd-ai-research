@@ -28,6 +28,17 @@ The Main Research Agent owns the end-to-end state and delegates bounded tasks to
 subagents. It never gives a subagent ownership of source IDs, claim IDs, final
 recommendations, or publication decisions.
 
+Codex orchestration sources:
+
+- `AGENTS.md`
+- `.codex/agents/*.toml`
+- `docs/RESEARCH_WORKFLOW.md`
+- `docs/AUTOMATION_PIPELINE.md`
+- `docs/WORKFLOW_ALIGNMENT.md`
+- `schemas/subagent-task.schema.json`
+- `scripts/research_pipeline.py`
+- `knowledge-base/topics/<topic_id>/`
+
 1. Read `research-request.json`, `topic.json`, `index.json`, and
    `crawl-queue.json`.
 2. Search local sources first with `local-search`.
@@ -231,6 +242,7 @@ python scripts/research_pipeline.py curate-sources <topic_id>
 python scripts/research_pipeline.py quality-check <topic_id> <report_set_id>
 python scripts/validate_report.py --report-set knowledge-base/topics/<topic_id>/reports <report_set_id>
 python scripts/validate_crawl_queue.py knowledge-base/topics/<topic_id>/crawl-queue.json
+python scripts/research_pipeline.py doctor <topic_id>
 ```
 
 The gates check:
@@ -243,6 +255,8 @@ The gates check:
 - bilingual Markdown existence
 - shared evidence mapping
 - crawl queue structure
+- task lifecycle validity
+- Git publication risks such as `outputs/`, caches, and raw snapshots
 
 ## 13. Human Escalation
 

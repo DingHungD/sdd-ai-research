@@ -21,6 +21,18 @@ python scripts/research_pipeline.py draft-report <topic_id> --report-id <report_
 python scripts/research_pipeline.py write-report <topic_id> --input <synthesis.json>
 python scripts/research_pipeline.py write-bilingual-report <topic_id> --input <synthesis.json>
 python scripts/research_pipeline.py quality-check <topic_id> <report_set_id>
+python scripts/research_pipeline.py task-create <topic_id> --agent <role> --objective <text>
+python scripts/research_pipeline.py task-list <topic_id>
+python scripts/research_pipeline.py task-start <topic_id> <task_id>
+python scripts/research_pipeline.py task-block <topic_id> <task_id> --reason <text>
+python scripts/research_pipeline.py task-fail <topic_id> <task_id> --reason <text>
+python scripts/research_pipeline.py task-validate <topic_id> <task_id>
+python scripts/research_pipeline.py task-complete <topic_id> <task_id> --result <json>
+python scripts/research_pipeline.py task-backlog-summary-gate <topic_id>
+python scripts/research_pipeline.py repo-manifest <topic_id> <source_id>
+python scripts/research_pipeline.py doctor <topic_id>
+python scripts/validate_workflow_alignment.py
+python -m unittest tests.test_research_pipeline
 ```
 
 `run` is the main agent's checkpoint command. It reports:
@@ -31,6 +43,17 @@ python scripts/research_pipeline.py quality-check <topic_id> <report_set_id>
 - next safe actions
 
 It does not overwrite source IDs or reports.
+
+Core alignment paths:
+
+- `AGENTS.md`
+- `.codex/agents/*.toml`
+- `docs/RESEARCH_WORKFLOW.md`
+- `docs/AUTOMATION_PIPELINE.md`
+- `docs/WORKFLOW_ALIGNMENT.md`
+- `schemas/subagent-task.schema.json`
+- `scripts/research_pipeline.py`
+- `knowledge-base/topics/<topic_id>/`
 
 ## 2. Module Map
 
@@ -45,6 +68,8 @@ It does not overwrite source IDs or reports.
 | `source_metadata` | `research_pipeline/source_metadata.py` | Build `source.json`, including GitHub repository metadata. |
 | `document_curator` | `research_pipeline/document_curator.py` | Save reviewed source summaries. |
 | `summary_quality` | `research_pipeline/summary_quality.py` | Enforce summary and GitHub repo gates. |
+| `agent_tasks` | `research_pipeline/agent_tasks.py` | Create, list, complete, and validate topic-level subagent tasks. |
+| `repo_manifest` | `research_pipeline/repo_manifest.py` | Build selected-file GitHub repo manifests and source repository metadata. |
 | `local_retriever` | `research_pipeline/local_retriever.py` | Search local summaries and source metadata. |
 | `source_evaluator` | `research_pipeline/source_evaluator.py` | Score source quality. |
 | `source_catalog` | `research_pipeline/source_catalog.py` | Write `sources/CATALOG.md`. |
@@ -62,7 +87,9 @@ It does not overwrite source IDs or reports.
 4. Source Curator writes reviewed summaries.
 5. `curate-batch` saves only summaries that pass the summary gate.
 6. GitHub Repo Analyst fills `repository` metadata and `repo_analysis` for repo
-   sources.
+   sources. `repo-manifest` records `candidate_files`, `selected_files`,
+   `selection_reasons`, `files_reviewed`, `files_not_reviewed`,
+   `needs_commit_pin`, and `blocked_reason`.
 7. `catalog <topic_id>` refreshes `sources/CATALOG.md`.
 8. Evidence Mapper creates claim-source mappings.
 9. Report Writer prepares synthesis JSON with `localized_content`.
@@ -70,7 +97,9 @@ It does not overwrite source IDs or reports.
     Markdown.
 11. Quality Gate runs `curate-sources`, `quality-check`,
     `validate_report.py --report-set`, and `validate_crawl_queue.py`.
-12. Main agent commits only curated artifacts.
+12. `doctor <topic_id>` aggregates workflow, queue, summary, task, report, and
+    Git publication risk checks without modifying files.
+13. Main agent commits only curated artifacts.
 
 ## 4. Subagent Execution Contract
 
@@ -86,7 +115,12 @@ by the Main Research Agent. Each task should record:
 - quality gate
 
 Agent profiles validate against `schemas/agent-profile.schema.json`. Detailed
-role definitions live in `docs/AGENT_ORCHESTRATION.md`.
+role definitions live in `docs/AGENT_ORCHESTRATION.md`. Task records validate
+against `schemas/subagent-task.schema.json` and are stored in:
+
+```text
+knowledge-base/topics/<topic_id>/agent-tasks/T-xxx.json
+```
 
 ## 5. Input And Output Schemas
 
@@ -130,6 +164,9 @@ Automation steps:
 4. Fill `repo_analysis`.
 5. Record files not reviewed and why.
 6. Downgrade README-only sources to positioning evidence.
+7. If the repository is unpinned, mark `needs_commit_pin`.
+8. If monorepo or scope is unclear, create a blocked `github_repo_analyst_agent`
+   task instead of scanning the full repository.
 
 ## 7. Quality Automation
 
@@ -174,6 +211,7 @@ when the next decision changes scope, legal risk, or adoption judgment:
 Before Git publication:
 
 - Run schema and CLI tests.
+- Run fixture tests with `python -m unittest tests.test_research_pipeline`.
 - Run summary gates.
 - Run report gates.
 - Run crawl queue validation.

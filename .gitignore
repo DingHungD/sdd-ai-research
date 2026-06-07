@@ -4,6 +4,8 @@ __pycache__/
 .mypy_cache/
 .ruff_cache/
 .coverage
+outputs/
+*.tmp.md
 
 # Raw evidence snapshots remain local by default. Commit metadata, hashes, and
 # curated summaries; publish snapshots separately only when redistribution is allowed.

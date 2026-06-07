@@ -1,0 +1,12 @@
+{
+  "source_id": "S-001",
+  "title": "Unpinned Fixture Repository",
+  "url": "https://github.com/example/unpinned",
+  "canonical_url": "https://github.com/example/unpinned",
+  "source_type": "official_documentation",
+  "repository": {
+    "owner": "example",
+    "name": "unpinned",
+    "default_branch": "main"
+  }
+}
