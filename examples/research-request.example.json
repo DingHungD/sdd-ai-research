@@ -20,7 +20,8 @@
   },
   "output": {
     "language": "zh-TW",
+    "languages": ["zh-TW", "en"],
+    "primary_language": "zh-TW",
     "format": ["markdown", "json"]
   }
 }
-

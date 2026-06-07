@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/subagent-task.schema.json",
+  "title": "Research Subagent Task",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "task_id",
+    "topic_id",
+    "agent_role",
+    "model",
+    "reasoning_effort",
+    "objective",
+    "input",
+    "expected_output",
+    "write_scope",
+    "quality_gate",
+    "status"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "pattern": "^T-[0-9]{3,}$"
+    },
+    "topic_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "agent_role": {
+      "type": "string",
+      "enum": [
+        "source_hunter_agent",
+        "source_curator_agent",
+        "github_repo_analyst_agent",
+        "evidence_mapper_agent",
+        "report_writer_agent",
+        "quality_gate_agent"
+      ]
+    },
+    "model": {
+      "type": "string",
+      "enum": ["gpt-5.4-mini", "gpt-5.4", "gpt-5.5"]
+    },
+    "reasoning_effort": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "xhigh"]
+    },
+    "objective": {
+      "type": "string",
+      "minLength": 1
+    },
+    "input": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["paths_or_urls", "questions", "constraints"],
+      "properties": {
+        "paths_or_urls": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "source_ids": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^S-[0-9]{3,}$" }
+        },
+        "claim_ids": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^C-[0-9]{3,}$" }
+        },
+        "questions": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "constraints": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "expected_output": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["artifact_type", "schema", "required_fields"],
+      "properties": {
+        "artifact_type": {
+          "type": "string",
+          "enum": [
+            "crawl_queue_items",
+            "document_summary",
+            "repo_analysis",
+            "claim_evidence_matrix",
+            "bilingual_synthesis",
+            "quality_gate_result"
+          ]
+        },
+        "schema": {
+          "type": "string",
+          "minLength": 1
+        },
+        "required_fields": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "write_scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["allowed_paths", "forbidden_paths"],
+      "properties": {
+        "allowed_paths": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "forbidden_paths": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "quality_gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["checks", "done_when"],
+      "properties": {
+        "checks": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "done_when": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "in_progress", "completed", "failed", "blocked"]
+    },
+    "human_escalation_reason": {
+      "type": "string"
+    }
+  }
+}

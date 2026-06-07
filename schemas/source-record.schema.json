@@ -34,6 +34,7 @@
       "type": "string",
       "pattern": "^[0-9a-fA-F]{7,64}$"
     },
+    "repository": { "$ref": "#/$defs/repository" },
     "locator": { "type": "string", "minLength": 1 },
     "content_hash": {
       "type": "string",
@@ -123,7 +124,9 @@
         "transparency": { "type": "string", "enum": ["high", "medium", "low"] },
         "independence": { "type": "string", "enum": ["high", "medium", "low"] },
         "reproducibility": { "type": "string", "enum": ["high", "medium", "low"] },
-        "notes": { "type": "string" }
+        "notes": { "type": "string" },
+        "category": { "type": "string" },
+        "review_summary": { "type": "string" }
       }
     },
     "conflict_of_interest": { "type": "string" },
@@ -133,6 +136,29 @@
       "items": {
         "type": "string",
         "pattern": "^C-[0-9]{3,}$"
+      }
+    }
+  },
+  "$defs": {
+    "repository": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["owner", "name"],
+      "properties": {
+        "owner": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "default_branch": { "type": "string" },
+        "commit_sha": {
+          "type": "string",
+          "pattern": "^[0-9a-fA-F]{7,64}$"
+        },
+        "tree_url": { "type": "string", "format": "uri" },
+        "capture_manifest_path": { "type": "string" },
+        "capture_scope": {
+          "type": "string",
+          "enum": ["readme_only", "selected_files", "full_tree_metadata"]
+        },
+        "selection_reason": { "type": "string" }
       }
     }
   },

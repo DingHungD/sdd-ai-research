@@ -107,6 +107,19 @@
           "type": "string",
           "default": "zh-TW"
         },
+        "languages": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z]{2,3}(?:-[A-Z]{2})?$"
+          },
+          "default": ["zh-TW"]
+        },
+        "primary_language": {
+          "type": "string",
+          "pattern": "^[a-z]{2,3}(?:-[A-Z]{2})?$",
+          "default": "zh-TW"
+        },
         "format": {
           "type": "array",
           "items": {

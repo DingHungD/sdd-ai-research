@@ -30,3 +30,47 @@
 - 程式碼重點應記錄固定 commit、檔案路徑與行號。
 - issue、discussion 與 pull request 可用於理解背景，但不自動視為已實作功能。
 - 若文件無法完整讀取，必須在限制中說明。
+
+## 最低摘要品質
+
+不可只輸出來源前幾百字或 HTML navigation/sidebar。每份 reviewed summary 至少要包含：
+
+- 文件用途與研究價值。
+- 來源能力或核心內容。
+- 可驗證 key points，且每一點都有 locator。
+- 關鍵技術、關鍵名詞與適用範圍。
+- 來源限制、未讀範圍與不能推出的結論。
+
+## GitHub Repository 深讀規則
+
+若來源是 GitHub repository，不能只讀 README 後就判斷架構或功能成熟度。必須產生 `repo_analysis`，至少說明：
+
+- 固定 `commit_sha` 或 immutable URL。
+- 已讀檔案與未讀檔案，包含選擇理由。
+- 功能清單與 evidence locators。
+- 架構摘要、核心檔案與能力邊界。
+- install/run/build/test/config 等 operational model。
+- tests、docs、release、license、security policy 等 quality signals。
+
+若只讀 README，該來源只能支持「專案定位或宣稱」，不能支持「實作能力、成熟度、安全性或 production readiness」。
+
+## AI-First File Selection
+
+不要強迫自己閱讀整個專案。依研究問題 smart selection：
+
+1. 先看 README、docs index、manifest/config、examples、tests、主要 entry points。
+2. 根據 repo tree 選擇最小可支持結論的檔案集合。
+3. 只在 claim 無法被目前檔案支持時再擴大閱讀範圍。
+4. 在 `files_reviewed` 記錄已讀檔案、permalink、選擇理由與使用到的證據。
+5. 在 `files_not_reviewed` 記錄未讀範圍與原因。
+
+## 達標定義
+
+GitHub repo summary 達標需同時滿足：
+
+- 固定 commit 或 immutable permalink。
+- `feature_inventory` 每項都有 evidence locator。
+- `architecture_summary` 不只來自 README 宣稱。
+- `core_files` 至少包含一個非 README 的檔案，除非 summary 明確降級為 README-only。
+- `capability_boundaries` 清楚區分 supported、not supported、unclear。
+- `limitations` 揭露未讀範圍與不能推出的結論。

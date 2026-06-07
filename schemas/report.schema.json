@@ -30,6 +30,20 @@
   ],
   "properties": {
     "report_id": { "type": "string", "minLength": 1 },
+    "report_set_id": { "type": "string", "minLength": 1 },
+    "primary_language": {
+      "type": "string",
+      "pattern": "^[a-z]{2,3}(?:-[A-Z]{2})?$"
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z]{2,3}(?:-[A-Z]{2})?$"
+      },
+      "uniqueItems": true
+    },
+    "localized_content": { "$ref": "#/$defs/localizedContent" },
     "version": { "type": "string", "minLength": 1 },
     "title": { "type": "string", "minLength": 1 },
     "generated_at": { "type": "string", "format": "date-time" },
@@ -80,6 +94,46 @@
     "stringArray": {
       "type": "array",
       "items": { "type": "string", "minLength": 1 }
+    },
+    "localizedContent": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/localizedReportContent" },
+      "minProperties": 1
+    },
+    "localizedReportContent": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "executive_summary": {
+          "oneOf": [
+            { "type": "string", "minLength": 1 },
+            { "$ref": "#/$defs/stringArray" }
+          ]
+        },
+        "methodology": {
+          "oneOf": [
+            { "type": "string", "minLength": 1 },
+            { "$ref": "#/$defs/stringArray" }
+          ]
+        },
+        "claim_text": {
+          "type": "object",
+          "additionalProperties": { "type": "string", "minLength": 1 }
+        },
+        "claim_reasoning": {
+          "type": "object",
+          "additionalProperties": { "type": "string", "minLength": 1 }
+        },
+        "recommendations": {
+          "oneOf": [
+            { "type": "string", "minLength": 1 },
+            { "$ref": "#/$defs/stringArray" }
+          ]
+        },
+        "conclusion": { "type": "string", "minLength": 1 },
+        "limitations": { "$ref": "#/$defs/stringArray" }
+      }
     },
     "sourceIdArray": {
       "type": "array",

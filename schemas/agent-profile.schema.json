@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/agent-profile.schema.json",
+  "title": "Research Agent Profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "agent_id",
+    "role",
+    "model",
+    "reasoning_effort",
+    "role_setting",
+    "core_responsibilities",
+    "workflow",
+    "quality_rules",
+    "done_criteria",
+    "should_do",
+    "should_not_do",
+    "ai_first_file_selection"
+  ],
+  "properties": {
+    "agent_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "main_research_agent",
+        "source_hunter_agent",
+        "source_curator_agent",
+        "github_repo_analyst_agent",
+        "evidence_mapper_agent",
+        "report_writer_agent",
+        "quality_gate_agent"
+      ]
+    },
+    "model": {
+      "type": "string",
+      "enum": ["gpt-5.4-mini", "gpt-5.4", "gpt-5.5"]
+    },
+    "reasoning_effort": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "xhigh"]
+    },
+    "role_setting": { "type": "string", "minLength": 1 },
+    "core_responsibilities": { "$ref": "#/$defs/nonEmptyStringArray" },
+    "workflow": { "$ref": "#/$defs/nonEmptyStringArray" },
+    "quality_rules": { "$ref": "#/$defs/nonEmptyStringArray" },
+    "done_criteria": { "$ref": "#/$defs/nonEmptyStringArray" },
+    "should_do": { "$ref": "#/$defs/nonEmptyStringArray" },
+    "should_not_do": { "$ref": "#/$defs/nonEmptyStringArray" },
+    "ai_first_file_selection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["enabled", "rules"],
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "rules": { "$ref": "#/$defs/nonEmptyStringArray" }
+      }
+    },
+    "human_escalation_conditions": { "$ref": "#/$defs/nonEmptyStringArray" }
+  },
+  "$defs": {
+    "nonEmptyStringArray": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    }
+  }
+}

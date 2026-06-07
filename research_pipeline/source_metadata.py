@@ -7,6 +7,7 @@ from urllib.parse import urlsplit
 
 
 CURRENT_OID_RE = re.compile(r'"currentOid":"([0-9a-f]{40})"')
+DEFAULT_BRANCH_RE = re.compile(r'"defaultBranch":"([^"]+)"')
 
 
 def _parse_timestamp(value: str) -> datetime:
@@ -68,6 +69,32 @@ def _github_permalink(url: str, content: bytes) -> tuple[str | None, str | None,
     return commit_sha, immutable_url, "repository tree"
 
 
+def _github_repository_metadata(url: str, content: bytes) -> dict[str, Any] | None:
+    parts = urlsplit(url)
+    if parts.netloc.lower() != "github.com":
+        return None
+    segments = [segment for segment in parts.path.split("/") if segment]
+    if len(segments) < 2:
+        return None
+    owner, repo = segments[:2]
+    text = content.decode("utf-8", errors="ignore")
+    commit_match = CURRENT_OID_RE.search(text)
+    branch_match = DEFAULT_BRANCH_RE.search(text)
+    metadata: dict[str, Any] = {
+        "owner": owner,
+        "name": repo,
+        "capture_scope": "readme_only",
+        "selection_reason": "Initial GitHub repository capture; deep-read curation must select README, docs/config, source, examples, and tests before using this source for implementation claims.",
+    }
+    if branch_match:
+        metadata["default_branch"] = branch_match.group(1)
+    if commit_match:
+        commit_sha = commit_match.group(1)
+        metadata["commit_sha"] = commit_sha
+        metadata["tree_url"] = f"https://github.com/{owner}/{repo}/tree/{commit_sha}"
+    return metadata
+
+
 def apply_source_metadata(source: dict[str, Any], content: bytes) -> dict[str, Any]:
     snapshots = source.get("local_snapshots", [])
     if not snapshots:
@@ -82,4 +109,11 @@ def apply_source_metadata(source: dict[str, Any], content: bytes) -> dict[str, A
         source["commit_sha"] = commit_sha
         source["immutable_url"] = immutable_url
         source["locator"] = locator or source["locator"]
+    repository = _github_repository_metadata(source["url"], content)
+    if repository:
+        if source.get("commit_sha") and "commit_sha" not in repository:
+            repository["commit_sha"] = source["commit_sha"]
+        if source.get("immutable_url") and "tree_url" not in repository:
+            repository["tree_url"] = source["immutable_url"]
+        source["repository"] = repository
     return source

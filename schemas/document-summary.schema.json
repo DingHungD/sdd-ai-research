@@ -84,6 +84,152 @@
     "potential_questions": {
       "type": "array",
       "items": { "type": "string", "minLength": 1 }
+    },
+    "repo_analysis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "commit_sha",
+        "repository_kind",
+        "files_reviewed",
+        "files_not_reviewed",
+        "feature_inventory",
+        "architecture_summary",
+        "core_files",
+        "capability_boundaries",
+        "operational_model",
+        "quality_signals",
+        "evidence_coverage",
+        "open_questions"
+      ],
+      "properties": {
+        "commit_sha": {
+          "type": "string",
+          "pattern": "^[0-9a-fA-F]{7,64}$"
+        },
+        "repository_kind": { "type": "string", "minLength": 1 },
+        "files_reviewed": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["path", "permalink", "why_selected", "evidence_used"],
+            "properties": {
+              "path": { "type": "string", "minLength": 1 },
+              "permalink": { "type": "string", "minLength": 1 },
+              "why_selected": { "type": "string", "minLength": 1 },
+              "evidence_used": { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+        "files_not_reviewed": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["pattern_or_path", "reason"],
+            "properties": {
+              "pattern_or_path": { "type": "string", "minLength": 1 },
+              "reason": { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+        "feature_inventory": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["feature", "evidence_locators", "confidence"],
+            "properties": {
+              "feature": { "type": "string", "minLength": 1 },
+              "evidence_locators": {
+                "type": "array",
+                "minItems": 1,
+                "items": { "type": "string", "minLength": 1 }
+              },
+              "confidence": { "type": "string", "enum": ["high", "medium", "low"] }
+            }
+          }
+        },
+        "architecture_summary": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["components", "data_or_control_flow", "extension_points"],
+          "properties": {
+            "components": {
+              "type": "array",
+              "minItems": 1,
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "data_or_control_flow": { "type": "string", "minLength": 1 },
+            "extension_points": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+        "core_files": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["path", "role", "locators"],
+            "properties": {
+              "path": { "type": "string", "minLength": 1 },
+              "role": { "type": "string", "minLength": 1 },
+              "locators": {
+                "type": "array",
+                "minItems": 1,
+                "items": { "type": "string", "minLength": 1 }
+              }
+            }
+          }
+        },
+        "capability_boundaries": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["supported", "not_supported", "unclear"],
+          "properties": {
+            "supported": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "not_supported": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "unclear": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+        "operational_model": { "type": "string", "minLength": 1 },
+        "quality_signals": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "evidence_coverage": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["readme", "docs", "source", "tests", "examples", "release_notes"],
+          "properties": {
+            "readme": { "type": "boolean" },
+            "docs": { "type": "boolean" },
+            "source": { "type": "boolean" },
+            "tests": { "type": "boolean" },
+            "examples": { "type": "boolean" },
+            "release_notes": { "type": "boolean" }
+          }
+        },
+        "open_questions": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
     }
   }
 }

@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import argparse
 import sys
 from pathlib import Path
 
@@ -11,6 +12,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from research_pipeline.quality_gate import evaluate_report_details
+from research_pipeline.summary_quality import is_github_repo_source, validate_summary
 
 
 REQUIRED_REPORT_FIELDS = {
@@ -43,6 +45,10 @@ ALLOWED_REPORT_FIELDS = REQUIRED_REPORT_FIELDS | {
     "minimum_primary_sources",
     "minimum_high_quality_sources",
     "recommendations",
+    "report_set_id",
+    "primary_language",
+    "languages",
+    "localized_content",
 }
 
 REQUIRED_SOURCE_FIELDS = {
@@ -165,6 +171,77 @@ def validate_recommendation_items(report: dict, source_id_set: set[str]) -> list
     return errors
 
 
+def validate_language_metadata(report: dict) -> list[str]:
+    errors: list[str] = []
+    languages = report.get("languages")
+    report_set_id = report.get("report_set_id")
+    if languages is None and report_set_id is None and "localized_content" not in report:
+        return errors
+    if not report_set_id:
+        errors.append("report_set_id is required for bilingual/localized reports")
+    if not isinstance(languages, list) or not languages:
+        errors.append("languages must be a non-empty array for bilingual/localized reports")
+        languages = []
+    if len(languages) != len(set(languages)):
+        errors.append("languages must not contain duplicates")
+    primary = report.get("primary_language")
+    if primary and languages and primary not in languages:
+        errors.append("primary_language must be included in languages")
+    localized = report.get("localized_content", {})
+    if not isinstance(localized, dict):
+        errors.append("localized_content must be an object")
+        return errors
+    for language in languages:
+        content = localized.get(language)
+        if not isinstance(content, dict):
+            errors.append(f"localized_content.{language} is required")
+            continue
+        for field in ("title", "executive_summary", "conclusion"):
+            if field not in content or not content[field]:
+                errors.append(f"localized_content.{language}.{field} is required")
+    return errors
+
+
+def validate_bilingual_files(report_path: Path, report: dict) -> list[str]:
+    errors: list[str] = []
+    report_set_id = report.get("report_set_id")
+    languages = report.get("languages", [])
+    if not report_set_id or not isinstance(languages, list):
+        return errors
+    for language in languages:
+        path = report_path.parent / f"{report_set_id}.{language}.md"
+        if not path.exists():
+            errors.append(f"missing localized markdown output: {path.name}")
+    return errors
+
+
+def validate_github_summary_gate(report_path: Path, report: dict) -> list[str]:
+    errors: list[str] = []
+    if "languages" not in report:
+        return errors
+    topic_dir = report_path.parent.parent
+    for source in report.get("sources", []):
+        if not isinstance(source, dict) or not is_github_repo_source(source):
+            continue
+        summary_path = topic_dir / "sources" / source["source_id"] / "summary.json"
+        if not summary_path.exists():
+            errors.append(f"{source['source_id']}: missing summary.json for GitHub source")
+            continue
+        try:
+            summary = load_json(summary_path)
+        except (OSError, json.JSONDecodeError) as exc:
+            errors.append(f"{source['source_id']}: cannot read summary.json: {exc}")
+            continue
+        critical_claims = [
+            claim
+            for claim in report.get("claims", [])
+            if source["source_id"] in claim.get("supporting_source_ids", []) and claim.get("importance") == "critical"
+        ]
+        if critical_claims:
+            errors.extend(validate_summary(source, summary))
+    return errors
+
+
 def validate(report: dict) -> list[str]:
     errors: list[str] = []
     missing = sorted(REQUIRED_REPORT_FIELDS - report.keys())
@@ -173,6 +250,7 @@ def validate(report: dict) -> list[str]:
     extra = sorted(report.keys() - ALLOWED_REPORT_FIELDS)
     if extra:
         errors.append(f"unknown report fields: {', '.join(extra)}")
+    errors.extend(validate_language_metadata(report))
 
     claims = report.get("claims", [])
     sources = report.get("sources", [])
@@ -344,12 +422,53 @@ def validate(report: dict) -> list[str]:
     return errors
 
 
+def validate_report_set(reports_dir: Path, report_set_id: str) -> list[str]:
+    errors: list[str] = []
+    json_path = reports_dir / f"{report_set_id}.json"
+    if not json_path.exists():
+        return [f"missing report set JSON: {json_path}"]
+    report = load_json(json_path)
+    errors.extend(validate(report))
+    errors.extend(validate_bilingual_files(json_path, report))
+    errors.extend(validate_github_summary_gate(json_path, report))
+    required = {"zh-TW", "en"}
+    languages = set(report.get("languages", []))
+    missing = sorted(required - languages)
+    if missing:
+        errors.append(f"report set must include languages: {', '.join(missing)}")
+    claim_ids = [claim.get("claim_id") for claim in report.get("claims", []) if isinstance(claim, dict)]
+    if len(claim_ids) != len(set(claim_ids)):
+        errors.append("report set claim IDs must be stable and unique")
+    return errors
+
+
 def main() -> int:
-    if len(sys.argv) != 2:
+    parser = argparse.ArgumentParser(description="Validate a trusted research report.")
+    parser.add_argument("report", nargs="?", help="Path to one report JSON file.")
+    parser.add_argument("--report-set", nargs=2, metavar=("REPORTS_DIR", "REPORT_SET_ID"))
+    args = parser.parse_args()
+
+    if args.report_set:
+        reports_dir = Path(args.report_set[0])
+        report_set_id = args.report_set[1]
+        try:
+            errors = validate_report_set(reports_dir, report_set_id)
+        except (OSError, json.JSONDecodeError) as exc:
+            print(f"ERROR: cannot read report set: {exc}")
+            return 2
+        if errors:
+            for error in errors:
+                print(f"ERROR: {error}")
+            return 1
+        print("Report set consistency checks passed.")
+        return 0
+
+    if not args.report:
         print("Usage: python scripts/validate_report.py <report.json>")
+        print("   or: python scripts/validate_report.py --report-set <reports_dir> <report_set_id>")
         return 2
 
-    path = Path(sys.argv[1])
+    path = Path(args.report)
     try:
         report = load_json(path)
     except (OSError, json.JSONDecodeError) as exc:
@@ -357,6 +476,8 @@ def main() -> int:
         return 2
 
     errors = validate(report)
+    errors.extend(validate_bilingual_files(path, report))
+    errors.extend(validate_github_summary_gate(path, report))
     if errors:
         for error in errors:
             print(f"ERROR: {error}")

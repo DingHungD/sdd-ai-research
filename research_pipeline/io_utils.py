@@ -20,7 +20,7 @@ def snapshot_id() -> str:
 
 
 def read_json(path: Path) -> dict[str, Any]:
-    return json.loads(path.read_text(encoding="utf-8"))
+    return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
 def write_json(path: Path, data: Any) -> None:
@@ -35,4 +35,3 @@ def sha256_bytes(content: bytes) -> str:
 def next_prefixed_id(existing: list[str], prefix: str) -> str:
     numbers = [int(value.split("-", 1)[1]) for value in existing if value.startswith(f"{prefix}-")]
     return f"{prefix}-{max(numbers, default=0) + 1:03d}"
-
