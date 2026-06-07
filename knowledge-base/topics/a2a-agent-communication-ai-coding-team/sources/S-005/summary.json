@@ -1,0 +1,15 @@
+{
+  "source_id": "S-005",
+  "snapshot_id": "SNAP-20260607T002502Z",
+  "summarized_at": "2026-06-07T00:25:02+00:00",
+  "document_purpose": "Initial machine summary for official_documentation. Agent review required.",
+  "summary": "Redirecting window.location.replace( \"latest/\" + window.location.search + window.location.hash ); Redirecting to latest/ ...",
+  "categories": [],
+  "key_points": [],
+  "keywords": [],
+  "entities": [],
+  "limitations": [
+    "This is an initial machine-generated extraction and must be reviewed by an agent."
+  ],
+  "potential_questions": []
+}

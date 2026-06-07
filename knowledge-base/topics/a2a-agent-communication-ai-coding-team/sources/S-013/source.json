@@ -1,0 +1,39 @@
+{
+  "source_id": "S-013",
+  "title": "Semantic Kernel Agent Framework",
+  "url": "https://learn.microsoft.com/en-us/semantic-kernel/frameworks/agent/",
+  "canonical_url": "https://learn.microsoft.com/en-us/semantic-kernel/frameworks/agent/",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:25:33+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T002533Z",
+      "local_path": "sources/S-013/raw/SNAP-20260607T002533Z.html",
+      "content_hash": "sha256:72264f0b0c9636ac9b8b6f5950051831722e948f9ff5696ef1dea7abdfafd374",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:25:33+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://learn.microsoft.com/en-us/semantic-kernel/frameworks/agent/",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:72264f0b0c9636ac9b8b6f5950051831722e948f9ff5696ef1dea7abdfafd374",
+  "locator": "local snapshot SNAP-20260607T002533Z",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:25:33+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  }
+}

@@ -1,0 +1,7 @@
+# A2A A New Era of Agent Interoperability
+
+Announcing the Agent2Agent Protocol (A2A) - Google Developers Blog { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Google for Developers Blog", "item": "https://developers.googleblog.com/" },{ "@type": "ListItem", "position": 2, "name": "Announcing the Agent2Agent Protocol (A2A)", "item": "https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/" }] } { "@context": "https://schema.org", "@type": "Article", "headline": "Announcing the Agent2Agent Protocol (A2A)", "description": "Agent2Agent (A2A) protocol is an open standard designed to enable AI agents from different vendors and frameworks to collaborate and exchange information across enterprise platforms aiming to foster a future of seamless AI agent interoperability and enhanced automation.", "image": "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Agent2Agent-Interoperability.2e16d0ba.fill-800x400.png", "datePublished": "2025-04-09", "author": [ { "@type": "Person", "name": "Rao Surapaneni", "url": "/en/search/?author=Rao+Surapaneni" }, { "@type": "Person", "name": "Miku Jha", "url": "/en/search/?author=
+
+## Limitations
+
+- This is an initial machine-generated extraction and must be reviewed by an agent.

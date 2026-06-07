@@ -1,0 +1,7 @@
+﻿# IBM Agent Communication Protocol
+
+Agent Communication Protocol (ACP) - IBM Research 0 Agent Communication Protocol The open protocol for AI agent interoperability View code View documentation Overview IMPORTANT UPDATE - ACP is now part of A2A under the Linux Foundation! Learn more | Migration Guide Agent Communication Protocol (ACP) is an open standard designed to enable seamless communication between AI agents regardless of framework, programming language, or runtime environment. ACP is lightweight, HTTP-native, and requires only a minimal setup for agents to send and receive messages to each other with a consistent interface. ACP was developed in response to the increased fragmentation of a rapidly growing agent ecosystem. Modern AI systems often rely on modular agents which perform tasks such as retrieval, reasoning, classification, or tool use. Yet these agents are typically locked into isolated frameworks, making it difficult to discover, reuse, or integrate them across platforms. This fragmentation leads to duplicated work, an inconsistent developer experience, and one-off integrations that don? scale. ACP addresses these challenges by standardizing how agents communicate while letting developers decide how
+
+## Limitations
+
+- This is an initial machine-generated extraction and must be reviewed by an agent.

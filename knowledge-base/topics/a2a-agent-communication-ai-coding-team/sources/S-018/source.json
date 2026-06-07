@@ -1,0 +1,39 @@
+{
+  "source_id": "S-018",
+  "title": "A2A Protocol Latest Documentation",
+  "url": "https://a2a-protocol.org/latest/",
+  "canonical_url": "https://a2a-protocol.org/latest/",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:26:28+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T002628Z",
+      "local_path": "sources/S-018/raw/SNAP-20260607T002628Z.html",
+      "content_hash": "sha256:6fa9d81dcd3368b8881ef8eb38d7879dc05113a93f5f25f5fc441e738def2fe9",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:26:28+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://a2a-protocol.org/latest/",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:6fa9d81dcd3368b8881ef8eb38d7879dc05113a93f5f25f5fc441e738def2fe9",
+  "locator": "local snapshot SNAP-20260607T002628Z",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:26:28+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  }
+}

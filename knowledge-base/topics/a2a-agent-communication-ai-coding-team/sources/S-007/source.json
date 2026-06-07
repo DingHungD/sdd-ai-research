@@ -1,0 +1,41 @@
+{
+  "source_id": "S-007",
+  "title": "MCP Official Specification Repository",
+  "url": "https://github.com/modelcontextprotocol/modelcontextprotocol",
+  "canonical_url": "https://github.com/modelcontextprotocol/modelcontextprotocol",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:25:30+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T002530Z",
+      "local_path": "sources/S-007/raw/SNAP-20260607T002530Z.html",
+      "content_hash": "sha256:426427016219f6bbf0755f616bdc5e32d99055ce092eb8e963cb7d3c2f17c74d",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:25:30+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/modelcontextprotocol/modelcontextprotocol",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:426427016219f6bbf0755f616bdc5e32d99055ce092eb8e963cb7d3c2f17c74d",
+  "locator": "repository tree",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:25:30+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "commit_sha": "699e664dfe1158045996f28e7dbd80db53bebbeb",
+  "immutable_url": "https://github.com/modelcontextprotocol/modelcontextprotocol/tree/699e664dfe1158045996f28e7dbd80db53bebbeb",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  }
+}

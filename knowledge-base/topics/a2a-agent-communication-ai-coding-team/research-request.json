@@ -1,0 +1,59 @@
+{
+  "topic_id": "a2a-agent-communication-ai-coding-team",
+  "topic": "A2A Agent 溝通（AI Coding 團隊）",
+  "objective": "建立一份可信研究報告，說明 AI coding team 中 agent-to-agent 溝通的協定、架構模式、工具選型、安全邊界、可落地 contract 與 PoC 建議。",
+  "questions": [
+    "A2A、MCP、ACP、ANP、AG-UI 與 framework-level handoff 分別適合 AI coding team 的哪一層？",
+    "AI coding team 的 planner、architect、implementer、reviewer、tester、security agent 應如何交接任務、上下文、產物與責任？",
+    "哪些協定或框架提供 discovery、agent card、task lifecycle、streaming、artifacts、auth、trace 與 human-in-the-loop？",
+    "哪些通訊架構模式最可靠，且如何處理失敗、重試、分歧與權限控制？",
+    "有哪些安全風險、治理方式與 benchmark 可評估多 agent coding team？",
+    "最小可落地 PoC 應如何設計？"
+  ],
+  "audience": "要設計或實作 AI coding team / coding-agent orchestration 的工程師與技術決策者",
+  "scope": {
+    "regions": ["global"],
+    "languages": ["zh-TW", "en"],
+    "date_from": "2023-01-01",
+    "date_to": "2026-06-07",
+    "include": [
+      "official protocol specifications",
+      "official SDK and framework documentation",
+      "multi-agent coding frameworks",
+      "security and governance guidance",
+      "benchmarks and empirical studies",
+      "open-source reference implementations"
+    ],
+    "exclude": [
+      "pure marketing pages without technical details",
+      "generic chatbot articles not involving agent-to-agent communication",
+      "unverifiable claims without source links"
+    ]
+  },
+  "source_preferences": {
+    "preferred_domains": [
+      "google-a2a.github.io",
+      "github.com",
+      "modelcontextprotocol.io",
+      "openai.github.io",
+      "platform.openai.com",
+      "langchain-ai.github.io",
+      "microsoft.github.io",
+      "learn.microsoft.com",
+      "research.ibm.com",
+      "arxiv.org"
+    ],
+    "excluded_domains": [],
+    "minimum_evidence_tier": "B"
+  },
+  "knowledge_base": {
+    "local_first": true,
+    "allow_web_refresh": true,
+    "refresh_expired_sources": true,
+    "force_web_refresh": false
+  },
+  "output": {
+    "language": "zh-TW",
+    "format": ["markdown", "json"]
+  }
+}

@@ -1,0 +1,629 @@
+{
+  "topic_id": "a2a-agent-communication-ai-coding-team",
+  "updated_at": "2026-06-07T00:26:29+00:00",
+  "items": [
+    {
+      "queue_id": "Q-001",
+      "sequence": 1,
+      "target_type": "url",
+      "target": "https://a2a-protocol.org/",
+      "reason": "Google A2A official documentation landing page for agent-to-agent interoperability.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-003",
+        "RQ-006"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "completed",
+      "result_source_ids": [
+        "S-005"
+      ]
+    },
+    {
+      "queue_id": "Q-002",
+      "sequence": 2,
+      "target_type": "url",
+      "target": "https://a2a-protocol.org/latest/specification/",
+      "reason": "A2A official protocol specification: discovery, task lifecycle, messages, artifacts and transport semantics.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-003",
+        "RQ-006"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "completed",
+      "result_source_ids": [
+        "S-006"
+      ]
+    },
+    {
+      "queue_id": "Q-003",
+      "sequence": 3,
+      "target_type": "url",
+      "target": "https://github.com/a2aproject/A2A",
+      "reason": "A2A official GitHub repository, samples and implementation details.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-003",
+        "RQ-006",
+        "RQ-008"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "completed",
+      "result_source_ids": [
+        "S-001"
+      ]
+    },
+    {
+      "queue_id": "Q-004",
+      "sequence": 4,
+      "target_type": "url",
+      "target": "https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/",
+      "reason": "Google launch post explaining A2A motivation, enterprise interoperability and intended use cases.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-003"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "completed",
+      "result_source_ids": [
+        "S-002"
+      ]
+    },
+    {
+      "queue_id": "Q-005",
+      "sequence": 5,
+      "target_type": "url",
+      "target": "https://modelcontextprotocol.io/docs/getting-started/intro",
+      "reason": "Official MCP introduction to compare agent-to-tool context with agent-to-agent protocols.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-003",
+        "RQ-005"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "completed",
+      "result_source_ids": [
+        "S-003"
+      ]
+    },
+    {
+      "queue_id": "Q-006",
+      "sequence": 6,
+      "target_type": "url",
+      "target": "https://modelcontextprotocol.io/specification/2025-11-25",
+      "reason": "MCP latest official specification for transports, message model and protocol boundaries.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-003",
+        "RQ-006"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "completed",
+      "result_source_ids": [
+        "S-004"
+      ]
+    },
+    {
+      "queue_id": "Q-007",
+      "sequence": 7,
+      "target_type": "url",
+      "target": "https://github.com/modelcontextprotocol/modelcontextprotocol",
+      "reason": "Official MCP specification and documentation repository.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-003",
+        "RQ-005"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "completed",
+      "result_source_ids": [
+        "S-007"
+      ]
+    },
+    {
+      "queue_id": "Q-008",
+      "sequence": 8,
+      "target_type": "url",
+      "target": "https://openai.github.io/openai-agents-python/agents/",
+      "reason": "OpenAI Agents SDK official agent model: tools, guardrails, sessions, orchestration and handoffs.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-003",
+        "RQ-004",
+        "RQ-006"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "completed",
+      "result_source_ids": [
+        "S-008"
+      ]
+    },
+    {
+      "queue_id": "Q-009",
+      "sequence": 9,
+      "target_type": "url",
+      "target": "https://openai.github.io/openai-agents-python/handoffs/",
+      "reason": "OpenAI Agents SDK handoffs documentation, directly relevant to specialist agent transfer in coding teams.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-006"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "completed",
+      "result_source_ids": [
+        "S-009"
+      ]
+    },
+    {
+      "queue_id": "Q-010",
+      "sequence": 10,
+      "target_type": "url",
+      "target": "https://openai.github.io/openai-agents-python/tracing/",
+      "reason": "OpenAI Agents SDK tracing documentation for agent handoff observability and evidence.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-006",
+        "RQ-008"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "completed",
+      "result_source_ids": [
+        "S-010"
+      ]
+    },
+    {
+      "queue_id": "Q-011",
+      "sequence": 11,
+      "target_type": "url",
+      "target": "https://platform.openai.com/docs/guides/agents-sdk/",
+      "reason": "OpenAI platform guide for Agents SDK and production agent runtime positioning.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-008"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "pending"
+    },
+    {
+      "queue_id": "Q-012",
+      "sequence": 12,
+      "target_type": "url",
+      "target": "https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf",
+      "reason": "OpenAI practical guide includes handoff and multi-agent patterns useful for coding-team architecture.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-008"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "pending"
+    },
+    {
+      "queue_id": "Q-013",
+      "sequence": 13,
+      "target_type": "url",
+      "target": "https://langchain-ai.github.io/langgraph/concepts/multi_agent/",
+      "reason": "LangGraph official multi-agent concepts: supervisor, handoff, network and hierarchical patterns.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-006"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "completed",
+      "result_source_ids": [
+        "S-011"
+      ]
+    },
+    {
+      "queue_id": "Q-014",
+      "sequence": 14,
+      "target_type": "url",
+      "target": "https://github.com/langchain-ai/langgraph-supervisor",
+      "reason": "LangGraph supervisor reference implementation for team-style orchestration.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-008"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "pending"
+    },
+    {
+      "queue_id": "Q-015",
+      "sequence": 15,
+      "target_type": "url",
+      "target": "https://microsoft.github.io/autogen/docs/Use-Cases/agent_chat/",
+      "reason": "AutoGen official multi-agent conversation framework, relevant to coding team chat and role delegation.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-007"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "completed",
+      "result_source_ids": [
+        "S-012"
+      ]
+    },
+    {
+      "queue_id": "Q-016",
+      "sequence": 16,
+      "target_type": "url",
+      "target": "https://learn.microsoft.com/en-us/semantic-kernel/frameworks/agent/",
+      "reason": "Microsoft Semantic Kernel Agent Framework documentation for enterprise agent orchestration.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-008"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "completed",
+      "result_source_ids": [
+        "S-013"
+      ]
+    },
+    {
+      "queue_id": "Q-017",
+      "sequence": 17,
+      "target_type": "url",
+      "target": "https://research.ibm.com/projects/agent-communication-protocol",
+      "reason": "IBM ACP official project page for protocol comparison with A2A.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-003"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "completed",
+      "result_source_ids": [
+        "S-014"
+      ]
+    },
+    {
+      "queue_id": "Q-018",
+      "sequence": 18,
+      "target_type": "url",
+      "target": "https://github.com/i-am-bee/acp",
+      "reason": "ACP/BeeAI official repository and reference implementation.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-003",
+        "RQ-008"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "completed",
+      "result_source_ids": [
+        "S-015"
+      ]
+    },
+    {
+      "queue_id": "Q-019",
+      "sequence": 19,
+      "target_type": "url",
+      "target": "https://github.com/agent-network-protocol/AgentNetworkProtocol",
+      "reason": "ANP open-source protocol repository for identity, discovery and agent network comparison.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-003",
+        "RQ-005"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "completed",
+      "result_source_ids": [
+        "S-016"
+      ]
+    },
+    {
+      "queue_id": "Q-020",
+      "sequence": 20,
+      "target_type": "url",
+      "target": "https://github.com/ag-ui-protocol/ag-ui",
+      "reason": "AG-UI protocol repository to separate agent-to-user UI events from agent-to-agent coding-team communication.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-003",
+        "RQ-006"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "completed",
+      "result_source_ids": [
+        "S-017"
+      ]
+    },
+    {
+      "queue_id": "Q-021",
+      "sequence": 21,
+      "target_type": "url",
+      "target": "https://www.ibm.com/think/topics/ai-agent-protocols",
+      "reason": "IBM overview comparing A2A, MCP, ACP, ANP and AG-UI; useful as secondary synthesis source.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-003"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "pending"
+    },
+    {
+      "queue_id": "Q-022",
+      "sequence": 22,
+      "target_type": "search_query",
+      "target": "official CrewAI multi agent collaboration documentation coding team agents",
+      "reason": "Find current official CrewAI collaboration docs for role-based agent teamwork.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-008"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "pending"
+    },
+    {
+      "queue_id": "Q-023",
+      "sequence": 23,
+      "target_type": "search_query",
+      "target": "Pydantic AI multi agent handoff official documentation",
+      "reason": "Find official Pydantic AI multi-agent or delegation documentation for lightweight Python implementation comparison.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-008"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "pending"
+    },
+    {
+      "queue_id": "Q-024",
+      "sequence": 24,
+      "target_type": "search_query",
+      "target": "AGNTCY agent connect protocol official documentation agent communication",
+      "reason": "Find AGNTCY/AConP official docs for agent discovery, identity and communication comparison.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-003",
+        "RQ-005"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "pending"
+    },
+    {
+      "queue_id": "Q-025",
+      "sequence": 25,
+      "target_type": "search_query",
+      "target": "Anthropic building effective agents multi agent official article",
+      "reason": "Find Anthropic official guidance on when to use workflows, routing and multi-agent systems.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-008"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "pending"
+    },
+    {
+      "queue_id": "Q-026",
+      "sequence": 26,
+      "target_type": "search_query",
+      "target": "MCP security best practices official specification prompt injection tool poisoning",
+      "reason": "Find official MCP security guidance and threat boundaries.",
+      "related_question_ids": [
+        "RQ-005",
+        "RQ-006"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "pending"
+    },
+    {
+      "queue_id": "Q-027",
+      "sequence": 27,
+      "target_type": "search_query",
+      "target": "A2A protocol security authentication authorization official documentation",
+      "reason": "Find A2A security, auth and authorization model details.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-005",
+        "RQ-006"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "pending"
+    },
+    {
+      "queue_id": "Q-028",
+      "sequence": 28,
+      "target_type": "url",
+      "target": "https://arxiv.org/abs/2505.02279",
+      "reason": "Survey of agent interoperability protocols including MCP, ACP, A2A and ANP.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-003",
+        "RQ-007"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "pending"
+    },
+    {
+      "queue_id": "Q-029",
+      "sequence": 29,
+      "target_type": "search_query",
+      "target": "ChatDev communicative agents software development paper GitHub",
+      "reason": "Find original ChatDev paper and repository for AI software company / coding team pattern.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-007"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "pending"
+    },
+    {
+      "queue_id": "Q-030",
+      "sequence": 30,
+      "target_type": "search_query",
+      "target": "MetaGPT multi agent software development paper GitHub SOP coding agents",
+      "reason": "Find MetaGPT paper and repository for SOP-based multi-agent coding team.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-007",
+        "RQ-008"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "pending"
+    },
+    {
+      "queue_id": "Q-031",
+      "sequence": 31,
+      "target_type": "search_query",
+      "target": "AgentCoder multi agent code generation paper GitHub",
+      "reason": "Find AgentCoder material for programmer/tester/executor multi-agent coding loop.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-007"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "pending"
+    },
+    {
+      "queue_id": "Q-032",
+      "sequence": 32,
+      "target_type": "url",
+      "target": "https://www.swebench.com/",
+      "reason": "SWE-bench benchmark site for grounding AI coding performance evaluation.",
+      "related_question_ids": [
+        "RQ-007",
+        "RQ-008"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "pending"
+    },
+    {
+      "queue_id": "Q-033",
+      "sequence": 33,
+      "target_type": "url",
+      "target": "https://github.com/SWE-bench/SWE-bench",
+      "reason": "SWE-bench repository and task format for coding-agent benchmark design.",
+      "related_question_ids": [
+        "RQ-007",
+        "RQ-008"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "pending"
+    },
+    {
+      "queue_id": "Q-034",
+      "sequence": 34,
+      "target_type": "search_query",
+      "target": "multi agent coding benchmark software engineering agents paper 2025 2026",
+      "reason": "Discover recent benchmark studies specifically about multi-agent coding teams.",
+      "related_question_ids": [
+        "RQ-007"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "pending"
+    },
+    {
+      "queue_id": "Q-035",
+      "sequence": 35,
+      "target_type": "search_query",
+      "target": "AI coding agents team planner reviewer tester architecture open source",
+      "reason": "Discover practical open-source AI coding team implementations beyond protocol specs.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-008"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "pending"
+    },
+    {
+      "queue_id": "Q-036",
+      "sequence": 36,
+      "target_type": "search_query",
+      "target": "agent handoff trace observability multi agent coding official documentation",
+      "reason": "Find observability and trace sources for agent handoff evidence and debugging.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-006",
+        "RQ-008"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "pending"
+    },
+    {
+      "queue_id": "Q-037",
+      "sequence": 37,
+      "target_type": "search_query",
+      "target": "OWASP agentic AI security agent communication MCP A2A prompt injection",
+      "reason": "Find security controls for agent communication and tool-use attack surfaces.",
+      "related_question_ids": [
+        "RQ-005",
+        "RQ-006"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "pending"
+    },
+    {
+      "queue_id": "Q-038",
+      "sequence": 38,
+      "target_type": "search_query",
+      "target": "NIST AI agent security guidance autonomous agents tool use governance",
+      "reason": "Find governance references for AI agent deployment and risk management.",
+      "related_question_ids": [
+        "RQ-005",
+        "RQ-008"
+      ],
+      "added_by_step": "step_3_source_search",
+      "status": "pending"
+    },
+    {
+      "queue_id": "Q-039",
+      "sequence": 39,
+      "target_type": "local_gap",
+      "target": "Define AI coding team communication contract schema",
+      "reason": "After collecting sources, design message, task, artifact, evidence and trace schema for a minimal PoC.",
+      "related_question_ids": [
+        "RQ-006",
+        "RQ-008"
+      ],
+      "added_by_step": "step_7_conflict_resolution",
+      "status": "pending"
+    },
+    {
+      "queue_id": "Q-040",
+      "sequence": 40,
+      "target_type": "local_gap",
+      "target": "Compare A2A vs MCP vs framework handoff for coding-team PoC",
+      "reason": "Resolve architecture decision after protocol and framework evidence is curated.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-004",
+        "RQ-008"
+      ],
+      "added_by_step": "step_7_conflict_resolution",
+      "status": "pending"
+    },
+    {
+      "queue_id": "Q-041",
+      "sequence": 41,
+      "target_type": "url",
+      "target": "https://a2a-protocol.org/latest/",
+      "reason": "A2A official latest documentation page after canonical migration from google-a2a.github.io.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-003",
+        "RQ-006"
+      ],
+      "added_by_step": "step_4_source_capture",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [
+        "S-018"
+      ],
+      "notes": ""
+    }
+  ]
+}

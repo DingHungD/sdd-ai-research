@@ -1,0 +1,39 @@
+{
+  "source_id": "S-003",
+  "title": "Model Context Protocol Introduction",
+  "url": "https://modelcontextprotocol.io/docs/getting-started/intro",
+  "canonical_url": "https://modelcontextprotocol.io/docs/getting-started/intro",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:22:46+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T002246Z",
+      "local_path": "sources/S-003/raw/SNAP-20260607T002246Z.html",
+      "content_hash": "sha256:1a0012e50036e6755e5500d1679c230ce267a721590999cbcb402164d99311f6",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:22:46+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://modelcontextprotocol.io/docs/getting-started/intro",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:1a0012e50036e6755e5500d1679c230ce267a721590999cbcb402164d99311f6",
+  "locator": "local snapshot SNAP-20260607T002246Z",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:22:46+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  }
+}

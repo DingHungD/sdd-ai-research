@@ -1,0 +1,41 @@
+{
+  "source_id": "S-001",
+  "title": "A2A Official GitHub Repository",
+  "url": "https://github.com/a2aproject/A2A",
+  "canonical_url": "https://github.com/a2aproject/A2A",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:22:44+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T002244Z",
+      "local_path": "sources/S-001/raw/SNAP-20260607T002244Z.html",
+      "content_hash": "sha256:2284c43dbcd42c6470b85c018bc050e2bceb898f9ed5a95cd8ef14a592cf3db6",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:22:44+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/a2aproject/A2A",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:2284c43dbcd42c6470b85c018bc050e2bceb898f9ed5a95cd8ef14a592cf3db6",
+  "locator": "repository tree",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:22:44+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "commit_sha": "2e0a4e535e738ae12af2a757c7013cf60283fa71",
+  "immutable_url": "https://github.com/a2aproject/A2A/tree/2e0a4e535e738ae12af2a757c7013cf60283fa71",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "topic_id": "a2a-agent-communication-ai-coding-team",
+  "updated_at": "2026-06-07T00:26:29+00:00",
+  "sources": [
+    {
+      "source_id": "S-001",
+      "source_path": "sources/S-001/source.json",
+      "summary_path": "sources/S-001/summary.json",
+      "title": "A2A Official GitHub Repository",
+      "categories": [],
+      "keywords": [],
+      "recheck_after": "2026-07-07T00:22:44+00:00"
+    },
+    {
+      "source_id": "S-002",
+      "source_path": "sources/S-002/source.json",
+      "summary_path": "sources/S-002/summary.json",
+      "title": "A2A A New Era of Agent Interoperability",
+      "categories": [],
+      "keywords": [],
+      "recheck_after": "2026-07-07T00:22:45+00:00"
+    },
+    {
+      "source_id": "S-003",
+      "source_path": "sources/S-003/source.json",
+      "summary_path": "sources/S-003/summary.json",
+      "title": "Model Context Protocol Introduction",
+      "categories": [],
+      "keywords": [],
+      "recheck_after": "2026-07-07T00:22:46+00:00"
+    },
+    {
+      "source_id": "S-004",
+      "source_path": "sources/S-004/source.json",
+      "summary_path": "sources/S-004/summary.json",
+      "title": "Model Context Protocol Latest Specification",
+      "categories": [],
+      "keywords": [],
+      "recheck_after": "2026-07-07T00:22:48+00:00"
+    },
+    {
+      "source_id": "S-005",
+      "source_path": "sources/S-005/source.json",
+      "summary_path": "sources/S-005/summary.json",
+      "title": "A2A Protocol Official Documentation",
+      "categories": [],
+      "keywords": [],
+      "recheck_after": "2026-07-07T00:25:02+00:00"
+    },
+    {
+      "source_id": "S-006",
+      "source_path": "sources/S-006/source.json",
+      "summary_path": "sources/S-006/summary.json",
+      "title": "A2A Protocol Specification v1.0",
+      "categories": [],
+      "keywords": [],
+      "recheck_after": "2026-07-07T00:25:03+00:00"
+    },
+    {
+      "source_id": "S-007",
+      "source_path": "sources/S-007/source.json",
+      "summary_path": "sources/S-007/summary.json",
+      "title": "MCP Official Specification Repository",
+      "categories": [],
+      "keywords": [],
+      "recheck_after": "2026-07-07T00:25:30+00:00"
+    },
+    {
+      "source_id": "S-008",
+      "source_path": "sources/S-008/source.json",
+      "summary_path": "sources/S-008/summary.json",
+      "title": "OpenAI Agents SDK Agents",
+      "categories": [],
+      "keywords": [],
+      "recheck_after": "2026-07-07T00:25:31+00:00"
+    },
+    {
+      "source_id": "S-009",
+      "source_path": "sources/S-009/source.json",
+      "summary_path": "sources/S-009/summary.json",
+      "title": "OpenAI Agents SDK Handoffs",
+      "categories": [],
+      "keywords": [],
+      "recheck_after": "2026-07-07T00:25:31+00:00"
+    },
+    {
+      "source_id": "S-010",
+      "source_path": "sources/S-010/source.json",
+      "summary_path": "sources/S-010/summary.json",
+      "title": "OpenAI Agents SDK Tracing",
+      "categories": [],
+      "keywords": [],
+      "recheck_after": "2026-07-07T00:25:32+00:00"
+    },
+    {
+      "source_id": "S-011",
+      "source_path": "sources/S-011/source.json",
+      "summary_path": "sources/S-011/summary.json",
+      "title": "LangGraph Multi-Agent Concepts",
+      "categories": [],
+      "keywords": [],
+      "recheck_after": "2026-07-07T00:25:32+00:00"
+    },
+    {
+      "source_id": "S-012",
+      "source_path": "sources/S-012/source.json",
+      "summary_path": "sources/S-012/summary.json",
+      "title": "AutoGen Multi-agent Conversation Framework",
+      "categories": [],
+      "keywords": [],
+      "recheck_after": "2026-07-07T00:25:33+00:00"
+    },
+    {
+      "source_id": "S-013",
+      "source_path": "sources/S-013/source.json",
+      "summary_path": "sources/S-013/summary.json",
+      "title": "Semantic Kernel Agent Framework",
+      "categories": [],
+      "keywords": [],
+      "recheck_after": "2026-07-07T00:25:33+00:00"
+    },
+    {
+      "source_id": "S-014",
+      "source_path": "sources/S-014/source.json",
+      "summary_path": "sources/S-014/summary.json",
+      "title": "IBM Agent Communication Protocol",
+      "categories": [],
+      "keywords": [],
+      "recheck_after": "2026-07-07T00:25:35+00:00"
+    },
+    {
+      "source_id": "S-015",
+      "source_path": "sources/S-015/source.json",
+      "summary_path": "sources/S-015/summary.json",
+      "title": "ACP BeeAI Reference Repository",
+      "categories": [],
+      "keywords": [],
+      "recheck_after": "2026-07-07T00:25:36+00:00"
+    },
+    {
+      "source_id": "S-016",
+      "source_path": "sources/S-016/source.json",
+      "summary_path": "sources/S-016/summary.json",
+      "title": "Agent Network Protocol Repository",
+      "categories": [],
+      "keywords": [],
+      "recheck_after": "2026-07-07T00:25:37+00:00"
+    },
+    {
+      "source_id": "S-017",
+      "source_path": "sources/S-017/source.json",
+      "summary_path": "sources/S-017/summary.json",
+      "title": "AG-UI Protocol Repository",
+      "categories": [],
+      "keywords": [],
+      "recheck_after": "2026-07-07T00:25:38+00:00"
+    },
+    {
+      "source_id": "S-018",
+      "source_path": "sources/S-018/source.json",
+      "summary_path": "sources/S-018/summary.json",
+      "title": "A2A Protocol Latest Documentation",
+      "categories": [],
+      "keywords": [],
+      "recheck_after": "2026-07-07T00:26:28+00:00"
+    }
+  ]
+}

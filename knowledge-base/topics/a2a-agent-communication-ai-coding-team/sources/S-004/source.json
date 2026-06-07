@@ -1,0 +1,39 @@
+{
+  "source_id": "S-004",
+  "title": "Model Context Protocol Latest Specification",
+  "url": "https://modelcontextprotocol.io/specification/2025-11-25",
+  "canonical_url": "https://modelcontextprotocol.io/specification/2025-11-25",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:22:48+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T002248Z",
+      "local_path": "sources/S-004/raw/SNAP-20260607T002248Z.html",
+      "content_hash": "sha256:36d5bd2271bcc2e971b4f2f5b2446f5d7bbe327375975dee934b1d6d35a6cd0e",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:22:48+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://modelcontextprotocol.io/specification/2025-11-25",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:36d5bd2271bcc2e971b4f2f5b2446f5d7bbe327375975dee934b1d6d35a6cd0e",
+  "locator": "local snapshot SNAP-20260607T002248Z",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:22:48+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  }
+}

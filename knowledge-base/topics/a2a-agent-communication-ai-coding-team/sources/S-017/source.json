@@ -1,0 +1,41 @@
+{
+  "source_id": "S-017",
+  "title": "AG-UI Protocol Repository",
+  "url": "https://github.com/ag-ui-protocol/ag-ui",
+  "canonical_url": "https://github.com/ag-ui-protocol/ag-ui",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:25:38+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T002538Z",
+      "local_path": "sources/S-017/raw/SNAP-20260607T002538Z.html",
+      "content_hash": "sha256:6b477382cd2462aa1b42a58e922602a101ae67ef7ea47453eea61d151898b2b5",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:25:38+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/ag-ui-protocol/ag-ui",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:6b477382cd2462aa1b42a58e922602a101ae67ef7ea47453eea61d151898b2b5",
+  "locator": "repository tree",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:25:38+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "commit_sha": "6534ec43990a153d49fad7e91d635e154e9dd6f3",
+  "immutable_url": "https://github.com/ag-ui-protocol/ag-ui/tree/6534ec43990a153d49fad7e91d635e154e9dd6f3",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  }
+}

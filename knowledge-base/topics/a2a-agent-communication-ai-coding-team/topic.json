@@ -1,0 +1,69 @@
+{
+  "topic_id": "a2a-agent-communication-ai-coding-team",
+  "title": "A2A Agent 溝通（AI Coding 團隊）",
+  "description": "研究 AI coding team 中多個 agent 如何以 A2A、MCP、handoff、task lifecycle、artifact contract、shared state、trace 與 policy gate 進行可靠協作，並比較官方協定、開源框架與安全治理做法。",
+  "questions": [
+    {
+      "question_id": "RQ-001",
+      "text": "A2A、MCP、ACP、ANP、AG-UI 與 framework-level handoff 分別解決 AI coding team 溝通中的哪一層問題？"
+    },
+    {
+      "question_id": "RQ-002",
+      "text": "在 AI coding team 中，planner、architect、implementer、reviewer、tester、security agent 應該如何交接任務、上下文、產物與責任？"
+    },
+    {
+      "question_id": "RQ-003",
+      "text": "哪些協定或框架提供 discovery、agent card/capability、task lifecycle、streaming、artifacts、auth、trace 與 human-in-the-loop？"
+    },
+    {
+      "question_id": "RQ-004",
+      "text": "在 coding 團隊情境中，哪些架構模式最可靠：supervisor-worker、handoff、blackboard/shared memory、event bus、contract-net、hierarchical team 或 peer-to-peer？"
+    },
+    {
+      "question_id": "RQ-005",
+      "text": "A2A agent 溝通的主要安全風險是什麼，例如 prompt injection、tool poisoning、capability escalation、data exfiltration、identity/auth 與 supply-chain risk？"
+    },
+    {
+      "question_id": "RQ-006",
+      "text": "如何設計可落地的 AI coding team communication contract：message schema、task state、artifact schema、evidence bundle、trace ID、retry 與 failure handling？"
+    },
+    {
+      "question_id": "RQ-007",
+      "text": "有哪些 benchmark、案例或論文可衡量多 agent coding team 相比單 agent 的品質、成本、延遲、穩定性與維護負擔？"
+    },
+    {
+      "question_id": "RQ-008",
+      "text": "若要實作一個穩健的 AI coding team，最推薦的通訊架構與最小 PoC 應包含哪些組件？"
+    }
+  ],
+  "keywords": [
+    "Agent2Agent",
+    "A2A protocol",
+    "Model Context Protocol",
+    "MCP",
+    "Agent Communication Protocol",
+    "ACP",
+    "Agent Network Protocol",
+    "ANP",
+    "AG-UI",
+    "multi-agent coding",
+    "agent handoff",
+    "agent orchestration",
+    "AI coding team",
+    "supervisor worker agents",
+    "agent card",
+    "task lifecycle",
+    "artifact contract",
+    "agent traceability",
+    "agent security"
+  ],
+  "categories": [
+    "agent_interoperability",
+    "ai_coding_team",
+    "protocols",
+    "orchestration",
+    "security",
+    "benchmarks"
+  ],
+  "default_recheck_days": 14
+}

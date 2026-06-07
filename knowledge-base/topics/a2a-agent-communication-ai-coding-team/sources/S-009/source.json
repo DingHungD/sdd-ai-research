@@ -1,0 +1,39 @@
+{
+  "source_id": "S-009",
+  "title": "OpenAI Agents SDK Handoffs",
+  "url": "https://openai.github.io/openai-agents-python/handoffs/",
+  "canonical_url": "https://openai.github.io/openai-agents-python/handoffs/",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:25:31+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T002531Z",
+      "local_path": "sources/S-009/raw/SNAP-20260607T002531Z.html",
+      "content_hash": "sha256:289d2e4193ef3f81d932732676b2b5301d6ac7a31827c717d1e5a5d99f6b39ed",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:25:31+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://openai.github.io/openai-agents-python/handoffs/",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:289d2e4193ef3f81d932732676b2b5301d6ac7a31827c717d1e5a5d99f6b39ed",
+  "locator": "local snapshot SNAP-20260607T002531Z",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:25:31+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  }
+}

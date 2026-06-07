@@ -1,0 +1,39 @@
+{
+  "source_id": "S-014",
+  "title": "IBM Agent Communication Protocol",
+  "url": "https://research.ibm.com/projects/agent-communication-protocol",
+  "canonical_url": "https://research.ibm.com/projects/agent-communication-protocol",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:25:35+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T002535Z",
+      "local_path": "sources/S-014/raw/SNAP-20260607T002535Z.html",
+      "content_hash": "sha256:5c1f440d74924dd3b61489f6ecf779a6e57d2cc6ddb309f74c67e5300410baa3",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:25:35+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://research.ibm.com/projects/agent-communication-protocol",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:5c1f440d74924dd3b61489f6ecf779a6e57d2cc6ddb309f74c67e5300410baa3",
+  "locator": "local snapshot SNAP-20260607T002535Z",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:25:35+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  }
+}

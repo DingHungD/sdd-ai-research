@@ -1,0 +1,39 @@
+{
+  "source_id": "S-002",
+  "title": "A2A A New Era of Agent Interoperability",
+  "url": "https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/",
+  "canonical_url": "https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:22:45+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T002245Z",
+      "local_path": "sources/S-002/raw/SNAP-20260607T002245Z.html",
+      "content_hash": "sha256:9f1edf7e2f8625d831d8657e804e17f82b6a939f1f8887e8c7d835ebaa4b72b9",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:22:45+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:9f1edf7e2f8625d831d8657e804e17f82b6a939f1f8887e8c7d835ebaa4b72b9",
+  "locator": "local snapshot SNAP-20260607T002245Z",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:22:45+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  }
+}

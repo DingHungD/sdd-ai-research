@@ -1,0 +1,41 @@
+{
+  "source_id": "S-015",
+  "title": "ACP BeeAI Reference Repository",
+  "url": "https://github.com/i-am-bee/acp",
+  "canonical_url": "https://github.com/i-am-bee/acp",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:25:36+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T002536Z",
+      "local_path": "sources/S-015/raw/SNAP-20260607T002536Z.html",
+      "content_hash": "sha256:0da403fbd0709718f952ecd540636f36babbfd5d802ea30a23166cc8a4aed6c4",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:25:36+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/i-am-bee/acp",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:0da403fbd0709718f952ecd540636f36babbfd5d802ea30a23166cc8a4aed6c4",
+  "locator": "repository tree",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:25:36+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "commit_sha": "e5265ca9fa06c55cd011b1e81ee927f6d80af8f6",
+  "immutable_url": "https://github.com/i-am-bee/acp/tree/e5265ca9fa06c55cd011b1e81ee927f6d80af8f6",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  }
+}

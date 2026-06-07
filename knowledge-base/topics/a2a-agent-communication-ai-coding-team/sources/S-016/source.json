@@ -1,0 +1,41 @@
+{
+  "source_id": "S-016",
+  "title": "Agent Network Protocol Repository",
+  "url": "https://github.com/agent-network-protocol/AgentNetworkProtocol",
+  "canonical_url": "https://github.com/agent-network-protocol/AgentNetworkProtocol",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:25:37+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T002537Z",
+      "local_path": "sources/S-016/raw/SNAP-20260607T002537Z.html",
+      "content_hash": "sha256:bd85bc631d39bc37c3c590cb0373847564aae1f0017a4e9a2af9add8db419cc1",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:25:37+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/agent-network-protocol/AgentNetworkProtocol",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:bd85bc631d39bc37c3c590cb0373847564aae1f0017a4e9a2af9add8db419cc1",
+  "locator": "repository tree",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:25:37+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "commit_sha": "a0a7d2f2ee88464a1ecbcb1e3f8f63c730b846c0",
+  "immutable_url": "https://github.com/agent-network-protocol/AgentNetworkProtocol/tree/a0a7d2f2ee88464a1ecbcb1e3f8f63c730b846c0",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+  }
+}
