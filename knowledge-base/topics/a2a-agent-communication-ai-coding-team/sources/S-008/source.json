@@ -18,7 +18,10 @@
   "source_type": "official_documentation",
   "conflict_of_interest": "",
   "evidence_chain": "https://openai.github.io/openai-agents-python/agents/",
-  "supported_claim_ids": [],
+  "supported_claim_ids": [
+    "C-002",
+    "C-009"
+  ],
   "content_hash": "sha256:173204ee89032527c706adead79d0e87113a9a94a4f01b7a6ee8fe8323aa2b26",
   "locator": "local snapshot SNAP-20260607T002531Z",
   "freshness": {
@@ -34,6 +37,8 @@
     "transparency": "high",
     "independence": "medium",
     "reproducibility": "medium",
-    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "OpenAI Agents SDK agent model. It supports tools, instructions, guardrails, sessions, and orchestration primitives for same-runtime agent teams.",
+    "category": "Framework orchestration"
   }
 }

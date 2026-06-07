@@ -1,0 +1,7 @@
+# MetaGPT Multi-Agent Collaborative Framework Paper
+
+[2308.00352] MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework Skip to main content Learn about arXiv becoming an independent nonprofit. We gratefully acknowledge support from the Simons Foundation, member institutions , and all contributors. Donate > cs > arXiv:2308.00352 Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search GO quick links Login Help Pages About --> Computer Science > Artificial Intelligence arXiv:2308.00352 (cs) [Submitted on 1 Aug 2023 ( v1 ), last revised 1 Nov 2024 (this version, v7)] Title: MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework Authors: Sirui Hong , Mingchen Zhuge , Jiaqi Chen , Xiawu Zheng , Yuheng Cheng , Ceyao Zhang , Jinlin Wang , Zili Wang , Steven Ka Shing Yau , Zijuan Lin , Liyang Zhou , Chenyu Ran , Lingfeng Xiao , Chenglin Wu , Jürgen Schmidhuber View a PDF of the paper titled MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework, by Sirui Hong and 14 other authors View PDF HTML (experimental) Abstract: Remarkable progress has been made on 
+
+## Limitations
+
+- This is an initial machine-generated extraction and must be reviewed by an agent.

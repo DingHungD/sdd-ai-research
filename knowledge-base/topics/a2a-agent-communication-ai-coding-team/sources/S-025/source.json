@@ -1,0 +1,46 @@
+{
+  "source_id": "S-025",
+  "title": "SWE-bench Repository",
+  "url": "https://github.com/SWE-bench/SWE-bench",
+  "canonical_url": "https://github.com/SWE-bench/SWE-bench",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:39:44+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T003944Z",
+      "local_path": "sources/S-025/raw/SNAP-20260607T003944Z.html",
+      "content_hash": "sha256:564c20d58c25926b24bbe8b004a9aff660ffb6ad2cf8a9d8e00c48b04bf7977e",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:39:44+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/SWE-bench/SWE-bench",
+  "supported_claim_ids": [
+    "C-003",
+    "C-007"
+  ],
+  "content_hash": "sha256:564c20d58c25926b24bbe8b004a9aff660ffb6ad2cf8a9d8e00c48b04bf7977e",
+  "locator": "repository tree",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:39:44+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "commit_sha": "f7bbbb2ccdf479001d6467c9e34af59e44a840f9",
+  "immutable_url": "https://github.com/SWE-bench/SWE-bench/tree/f7bbbb2ccdf479001d6467c9e34af59e44a840f9",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "SWE-bench repository. Provides task format, harness, and reproducibility material for coding-agent benchmark design.",
+    "category": "Benchmarks"
+  }
+}

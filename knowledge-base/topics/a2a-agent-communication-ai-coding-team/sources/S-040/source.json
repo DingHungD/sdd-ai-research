@@ -1,0 +1,45 @@
+{
+  "source_id": "S-040",
+  "title": "OWASP MCP Top 10",
+  "url": "https://owasp.org/www-project-mcp-top-10/",
+  "canonical_url": "https://owasp.org/www-project-mcp-top-10/",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:42:01+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T004201Z",
+      "local_path": "sources/S-040/raw/SNAP-20260607T004201Z.html",
+      "content_hash": "sha256:6380ca5af4486b202f3121c497666625f9a41436419aa490f3c45caef11827c1",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:42:01+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://owasp.org/www-project-mcp-top-10/",
+  "supported_claim_ids": [
+    "C-003",
+    "C-009",
+    "C-010"
+  ],
+  "content_hash": "sha256:6380ca5af4486b202f3121c497666625f9a41436419aa490f3c45caef11827c1",
+  "locator": "local snapshot SNAP-20260607T004201Z",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:42:01+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "OWASP MCP Top 10. Key source for tool poisoning, excessive permissions, rug-pull risks, and MCP-specific controls.",
+    "category": "Security"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "source_id": "S-038",
+  "title": "MetaGPT Repository",
+  "url": "https://github.com/FoundationAgents/MetaGPT",
+  "canonical_url": "https://github.com/FoundationAgents/MetaGPT",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:42:00+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T004200Z",
+      "local_path": "sources/S-038/raw/SNAP-20260607T004200Z.html",
+      "content_hash": "sha256:acdaa4ea2df1e43550398e654f8c1bb035cbc729ba7281648db7054a60f6c5f9",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:42:00+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/FoundationAgents/MetaGPT",
+  "supported_claim_ids": [
+    "C-005"
+  ],
+  "content_hash": "sha256:acdaa4ea2df1e43550398e654f8c1bb035cbc729ba7281648db7054a60f6c5f9",
+  "locator": "repository tree",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:42:00+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "commit_sha": "11cdf466d042aece04fc6cfd13b28e1a70341b1f",
+  "immutable_url": "https://github.com/FoundationAgents/MetaGPT/tree/11cdf466d042aece04fc6cfd13b28e1a70341b1f",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "MetaGPT repository. Implementation reference for product manager, architect, engineer, and QA-style software company roles.",
+    "category": "Coding-team implementation"
+  }
+}

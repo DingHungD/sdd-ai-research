@@ -18,7 +18,9 @@
   "source_type": "official_documentation",
   "conflict_of_interest": "",
   "evidence_chain": "https://github.com/agent-network-protocol/AgentNetworkProtocol",
-  "supported_claim_ids": [],
+  "supported_claim_ids": [
+    "C-008"
+  ],
   "content_hash": "sha256:bd85bc631d39bc37c3c590cb0373847564aae1f0017a4e9a2af9add8db419cc1",
   "locator": "repository tree",
   "freshness": {
@@ -36,6 +38,8 @@
     "transparency": "high",
     "independence": "medium",
     "reproducibility": "high",
-    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "Agent Network Protocol repository. Useful for identity, discovery, and decentralized agent-network comparison.",
+    "category": "Adjacent protocols"
   }
 }

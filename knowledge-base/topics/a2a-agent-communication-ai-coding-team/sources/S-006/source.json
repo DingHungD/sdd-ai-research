@@ -18,7 +18,11 @@
   "source_type": "official_documentation",
   "conflict_of_interest": "",
   "evidence_chain": "https://a2a-protocol.org/latest/specification/",
-  "supported_claim_ids": [],
+  "supported_claim_ids": [
+    "C-001",
+    "C-003",
+    "C-009"
+  ],
   "content_hash": "sha256:afb8ce53ea6e6cdf03952fc3d27bb3c93f637eaba780adeb338c1d341e0d716f",
   "locator": "local snapshot SNAP-20260607T002503Z",
   "freshness": {
@@ -34,6 +38,8 @@
     "transparency": "high",
     "independence": "medium",
     "reproducibility": "medium",
-    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "A2A protocol specification v1.0. Main evidence for task lifecycle, AgentCard discovery, message parts, artifacts, events, and auth-related extension points.",
+    "category": "A2A core"
   }
 }

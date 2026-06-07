@@ -1,0 +1,44 @@
+{
+  "source_id": "S-024",
+  "title": "SWE-bench Official Site",
+  "url": "https://www.swebench.com/",
+  "canonical_url": "https://www.swebench.com/",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:39:43+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T003943Z",
+      "local_path": "sources/S-024/raw/SNAP-20260607T003943Z.html",
+      "content_hash": "sha256:ff68c33fb18e5a5fec203f431a8d069b584039b24ba7d9544b2b64e125104c69",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:39:43+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://www.swebench.com/",
+  "supported_claim_ids": [
+    "C-003",
+    "C-007"
+  ],
+  "content_hash": "sha256:ff68c33fb18e5a5fec203f431a8d069b584039b24ba7d9544b2b64e125104c69",
+  "locator": "local snapshot SNAP-20260607T003943Z",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:39:43+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "SWE-bench official site. Baseline for evaluating coding agents against real GitHub issues, but not sufficient by itself for multi-agent handoff quality.",
+    "category": "Benchmarks"
+  }
+}

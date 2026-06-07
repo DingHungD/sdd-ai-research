@@ -1,0 +1,45 @@
+{
+  "source_id": "S-039",
+  "title": "AgentCoder Multi-Agent Code Generation Paper",
+  "url": "https://arxiv.org/abs/2312.13010",
+  "canonical_url": "https://arxiv.org/abs/2312.13010",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:42:00+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T004200Z",
+      "local_path": "sources/S-039/raw/SNAP-20260607T004200Z.html",
+      "content_hash": "sha256:3ba6320aad7c69c808408ec55539b58b2872ed69d1a0e27cba9b58e167e7ee51",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:42:00+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://arxiv.org/abs/2312.13010",
+  "supported_claim_ids": [
+    "C-004",
+    "C-005",
+    "C-007"
+  ],
+  "content_hash": "sha256:3ba6320aad7c69c808408ec55539b58b2872ed69d1a0e27cba9b58e167e7ee51",
+  "locator": "local snapshot SNAP-20260607T004200Z",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:42:00+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "AgentCoder paper. Provides a programmer, test designer, and test executor loop for code generation and validation.",
+    "category": "Coding-team research"
+  }
+}

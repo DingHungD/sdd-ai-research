@@ -1,0 +1,43 @@
+{
+  "source_id": "S-027",
+  "title": "LangChain Multi-agent Handoffs",
+  "url": "https://docs.langchain.com/oss/python/langchain/multi-agent/handoffs",
+  "canonical_url": "https://docs.langchain.com/oss/python/langchain/multi-agent/handoffs",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:39:47+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T003947Z",
+      "local_path": "sources/S-027/raw/SNAP-20260607T003947Z.html",
+      "content_hash": "sha256:7986a9e16b9431f2b49eff9b24e416954cf7f905daa8a288922041f059028802",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:39:47+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://docs.langchain.com/oss/python/langchain/multi-agent/handoffs",
+  "supported_claim_ids": [
+    "C-002"
+  ],
+  "content_hash": "sha256:7986a9e16b9431f2b49eff9b24e416954cf7f905daa8a288922041f059028802",
+  "locator": "local snapshot SNAP-20260607T003947Z",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:39:47+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "LangChain handoffs documentation. Useful for active-agent switching and user-facing specialist transitions.",
+    "category": "Framework orchestration"
+  }
+}

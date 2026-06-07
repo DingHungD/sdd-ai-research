@@ -1,6 +1,6 @@
 {
   "topic_id": "a2a-agent-communication-ai-coding-team",
-  "updated_at": "2026-06-07T00:26:29+00:00",
+  "updated_at": "2026-06-07T00:53:43.461151+00:00",
   "items": [
     {
       "queue_id": "Q-001",
@@ -185,7 +185,10 @@
         "RQ-008"
       ],
       "added_by_step": "step_3_source_search",
-      "status": "pending"
+      "status": "completed",
+      "result_source_ids": [
+        "S-019"
+      ]
     },
     {
       "queue_id": "Q-012",
@@ -199,7 +202,10 @@
         "RQ-008"
       ],
       "added_by_step": "step_3_source_search",
-      "status": "pending"
+      "status": "completed",
+      "result_source_ids": [
+        "S-020"
+      ]
     },
     {
       "queue_id": "Q-013",
@@ -230,7 +236,10 @@
         "RQ-008"
       ],
       "added_by_step": "step_3_source_search",
-      "status": "pending"
+      "status": "completed",
+      "result_source_ids": [
+        "S-021"
+      ]
     },
     {
       "queue_id": "Q-015",
@@ -344,7 +353,10 @@
         "RQ-003"
       ],
       "added_by_step": "step_3_source_search",
-      "status": "pending"
+      "status": "completed",
+      "result_source_ids": [
+        "S-022"
+      ]
     },
     {
       "queue_id": "Q-022",
@@ -358,7 +370,12 @@
         "RQ-008"
       ],
       "added_by_step": "step_3_source_search",
-      "status": "pending"
+      "status": "completed",
+      "result_source_ids": [
+        "S-030",
+        "S-031"
+      ],
+      "notes": "Resolved by direct CrewAI official docs."
     },
     {
       "queue_id": "Q-023",
@@ -372,7 +389,11 @@
         "RQ-008"
       ],
       "added_by_step": "step_3_source_search",
-      "status": "pending"
+      "status": "completed",
+      "result_source_ids": [
+        "S-029"
+      ],
+      "notes": "Resolved by Pydantic AI official multi-agent guide."
     },
     {
       "queue_id": "Q-024",
@@ -386,7 +407,11 @@
         "RQ-005"
       ],
       "added_by_step": "step_3_source_search",
-      "status": "pending"
+      "status": "completed",
+      "result_source_ids": [
+        "S-032"
+      ],
+      "notes": "Resolved by AGNTCY ACP OpenAPI specification."
     },
     {
       "queue_id": "Q-025",
@@ -400,7 +425,12 @@
         "RQ-008"
       ],
       "added_by_step": "step_3_source_search",
-      "status": "pending"
+      "status": "completed",
+      "result_source_ids": [
+        "S-033",
+        "S-034"
+      ],
+      "notes": "Resolved by Anthropic effective agents pages."
     },
     {
       "queue_id": "Q-026",
@@ -413,7 +443,12 @@
         "RQ-006"
       ],
       "added_by_step": "step_3_source_search",
-      "status": "pending"
+      "status": "completed",
+      "result_source_ids": [
+        "S-040",
+        "S-042"
+      ],
+      "notes": "Resolved by OWASP MCP Top 10 and OWASP LLM Top 10."
     },
     {
       "queue_id": "Q-027",
@@ -427,7 +462,12 @@
         "RQ-006"
       ],
       "added_by_step": "step_3_source_search",
-      "status": "pending"
+      "status": "completed",
+      "result_source_ids": [
+        "S-006",
+        "S-018"
+      ],
+      "notes": "Resolved by A2A specification and latest docs."
     },
     {
       "queue_id": "Q-028",
@@ -441,7 +481,10 @@
         "RQ-007"
       ],
       "added_by_step": "step_3_source_search",
-      "status": "pending"
+      "status": "completed",
+      "result_source_ids": [
+        "S-023"
+      ]
     },
     {
       "queue_id": "Q-029",
@@ -455,7 +498,12 @@
         "RQ-007"
       ],
       "added_by_step": "step_3_source_search",
-      "status": "pending"
+      "status": "completed",
+      "result_source_ids": [
+        "S-035",
+        "S-036"
+      ],
+      "notes": "Resolved by ChatDev paper and repository."
     },
     {
       "queue_id": "Q-030",
@@ -470,7 +518,12 @@
         "RQ-008"
       ],
       "added_by_step": "step_3_source_search",
-      "status": "pending"
+      "status": "completed",
+      "result_source_ids": [
+        "S-037",
+        "S-038"
+      ],
+      "notes": "Resolved by MetaGPT paper and repository."
     },
     {
       "queue_id": "Q-031",
@@ -484,7 +537,11 @@
         "RQ-007"
       ],
       "added_by_step": "step_3_source_search",
-      "status": "pending"
+      "status": "completed",
+      "result_source_ids": [
+        "S-039"
+      ],
+      "notes": "Resolved by AgentCoder paper."
     },
     {
       "queue_id": "Q-032",
@@ -497,7 +554,10 @@
         "RQ-008"
       ],
       "added_by_step": "step_3_source_search",
-      "status": "pending"
+      "status": "completed",
+      "result_source_ids": [
+        "S-024"
+      ]
     },
     {
       "queue_id": "Q-033",
@@ -510,7 +570,10 @@
         "RQ-008"
       ],
       "added_by_step": "step_3_source_search",
-      "status": "pending"
+      "status": "completed",
+      "result_source_ids": [
+        "S-025"
+      ]
     },
     {
       "queue_id": "Q-034",
@@ -522,7 +585,15 @@
         "RQ-007"
       ],
       "added_by_step": "step_3_source_search",
-      "status": "pending"
+      "status": "completed",
+      "result_source_ids": [
+        "S-024",
+        "S-025",
+        "S-035",
+        "S-037",
+        "S-039"
+      ],
+      "notes": "Resolved with SWE-bench baseline plus coding-team research papers."
     },
     {
       "queue_id": "Q-035",
@@ -536,7 +607,13 @@
         "RQ-008"
       ],
       "added_by_step": "step_3_source_search",
-      "status": "pending"
+      "status": "completed",
+      "result_source_ids": [
+        "S-021",
+        "S-036",
+        "S-038"
+      ],
+      "notes": "Resolved with LangGraph supervisor, ChatDev, and MetaGPT implementations."
     },
     {
       "queue_id": "Q-036",
@@ -550,7 +627,12 @@
         "RQ-008"
       ],
       "added_by_step": "step_3_source_search",
-      "status": "pending"
+      "status": "completed",
+      "result_source_ids": [
+        "S-010",
+        "S-028"
+      ],
+      "notes": "Resolved with tracing and durable graph execution sources."
     },
     {
       "queue_id": "Q-037",
@@ -563,7 +645,15 @@
         "RQ-006"
       ],
       "added_by_step": "step_3_source_search",
-      "status": "pending"
+      "status": "completed",
+      "result_source_ids": [
+        "S-040",
+        "S-041",
+        "S-042",
+        "S-044",
+        "S-045"
+      ],
+      "notes": "Resolved with OWASP and prompt-injection research."
     },
     {
       "queue_id": "Q-038",
@@ -576,7 +666,11 @@
         "RQ-008"
       ],
       "added_by_step": "step_3_source_search",
-      "status": "pending"
+      "status": "completed",
+      "result_source_ids": [
+        "S-043"
+      ],
+      "notes": "Resolved with NIST AI RMF."
     },
     {
       "queue_id": "Q-039",
@@ -589,7 +683,9 @@
         "RQ-008"
       ],
       "added_by_step": "step_7_conflict_resolution",
-      "status": "pending"
+      "status": "completed",
+      "result_source_ids": [],
+      "notes": "Resolved in report Minimal Communication Contract section."
     },
     {
       "queue_id": "Q-040",
@@ -603,7 +699,9 @@
         "RQ-008"
       ],
       "added_by_step": "step_7_conflict_resolution",
-      "status": "pending"
+      "status": "completed",
+      "result_source_ids": [],
+      "notes": "Resolved in report Recommended Architecture and resolution matrix."
     },
     {
       "queue_id": "Q-041",
@@ -622,6 +720,418 @@
       "discovered_from": null,
       "result_source_ids": [
         "S-018"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-042",
+      "sequence": 42,
+      "target_type": "url",
+      "target": "https://docs.langchain.com/oss/python/langchain/multi-agent/index",
+      "reason": "LangChain current multi-agent patterns documentation: subagents, handoffs, skills, router and custom workflows.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-006"
+      ],
+      "added_by_step": "step_4_source_capture",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [
+        "S-026"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-043",
+      "sequence": 43,
+      "target_type": "url",
+      "target": "https://docs.langchain.com/oss/python/langchain/multi-agent/handoffs",
+      "reason": "LangChain current handoffs documentation with context engineering guidance for agent transfers.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-006"
+      ],
+      "added_by_step": "step_4_source_capture",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [
+        "S-027"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-044",
+      "sequence": 44,
+      "target_type": "url",
+      "target": "https://docs.langchain.com/oss/python/langgraph",
+      "reason": "LangGraph current overview for durable execution, streaming, state and human-in-the-loop.",
+      "related_question_ids": [
+        "RQ-003",
+        "RQ-004",
+        "RQ-008"
+      ],
+      "added_by_step": "step_4_source_capture",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [
+        "S-028"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-045",
+      "sequence": 45,
+      "target_type": "url",
+      "target": "https://pydantic.dev/docs/ai/guides/multi-agent-applications/",
+      "reason": "Pydantic AI official multi-agent patterns including delegation, handoff and graph control flow.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-008"
+      ],
+      "added_by_step": "step_4_source_capture",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [
+        "S-029"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-046",
+      "sequence": 46,
+      "target_type": "url",
+      "target": "https://docs.crewai.com/introduction",
+      "reason": "CrewAI official introduction to crews and flows for production multi-agent systems.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-008"
+      ],
+      "added_by_step": "step_4_source_capture",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [
+        "S-030"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-047",
+      "sequence": 47,
+      "target_type": "url",
+      "target": "https://docs.crewai.com/concepts/crews",
+      "reason": "CrewAI official crews concept page for collaborative groups of role-based agents.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-008"
+      ],
+      "added_by_step": "step_4_source_capture",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [
+        "S-031"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-048",
+      "sequence": 48,
+      "target_type": "url",
+      "target": "https://docs.agntcy.org/syntactic/connect/",
+      "reason": "AGNTCY Agent Connect Protocol documentation for remote agent invocation, descriptors, runs, interrupts and streaming.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-003",
+        "RQ-005"
+      ],
+      "added_by_step": "step_4_source_capture",
+      "status": "skipped",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [],
+      "notes": "AGNTCY details were covered by Q-049 / S-032; this docs page remains optional for a future refresh."
+    },
+    {
+      "queue_id": "Q-049",
+      "sequence": 49,
+      "target_type": "url",
+      "target": "https://spec.acp.agntcy.org/",
+      "reason": "AGNTCY Agent Connect Protocol OpenAPI specification.",
+      "related_question_ids": [
+        "RQ-001",
+        "RQ-003",
+        "RQ-006"
+      ],
+      "added_by_step": "step_4_source_capture",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [
+        "S-032"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-050",
+      "sequence": 50,
+      "target_type": "url",
+      "target": "https://www.anthropic.com/engineering/building-effective-agents",
+      "reason": "Anthropic official guidance on workflows, routing, orchestrator-workers and evaluator-optimizer agent patterns.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-008"
+      ],
+      "added_by_step": "step_4_source_capture",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [
+        "S-033"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-051",
+      "sequence": 51,
+      "target_type": "url",
+      "target": "https://resources.anthropic.com/building-effective-ai-agents",
+      "reason": "Anthropic resources page for building effective agents with workflow and multi-agent architecture guidance.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-008"
+      ],
+      "added_by_step": "step_4_source_capture",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [
+        "S-034"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-052",
+      "sequence": 52,
+      "target_type": "url",
+      "target": "https://arxiv.org/abs/2307.07924",
+      "reason": "ChatDev paper: communicative agents for software development.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-007"
+      ],
+      "added_by_step": "step_4_source_capture",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [
+        "S-035"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-053",
+      "sequence": 53,
+      "target_type": "url",
+      "target": "https://github.com/OpenBMB/ChatDev",
+      "reason": "ChatDev official repository for virtual software company implementation.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-008"
+      ],
+      "added_by_step": "step_4_source_capture",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [
+        "S-036"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-054",
+      "sequence": 54,
+      "target_type": "url",
+      "target": "https://arxiv.org/abs/2308.00352",
+      "reason": "MetaGPT paper: SOP-based multi-agent collaborative framework.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-007"
+      ],
+      "added_by_step": "step_4_source_capture",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [
+        "S-037"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-055",
+      "sequence": 55,
+      "target_type": "url",
+      "target": "https://github.com/FoundationAgents/MetaGPT",
+      "reason": "MetaGPT official repository for AI software company and SOP team implementation.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-008"
+      ],
+      "added_by_step": "step_4_source_capture",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [
+        "S-038"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-056",
+      "sequence": 56,
+      "target_type": "url",
+      "target": "https://arxiv.org/abs/2312.13010",
+      "reason": "AgentCoder paper: programmer, test designer and test executor multi-agent code generation.",
+      "related_question_ids": [
+        "RQ-002",
+        "RQ-004",
+        "RQ-007"
+      ],
+      "added_by_step": "step_4_source_capture",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [
+        "S-039"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-057",
+      "sequence": 57,
+      "target_type": "url",
+      "target": "https://owasp.org/www-project-mcp-top-10/",
+      "reason": "OWASP MCP Top 10 for tool poisoning and MCP-specific agent risk.",
+      "related_question_ids": [
+        "RQ-005",
+        "RQ-006"
+      ],
+      "added_by_step": "step_4_source_capture",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [
+        "S-040"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-058",
+      "sequence": 58,
+      "target_type": "url",
+      "target": "https://owasp.org/www-project-agentic-skills-top-10/",
+      "reason": "OWASP Agentic Skills Top 10 for skill-layer risks in agent platforms.",
+      "related_question_ids": [
+        "RQ-005",
+        "RQ-006"
+      ],
+      "added_by_step": "step_4_source_capture",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [
+        "S-041"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-059",
+      "sequence": 59,
+      "target_type": "url",
+      "target": "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
+      "reason": "OWASP LLM Top 10 project for baseline LLM application risks including prompt injection and excessive agency.",
+      "related_question_ids": [
+        "RQ-005",
+        "RQ-006"
+      ],
+      "added_by_step": "step_4_source_capture",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [
+        "S-042"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-060",
+      "sequence": 60,
+      "target_type": "url",
+      "target": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "reason": "NIST AI RMF for governance baseline and trustworthy AI risk management.",
+      "related_question_ids": [
+        "RQ-005",
+        "RQ-008"
+      ],
+      "added_by_step": "step_4_source_capture",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [
+        "S-043"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-061",
+      "sequence": 61,
+      "target_type": "url",
+      "target": "https://arxiv.org/abs/2601.17548",
+      "reason": "Prompt injection attacks on agentic coding assistants across skills, tools and protocol ecosystems.",
+      "related_question_ids": [
+        "RQ-005",
+        "RQ-007"
+      ],
+      "added_by_step": "step_4_source_capture",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [
+        "S-044"
+      ],
+      "notes": ""
+    },
+    {
+      "queue_id": "Q-062",
+      "sequence": 62,
+      "target_type": "url",
+      "target": "https://arxiv.org/abs/2509.22040",
+      "reason": "AIShellJack paper on prompt injection attacks against agentic coding editors.",
+      "related_question_ids": [
+        "RQ-005",
+        "RQ-007"
+      ],
+      "added_by_step": "step_4_source_capture",
+      "status": "completed",
+      "priority_override": false,
+      "discovered_from": null,
+      "result_source_ids": [
+        "S-045"
       ],
       "notes": ""
     }

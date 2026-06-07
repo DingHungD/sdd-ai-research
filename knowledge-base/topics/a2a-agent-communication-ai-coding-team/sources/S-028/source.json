@@ -1,0 +1,45 @@
+{
+  "source_id": "S-028",
+  "title": "LangGraph Overview",
+  "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+  "canonical_url": "https://docs.langchain.com/oss/python/langgraph/overview",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:39:48+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T003948Z",
+      "local_path": "sources/S-028/raw/SNAP-20260607T003948Z.html",
+      "content_hash": "sha256:d5cebdfb29b4a48fe9e80bc26622ef5e47886bc75afa4c77c9f1b98e6120ad69",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:39:48+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://docs.langchain.com/oss/python/langgraph/overview",
+  "supported_claim_ids": [
+    "C-002",
+    "C-003",
+    "C-009"
+  ],
+  "content_hash": "sha256:d5cebdfb29b4a48fe9e80bc26622ef5e47886bc75afa4c77c9f1b98e6120ad69",
+  "locator": "local snapshot SNAP-20260607T003948Z",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:39:48+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "LangGraph overview. Strong evidence for durable execution, persistence, streaming, human-in-the-loop, and stateful agent graphs.",
+    "category": "Framework orchestration"
+  }
+}

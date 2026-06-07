@@ -1,0 +1,44 @@
+{
+  "source_id": "S-022",
+  "title": "IBM What Are AI Agent Protocols",
+  "url": "https://www.ibm.com/think/topics/ai-agent-protocols",
+  "canonical_url": "https://www.ibm.com/think/topics/ai-agent-protocols",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:39:41+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T003941Z",
+      "local_path": "sources/S-022/raw/SNAP-20260607T003941Z.html",
+      "content_hash": "sha256:8524b4a19887d6c40a0232092e1ce9a705b5858de7c40573d2e2f9624f9251f2",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:39:41+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://www.ibm.com/think/topics/ai-agent-protocols",
+  "supported_claim_ids": [
+    "C-001",
+    "C-008"
+  ],
+  "content_hash": "sha256:8524b4a19887d6c40a0232092e1ce9a705b5858de7c40573d2e2f9624f9251f2",
+  "locator": "local snapshot SNAP-20260607T003941Z",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:39:41+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "IBM overview of AI agent protocols. Secondary synthesis comparing A2A, MCP, ACP, ANP, and AG-UI.",
+    "category": "Protocol synthesis"
+  }
+}

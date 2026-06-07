@@ -18,7 +18,9 @@
   "source_type": "official_documentation",
   "conflict_of_interest": "",
   "evidence_chain": "https://github.com/i-am-bee/acp",
-  "supported_claim_ids": [],
+  "supported_claim_ids": [
+    "C-008"
+  ],
   "content_hash": "sha256:0da403fbd0709718f952ecd540636f36babbfd5d802ea30a23166cc8a4aed6c4",
   "locator": "repository tree",
   "freshness": {
@@ -36,6 +38,8 @@
     "transparency": "high",
     "independence": "medium",
     "reproducibility": "high",
-    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "BeeAI ACP repository. Provides practical protocol and reference implementation material for agent-to-agent communication comparison.",
+    "category": "Adjacent protocols"
   }
 }

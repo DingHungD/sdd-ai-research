@@ -18,7 +18,10 @@
   "source_type": "official_documentation",
   "conflict_of_interest": "",
   "evidence_chain": "https://modelcontextprotocol.io/specification/2025-11-25",
-  "supported_claim_ids": [],
+  "supported_claim_ids": [
+    "C-001",
+    "C-009"
+  ],
   "content_hash": "sha256:36d5bd2271bcc2e971b4f2f5b2446f5d7bbe327375975dee934b1d6d35a6cd0e",
   "locator": "local snapshot SNAP-20260607T002248Z",
   "freshness": {
@@ -34,6 +37,8 @@
     "transparency": "high",
     "independence": "medium",
     "reproducibility": "medium",
-    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "MCP 2025-11-25 specification. It grounds transport, tool/resource/prompt capability exposure, and host/client/server security boundaries.",
+    "category": "MCP comparison"
   }
 }

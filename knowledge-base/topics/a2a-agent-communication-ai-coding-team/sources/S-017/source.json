@@ -18,7 +18,9 @@
   "source_type": "official_documentation",
   "conflict_of_interest": "",
   "evidence_chain": "https://github.com/ag-ui-protocol/ag-ui",
-  "supported_claim_ids": [],
+  "supported_claim_ids": [
+    "C-008"
+  ],
   "content_hash": "sha256:6b477382cd2462aa1b42a58e922602a101ae67ef7ea47453eea61d151898b2b5",
   "locator": "repository tree",
   "freshness": {
@@ -36,6 +38,8 @@
     "transparency": "high",
     "independence": "medium",
     "reproducibility": "high",
-    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "AG-UI protocol repository. Separates agent-to-user UI event streams from agent-to-agent task communication.",
+    "category": "Adjacent protocols"
   }
 }

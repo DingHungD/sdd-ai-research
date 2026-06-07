@@ -18,7 +18,9 @@
   "source_type": "official_documentation",
   "conflict_of_interest": "",
   "evidence_chain": "https://research.ibm.com/projects/agent-communication-protocol",
-  "supported_claim_ids": [],
+  "supported_claim_ids": [
+    "C-008"
+  ],
   "content_hash": "sha256:5c1f440d74924dd3b61489f6ecf779a6e57d2cc6ddb309f74c67e5300410baa3",
   "locator": "local snapshot SNAP-20260607T002535Z",
   "freshness": {
@@ -34,6 +36,8 @@
     "transparency": "high",
     "independence": "medium",
     "reproducibility": "medium",
-    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "IBM ACP project page. It positions ACP as an agent communication protocol and notes convergence with A2A under the Linux Foundation ecosystem.",
+    "category": "Adjacent protocols"
   }
 }

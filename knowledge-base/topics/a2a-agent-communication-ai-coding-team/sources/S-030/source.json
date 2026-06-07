@@ -1,0 +1,43 @@
+{
+  "source_id": "S-030",
+  "title": "CrewAI Introduction",
+  "url": "https://docs.crewai.com/en/introduction",
+  "canonical_url": "https://docs.crewai.com/en/introduction",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:39:52+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T003952Z",
+      "local_path": "sources/S-030/raw/SNAP-20260607T003952Z.html",
+      "content_hash": "sha256:f5f5bb8f2ca8ed241c38839f9a594ebd7e1055c0ac6e9b77a9f0a2c0f568de12",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:39:52+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://docs.crewai.com/en/introduction",
+  "supported_claim_ids": [
+    "C-004"
+  ],
+  "content_hash": "sha256:f5f5bb8f2ca8ed241c38839f9a594ebd7e1055c0ac6e9b77a9f0a2c0f568de12",
+  "locator": "local snapshot SNAP-20260607T003952Z",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:39:52+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "CrewAI introduction. Production multi-agent framework focused on crews, flows, role/task modeling, and operational deployment.",
+    "category": "Framework orchestration"
+  }
+}

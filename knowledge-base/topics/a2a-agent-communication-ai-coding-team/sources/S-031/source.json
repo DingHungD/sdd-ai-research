@@ -1,0 +1,44 @@
+{
+  "source_id": "S-031",
+  "title": "CrewAI Crews",
+  "url": "https://docs.crewai.com/en/concepts/crews",
+  "canonical_url": "https://docs.crewai.com/en/concepts/crews",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:39:55+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T003955Z",
+      "local_path": "sources/S-031/raw/SNAP-20260607T003955Z.html",
+      "content_hash": "sha256:0a7087f9954fa6ac32a231367c5dabd8bbc887409840efd9d304e300464ef28e",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:39:55+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://docs.crewai.com/en/concepts/crews",
+  "supported_claim_ids": [
+    "C-004",
+    "C-005"
+  ],
+  "content_hash": "sha256:0a7087f9954fa6ac32a231367c5dabd8bbc887409840efd9d304e300464ef28e",
+  "locator": "local snapshot SNAP-20260607T003955Z",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:39:55+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "CrewAI crews concept page. Direct evidence for collaborative role-based agents, tasks, processes, and hierarchical execution.",
+    "category": "Framework orchestration"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "source_id": "S-023",
+  "title": "Survey of Agent Interoperability Protocols",
+  "url": "https://arxiv.org/abs/2505.02279",
+  "canonical_url": "https://arxiv.org/abs/2505.02279",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:39:42+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T003942Z",
+      "local_path": "sources/S-023/raw/SNAP-20260607T003942Z.html",
+      "content_hash": "sha256:cdb45c8244504c0e9abddbe615cd66ce00390d83d06044da2efda1749ea7e156",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:39:42+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://arxiv.org/abs/2505.02279",
+  "supported_claim_ids": [
+    "C-001",
+    "C-008"
+  ],
+  "content_hash": "sha256:cdb45c8244504c0e9abddbe615cd66ce00390d83d06044da2efda1749ea7e156",
+  "locator": "local snapshot SNAP-20260607T003942Z",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:39:42+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "Survey of agent interoperability protocols. Academic comparison source for MCP, ACP, A2A, ANP, and protocol design dimensions.",
+    "category": "Protocol synthesis"
+  }
+}

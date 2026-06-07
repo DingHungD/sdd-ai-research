@@ -18,7 +18,9 @@
   "source_type": "official_documentation",
   "conflict_of_interest": "",
   "evidence_chain": "https://a2a-protocol.org/latest/",
-  "supported_claim_ids": [],
+  "supported_claim_ids": [
+    "C-001"
+  ],
   "content_hash": "sha256:6fa9d81dcd3368b8881ef8eb38d7879dc05113a93f5f25f5fc441e738def2fe9",
   "locator": "local snapshot SNAP-20260607T002628Z",
   "freshness": {
@@ -34,6 +36,8 @@
     "transparency": "high",
     "independence": "medium",
     "reproducibility": "medium",
-    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "A2A latest docs page. Canonical replacement for older pages and useful for current navigation.",
+    "category": "A2A core"
   }
 }

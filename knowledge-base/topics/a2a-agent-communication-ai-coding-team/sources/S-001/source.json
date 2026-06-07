@@ -18,7 +18,10 @@
   "source_type": "official_documentation",
   "conflict_of_interest": "",
   "evidence_chain": "https://github.com/a2aproject/A2A",
-  "supported_claim_ids": [],
+  "supported_claim_ids": [
+    "C-001",
+    "C-009"
+  ],
   "content_hash": "sha256:2284c43dbcd42c6470b85c018bc050e2bceb898f9ed5a95cd8ef14a592cf3db6",
   "locator": "repository tree",
   "freshness": {
@@ -36,6 +39,8 @@
     "transparency": "high",
     "independence": "medium",
     "reproducibility": "high",
-    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "A2A official repository. It anchors AgentCard, task, message, artifact, streaming, sample implementation, and protocol governance details.",
+    "category": "A2A core"
   }
 }

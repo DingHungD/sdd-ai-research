@@ -1,0 +1,43 @@
+{
+  "source_id": "S-021",
+  "title": "LangGraph Supervisor Repository",
+  "url": "https://github.com/langchain-ai/langgraph-supervisor-py",
+  "canonical_url": "https://github.com/langchain-ai/langgraph-supervisor-py",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:39:39+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T003939Z",
+      "local_path": "sources/S-021/raw/SNAP-20260607T003939Z.html",
+      "content_hash": "sha256:bcbdf7ea7474f604fd9f801a487a36706b27c18402a0edd4b493c7944e57a0ad",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:39:39+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/langchain-ai/langgraph-supervisor-py",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:bcbdf7ea7474f604fd9f801a487a36706b27c18402a0edd4b493c7944e57a0ad",
+  "locator": "repository tree",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:39:39+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "commit_sha": "997ea191a88a367bb577cf448bcf252b64e001aa",
+  "immutable_url": "https://github.com/langchain-ai/langgraph-supervisor-py/tree/997ea191a88a367bb577cf448bcf252b64e001aa",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "LangGraph supervisor repository. Gives a concrete supervisor/team implementation pattern for routing work among specialist agents.",
+    "category": "Framework orchestration"
+  }
+}

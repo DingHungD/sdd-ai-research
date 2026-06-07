@@ -18,7 +18,9 @@
   "source_type": "official_documentation",
   "conflict_of_interest": "",
   "evidence_chain": "https://modelcontextprotocol.io/docs/getting-started/intro",
-  "supported_claim_ids": [],
+  "supported_claim_ids": [
+    "C-001"
+  ],
   "content_hash": "sha256:1a0012e50036e6755e5500d1679c230ce267a721590999cbcb402164d99311f6",
   "locator": "local snapshot SNAP-20260607T002246Z",
   "freshness": {
@@ -34,6 +36,8 @@
     "transparency": "high",
     "independence": "medium",
     "reproducibility": "medium",
-    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "Official MCP introduction. It defines MCP as a model-to-context/tool/resource protocol, which is complementary rather than equivalent to A2A.",
+    "category": "MCP comparison"
   }
 }

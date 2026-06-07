@@ -1,0 +1,44 @@
+{
+  "source_id": "S-043",
+  "title": "NIST AI Risk Management Framework",
+  "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+  "canonical_url": "https://www.nist.gov/itl/ai-risk-management-framework",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:42:03+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T004203Z",
+      "local_path": "sources/S-043/raw/SNAP-20260607T004203Z.html",
+      "content_hash": "sha256:bc36a6ea623d6bf7b8b35a5e4829f7c003ff875cac4839eb2cfdfeb8c0cbf480",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:42:03+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://www.nist.gov/itl/ai-risk-management-framework",
+  "supported_claim_ids": [
+    "C-003",
+    "C-009"
+  ],
+  "content_hash": "sha256:bc36a6ea623d6bf7b8b35a5e4829f7c003ff875cac4839eb2cfdfeb8c0cbf480",
+  "locator": "local snapshot SNAP-20260607T004203Z",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:42:03+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "NIST AI Risk Management Framework. Governance baseline for trustworthy, risk-managed deployment of AI agent systems.",
+    "category": "Governance"
+  }
+}

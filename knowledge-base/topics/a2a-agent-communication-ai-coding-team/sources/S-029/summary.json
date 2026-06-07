@@ -1,0 +1,15 @@
+{
+  "source_id": "S-029",
+  "snapshot_id": "SNAP-20260607T003950Z",
+  "summarized_at": "2026-06-07T00:39:50+00:00",
+  "document_purpose": "Initial machine summary for official_documentation. Agent review required.",
+  "summary": "Multi-Agent Patterns | Pydantic Docs const d=\"sl-sidebar-state\";function l(){return document.querySelector(\"sl-sidebar-state-persist\")}function u(){return document.getElementById(\"starlight__sidebar\")}function f(t){try{const e=JSON.parse(sessionStorage.getItem(d)||\"{}\");if(e.hash===t&&Array.isArray(e.open))return e}catch{}return null}function c(){const t=l(),e=u();if(!t)return;const a=t.dataset.hash||\"\",o=[];t.querySelectorAll(\"sl-sidebar-restore\").forEach(r=>{const s=parseInt(r.dataset.index||\"\"),n=r.closest(\"details\");!isNaN(s)&&n&&(o[s]=n.open)});try{sessionStorage.setItem(d,JSON.stringify({hash:a,open:o,scroll:e?.scrollTop||0}))}catch{}}function h(){if(!matchMedia(\"(min-width: 50em)\").matches)return;const t=l();if(!t)return;const e=t.dataset.hash||\"\",a=f(e);if(!a)return;t.querySelectorAll(\"sl-sidebar-restore\").forEach(s=>{const n=parseInt(s.dataset.index||\"\"),i=s.closest(\"details\");i&&typeof a.open[n]==\"boolean\"&&(i.open=a.open[n])});const o=t.querySelector('[aria-current=\"page\"]');if(!o)return;let r=o.parentElement;for(;r&&r!==t;)r instanceof HTMLDetailsElement&&(r.open=!0),r=r.parentElement}document.addEventListener(\"astro:before-swap\",()=>c());addEventListener(\"visibilitycha",
+  "categories": [],
+  "key_points": [],
+  "keywords": [],
+  "entities": [],
+  "limitations": [
+    "This is an initial machine-generated extraction and must be reviewed by an agent."
+  ],
+  "potential_questions": []
+}

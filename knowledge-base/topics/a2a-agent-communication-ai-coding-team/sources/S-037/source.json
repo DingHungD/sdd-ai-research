@@ -1,0 +1,45 @@
+{
+  "source_id": "S-037",
+  "title": "MetaGPT Multi-Agent Collaborative Framework Paper",
+  "url": "https://arxiv.org/abs/2308.00352",
+  "canonical_url": "https://arxiv.org/abs/2308.00352",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:41:59+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T004159Z",
+      "local_path": "sources/S-037/raw/SNAP-20260607T004159Z.html",
+      "content_hash": "sha256:439090d1aedfe02dbf071f9165ca9461c9413d636a596c71eb3edb31335bce44",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:41:59+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://arxiv.org/abs/2308.00352",
+  "supported_claim_ids": [
+    "C-004",
+    "C-005",
+    "C-007"
+  ],
+  "content_hash": "sha256:439090d1aedfe02dbf071f9165ca9461c9413d636a596c71eb3edb31335bce44",
+  "locator": "local snapshot SNAP-20260607T004159Z",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:41:59+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "MetaGPT paper. Shows SOP-oriented multi-agent collaboration that translates requirements into structured software artifacts.",
+    "category": "Coding-team research"
+  }
+}

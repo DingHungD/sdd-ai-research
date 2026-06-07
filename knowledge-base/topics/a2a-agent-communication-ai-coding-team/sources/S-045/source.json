@@ -1,0 +1,45 @@
+{
+  "source_id": "S-045",
+  "title": "AIShellJack Prompt Injection Attacks on Coding Editors",
+  "url": "https://arxiv.org/abs/2509.22040",
+  "canonical_url": "https://arxiv.org/abs/2509.22040",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:42:04+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T004204Z",
+      "local_path": "sources/S-045/raw/SNAP-20260607T004204Z.html",
+      "content_hash": "sha256:b05a72ce4f88e640f7e87a2e5d401f7513b54bc8858c1472697f7371e25ce78c",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:42:04+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://arxiv.org/abs/2509.22040",
+  "supported_claim_ids": [
+    "C-006",
+    "C-007",
+    "C-010"
+  ],
+  "content_hash": "sha256:b05a72ce4f88e640f7e87a2e5d401f7513b54bc8858c1472697f7371e25ce78c",
+  "locator": "local snapshot SNAP-20260607T004204Z",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:42:04+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "AIShellJack paper. Research evidence on prompt-injection attacks against agentic coding editors and shell/tool execution paths.",
+    "category": "Security"
+  }
+}

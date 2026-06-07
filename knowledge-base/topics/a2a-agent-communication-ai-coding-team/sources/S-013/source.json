@@ -34,6 +34,8 @@
     "transparency": "high",
     "independence": "medium",
     "reproducibility": "medium",
-    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "Semantic Kernel Agent Framework documentation. Useful for enterprise .NET/Python orchestration, agent threads, and group collaboration patterns.",
+    "category": "Framework orchestration"
   }
 }

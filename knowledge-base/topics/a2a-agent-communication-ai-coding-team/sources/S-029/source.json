@@ -1,0 +1,44 @@
+{
+  "source_id": "S-029",
+  "title": "Pydantic AI Multi-Agent Patterns",
+  "url": "https://pydantic.dev/docs/ai/guides/multi-agent-applications/",
+  "canonical_url": "https://pydantic.dev/docs/ai/guides/multi-agent-applications/",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:39:50+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T003950Z",
+      "local_path": "sources/S-029/raw/SNAP-20260607T003950Z.html",
+      "content_hash": "sha256:54aa28203e9e6b2c0281eb9193946cdc49fa025acf6565c46698727caebeea2f",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:39:50+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://pydantic.dev/docs/ai/guides/multi-agent-applications/",
+  "supported_claim_ids": [
+    "C-002",
+    "C-004"
+  ],
+  "content_hash": "sha256:54aa28203e9e6b2c0281eb9193946cdc49fa025acf6565c46698727caebeea2f",
+  "locator": "local snapshot SNAP-20260607T003950Z",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:39:50+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "Pydantic AI multi-agent guide. Lightweight Python option with delegation, programmatic control, and typed outputs.",
+    "category": "Framework orchestration"
+  }
+}

@@ -34,6 +34,8 @@
     "transparency": "high",
     "independence": "medium",
     "reproducibility": "medium",
-    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "AutoGen agent chat page capture. It represents conversation-based multi-agent collaboration patterns, though the captured page should be refreshed before implementation.",
+    "category": "Framework orchestration"
   }
 }

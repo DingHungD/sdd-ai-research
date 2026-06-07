@@ -1,0 +1,45 @@
+{
+  "source_id": "S-042",
+  "title": "OWASP Top 10 for LLM Applications",
+  "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
+  "canonical_url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:42:02+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T004202Z",
+      "local_path": "sources/S-042/raw/SNAP-20260607T004202Z.html",
+      "content_hash": "sha256:777069d27ae5de079f84c7ccf81346cdaca5e8993ad7eca22e11e78533541871",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:42:02+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
+  "supported_claim_ids": [
+    "C-003",
+    "C-006",
+    "C-010"
+  ],
+  "content_hash": "sha256:777069d27ae5de079f84c7ccf81346cdaca5e8993ad7eca22e11e78533541871",
+  "locator": "local snapshot SNAP-20260607T004202Z",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:42:02+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "OWASP Top 10 for LLM Applications. Baseline for prompt injection, sensitive information disclosure, excessive agency, and supply-chain risk.",
+    "category": "Security"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "source_id": "S-019",
+  "title": "OpenAI Agents SDK Platform Guide",
+  "url": "https://developers.openai.com/api/docs/guides/agents",
+  "canonical_url": "https://developers.openai.com/api/docs/guides/agents",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:39:36+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T003936Z",
+      "local_path": "sources/S-019/raw/SNAP-20260607T003936Z.html",
+      "content_hash": "sha256:11eb2961f7deb33dc0708db59a861a34e3534c8152037c75656188f8bdfc5c55",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:39:36+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://developers.openai.com/api/docs/guides/agents",
+  "supported_claim_ids": [],
+  "content_hash": "sha256:11eb2961f7deb33dc0708db59a861a34e3534c8152037c75656188f8bdfc5c55",
+  "locator": "local snapshot SNAP-20260607T003936Z",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:39:36+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "OpenAI platform Agents SDK guide. Production-oriented framing for agents, tools, handoffs, tracing, and hosted runtime choices.",
+    "category": "Framework orchestration"
+  }
+}

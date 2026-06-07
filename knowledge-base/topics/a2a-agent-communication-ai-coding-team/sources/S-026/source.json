@@ -1,0 +1,46 @@
+{
+  "source_id": "S-026",
+  "title": "LangChain Multi-agent Patterns",
+  "url": "https://docs.langchain.com/oss/python/langchain/multi-agent/index",
+  "canonical_url": "https://docs.langchain.com/oss/python/langchain/multi-agent/index",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:39:45+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T003945Z",
+      "local_path": "sources/S-026/raw/SNAP-20260607T003945Z.html",
+      "content_hash": "sha256:cd775b618ee0053d55159d473cebf4221f9a4c2331c27e12044432e2d475ee6e",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:39:45+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://docs.langchain.com/oss/python/langchain/multi-agent/index",
+  "supported_claim_ids": [
+    "C-002",
+    "C-004",
+    "C-005",
+    "C-006"
+  ],
+  "content_hash": "sha256:cd775b618ee0053d55159d473cebf4221f9a4c2331c27e12044432e2d475ee6e",
+  "locator": "local snapshot SNAP-20260607T003945Z",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:39:45+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "medium",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "LangChain current multi-agent patterns. Distinguishes tool-calling supervisors from handoffs and emphasizes context engineering.",
+    "category": "Framework orchestration"
+  }
+}

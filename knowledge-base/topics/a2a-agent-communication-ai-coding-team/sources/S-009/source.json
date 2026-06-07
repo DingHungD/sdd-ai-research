@@ -18,7 +18,12 @@
   "source_type": "official_documentation",
   "conflict_of_interest": "",
   "evidence_chain": "https://openai.github.io/openai-agents-python/handoffs/",
-  "supported_claim_ids": [],
+  "supported_claim_ids": [
+    "C-002",
+    "C-003",
+    "C-005",
+    "C-009"
+  ],
   "content_hash": "sha256:289d2e4193ef3f81d932732676b2b5301d6ac7a31827c717d1e5a5d99f6b39ed",
   "locator": "local snapshot SNAP-20260607T002531Z",
   "freshness": {
@@ -34,6 +39,8 @@
     "transparency": "high",
     "independence": "medium",
     "reproducibility": "medium",
-    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored."
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "OpenAI Agents SDK handoffs. Directly relevant to specialist transfer in an AI coding team, especially explicit delegation and input filtering.",
+    "category": "Framework orchestration"
   }
 }

@@ -1,0 +1,45 @@
+{
+  "source_id": "S-036",
+  "title": "ChatDev Repository",
+  "url": "https://github.com/OpenBMB/ChatDev",
+  "canonical_url": "https://github.com/OpenBMB/ChatDev",
+  "author_or_organization": "",
+  "publisher": "",
+  "retrieved_at": "2026-06-07T00:41:58+00:00",
+  "local_snapshots": [
+    {
+      "snapshot_id": "SNAP-20260607T004158Z",
+      "local_path": "sources/S-036/raw/SNAP-20260607T004158Z.html",
+      "content_hash": "sha256:51451b801f38aed505002b1c151aa153db0cfc3b6aa87433df4639fbc9045ba5",
+      "mime_type": "text/html",
+      "captured_at": "2026-06-07T00:41:58+00:00"
+    }
+  ],
+  "source_type": "official_documentation",
+  "conflict_of_interest": "",
+  "evidence_chain": "https://github.com/OpenBMB/ChatDev",
+  "supported_claim_ids": [
+    "C-005"
+  ],
+  "content_hash": "sha256:51451b801f38aed505002b1c151aa153db0cfc3b6aa87433df4639fbc9045ba5",
+  "locator": "repository tree",
+  "freshness": {
+    "mode": "periodic",
+    "recheck_after": "2026-07-07T00:41:58+00:00",
+    "reason": "Living documentation or repository page; refresh before relying on current-state claims."
+  },
+  "commit_sha": "a6a5cda5560053136897aa44301eacc6c48d8168",
+  "immutable_url": "https://github.com/OpenBMB/ChatDev/tree/a6a5cda5560053136897aa44301eacc6c48d8168",
+  "evidence_tier": "A",
+  "quality": {
+    "authority": "high",
+    "directness": "high",
+    "recency": "medium",
+    "transparency": "high",
+    "independence": "medium",
+    "reproducibility": "high",
+    "notes": "Heuristic initial evaluation. Agent review is required before publication. Repository default-branch pages remain provisional unless an immutable permalink is stored.",
+    "review_summary": "ChatDev repository. Practical implementation reference for multi-role AI software company style coding teams.",
+    "category": "Coding-team implementation"
+  }
+}
