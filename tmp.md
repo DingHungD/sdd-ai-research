@@ -7,6 +7,11 @@ agent-template/
 ├─ .env.example                    # 環境變數範本
 ├─ README.md                       # 專案說明與使用文件
 │
+├─ skills/                         # Agent 可載入的任務技能與專項 SOP
+│  ├─ XXX/
+│  │  ├─ SKILL.md                  # XXX標準流程
+│  │  └─ policy.json               # XXX權限與工具限制
+│
 ├─ src/
 │  ├─ main.ts                      # Agent 系統啟動入口
 │  │
@@ -37,6 +42,12 @@ agent-template/
 │  │  ├─ session.ts                # Agent Session 與短期記憶管理
 │  │  ├─ guardrails.ts             # Agent 安全規則與限制條件
 │  │  └─ handoffs.ts               # Agent 任務轉交與協作策略
+│  │
+│  ├─ skills/
+│  │  ├─ loader.ts                 # 從 skills/ 目錄載入 Skill 文件
+│  │  ├─ registry.ts               # 建立 Skill 清單與 metadata
+│  │  ├─ matcher.ts                # 根據任務語意匹配 Skill
+│  │  └─ types.ts                  # Skill 相關型別定義
 │  │
 │  ├─ workflow/
 │  │  ├─ taskdb.client.ts          # TaskDB API 存取封裝
